@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Chthollists的平凡之路</title>
+  <title>Hexo Blogs | Chthollists的平凡之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Chthollists的平凡之路">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="简易博客搭建——Windows系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo Blogs">
+<meta property="og:url" content="http://yoursite.com/2020/07/28/Hexo%20Blogs/index.html">
 <meta property="og:site_name" content="Chthollists的平凡之路">
+<meta property="og:description" content="简易博客搭建——Windows系统">
 <meta property="og:locale" content="cn">
+<meta property="article:published_time" content="2020-07-28T10:50:10.011Z">
+<meta property="article:modified_time" content="2020-07-28T12:56:25.220Z">
 <meta property="article:author" content="Code.Yang">
 <meta property="article:tag" content="Code">
 <meta property="article:tag" content="Python">
@@ -171,16 +175,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Hexo Blogs" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Hexo Blogs" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/28/Hexo%20Blogs/">Hexo Blogs</a>
+    <h1 class="article-title" itemprop="name">
+      Hexo Blogs
     </h1>
   
 
@@ -193,10 +195,308 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="简易博客搭建——Windows系统"><a href="#简易博客搭建——Windows系统" class="headerlink" title="简易博客搭建——Windows系统"></a>简易博客搭建——Windows系统</h2>
-        
+        <h2 id="简易博客搭建——Windows系统"><a href="#简易博客搭建——Windows系统" class="headerlink" title="简易博客搭建——Windows系统"></a>简易博客搭建——Windows系统</h2><a id="more"></a>
+
+<h3 id="一、博客分类及搭建工具"><a href="#一、博客分类及搭建工具" class="headerlink" title="一、博客分类及搭建工具"></a>一、博客分类及搭建工具</h3><h4 id="1-动态博客-Dynamic-Blog"><a href="#1-动态博客-Dynamic-Blog" class="headerlink" title="1.动态博客 Dynamic Blog"></a>1.动态博客 Dynamic Blog</h4><h4 id="2-静态博客-Static-blog"><a href="#2-静态博客-Static-blog" class="headerlink" title="2.静态博客 Static blog"></a>2.静态博客 Static blog</h4><h3 id="二、Git与Github"><a href="#二、Git与Github" class="headerlink" title="二、Git与Github"></a>二、Git与Github</h3><ul>
+<li><p>教程</p>
+<blockquote>
+<p><a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener">https://www.liaoxuefeng.com/</a></p>
+<p><a href="https://blog.csdn.net/qq_39387475/article/details/84996173" target="_blank" rel="noopener">https://blog.csdn.net/qq_39387475/article/details/84996173</a></p>
+</blockquote>
+</li>
+</ul>
+<h4 id="1-Git安装与配置"><a href="#1-Git安装与配置" class="headerlink" title="1. Git安装与配置"></a>1. Git安装与配置</h4><ul>
+<li><p>Git 分布式版本控制系统原理</p>
+<blockquote>
+<p>版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，无法追踪图片、音频、视频等的改动。</p>
+</blockquote>
+<ul>
+<li><p>工作区(Working Directory)：就是电脑本地看到的目录。</p>
+</li>
+<li><p>暂存区：英文叫stage, 或index。</p>
+<blockquote>
+<p>一般存放在 “.git目录下” 下的index文件（.git/index）中，所以我们把暂存区有时也叫作索引（index）。</p>
+</blockquote>
+</li>
+<li><p>版本库(Repository)：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。</p>
+</li>
+</ul>
+</li>
+<li><p>安装包下载</p>
+<blockquote>
+<p>官网：<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a></p>
+</blockquote>
+</li>
+<li><p>在Git bash中配置本地用户名及邮箱</p>
+<blockquote>
+<p>如果用了 –global 选项，那么更改的配置文件就是位于你用户主目录下的那个，以后你所有的项目都会默认使用这里配置的用户信息。</p>
+<p>如果要在某个特定的项目中使用其他名字或者电邮，只要去掉 –global 选项重新配置即可，新的设定保存在当前项目的 .git/config 文件里。</p>
+</blockquote>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看配置</span></span><br><span class="line">git config --list ：</span><br><span class="line"><span class="comment"># 设置全局用户名</span></span><br><span class="line">git config --global user.name "your name"   </span><br><span class="line"><span class="comment"># 设置全局邮箱</span></span><br><span class="line">git config --global user.email "your email" </span><br><span class="line"><span class="comment"># 查看本目录下仓库的用户名</span></span><br><span class="line"> git config user.name</span><br><span class="line"><span class="comment"># 修改本目录下仓库的用户名</span></span><br><span class="line">git config user.name "用户名"</span><br><span class="line"><span class="comment"># 查看本目录下仓库的邮箱 ；</span></span><br><span class="line">git config user.email </span><br><span class="line"><span class="comment"># 修改本目录下仓库的邮箱 ； </span></span><br><span class="line">git config user.email "邮箱"   </span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>编辑、删除全局配置</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除全局配置，终端执行命令</span></span><br><span class="line">git config --global --unset user.name</span><br><span class="line"></span><br><span class="line"><span class="comment"># 编辑配置文件</span></span><br><span class="line">git config --global --edit</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h3 id="2-Git创建仓库及管理"><a href="#2-Git创建仓库及管理" class="headerlink" title="2. Git创建仓库及管理"></a>2. Git创建仓库及管理</h3><blockquote>
+<p>所有命令均在Git bash 命令行中完成 $</p>
+</blockquote>
+<ul>
+<li><p>创建仓库</p>
+<ul>
+<li><p>在路径下创建空目录</p>
+<blockquote>
+<p>可以修改新建路径，默认C/Users/you</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir newrepo</span><br><span class="line">cd newrepo</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>在新建的目录下完成初始化</p>
+<blockquote>
+<p>在目录下会出现一个名为 .git 的目录，所有 Git 需要的数据和资源都存放在这个目录中</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line"><span class="comment"># 或者直接把创建目录和初始化一步完成</span></span><br><span class="line">git init newrepo</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>本地仓库管理(文件版本管理)</p>
+<blockquote>
+<p>所有要管理的文件必须放在仓库中</p>
+</blockquote>
+<ul>
+<li><p>添加文件</p>
+<blockquote>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 把文件从工作区Working Directory添加到缓存index</span></span><br><span class="line"><span class="comment">#  git add 文件名</span></span><br><span class="line"><span class="comment"># 文件名有空格时，需要写在引号中</span></span><br><span class="line">git add CodeAlgorithm.md</span><br><span class="line"><span class="comment"># 把全部文件添加到缓存区</span></span><br><span class="line">git add --all</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把文件从缓存区index提交到Git仓库中master</span></span><br><span class="line"><span class="comment"># 可以一次提交多个文件，即多次add后再commit</span></span><br><span class="line"><span class="comment"># git commit -m "提交说明"</span></span><br><span class="line">git commit -m "test"</span><br><span class="line"><span class="comment"># 跳过添加成缓存步骤，直接添加到仓库中  -a</span></span><br></pre></td></tr></table></figure>
+<p>git commit -a</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>查看改动</p>
+<blockquote>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看缓存区index文件</span></span><br><span class="line"><span class="comment"># A 表示缓存区</span></span><br><span class="line"><span class="comment"># AM 表示该文件添加进缓存区后被改动过，此时需要再次add</span></span><br><span class="line"><span class="comment"># ??表示不再缓存区</span></span><br><span class="line">git status -s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看具体改动</span></span><br><span class="line"><span class="comment"># 查看执行 git status 的结果的详细信息</span></span><br><span class="line"><span class="comment"># 尚未缓存的改动</span></span><br><span class="line">git diff</span><br><span class="line"><span class="comment"># 查看已缓存的改动</span></span><br><span class="line">git diff --cached</span><br><span class="line"><span class="comment"># 查看已缓存的与未缓存的所有改动</span></span><br><span class="line">git diff HEAD</span><br><span class="line"><span class="comment"># 显示摘要而非整个 diff</span></span><br></pre></td></tr></table></figure>
+<p>git diff –stat</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>查看历史记录</p>
+<blockquote>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 详细历史日志</span></span><br><span class="line">git log</span><br><span class="line"><span class="comment"># 单行简易输出</span></span><br></pre></td></tr></table></figure>
+<p>git log –pretty=oneline</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li><p>文件版本回溯</p>
+<blockquote>
+<p>在Git中，用<code>HEAD</code>表示当前版本，上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，往上100个版本简写成<code>HEAD~100</code>。</p>
+<p>Git在内部有个指向当前版本的<code>HEAD</code>指针，回溯版本实际上是改变指针的对象。</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 版本回溯 --旧版</span></span><br><span class="line"><span class="comment"># git reset 版本(HEAD表示法、或者log下显示的版本号---输入前几位即可自动匹配)</span></span><br><span class="line">git reset --hard HEAD^</span><br><span class="line">git reset --hard xxxxxx</span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本回溯 --新版</span></span><br><span class="line"><span class="comment"># 从master恢复暂存区</span></span><br><span class="line">git resotre --worktree File</span><br><span class="line"><span class="comment"># 从暂存区恢复工作区</span></span><br><span class="line">git restore --staged </span><br><span class="line"><span class="comment"># 从master同时恢复工作区和暂存区</span></span><br><span class="line">git restore --source=HEAD --staged --worktree 文件名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看当前记录、版本号</span></span><br><span class="line">git log</span><br><span class="line"><span class="comment"># 查看之前指令的相关记录---可以看到版本号</span></span><br></pre></td></tr></table></figure>
+<p>git reflog</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>文件撤销修改</p>
+<blockquote>
+<p>把文件在工作区的修改全部撤销，这里有两种情况：</p>
+</blockquote>
+<ul>
+<li>一种是文件自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</li>
+</ul>
+</li>
+<li><p>一种是文件已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</p>
+<ul>
+<li>总之，就是让这个文件回到最近一次<code>git commit</code>或<code>git add</code>时的状态。</li>
+</ul>
+<blockquote>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 旧版</span></span><br><span class="line">git checkout -- 文件名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新版</span></span><br></pre></td></tr></table></figure>
+<p>git restore 文件名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>文件删除与恢复</p>
+<blockquote>
+<p>工作区的文件被删除后，在删除版本库中的文件</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rm  文件名</span><br><span class="line">git commit -m "说明remove "</span><br></pre></td></tr></table></figure>
+
+<p>工作区的文佳误删后，通过版本库恢复文件</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm '文件名'</span><br><span class="line">git restore 文件名</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>创建、切换、删除分支</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认主分支master</span></span><br><span class="line"><span class="comment"># 创建一个叫做"feature_x"的分支，并切换过去：-b</span></span><br><span class="line">git checkout -b feature_x</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换回主分支：</span></span><br><span class="line">git checkout master</span><br><span class="line"></span><br><span class="line"><span class="comment"># 再把新建的分支删掉：-d</span></span><br><span class="line">git branch -d feature_x</span><br><span class="line"></span><br><span class="line"><span class="comment"># 除非你将分支推送到远端仓库，不然该分支就是 不为他人所见的：</span></span><br><span class="line">git push origin &lt;branch&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-Git远程仓库"><a href="#3-Git远程仓库" class="headerlink" title="3. Git远程仓库"></a>3. Git远程仓库</h3><blockquote>
+<p>将文件push到远程仓库的流程</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在目标路径下Git bash</span></span><br><span class="line">git init</span><br><span class="line">git add -all</span><br><span class="line">git commit -m 'readme'</span><br><span class="line">git remote add origin git@server-name:path/repo-name.git</span><br><span class="line"><span class="comment"># git remote -v</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li><p>创建SSH Key</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 会在用户主目录下，生成.ssh目录，里面有id_rsa私钥、id_ras.pub公钥文件</span><br><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p><a href="mailto:youremail@example.com">youremail@example.com</a>使用注册Github、Gitee时的邮箱</p>
+</blockquote>
+</li>
+<li><p>登陆Github，Add SSH Key</p>
+<blockquote>
+<p>打开“Account settings”，“SSH Keys”页面，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴<code>id_rsa.pub</code>文件的内容</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 验证是否成功</span></span><br><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>在Github上创建新的库并关联remote，将本地库推送到远程库push</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 关联远程库</span></span><br><span class="line">git remote add origin git@server-name:path/repo-name.git</span><br><span class="line">git remote add origin(远程库名，默认origin) git@github.com:Github用户名/远程库名</span><br><span class="line">git remote add origin git@github.com:Amaduess/newrepo.git</span><br><span class="line"><span class="comment"># 删除已有的关联origin</span></span><br><span class="line">git remote rm origin</span><br><span class="line"><span class="comment"># 查看现有的关联</span></span><br><span class="line"> git remote -v</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 推送push</span></span><br><span class="line"><span class="comment"># 第一次push -u 将本地master与远程master关联</span></span><br><span class="line">git push -u origin master</span><br><span class="line"><span class="comment"># 之后push</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+</li>
+<li><p>从远程库克隆到本地库</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone git@server-name:path/repo-name.git</span><br><span class="line">git clone git@github.com:Github用户名/远程库名</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>克隆后可以更新本地库pull</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在当前工作目录中 获取（fetch） 并 合并（merge） 远端的改动</span></span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>其他</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 内建的图形化 git：</span></span><br><span class="line">gitk</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建标签</span></span><br><span class="line">git tag 1.0.0  ID(前十位字符)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 彩色的 git 输出：</span></span><br><span class="line">git config color.ui true</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示历史记录时，每个提交的信息只显示一行：</span></span><br><span class="line">git config format.pretty oneline</span><br><span class="line"></span><br><span class="line"><span class="comment"># 交互式添加文件到暂存区：</span></span><br><span class="line">git add -i</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h3 id="三、利用Hexo搭建博客"><a href="#三、利用Hexo搭建博客" class="headerlink" title="三、利用Hexo搭建博客"></a>三、利用Hexo搭建博客</h3><blockquote>
+<p>最好在Git bash里面输入命令</p>
+</blockquote>
+<h4 id="1-准备工作-Nodejs-amp-Git"><a href="#1-准备工作-Nodejs-amp-Git" class="headerlink" title="1. 准备工作 Nodejs &amp; Git"></a>1. 准备工作 Nodejs &amp; Git</h4><ul>
+<li><p>配置Node.js</p>
+<blockquote>
+<p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></p>
+</blockquote>
+</li>
+<li><p>配置Git</p>
+<blockquote>
+<p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a></p>
+</blockquote>
+</li>
+<li><p>检测安装结果</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看node、npm、git版本</span></span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>通过npm安装淘宝镜像源cnmp</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装cnpm</span></span><br><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看cnpm版本</span></span><br><span class="line">cnpm --version</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="2-Hexo安装及配置"><a href="#2-Hexo安装及配置" class="headerlink" title="2.Hexo安装及配置"></a>2.Hexo安装及配置</h4><ul>
+<li><p>安装Hexo</p>
+<blockquote>
+<p><a href="https://hexo.io/" target="_blank" rel="noopener">https://hexo.io/</a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">cnpm install -g hexo-cli</span><br><span class="line"><span class="comment"># 查看版本</span></span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>Hexo初始化</p>
+<blockquote>
+<p>创建目录，并在此目录下进行后续操作</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建目录</span></span><br><span class="line">mkdir HexoBlog</span><br><span class="line">cd HexoBlog</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化hexo</span></span><br><span class="line">hexo init</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看初始化的文件</span></span><br><span class="line">ls -al</span><br><span class="line"></span><br><span class="line"><span class="comment"># ------------------或者--------------------------</span></span><br><span class="line">hexo init HexoBlog</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>Hexo启动</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动Hexo 搭建初始博客</span></span><br><span class="line">hexo s</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p> 此时博客已经初步搭建完成，本地访问地址：<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
+<p>当Git bash上停止服务器后，无法访问</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="3-博客部署到远端服务器"><a href="#3-博客部署到远端服务器" class="headerlink" title="3. 博客部署到远端服务器"></a>3. 博客部署到远端服务器</h4><ul>
+<li><p>使用Github作为远端服务器</p>
+<blockquote>
+<p>在Github上新建库，库名为：用户名.github.io</p>
+<p>ssh：<a href="mailto:git@github.com">git@github.com</a>:Amaduess/Amaduess.github.io.git</p>
+</blockquote>
+</li>
+<li><p>利用cnpm安装一个hexo-deployer-git插件</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装插件</span></span><br><span class="line">cnpm install --save hexo-deployer-git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开_config.yml文件，修改内容</span></span><br><span class="line">vim _config.yml</span><br><span class="line"><span class="comment"># 原内容</span></span><br><span class="line">deploy:</span><br><span class="line">	type : ' '</span><br><span class="line"><span class="comment"># 改为</span></span><br><span class="line">deploy:</span><br><span class="line">	type : git</span><br><span class="line">	<span class="comment"># 服务器地址(仓库地址)</span></span><br><span class="line">	repo : git@github.com:Amaduess/Amaduess.github.io.git </span><br><span class="line">	<span class="comment"># 分支，设置为管理员</span></span><br><span class="line">	branch : master</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>将博客部署到Github上</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h3 id="四、博客设置美化"><a href="#四、博客设置美化" class="headerlink" title="四、博客设置美化"></a>四、博客设置美化</h3><blockquote>
+<p>参考：</p>
+<p><a href="https://cloudy-liu.github.io/2018/04/07/Hexo_yilia" target="_blank" rel="noopener">https://cloudy-liu.github.io/2018/04/07/Hexo_yilia</a></p>
+<p><a href="https://blog.csdn.net/weixin_41287260/article/details/97693850" target="_blank" rel="noopener">https://blog.csdn.net/weixin_41287260/article/details/97693850</a></p>
+<p><a href="https://blog.csdn.net/qq_37939980/article/details/104390332" target="_blank" rel="noopener">https://blog.csdn.net/qq_37939980/article/details/104390332</a></p>
+</blockquote>
+<h4 id="1-主题更换-：landscape——yilia"><a href="#1-主题更换-：landscape——yilia" class="headerlink" title="1. 主题更换 ：landscape——yilia"></a>1. 主题更换 ：landscape——yilia</h4><ul>
+<li><p>下载开源的主题，存放在HexoBlog/theme目录下</p>
+<blockquote>
+<p>选择Github上很多人star的yilia主题</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在HexoBlog目录下Git bash</span></span><br><span class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>修改_config.yml文件</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">theme : landscape</span><br><span class="line"><span class="comment"># 改为</span></span><br><span class="line">theme : yilia</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>清理hexo并重新生成页面，部署到Github上</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 清理</span></span><br><span class="line">hexo clean</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成</span></span><br><span class="line">hexo g</span><br><span class="line">hexo generate</span><br><span class="line"></span><br><span class="line"><span class="comment"># 本地预览</span></span><br><span class="line">hexo s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 部署</span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h4>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢您的支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/payforwechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -205,16 +505,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/28/Hexo%20Blogs/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://chthollists.github.iohttp://yoursite.com/2020/07/28/Hexo%20Blogs/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/28/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -229,88 +588,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/28/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/28/hello-world/" class="archive-article-date">
-  	<time datetime="2020-07-28T03:55:46.889Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/28/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简易博客搭建——Windows系统"><span class="toc-number">1.</span> <span class="toc-text">简易博客搭建——Windows系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、博客分类及搭建工具"><span class="toc-number">1.1.</span> <span class="toc-text">一、博客分类及搭建工具</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-动态博客-Dynamic-Blog"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.动态博客 Dynamic Blog</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-静态博客-Static-blog"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.静态博客 Static blog</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、Git与Github"><span class="toc-number">1.2.</span> <span class="toc-text">二、Git与Github</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Git安装与配置"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. Git安装与配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Git创建仓库及管理"><span class="toc-number">1.3.</span> <span class="toc-text">2. Git创建仓库及管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Git远程仓库"><span class="toc-number">1.4.</span> <span class="toc-text">3. Git远程仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、利用Hexo搭建博客"><span class="toc-number">1.5.</span> <span class="toc-text">三、利用Hexo搭建博客</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-准备工作-Nodejs-amp-Git"><span class="toc-number">1.5.1.</span> <span class="toc-text">1. 准备工作 Nodejs &amp; Git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Hexo安装及配置"><span class="toc-number">1.5.2.</span> <span class="toc-text">2.Hexo安装及配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-博客部署到远端服务器"><span class="toc-number">1.5.3.</span> <span class="toc-text">3. 博客部署到远端服务器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、博客设置美化"><span class="toc-number">1.6.</span> <span class="toc-text">四、博客设置美化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-主题更换-：landscape——yilia"><span class="toc-number">1.6.1.</span> <span class="toc-text">1. 主题更换 ：landscape——yilia</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2"><span class="toc-number">1.6.2.</span> <span class="toc-text">2.</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
+  
+  
+  
 
   
+
+  
+
   
 
 
@@ -333,8 +636,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
