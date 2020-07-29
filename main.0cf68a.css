@@ -7,3 +7,27 @@
 .toc-article ol, .toc-article ul {
     margin: 10px 0;
 }
+
+
+/* 版权声明 */
+.copyright {
+	background-color: white;
+	margin-top: 2em;
+	border-left: 3px solid #03a9f4;
+	padding: .5em 1em;
+}
+ul.copyright li {
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+/* 版权声明移动端 */
+@media screen and (max-width:800px){
+	li.copyright_article-url{
+		display: none;
+	}
+  ul.copyright li{
+		font-weight: normal;
+		font-size: 16px;
+	}
+}
