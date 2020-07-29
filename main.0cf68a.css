@@ -10,23 +10,23 @@
 
 
 /* 版权声明 */
-.copyright {
-	background-color: white;
+.declare {
+	background-color: #eaeaea;
 	margin-top: 2em;
-	border-left: 3px solid #03a9f4;
+	border-left: 3px solid #ff1700;
 	padding: .5em 1em;
 }
-ul.copyright li {
+ul.declare li {
     font-size: 19px;
     font-weight: bold;
     line-height: 1.5;
 }
 /* 版权声明移动端 */
 @media screen and (max-width:800px){
-	li.copyright_article-url{
+	li.declare_article-url{
 		display: none;
 	}
-  ul.copyright li{
+  ul.declare li{
 		font-weight: normal;
 		font-size: 16px;
 	}
