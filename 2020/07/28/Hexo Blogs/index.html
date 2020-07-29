@@ -16,7 +16,7 @@
 <meta property="og:description" content="利用Hexo搭建的一个Yilia主题静态博客，并对博客进行了美化和功能扩展。 互链可以通过左下方的社交工具与博主联系添加">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-28T12:18:58.000Z">
-<meta property="article:modified_time" content="2020-07-29T04:17:47.583Z">
+<meta property="article:modified_time" content="2020-07-29T05:20:27.628Z">
 <meta property="article:author" content="Code.Yang">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Blog">
@@ -71,7 +71,7 @@
 	        
 				<li><a href="/archives/index.html">归档</a></li>
 	        
-				<li><a href="/categories/">分类</a></li>
+				<li><a href="/tags/Encrypt/">限权</a></li>
 	        
 				<li><a href="/categories/essays/">随笔</a></li>
 	        
@@ -98,13 +98,13 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">个人签名</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">个性签名</a>
     			
             
 		</nav>
 		
 			<nav>
-				Total: 2
+				Total: 4
 			</nav>
 		
 		<nav class="header-nav">
@@ -188,7 +188,7 @@
 		        
 					<li style="width: 12.5%"><a href="/archives/index.html">归档</a></li>
 		        
-					<li style="width: 12.5%"><a href="/categories/">分类</a></li>
+					<li style="width: 12.5%"><a href="/tags/Encrypt/">限权</a></li>
 		        
 					<li style="width: 12.5%"><a href="/categories/essays/">随笔</a></li>
 		        
@@ -213,7 +213,8 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Hexo Blogs" class="article article-type-post " itemscope itemprop="blogPost">
+            
+<article id="post-Hexo Blogs" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -224,6 +225,19 @@
     </h1>
   
 
+		
+		<!--显示阅读次数-->
+		
+		<br/>
+		<a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+		<span class="icon-sort"></span>
+		<span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数 : <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+		</span>
+		</a>
+		
+		<!--显示阅读次数完毕-->
+
         
         <a href="/2020/07/28/Hexo%20Blogs/" class="archive-article-date">
   	<time datetime="2020-07-28T12:18:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-28</time>
@@ -231,6 +245,35 @@
         
       </header>
     
+	
+<!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+	<div id="toc-article" class="toc-article">
+	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+		<strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简易博客搭建——Windows系统"><span class="toc-number">1.</span> <span class="toc-text">简易博客搭建——Windows系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、博客分类及搭建工具"><span class="toc-number">1.1.</span> <span class="toc-text">一、博客分类及搭建工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-动态博客-Dynamic-Blog"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 动态博客 Dynamic Blog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-静态博客-Static-blog"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 静态博客 Static blog</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、Git与Github"><span class="toc-number">1.2.</span> <span class="toc-text">二、Git与Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Git安装与配置"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. Git安装与配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Git创建仓库及管理"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. Git创建仓库及管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Git远程仓库"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. Git远程仓库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、利用Hexo搭建博客"><span class="toc-number">1.3.</span> <span class="toc-text">三、利用Hexo搭建博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-准备工作-Nodejs-amp-Git"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 准备工作 Nodejs &amp; Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Hexo安装及配置"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. Hexo安装及配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-博客部署到远端服务器"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 博客部署到远端服务器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、博客设置美化"><span class="toc-number">1.4.</span> <span class="toc-text">四、博客设置美化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-主题更换-：landscape——yilia"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 主题更换 ：landscape——yilia</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置图片资源和链接资源"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. 配置图片资源和链接资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-博客文章美化设置"><span class="toc-number">1.4.3.</span> <span class="toc-text">3. 博客文章美化设置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-显示文章摘要"><span class="toc-number">1.4.3.1.</span> <span class="toc-text">3.1 显示文章摘要</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-显示文章目录TOC"><span class="toc-number">1.4.3.2.</span> <span class="toc-text">3.2 显示文章目录TOC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-增加归档菜单"><span class="toc-number">1.4.3.3.</span> <span class="toc-text">3.3 增加归档菜单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-美化目录"><span class="toc-number">1.4.3.4.</span> <span class="toc-text">3.4 美化目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-字体美化"><span class="toc-number">1.4.3.5.</span> <span class="toc-text">3.5 字体美化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-博客主页美化"><span class="toc-number">1.4.4.</span> <span class="toc-text">4. 博客主页美化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-修改博客标题、子标题、用户"><span class="toc-number">1.4.4.1.</span> <span class="toc-text">4.1 修改博客标题、子标题、用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-主页左侧显示文章总数"><span class="toc-number">1.4.4.2.</span> <span class="toc-text">4.2 主页左侧显示文章总数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-设置个人签名"><span class="toc-number">1.4.4.3.</span> <span class="toc-text">4.3 设置个人签名</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、高级功能实现"><span class="toc-number">1.5.</span> <span class="toc-text">五、高级功能实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-微信分享功能"><span class="toc-number">1.5.1.</span> <span class="toc-text">1. 微信分享功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-版权信息功能"><span class="toc-number">1.5.2.</span> <span class="toc-text">2. 版权信息功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-不蒜子统计功能"><span class="toc-number">1.5.3.</span> <span class="toc-text">3. 不蒜子统计功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-字数统计和阅读时长功能"><span class="toc-number">1.5.4.</span> <span class="toc-text">4. 字数统计和阅读时长功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-网易云音乐功能"><span class="toc-number">1.5.5.</span> <span class="toc-text">5. 网易云音乐功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-文章置顶功能"><span class="toc-number">1.5.6.</span> <span class="toc-text">6. 文章置顶功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-添加分类与标签"><span class="toc-number">1.5.7.</span> <span class="toc-text">7. 添加分类与标签</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-添加一个分类页面，并在菜单中显示页面链接"><span class="toc-number">1.5.7.1.</span> <span class="toc-text">7.1 添加一个分类页面，并在菜单中显示页面链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-为文章添加标签"><span class="toc-number">1.5.7.2.</span> <span class="toc-text">7.2 为文章添加标签</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-添加404网页"><span class="toc-number">1.5.8.</span> <span class="toc-text">8. 添加404网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-头像旋转功能"><span class="toc-number">1.5.9.</span> <span class="toc-text">9. 头像旋转功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-评论系统"><span class="toc-number">1.5.10.</span> <span class="toc-text">10. 评论系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-点击爱心功能"><span class="toc-number">1.5.11.</span> <span class="toc-text">11. 点击爱心功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-Live-2D功能"><span class="toc-number">1.5.12.</span> <span class="toc-text">12. Live 2D功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-图床"><span class="toc-number">1.5.13.</span> <span class="toc-text">12. 图床</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附录：参考资料"><span class="toc-number">1.6.</span> <span class="toc-text">附录：参考资料</span></a></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+	function showToc(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:block");
+		show_toc_btn.setAttribute("style","display:none");
+		};
+	function showBtn(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:none");
+		show_toc_btn.setAttribute("style","display:block");
+		};
+   </script>
+      
+<!-- 目录内容结束 -->
+	
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
@@ -240,7 +283,9 @@
 </ul>
 <a id="more"></a>
 
-<h1 id="简易博客搭建——Windows系统"><a href="#简易博客搭建——Windows系统" class="headerlink" title="简易博客搭建——Windows系统"></a>简易博客搭建——Windows系统</h1><h2 id="一、博客分类及搭建工具"><a href="#一、博客分类及搭建工具" class="headerlink" title="一、博客分类及搭建工具"></a>一、博客分类及搭建工具</h2><h3 id="1-动态博客-Dynamic-Blog"><a href="#1-动态博客-Dynamic-Blog" class="headerlink" title="1. 动态博客 Dynamic Blog"></a>1. 动态博客 Dynamic Blog</h3><h3 id="2-静态博客-Static-blog"><a href="#2-静态博客-Static-blog" class="headerlink" title="2. 静态博客 Static blog"></a>2. 静态博客 Static blog</h3><hr>
+<h1 id="简易博客搭建——Windows系统"><a href="#简易博客搭建——Windows系统" class="headerlink" title="简易博客搭建——Windows系统"></a>简易博客搭建——Windows系统</h1><hr>
+<h2 id="一、博客分类及搭建工具"><a href="#一、博客分类及搭建工具" class="headerlink" title="一、博客分类及搭建工具"></a>一、博客分类及搭建工具</h2><h3 id="1-动态博客-Dynamic-Blog"><a href="#1-动态博客-Dynamic-Blog" class="headerlink" title="1. 动态博客 Dynamic Blog"></a>1. 动态博客 Dynamic Blog</h3><h3 id="2-静态博客-Static-blog"><a href="#2-静态博客-Static-blog" class="headerlink" title="2. 静态博客 Static blog"></a>2. 静态博客 Static blog</h3><hr>
+<hr>
 <h2 id="二、Git与Github"><a href="#二、Git与Github" class="headerlink" title="二、Git与Github"></a>二、Git与Github</h2><ul>
 <li><p>教程</p>
 <blockquote>
@@ -286,6 +331,7 @@
 </blockquote>
 </li>
 </ul>
+<hr>
 <h3 id="2-Git创建仓库及管理"><a href="#2-Git创建仓库及管理" class="headerlink" title="2. Git创建仓库及管理"></a>2. Git创建仓库及管理</h3><blockquote>
 <p>所有命令均在Git bash 命令行中完成 $</p>
 </blockquote>
@@ -313,36 +359,28 @@
 <ul>
 <li><p>添加文件</p>
 <blockquote>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 把文件从工作区Working Directory添加到缓存index</span></span><br><span class="line"><span class="comment">#  git add 文件名</span></span><br><span class="line"><span class="comment"># 文件名有空格时，需要写在引号中</span></span><br><span class="line">git add CodeAlgorithm.md</span><br><span class="line"><span class="comment"># 把全部文件添加到缓存区</span></span><br><span class="line">git add --all</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把文件从缓存区index提交到Git仓库中master</span></span><br><span class="line"><span class="comment"># 可以一次提交多个文件，即多次add后再commit</span></span><br><span class="line"><span class="comment"># git commit -m "提交说明"</span></span><br><span class="line">git commit -m "test"</span><br><span class="line"><span class="comment"># 跳过添加成缓存步骤，直接添加到仓库中  -a</span></span><br></pre></td></tr></table></figure>
-<p>git commit -a</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>查看改动</p>
-<blockquote>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看缓存区index文件</span></span><br><span class="line"><span class="comment"># A 表示缓存区</span></span><br><span class="line"><span class="comment"># AM 表示该文件添加进缓存区后被改动过，此时需要再次add</span></span><br><span class="line"><span class="comment"># ??表示不再缓存区</span></span><br><span class="line">git status -s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看具体改动</span></span><br><span class="line"><span class="comment"># 查看执行 git status 的结果的详细信息</span></span><br><span class="line"><span class="comment"># 尚未缓存的改动</span></span><br><span class="line">git diff</span><br><span class="line"><span class="comment"># 查看已缓存的改动</span></span><br><span class="line">git diff --cached</span><br><span class="line"><span class="comment"># 查看已缓存的与未缓存的所有改动</span></span><br><span class="line">git diff HEAD</span><br><span class="line"><span class="comment"># 显示摘要而非整个 diff</span></span><br></pre></td></tr></table></figure>
-<p>git diff –stat</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 把文件从工作区Working Directory添加到缓存index</span></span><br><span class="line"><span class="comment">#  git add 文件名</span></span><br><span class="line"><span class="comment"># 文件名有空格时，需要写在引号中</span></span><br><span class="line">git add CodeAlgorithm.md</span><br><span class="line"><span class="comment"># 把全部文件添加到缓存区</span></span><br><span class="line">git add --all</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把文件从缓存区index提交到Git仓库中master</span></span><br><span class="line"><span class="comment"># 可以一次提交多个文件，即多次add后再commit</span></span><br><span class="line"><span class="comment"># git commit -m "提交说明"</span></span><br><span class="line">git commit -m "test"</span><br><span class="line"><span class="comment"># 跳过添加成缓存步骤，直接添加到仓库中  -a</span></span><br><span class="line">git commit -a</span><br></pre></td></tr></table></figure></blockquote>
 </li>
 </ul>
 </li>
-<li><p>查看历史记录</p>
+<li><p>查看改动</p>
 <blockquote>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 详细历史日志</span></span><br><span class="line">git log</span><br><span class="line"><span class="comment"># 单行简易输出</span></span><br></pre></td></tr></table></figure>
-<p>git log –pretty=oneline</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看缓存区index文件</span></span><br><span class="line"><span class="comment"># A 表示缓存区</span></span><br><span class="line"><span class="comment"># AM 表示该文件添加进缓存区后被改动过，此时需要再次add</span></span><br><span class="line"><span class="comment"># ??表示不再缓存区</span></span><br><span class="line">git status -s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看具体改动</span></span><br><span class="line"><span class="comment"># 查看执行 git status 的结果的详细信息</span></span><br><span class="line"><span class="comment"># 尚未缓存的改动</span></span><br><span class="line">git diff</span><br><span class="line"><span class="comment"># 查看已缓存的改动</span></span><br><span class="line">git diff --cached</span><br><span class="line"><span class="comment"># 查看已缓存的与未缓存的所有改动</span></span><br><span class="line">git diff HEAD</span><br><span class="line"><span class="comment"># 显示摘要而非整个 diff</span></span><br><span class="line">git diff --stat</span><br></pre></td></tr></table></figure>
 </blockquote>
 <ul>
+<li><p>查看历史记录</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 详细历史日志</span></span><br><span class="line">git log</span><br><span class="line"><span class="comment"># 单行简易输出</span></span><br><span class="line">git log --pretty=oneline</span><br></pre></td></tr></table></figure></blockquote>
+</li>
 <li><p>文件版本回溯</p>
+</li>
+</ul>
 <blockquote>
 <p>在Git中，用<code>HEAD</code>表示当前版本，上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，往上100个版本简写成<code>HEAD~100</code>。</p>
 <p>Git在内部有个指向当前版本的<code>HEAD</code>指针，回溯版本实际上是改变指针的对象。</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 版本回溯 --旧版</span></span><br><span class="line"><span class="comment"># git reset 版本(HEAD表示法、或者log下显示的版本号---输入前几位即可自动匹配)</span></span><br><span class="line">git reset --hard HEAD^</span><br><span class="line">git reset --hard xxxxxx</span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本回溯 --新版</span></span><br><span class="line"><span class="comment"># 从master恢复暂存区</span></span><br><span class="line">git resotre --worktree File</span><br><span class="line"><span class="comment"># 从暂存区恢复工作区</span></span><br><span class="line">git restore --staged </span><br><span class="line"><span class="comment"># 从master同时恢复工作区和暂存区</span></span><br><span class="line">git restore --source=HEAD --staged --worktree 文件名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看当前记录、版本号</span></span><br><span class="line">git log</span><br><span class="line"><span class="comment"># 查看之前指令的相关记录---可以看到版本号</span></span><br></pre></td></tr></table></figure>
-<p>git reflog</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 版本回溯 --旧版</span></span><br><span class="line"><span class="comment"># git reset 版本(HEAD表示法、或者log下显示的版本号---输入前几位即可自动匹配)</span></span><br><span class="line">git reset --hard HEAD^</span><br><span class="line">git reset --hard xxxxxx</span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本回溯 --新版</span></span><br><span class="line"><span class="comment"># 从master恢复暂存区</span></span><br><span class="line">git resotre --worktree File</span><br><span class="line"><span class="comment"># 从暂存区恢复工作区</span></span><br><span class="line">git restore --staged </span><br><span class="line"><span class="comment"># 从master同时恢复工作区和暂存区</span></span><br><span class="line">git restore --source=HEAD --staged --worktree 文件名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看当前记录、版本号</span></span><br><span class="line">git log</span><br><span class="line"><span class="comment"># 查看之前指令的相关记录---可以看到版本号</span></span><br><span class="line">git reflog</span><br></pre></td></tr></table></figure>
 </blockquote>
-</li>
+<ul>
 <li><p>文件撤销修改</p>
 <blockquote>
 <p>把文件在工作区的修改全部撤销，这里有两种情况：</p>
@@ -351,17 +389,17 @@
 <li>一种是文件自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</li>
 </ul>
 </li>
+</ul>
+</li>
 <li><p>一种是文件已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</p>
 <ul>
-<li>总之，就是让这个文件回到最近一次<code>git commit</code>或<code>git add</code>时的状态。</li>
-</ul>
+<li><p>总之，就是让这个文件回到最近一次<code>git commit</code>或<code>git add</code>时的状态。</p>
 <blockquote>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 旧版</span></span><br><span class="line">git checkout -- 文件名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新版</span></span><br></pre></td></tr></table></figure>
-<p>git restore 文件名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 旧版</span></span><br><span class="line">git checkout -- 文件名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新版</span></span><br><span class="line">git restore 文件名</span><br></pre></td></tr></table></figure>
 </blockquote>
-</li>
-<li><p>文件删除与恢复</p>
+<ul>
+<li>文件删除与恢复</li>
+</ul>
 <blockquote>
 <p>工作区的文件被删除后，在删除版本库中的文件</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rm  文件名</span><br><span class="line">git commit -m "说明remove "</span><br></pre></td></tr></table></figure>
@@ -370,6 +408,8 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm '文件名'</span><br><span class="line">git restore 文件名</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
+</ul>
+<ul>
 <li><p>创建、切换、删除分支</p>
 <blockquote>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认主分支master</span></span><br><span class="line"><span class="comment"># 创建一个叫做"feature_x"的分支，并切换过去：-b</span></span><br><span class="line">git checkout -b feature_x</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换回主分支：</span></span><br><span class="line">git checkout master</span><br><span class="line"></span><br><span class="line"><span class="comment"># 再把新建的分支删掉：-d</span></span><br><span class="line">git branch -d feature_x</span><br><span class="line"></span><br><span class="line"><span class="comment"># 除非你将分支推送到远端仓库，不然该分支就是 不为他人所见的：</span></span><br><span class="line">git push origin &lt;branch&gt;</span><br></pre></td></tr></table></figure>
@@ -378,6 +418,7 @@
 </ul>
 </li>
 </ul>
+<hr>
 <h3 id="3-Git远程仓库"><a href="#3-Git远程仓库" class="headerlink" title="3. Git远程仓库"></a>3. Git远程仓库</h3><blockquote>
 <p>将文件push到远程仓库的流程</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在目标路径下Git bash</span></span><br><span class="line">git init</span><br><span class="line">git add -all</span><br><span class="line">git commit -m 'readme'</span><br><span class="line">git remote add origin git@server-name:path/repo-name.git</span><br><span class="line"><span class="comment"># git remote -v</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
@@ -419,6 +460,7 @@
 </li>
 </ul>
 <hr>
+<hr>
 <h2 id="三、利用Hexo搭建博客"><a href="#三、利用Hexo搭建博客" class="headerlink" title="三、利用Hexo搭建博客"></a>三、利用Hexo搭建博客</h2><blockquote>
 <p><a href="http://dongshuyan.com/2016/04/07/%E6%80%8E%E4%B9%88%E5%86%99%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener">Hexo博客搭建教程</a></p>
 </blockquote>
@@ -444,6 +486,7 @@
 </blockquote>
 </li>
 </ul>
+<hr>
 <h3 id="2-Hexo安装及配置"><a href="#2-Hexo安装及配置" class="headerlink" title="2. Hexo安装及配置"></a>2. Hexo安装及配置</h3><ul>
 <li><p>安装Hexo</p>
 <blockquote>
@@ -471,6 +514,7 @@
 </blockquote>
 </li>
 </ul>
+<hr>
 <h3 id="3-博客部署到远端服务器"><a href="#3-博客部署到远端服务器" class="headerlink" title="3. 博客部署到远端服务器"></a>3. 博客部署到远端服务器</h3><ul>
 <li><p>使用Github作为远端服务器</p>
 <blockquote>
@@ -490,12 +534,14 @@
 </li>
 </ul>
 <hr>
+<hr>
 <h2 id="四、博客设置美化"><a href="#四、博客设置美化" class="headerlink" title="四、博客设置美化"></a>四、博客设置美化</h2><ul>
 <li>各功能教程超链接汇总<ul>
 <li><a href="http://dongshuyan.com/2016/04/07/%E6%80%8E%E4%B9%88%E5%86%99%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener">MarkDown语法简介</a></li>
 <li><a href="[http://dongshuyan.com/2016/04/07/%E6%80%8E%E4%B9%88%E5%86%99%E5%8D%9A%E5%AE%A2/](http://dongshuyan.com/2016/04/07/怎么写博客/)">主题更换</a></li>
 <li><a href="https://cloudy-liu.github.io/2018/04/07/Hexo_yilia_%E4%B8%BB%E9%A2%98%E4%B8%80%E6%8F%BD%E5%AD%90%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/#%E7%99%BE%E5%BA%A6-Google%E7%BB%9F%E8%AE%A1-SEO" target="_blank" rel="noopener">配置图片和链接</a></li>
 <li><a href="https://blog.csdn.net/qq_37939980/article/details/104390332" target="_blank" rel="noopener">文章摘要、目录、归档、字体</a></li>
+<li><a href="https://blog.csdn.net/qq_40922859/article/details/97035497?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param" target="_blank" rel="noopener">美化目录</a></li>
 <li><a href="https://blog.csdn.net/qq_37939980/article/details/104390332" target="_blank" rel="noopener">文章总数统计、主页美化</a></li>
 </ul>
 </li>
@@ -518,6 +564,7 @@
 </blockquote>
 </li>
 </ul>
+<hr>
 <h3 id="2-配置图片资源和链接资源"><a href="#2-配置图片资源和链接资源" class="headerlink" title="2. 配置图片资源和链接资源"></a>2. 配置图片资源和链接资源</h3><blockquote>
 <p>添加WeChat、Email、Github等作为博主的联系方式</p>
 <p>添加个人头像、网页favicon</p>
@@ -544,6 +591,7 @@
 <li><p>注意：_config.yml的语句对空格、缩进要求严格</p>
 </li>
 </ul>
+<hr>
 <h3 id="3-博客文章美化设置"><a href="#3-博客文章美化设置" class="headerlink" title="3. 博客文章美化设置"></a>3. 博客文章美化设置</h3><h4 id="3-1-显示文章摘要"><a href="#3-1-显示文章摘要" class="headerlink" title="3.1 显示文章摘要"></a>3.1 显示文章摘要</h4><ul>
 <li><p>在你MD 格式文章正文,一般在标题后插入 <code>&lt;!-- more --&gt;</code></p>
 <blockquote>
@@ -566,7 +614,7 @@
 </blockquote>
 </li>
 </ul>
-<h4 id="3-4-字体美化"><a href="#3-4-字体美化" class="headerlink" title="3.4 字体美化"></a>3.4 字体美化</h4><ul>
+<h4 id="3-4-美化目录"><a href="#3-4-美化目录" class="headerlink" title="3.4 美化目录"></a>3.4 美化目录</h4><h4 id="3-5-字体美化"><a href="#3-5-字体美化" class="headerlink" title="3.5 字体美化"></a>3.5 字体美化</h4><ul>
 <li><p>代码字体美化、颜色设置</p>
 </li>
 <li><p>正文字体美化</p>
@@ -576,6 +624,7 @@
 </blockquote>
 </li>
 </ul>
+<hr>
 <h3 id="4-博客主页美化"><a href="#4-博客主页美化" class="headerlink" title="4. 博客主页美化"></a>4. 博客主页美化</h3><h4 id="4-1-修改博客标题、子标题、用户"><a href="#4-1-修改博客标题、子标题、用户" class="headerlink" title="4.1 修改博客标题、子标题、用户"></a>4.1 修改博客标题、子标题、用户</h4><ul>
 <li><p>修改文件路径为博客根路径下的<code>_config.yml</code></p>
 <blockquote>
@@ -598,6 +647,7 @@
 </li>
 </ul>
 <hr>
+<hr>
 <h2 id="五、高级功能实现"><a href="#五、高级功能实现" class="headerlink" title="五、高级功能实现"></a>五、高级功能实现</h2><ul>
 <li>各功能教程超链接汇总<ul>
 <li><a href="http://dongshuyan.com/2019/05/24/hexo%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" target="_blank" rel="noopener">微信分享</a></li>
@@ -605,8 +655,7 @@
 <li><a href="https://blog.csdn.net/qq_40922859/article/details/97035497?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param" target="_blank" rel="noopener">不蒜子统计</a></li>
 <li><a href="https://blog.csdn.net/qq_40922859/article/details/97035497?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param" target="_blank" rel="noopener">爱心功能、评论系统</a></li>
 <li><a href="https://blog.csdn.net/weixin_41287260/article/details/97693850" target="_blank" rel="noopener">音乐功能、404页面、头像旋转</a></li>
-<li><a href="https://www.bilibili.com/video/BV1pt411K7o9?p=8" target="_blank" rel="noopener">随笔</a></li>
-<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" target="_blank" rel="noopener">分类、标签</a></li>
+<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" target="_blank" rel="noopener">分类、随笔、标签</a></li>
 <li><a href="https://blog.csdn.net/weixin_41287260/article/details/97693850" target="_blank" rel="noopener">字数统计、阅读时长</a></li>
 <li><a href="http://dongshuyan.com/2019/05/24/hexo%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" target="_blank" rel="noopener">live2D</a></li>
 <li><a href="http://dongshuyan.com/2019/05/24/hexo%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" target="_blank" rel="noopener">更多功能</a></li>
@@ -640,7 +689,9 @@
 </blockquote>
 </li>
 </ul>
-<h3 id="2-版权信息功能"><a href="#2-版权信息功能" class="headerlink" title="2. 版权信息功能"></a>2. 版权信息功能</h3><h3 id="3-不蒜子统计功能"><a href="#3-不蒜子统计功能" class="headerlink" title="3. 不蒜子统计功能"></a>3. 不蒜子统计功能</h3><h3 id="4-字数统计和阅读时长功能"><a href="#4-字数统计和阅读时长功能" class="headerlink" title="4. 字数统计和阅读时长功能"></a>4. 字数统计和阅读时长功能</h3><h3 id="5-网易云音乐功能"><a href="#5-网易云音乐功能" class="headerlink" title="5. 网易云音乐功能"></a>5. 网易云音乐功能</h3><h3 id="6-文章置顶功能"><a href="#6-文章置顶功能" class="headerlink" title="6. 文章置顶功能"></a>6. 文章置顶功能</h3><h3 id="7-添加分类与标签"><a href="#7-添加分类与标签" class="headerlink" title="7. 添加分类与标签"></a>7. 添加分类与标签</h3><h4 id="7-1-添加一个分类页面，并在菜单中显示页面链接。"><a href="#7-1-添加一个分类页面，并在菜单中显示页面链接。" class="headerlink" title="7.1 添加一个分类页面，并在菜单中显示页面链接。"></a>7.1 添加一个分类页面，并在菜单中显示页面链接。</h4><ul>
+<hr>
+<h3 id="2-版权信息功能"><a href="#2-版权信息功能" class="headerlink" title="2. 版权信息功能"></a>2. 版权信息功能</h3><h3 id="3-不蒜子统计功能"><a href="#3-不蒜子统计功能" class="headerlink" title="3. 不蒜子统计功能"></a>3. 不蒜子统计功能</h3><h3 id="4-字数统计和阅读时长功能"><a href="#4-字数统计和阅读时长功能" class="headerlink" title="4. 字数统计和阅读时长功能"></a>4. 字数统计和阅读时长功能</h3><h3 id="5-网易云音乐功能"><a href="#5-网易云音乐功能" class="headerlink" title="5. 网易云音乐功能"></a>5. 网易云音乐功能</h3><h3 id="6-文章置顶功能"><a href="#6-文章置顶功能" class="headerlink" title="6. 文章置顶功能"></a>6. 文章置顶功能</h3><hr>
+<h3 id="7-添加分类与标签"><a href="#7-添加分类与标签" class="headerlink" title="7. 添加分类与标签"></a>7. 添加分类与标签</h3><h4 id="7-1-添加一个分类页面，并在菜单中显示页面链接"><a href="#7-1-添加一个分类页面，并在菜单中显示页面链接" class="headerlink" title="7.1 添加一个分类页面，并在菜单中显示页面链接"></a>7.1 添加一个分类页面，并在菜单中显示页面链接</h4><ul>
 <li><p>通过hexo新建一个页面，命名为 categories </p>
 <blockquote>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categoties</span><br></pre></td></tr></table></figure>
@@ -651,7 +702,7 @@
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">分类</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020</span><span class="number">-07</span><span class="number">-29</span> <span class="number">10</span><span class="string">:36:40</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"categories"</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
-<li><p>菜单中添加链接。编辑主题的<code>_config.yml</code> ，将 menu中的 <code>#categories: /categories</code>注释去掉，如</p>
+<li><p>菜单中添加链接。编辑主题的<code>_config.yml</code> ，将categories添加到menu中</p>
 <blockquote>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags</span></span><br></pre></td></tr></table></figure>
 </blockquote>
@@ -660,11 +711,11 @@
 <h4 id="7-2-为文章添加标签"><a href="#7-2-为文章添加标签" class="headerlink" title="7.2 为文章添加标签"></a>7.2 为文章添加标签</h4><ul>
 <li><p>MarkDown 各种标签设置</p>
 <blockquote>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> 				 <span class="comment">#文章标题</span></span><br><span class="line"><span class="attr">subtitle:</span>                            <span class="comment">#子标题</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">文章</span>             <span class="comment">#文章分類目錄 可以省略    </span></span><br><span class="line"><span class="attr">toc:</span> <span class="literal">true</span>                            <span class="comment">#目录 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">reward:</span> <span class="literal">true</span>                      <span class="comment">#打赏 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">declare:</span> <span class="literal">true</span>                      <span class="comment">#版权 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">date:</span>                                   <span class="comment">#文章日期</span></span><br><span class="line"><span class="attr">header-img:</span>                        <span class="comment">#顶部背景图片</span></span><br><span class="line"><span class="attr">tags:</span>                                    <span class="comment">#标签</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> 				 <span class="comment">#文章标题</span></span><br><span class="line"><span class="attr">subtitle:</span>                            <span class="comment">#子标题</span></span><br><span class="line"><span class="attr">categories:</span>                       <span class="comment">#文章分類目錄 可以省略    </span></span><br><span class="line"><span class="attr">toc:</span> <span class="literal">true</span>                            <span class="comment">#目录 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">reward:</span> <span class="literal">true</span>                      <span class="comment">#打赏 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">declare:</span> <span class="literal">true</span>                      <span class="comment">#版权 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">date:</span>                                   <span class="comment">#文章日期</span></span><br><span class="line"><span class="attr">header-img:</span>                        <span class="comment">#顶部背景图片</span></span><br><span class="line"><span class="attr">tags:</span>                                    <span class="comment">#标签</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
-<li></li>
 </ul>
+<hr>
 <h3 id="8-添加404网页"><a href="#8-添加404网页" class="headerlink" title="8. 添加404网页"></a>8. 添加404网页</h3><ul>
 <li><p>参考：<a href="https://docs.github.com/cn/github/working-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site" target="_blank" rel="noopener">自定义Github Pages</a></p>
 </li>
@@ -676,6 +727,7 @@
 </blockquote>
 </li>
 </ul>
+<hr>
 <h3 id="9-头像旋转功能"><a href="#9-头像旋转功能" class="headerlink" title="9. 头像旋转功能"></a>9. 头像旋转功能</h3><ul>
 <li><p>在<code>themes\yilia\source\</code>文件夹下增加一个css文件<code>avatarrotation.css</code>用来旋转360度</p>
 <blockquote>
@@ -852,6 +904,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/07/29/Encryption/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Encryption test
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/07/28/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Hello World</div>
@@ -881,7 +942,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简易博客搭建——Windows系统"><span class="toc-number">1.</span> <span class="toc-text">简易博客搭建——Windows系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、博客分类及搭建工具"><span class="toc-number">1.1.</span> <span class="toc-text">一、博客分类及搭建工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-动态博客-Dynamic-Blog"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 动态博客 Dynamic Blog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-静态博客-Static-blog"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 静态博客 Static blog</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、Git与Github"><span class="toc-number">1.2.</span> <span class="toc-text">二、Git与Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Git安装与配置"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. Git安装与配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Git创建仓库及管理"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. Git创建仓库及管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Git远程仓库"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. Git远程仓库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、利用Hexo搭建博客"><span class="toc-number">1.3.</span> <span class="toc-text">三、利用Hexo搭建博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-准备工作-Nodejs-amp-Git"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 准备工作 Nodejs &amp; Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Hexo安装及配置"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. Hexo安装及配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-博客部署到远端服务器"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 博客部署到远端服务器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、博客设置美化"><span class="toc-number">1.4.</span> <span class="toc-text">四、博客设置美化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-主题更换-：landscape——yilia"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 主题更换 ：landscape——yilia</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置图片资源和链接资源"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. 配置图片资源和链接资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-博客文章美化设置"><span class="toc-number">1.4.3.</span> <span class="toc-text">3. 博客文章美化设置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-显示文章摘要"><span class="toc-number">1.4.3.1.</span> <span class="toc-text">3.1 显示文章摘要</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-显示文章目录TOC"><span class="toc-number">1.4.3.2.</span> <span class="toc-text">3.2 显示文章目录TOC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-增加归档菜单"><span class="toc-number">1.4.3.3.</span> <span class="toc-text">3.3 增加归档菜单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-字体美化"><span class="toc-number">1.4.3.4.</span> <span class="toc-text">3.4 字体美化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-博客主页美化"><span class="toc-number">1.4.4.</span> <span class="toc-text">4. 博客主页美化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-修改博客标题、子标题、用户"><span class="toc-number">1.4.4.1.</span> <span class="toc-text">4.1 修改博客标题、子标题、用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-主页左侧显示文章总数"><span class="toc-number">1.4.4.2.</span> <span class="toc-text">4.2 主页左侧显示文章总数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-设置个人签名"><span class="toc-number">1.4.4.3.</span> <span class="toc-text">4.3 设置个人签名</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、高级功能实现"><span class="toc-number">1.5.</span> <span class="toc-text">五、高级功能实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-微信分享功能"><span class="toc-number">1.5.1.</span> <span class="toc-text">1. 微信分享功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-版权信息功能"><span class="toc-number">1.5.2.</span> <span class="toc-text">2. 版权信息功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-不蒜子统计功能"><span class="toc-number">1.5.3.</span> <span class="toc-text">3. 不蒜子统计功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-字数统计和阅读时长功能"><span class="toc-number">1.5.4.</span> <span class="toc-text">4. 字数统计和阅读时长功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-网易云音乐功能"><span class="toc-number">1.5.5.</span> <span class="toc-text">5. 网易云音乐功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-文章置顶功能"><span class="toc-number">1.5.6.</span> <span class="toc-text">6. 文章置顶功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-添加分类与标签"><span class="toc-number">1.5.7.</span> <span class="toc-text">7. 添加分类与标签</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-添加一个分类页面，并在菜单中显示页面链接。"><span class="toc-number">1.5.7.1.</span> <span class="toc-text">7.1 添加一个分类页面，并在菜单中显示页面链接。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-为文章添加标签"><span class="toc-number">1.5.7.2.</span> <span class="toc-text">7.2 为文章添加标签</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-添加404网页"><span class="toc-number">1.5.8.</span> <span class="toc-text">8. 添加404网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-头像旋转功能"><span class="toc-number">1.5.9.</span> <span class="toc-text">9. 头像旋转功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-评论系统"><span class="toc-number">1.5.10.</span> <span class="toc-text">10. 评论系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-点击爱心功能"><span class="toc-number">1.5.11.</span> <span class="toc-text">11. 点击爱心功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-Live-2D功能"><span class="toc-number">1.5.12.</span> <span class="toc-text">12. Live 2D功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-图床"><span class="toc-number">1.5.13.</span> <span class="toc-text">12. 图床</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附录：参考资料"><span class="toc-number">1.6.</span> <span class="toc-text">附录：参考资料</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简易博客搭建——Windows系统"><span class="toc-number">1.</span> <span class="toc-text">简易博客搭建——Windows系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、博客分类及搭建工具"><span class="toc-number">1.1.</span> <span class="toc-text">一、博客分类及搭建工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-动态博客-Dynamic-Blog"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 动态博客 Dynamic Blog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-静态博客-Static-blog"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 静态博客 Static blog</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、Git与Github"><span class="toc-number">1.2.</span> <span class="toc-text">二、Git与Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Git安装与配置"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. Git安装与配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Git创建仓库及管理"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. Git创建仓库及管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Git远程仓库"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. Git远程仓库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、利用Hexo搭建博客"><span class="toc-number">1.3.</span> <span class="toc-text">三、利用Hexo搭建博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-准备工作-Nodejs-amp-Git"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 准备工作 Nodejs &amp; Git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Hexo安装及配置"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. Hexo安装及配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-博客部署到远端服务器"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 博客部署到远端服务器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、博客设置美化"><span class="toc-number">1.4.</span> <span class="toc-text">四、博客设置美化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-主题更换-：landscape——yilia"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 主题更换 ：landscape——yilia</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置图片资源和链接资源"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. 配置图片资源和链接资源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-博客文章美化设置"><span class="toc-number">1.4.3.</span> <span class="toc-text">3. 博客文章美化设置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-显示文章摘要"><span class="toc-number">1.4.3.1.</span> <span class="toc-text">3.1 显示文章摘要</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-显示文章目录TOC"><span class="toc-number">1.4.3.2.</span> <span class="toc-text">3.2 显示文章目录TOC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-增加归档菜单"><span class="toc-number">1.4.3.3.</span> <span class="toc-text">3.3 增加归档菜单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-美化目录"><span class="toc-number">1.4.3.4.</span> <span class="toc-text">3.4 美化目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-字体美化"><span class="toc-number">1.4.3.5.</span> <span class="toc-text">3.5 字体美化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-博客主页美化"><span class="toc-number">1.4.4.</span> <span class="toc-text">4. 博客主页美化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-修改博客标题、子标题、用户"><span class="toc-number">1.4.4.1.</span> <span class="toc-text">4.1 修改博客标题、子标题、用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-主页左侧显示文章总数"><span class="toc-number">1.4.4.2.</span> <span class="toc-text">4.2 主页左侧显示文章总数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-设置个人签名"><span class="toc-number">1.4.4.3.</span> <span class="toc-text">4.3 设置个人签名</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、高级功能实现"><span class="toc-number">1.5.</span> <span class="toc-text">五、高级功能实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-微信分享功能"><span class="toc-number">1.5.1.</span> <span class="toc-text">1. 微信分享功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-版权信息功能"><span class="toc-number">1.5.2.</span> <span class="toc-text">2. 版权信息功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-不蒜子统计功能"><span class="toc-number">1.5.3.</span> <span class="toc-text">3. 不蒜子统计功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-字数统计和阅读时长功能"><span class="toc-number">1.5.4.</span> <span class="toc-text">4. 字数统计和阅读时长功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-网易云音乐功能"><span class="toc-number">1.5.5.</span> <span class="toc-text">5. 网易云音乐功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-文章置顶功能"><span class="toc-number">1.5.6.</span> <span class="toc-text">6. 文章置顶功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-添加分类与标签"><span class="toc-number">1.5.7.</span> <span class="toc-text">7. 添加分类与标签</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-添加一个分类页面，并在菜单中显示页面链接"><span class="toc-number">1.5.7.1.</span> <span class="toc-text">7.1 添加一个分类页面，并在菜单中显示页面链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-为文章添加标签"><span class="toc-number">1.5.7.2.</span> <span class="toc-text">7.2 为文章添加标签</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-添加404网页"><span class="toc-number">1.5.8.</span> <span class="toc-text">8. 添加404网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-头像旋转功能"><span class="toc-number">1.5.9.</span> <span class="toc-text">9. 头像旋转功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-评论系统"><span class="toc-number">1.5.10.</span> <span class="toc-text">10. 评论系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-点击爱心功能"><span class="toc-number">1.5.11.</span> <span class="toc-text">11. 点击爱心功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-Live-2D功能"><span class="toc-number">1.5.12.</span> <span class="toc-text">12. Live 2D功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-图床"><span class="toc-number">1.5.13.</span> <span class="toc-text">12. 图床</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#附录：参考资料"><span class="toc-number">1.6.</span> <span class="toc-text">附录：参考资料</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -913,7 +974,13 @@
     		&copy; 2020 Code.Yang
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+		
+			<!-- # PV方式，单个用户连续点击 n 篇，记录 n 次记录值 -->
+			<span id="busuanzi_container_site_pv"> 本站总访问量: <span id="busuanzi_value_site_pv"></span> &</span>
+			<!-- # UV方式，单个用户连续点击 n 篇，记录 1 次记录值 -->
+			<span id="busuanzi_container_site_uv"> 本站总访客数: <span id="busuanzi_value_site_uv"></span></span>
+
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Kikyo
       	</div>
     </div>
   </div>
@@ -941,6 +1008,8 @@ if(!isFinite(o.call(this)))throw RangeError("Invalid time value");var t=this,n=t
 return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var e=r(54),i=r(2),o=e.get,u=e.key;e.exp({getOwnMetadata:function(t,n){return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){var e=r(54),i=r(2),o=r(32),u=e.has,c=e.key,f=function(t,n,r){if(u(t,n,r))return!0;var e=o(n);return null!==e&&f(t,e,r)};e.exp({hasMetadata:function(t,n){return f(t,i(n),arguments.length<3?void 0:c(arguments[2]))}})},function(t,n,r){var e=r(54),i=r(2),o=e.has,u=e.key;e.exp({hasOwnMetadata:function(t,n){return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){var e=r(54),i=r(2),o=r(26),u=e.key,c=e.set;e.exp({metadata:function(t,n){return function(r,e){c(t,n,(void 0!==e?i:o)(r),u(e))}}})},function(t,n,r){var e=r(1);e(e.P+e.R,"Set",{toJSON:r(165)("Set")})},function(t,n,r){"use strict";var e=r(1),i=r(147)(!0);e(e.P,"String",{at:function(t){return i(this,t)}})},function(t,n,r){"use strict";var e=r(1),i=r(46),o=r(16),u=r(122),c=r(120),f=RegExp.prototype,a=function(t,n){this._r=t,this._s=n};r(139)(a,"RegExp String",function(){var t=this._r.exec(this._s);return{value:t,done:null===t}}),e(e.P,"String",{matchAll:function(t){if(i(this),!u(t))throw TypeError(t+" is not a regexp!");var n=String(this),r="flags"in f?String(t.flags):c.call(t),e=new RegExp(t.source,~r.indexOf("g")?r:"g"+r);return e.lastIndex=o(t.lastIndex),new a(e,n)}})},function(t,n,r){"use strict";var e=r(1),i=r(181);e(e.P,"String",{padEnd:function(t){return i(this,t,arguments.length>1?arguments[1]:void 0,!1)}})},function(t,n,r){"use strict";var e=r(1),i=r(181);e(e.P,"String",{padStart:function(t){return i(this,t,arguments.length>1?arguments[1]:void 0,!0)}})},function(t,n,r){"use strict";r(82)("trimLeft",function(t){return function(){return t(this,1)}},"trimStart")},function(t,n,r){"use strict";r(82)("trimRight",function(t){return function(){return t(this,2)}},"trimEnd")},function(t,n,r){r(153)("asyncIterator")},function(t,n,r){r(153)("observable")},function(t,n,r){var e=r(1);e(e.S,"System",{global:r(3)})},function(t,n,r){for(var e=r(155),i=r(28),o=r(3),u=r(27),c=r(80),f=r(7),a=f("iterator"),s=f("toStringTag"),l=c.Array,h=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],v=0;v<5;v++){var p,d=h[v],y=o[d],g=y&&y.prototype;if(g){g[a]||u(g,a,l),g[s]||u(g,s,d),c[d]=l;for(p in e)g[p]||i(g,p,e[p],!0)}}},function(t,n,r){var e=r(1),i=r(151);e(e.G+e.B,{setImmediate:i.set,clearImmediate:i.clear})},function(t,n,r){var e=r(3),i=r(1),o=r(121),u=r(207),c=e.navigator,f=!!c&&/MSIE .\./.test(c.userAgent),a=function(t){return f?function(n,r){return t(o(u,[].slice.call(arguments,2),"function"==typeof n?n:Function(n)),r)}:t};i(i.G+i.B+i.F*f,{setTimeout:a(e.setTimeout),setInterval:a(e.setInterval)})},function(t,n,r){r(330),r(269),r(271),r(270),r(273),r(275),r(280),r(274),r(272),r(282),r(281),r(277),r(278),r(276),r(268),r(279),r(283),r(284),r(236),r(238),r(237),r(286),r(285),r(256),r(266),r(267),r(257),r(258),r(259),r(260),r(261),r(262),r(263),r(264),r(265),r(239),r(240),r(241),r(242),r(243),r(244),r(245),r(246),r(247),r(248),r(249),r(250),r(251),r(252),r(253),r(254),r(255),r(317),r(322),r(329),r(320),r(312),r(313),r(318),r(323),r(325),r(308),r(309),r(310),r(311),r(314),r(315),r(316),r(319),r(321),r(324),r(326),r(327),r(328),r(231),r(233),r(232),r(235),r(234),r(220),r(218),r(224),r(221),r(227),r(229),r(217),r(223),r(214),r(228),r(212),r(226),r(225),r(219),r(222),r(211),r(213),r(216),r(215),r(230),r(155),r(302),r(307),r(184),r(303),r(304),r(305),r(306),r(287),r(183),r(185),r(186),r(342),r(331),r(332),r(337),r(340),r(341),r(335),r(338),r(336),r(339),r(333),r(334),r(288),r(289),r(290),r(291),r(292),r(295),r(293),r(294),r(296),r(297),r(298),r(299),r(301),r(300),r(343),r(369),r(372),r(371),r(373),r(374),r(370),r(375),r(376),r(354),r(357),r(353),r(351),r(352),r(355),r(356),r(346),r(368),r(377),r(345),r(347),r(349),r(348),r(350),r(359),r(360),r(362),r(361),r(364),r(363),r(365),r(366),r(367),r(344),r(358),r(380),r(379),r(378),t.exports=r(52)},function(t,n){function r(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var r=t.nextSibling;return r?t.parentNode.insertBefore(n,r):t.parentNode.appendChild(n)}t.exports=r},,,,,,,,,function(t,n,r){(function(n,r){!function(n){"use strict";function e(t,n,r,e){var i=n&&n.prototype instanceof o?n:o,u=Object.create(i.prototype),c=new p(e||[]);return u._invoke=s(t,r,c),u}function i(t,n,r){try{return{type:"normal",arg:t.call(n,r)}}catch(t){return{type:"throw",arg:t}}}function o(){}function u(){}function c(){}function f(t){["next","throw","return"].forEach(function(n){t[n]=function(t){return this._invoke(n,t)}})}function a(t){function n(r,e,o,u){var c=i(t[r],t,e);if("throw"!==c.type){var f=c.arg,a=f.value;return a&&"object"==typeof a&&m.call(a,"__await")?Promise.resolve(a.__await).then(function(t){n("next",t,o,u)},function(t){n("throw",t,o,u)}):Promise.resolve(a).then(function(t){f.value=t,o(f)},u)}u(c.arg)}function e(t,r){function e(){return new Promise(function(e,i){n(t,r,e,i)})}return o=o?o.then(e,e):e()}"object"==typeof r&&r.domain&&(n=r.domain.bind(n));var o;this._invoke=e}function s(t,n,r){var e=P;return function(o,u){if(e===F)throw new Error("Generator is already running");if(e===M){if("throw"===o)throw u;return y()}for(r.method=o,r.arg=u;;){var c=r.delegate;if(c){var f=l(c,r);if(f){if(f===A)continue;return f}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if(e===P)throw e=M,r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);e=F;var a=i(t,n,r);if("normal"===a.type){if(e=r.done?M:j,a.arg===A)continue;return{value:a.arg,done:r.done}}"throw"===a.type&&(e=M,r.method="throw",r.arg=a.arg)}}}function l(t,n){var r=t.iterator[n.method];if(r===g){if(n.delegate=null,"throw"===n.method){if(t.iterator.return&&(n.method="return",n.arg=g,l(t,n),"throw"===n.method))return A;n.method="throw",n.arg=new TypeError("The iterator does not provide a 'throw' method")}return A}var e=i(r,t.iterator,n.arg);if("throw"===e.type)return n.method="throw",n.arg=e.arg,n.delegate=null,A;var o=e.arg;return o?o.done?(n[t.resultName]=o.value,n.next=t.nextLoc,"return"!==n.method&&(n.method="next",n.arg=g),n.delegate=null,A):o:(n.method="throw",n.arg=new TypeError("iterator result is not an object"),n.delegate=null,A)}function h(t){var n={tryLoc:t[0]};1 in t&&(n.catchLoc=t[1]),2 in t&&(n.finallyLoc=t[2],n.afterLoc=t[3]),this.tryEntries.push(n)}function v(t){var n=t.completion||{};n.type="normal",delete n.arg,t.completion=n}function p(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(h,this),this.reset(!0)}function d(t){if(t){var n=t[w];if(n)return n.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var r=-1,e=function n(){for(;++r<t.length;)if(m.call(t,r))return n.value=t[r],n.done=!1,n;return n.value=g,n.done=!0,n};return e.next=e}}return{next:y}}function y(){return{value:g,done:!0}}var g,b=Object.prototype,m=b.hasOwnProperty,x="function"==typeof Symbol?Symbol:{},w=x.iterator||"@@iterator",S=x.asyncIterator||"@@asyncIterator",_=x.toStringTag||"@@toStringTag",O="object"==typeof t,E=n.regeneratorRuntime;if(E)return void(O&&(t.exports=E));E=n.regeneratorRuntime=O?t.exports:{},E.wrap=e;var P="suspendedStart",j="suspendedYield",F="executing",M="completed",A={},N={};N[w]=function(){return this};var T=Object.getPrototypeOf,I=T&&T(T(d([])));I&&I!==b&&m.call(I,w)&&(N=I);var k=c.prototype=o.prototype=Object.create(N);u.prototype=k.constructor=c,c.constructor=u,c[_]=u.displayName="GeneratorFunction",E.isGeneratorFunction=function(t){var n="function"==typeof t&&t.constructor;return!!n&&(n===u||"GeneratorFunction"===(n.displayName||n.name))},E.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,c):(t.__proto__=c,_ in t||(t[_]="GeneratorFunction")),t.prototype=Object.create(k),t},E.awrap=function(t){return{__await:t}},f(a.prototype),a.prototype[S]=function(){return this},E.AsyncIterator=a,E.async=function(t,n,r,i){var o=new a(e(t,n,r,i));return E.isGeneratorFunction(n)?o:o.next().then(function(t){return t.done?t.value:o.next()})},f(k),k[_]="Generator",k.toString=function(){return"[object Generator]"},E.keys=function(t){var n=[];for(var r in t)n.push(r);return n.reverse(),function r(){for(;n.length;){var e=n.pop();if(e in t)return r.value=e,r.done=!1,r}return r.done=!0,r}},E.values=d,p.prototype={constructor:p,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=g,this.done=!1,this.delegate=null,this.method="next",this.arg=g,this.tryEntries.forEach(v),!t)for(var n in this)"t"===n.charAt(0)&&m.call(this,n)&&!isNaN(+n.slice(1))&&(this[n]=g)},stop:function(){this.done=!0;var t=this.tryEntries[0],n=t.completion;if("throw"===n.type)throw n.arg;return this.rval},dispatchException:function(t){function n(n,e){return o.type="throw",o.arg=t,r.next=n,e&&(r.method="next",r.arg=g),!!e}if(this.done)throw t;for(var r=this,e=this.tryEntries.length-1;e>=0;--e){var i=this.tryEntries[e],o=i.completion;if("root"===i.tryLoc)return n("end");if(i.tryLoc<=this.prev){var u=m.call(i,"catchLoc"),c=m.call(i,"finallyLoc");if(u&&c){if(this.prev<i.catchLoc)return n(i.catchLoc,!0);if(this.prev<i.finallyLoc)return n(i.finallyLoc)}else if(u){if(this.prev<i.catchLoc)return n(i.catchLoc,!0)}else{if(!c)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return n(i.finallyLoc)}}}},abrupt:function(t,n){for(var r=this.tryEntries.length-1;r>=0;--r){var e=this.tryEntries[r];if(e.tryLoc<=this.prev&&m.call(e,"finallyLoc")&&this.prev<e.finallyLoc){var i=e;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=n&&n<=i.finallyLoc&&(i=null);var o=i?i.completion:{};return o.type=t,o.arg=n,i?(this.method="next",this.next=i.finallyLoc,A):this.complete(o)},complete:function(t,n){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&n&&(this.next=n),A},finish:function(t){for(var n=this.tryEntries.length-1;n>=0;--n){var r=this.tryEntries[n];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),v(r),A}},catch:function(t){for(var n=this.tryEntries.length-1;n>=0;--n){var r=this.tryEntries[n];if(r.tryLoc===t){var e=r.completion;if("throw"===e.type){var i=e.arg;v(r)}return i}}throw new Error("illegal catch attempt")},delegateYield:function(t,n,r){return this.delegate={iterator:d(t),resultName:n,nextLoc:r},"next"===this.method&&(this.arg=g),A}}}("object"==typeof n?n:"object"==typeof window?window:"object"==typeof self?self:this)}).call(n,function(){return this}(),r(158))}])</script><script src="/./main.0cf68a.js"></script><script>!function(){!function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)}("/slider.e37972.js")}()</script>
 
 
+
+<script  async  src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
@@ -972,7 +1041,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">个人签名</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">个性签名</a></li>
       
         
     </ul>
@@ -1010,6 +1079,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">npm cnpm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
               </li>
             
             <div class="clearfix"></div>
@@ -1092,7 +1169,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;font color=&#34;purple&#34; face=&#34;Microsoft YaHei&#34; size= 5&gt;&lt;b&gt;待到雄图卷毕&amp;nbsp;隐居山水里&lt;br&gt;坐看炊烟旖旎&amp;nbsp;浅池戏双鲤&lt;br&gt; &lt;/b&gt;&lt;/font&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;font color=&#34;purple&#34; face=&#34;Microsoft YaHei&#34; size= 5&gt;&lt;b&gt;待到雄图卷毕 &amp;nbsp;&amp;nbsp;隐居山水里&lt;br&gt;坐看炊烟旖旎 &amp;nbsp;&amp;nbsp;浅池戏双鲤&lt;br&gt; &lt;/b&gt;&lt;/font&gt;</div>
   	  	
     	</section>
     
