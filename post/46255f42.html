@@ -18,7 +18,7 @@
 <meta property="og:description" content="利用Hexo搭建的一个Yilia主题静态博客，并对博客进行了美化和功能扩展。 主要功能：文章加密、文章置顶、背景音乐、点击爱心、百度统计、不蒜子统计、SEO优化、百度收录、版权信息、Gitalk评论系统、Live2D">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-28T12:18:58.000Z">
-<meta property="article:modified_time" content="2020-07-30T13:19:14.352Z">
+<meta property="article:modified_time" content="2020-07-30T16:04:34.976Z">
 <meta property="article:author" content="Code.Yang">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Blog">
@@ -283,7 +283,7 @@ var _hmt = _hmt || [];
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text" style="font-size: 16px;color: grey">  字数统计: </span>
         <!--这里样式可以自己定制-->
-        <span class="post-count" style="font-size: 16px;color: blue">13.4k字</span>
+        <span class="post-count" style="font-size: 16px;color: blue">13.6k字</span>
       </span>
     </span>
 
@@ -292,7 +292,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text" style="font-size: 16px;color: grey">  阅读时长: </span>
-        <span class="post-count" style="font-size: 16px;color: red">63分</span>
+        <span class="post-count" style="font-size: 16px;color: red">64分</span>
       </span>
     </span>
 </div>
@@ -1528,7 +1528,7 @@ var _hmt = _hmt || [];
 </li>
 <li><p><a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">创建APP应用</a></p>
 <blockquote>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Application name : HexoBlogComment</span></span><br><span class="line"><span class="comment"># Homepage URl : github.com/chthollists</span></span><br><span class="line"><span class="comment"># description</span></span><br><span class="line"><span class="comment"># callback URL : chthollists.github.io</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建APP的相关设置</span></span><br><span class="line"><span class="comment"># APP名称---无限制</span></span><br><span class="line">Application name : HexoBlogComment</span><br><span class="line"><span class="comment"># APP主页URL---无限制</span></span><br><span class="line">Homepage URL : github.com/chthollists</span><br><span class="line"><span class="comment"># APP 描述介绍---无限制</span></span><br><span class="line">description : Gitalk Comment APP </span><br><span class="line"><span class="comment"># 回调地址---重要：取博客主页，要与_config.yml配置文件中的 config.url 一致</span></span><br><span class="line">callback URL : http://mfln8n.coding-pages.com</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>获取Client ID和Client Secret</p>
@@ -1556,10 +1556,27 @@ var _hmt = _hmt || [];
 </li>
 <li><p>最后修改<code>theme/yilia/_config.yml</code></p>
 <blockquote>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">githubID:</span> <span class="string">github帐号</span>     </span><br><span class="line">  <span class="attr">repo:</span> <span class="string">仓库名称</span> <span class="string">(</span> <span class="string">用来存放评论的仓库名</span> <span class="string">)</span> <span class="string">例如：</span> <span class="string">blog-comments</span></span><br><span class="line">  <span class="attr">ClientID:</span> <span class="string">Client</span> <span class="string">ID</span></span><br><span class="line">  <span class="attr">ClientSecret:</span> <span class="string">Client</span> <span class="string">Secret</span></span><br><span class="line">  <span class="attr">adminUser:</span> <span class="string">github帐号#指定可初始化评论账户</span></span><br><span class="line">  <span class="attr">distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">githubID:</span> <span class="string">github帐号</span>     </span><br><span class="line">  <span class="attr">repo:</span> <span class="string">仓库名称</span> <span class="string">(</span> <span class="string">用来存放评论的仓库名</span> <span class="string">)</span>   <span class="string">例如：blog-comments</span></span><br><span class="line">  <span class="attr">ClientID:</span> <span class="string">Client</span> <span class="string">ID</span></span><br><span class="line">  <span class="attr">ClientSecret:</span> <span class="string">Client</span> <span class="string">Secret</span></span><br><span class="line">  <span class="attr">adminUser:</span> <span class="string">github帐号</span>   <span class="comment">#指定可初始化评论账户</span></span><br><span class="line">  <span class="attr">distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span>  <span class="literal">true</span></span><br><span class="line">  <span class="attr">githubID:</span>  <span class="string">'Chthollists'</span>   </span><br><span class="line">  <span class="attr">repo:</span>  <span class="string">'chthollists.github.io'</span> <span class="comment">#这里可以另开一个也可以就用你博客的那个repo</span></span><br><span class="line">  <span class="attr">ClientID:</span>  <span class="string">'xxxxxx'</span></span><br><span class="line">  <span class="attr">ClientSecret:</span>  <span class="string">'xxxxxxxxxxxxxxxxxxxxxxxxx'</span></span><br><span class="line">  <span class="attr">adminUser:</span>  <span class="string">'Chthollists'</span> </span><br><span class="line">  <span class="attr">distractionFreeMode:</span> <span class="literal">true</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span>  <span class="literal">true</span></span><br><span class="line">  <span class="attr">githubID:</span>  <span class="string">'Chthollists'</span>   </span><br><span class="line">  <span class="attr">repo:</span>  <span class="string">'chthollists.github.io'</span> <span class="comment">#这里可以另开一个也可以就用你博客的那个repo</span></span><br><span class="line">  <span class="attr">ClientID:</span>  <span class="string">'xxxxxx'</span></span><br><span class="line">  <span class="attr">ClientSecret:</span>  <span class="string">'xxxxxxxxxxxxxxxxxxxxxxxxx'</span></span><br><span class="line">  <span class="attr">adminUser:</span>  <span class="string">'Chthollists'</span> </span><br><span class="line">  <span class="attr">distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 </blockquote>
+</li>
+<li><p>注意：在Github创建OAuth APP时：</p>
+<ul>
+<li><p>如果博客只部署在一个云端，无论是Github Pages、Gitee Pages、Coding Pages还是个人搭建的云服务器，回调地址callback URL都选择博客主页</p>
+</li>
+<li><p>而当博客双线部署在多个云端时，会出现Error : Network Error 错误，此时回调地址callback URL要与_config.yml配置文件中的 config.url 一致，不然会无法登陆。</p>
+<blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">callback URL:</span> <span class="string">http://mfln8n.coding-pages.com</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>参考：</p>
+<blockquote>
+<p><a href="https://www.cnblogs.com/liuurick/p/10713693.html" target="_blank" rel="noopener">Gitalk评论初始化无法登陆</a></p>
+<p><a href="https://blog.csdn.net/w47_csdn/article/details/88858343" target="_blank" rel="noopener">Gitalk评论初始化登录时跳转回首页</a></p>
+</blockquote>
+</li>
+</ul>
 </li>
 </ul>
 <hr>
@@ -1865,7 +1882,7 @@ if(true){
   var gitalk = new Gitalk({
     clientID: 'ef41cd3f6bb938f5b4c6',
     clientSecret: '0a387b3802665d8a71757a618f93dfd8cb5ec7d8',
-    repo: 'chthollists.github.io',
+    repo: 'Chthollists.github.io',
     owner: 'Chthollists',
     admin: ['Chthollists'],
     id: 'Tue Jul 28 2020 20:18:58 GMT+0800',
@@ -2170,5 +2187,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/poi.model.json"},"display":{"position":"right","width":250,"height":500},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/poi.model.json"},"display":{"position":"right","width":250,"height":300},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>
