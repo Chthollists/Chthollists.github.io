@@ -7,24 +7,22 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://mfln8n.coding-pages.com">
+  <link rel="dns-prefetch" href="https://mfln8n.coding-pages.com">
   <title>简易博客搭建——Windows系统 | Chthollists的平凡之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="利用Hexo搭建的一个Yilia主题静态博客，并对博客进行了美化和功能扩展。 主要功能：文章加密、文章置顶、背景音乐、点击爱心、百度统计、不蒜子统计、SEO优化、百度收录、版权信息、Gitalk评论系统、Live2D">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简易博客搭建——Windows系统">
-<meta property="og:url" content="http://mfln8n.coding-pages.com/post/46255f42.html">
+<meta property="og:url" content="https://mfln8n.coding-pages.com/post/46255f42.html">
 <meta property="og:site_name" content="Chthollists的平凡之路">
 <meta property="og:description" content="利用Hexo搭建的一个Yilia主题静态博客，并对博客进行了美化和功能扩展。 主要功能：文章加密、文章置顶、背景音乐、点击爱心、百度统计、不蒜子统计、SEO优化、百度收录、版权信息、Gitalk评论系统、Live2D">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-28T12:18:58.000Z">
-<meta property="article:modified_time" content="2020-07-30T16:04:34.976Z">
+<meta property="article:modified_time" content="2020-07-31T02:11:42.635Z">
 <meta property="article:author" content="Code.Yang">
 <meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="Blog">
 <meta property="article:tag" content="Git">
 <meta property="article:tag" content="Node.js">
-<meta property="article:tag" content="npm cnpm">
 <meta property="article:tag" content="Live2D">
 <meta name="twitter:card" content="summary">
   
@@ -146,9 +144,9 @@ var _hmt = _hmt || [];
 			</div>
 				<!-- 网易云音乐插件 -->
 				
-					<div style="position:absolute; bottom:120px left:auto; width:85%">
-						<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=224 height=60 src="https://music.163.com/outchain/player?type=0&id=5148805465&auto=1&height=32"></iframe>
-					</div>
+				<div style="position:absolute; bottom:120px left:auto; width:85%">
+					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=228 height=52 src="//music.163.com/outchain/player?type=4&id=349623778&auto=0&height=32"></iframe>
+				</div>
 				
 		</nav>
 		
@@ -1539,7 +1537,7 @@ var _hmt = _hmt || [];
 <li><p>新建Gitalk文件</p>
 <blockquote>
 <p>新建ejs文件<code>layout/_partial/post/gitalk.ejs</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;gitalk-container&quot; style&#x3D;&quot;padding: 0px 30px 0px 30px;&quot;&gt;&lt;&#x2F;div&gt; </span><br><span class="line"></span><br><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;gitalk@1&#x2F;dist&#x2F;gitalk.css&quot;&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;gitalk@1&#x2F;dist&#x2F;gitalk.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">if(&lt;%&#x3D;theme.gitalk.enable%&gt;)&#123;</span><br><span class="line">  var gitalk &#x3D; new Gitalk(&#123;</span><br><span class="line">    clientID: &#39;&lt;%&#x3D;theme.gitalk.ClientID%&gt;&#39;,</span><br><span class="line">    clientSecret: &#39;&lt;%&#x3D;theme.gitalk.ClientSecret%&gt;&#39;,</span><br><span class="line">    repo: &#39;&lt;%&#x3D;theme.gitalk.repo%&gt;&#39;,</span><br><span class="line">    owner: &#39;&lt;%&#x3D;theme.gitalk.githubID%&gt;&#39;,</span><br><span class="line">    admin: [&#39;&lt;%&#x3D;theme.gitalk.adminUser%&gt;&#39;],</span><br><span class="line">    id: &#39;&lt;%&#x3D; page.date %&gt;&#39;,</span><br><span class="line">    distractionFreeMode: &#39;&lt;%&#x3D;theme.gitalk.distractionFreeMode%&gt;&#39;</span><br><span class="line">&#125;)</span><br><span class="line">gitalk.render(&#39;gitalk-container&#39;) </span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;gitalk-container&quot; style&#x3D;&quot;padding: 0px 30px 0px 30px;&quot;&gt;&lt;&#x2F;div&gt; </span><br><span class="line"></span><br><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;gitalk@1&#x2F;dist&#x2F;gitalk.css&quot;&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;gitalk@1&#x2F;dist&#x2F;gitalk.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line">if(&lt;%&#x3D;theme.gitalk.enable%&gt;)&#123;</span><br><span class="line">var gitalk &#x3D; new Gitalk(&#123;</span><br><span class="line"> clientID: &#39;&lt;%&#x3D;theme.gitalk.ClientID%&gt;&#39;,</span><br><span class="line"> clientSecret: &#39;&lt;%&#x3D;theme.gitalk.ClientSecret%&gt;&#39;,</span><br><span class="line"> repo: &#39;&lt;%&#x3D;theme.gitalk.repo%&gt;&#39;,</span><br><span class="line"> owner: &#39;&lt;%&#x3D;theme.gitalk.githubID%&gt;&#39;,</span><br><span class="line"> admin: [&#39;&lt;%&#x3D;theme.gitalk.adminUser%&gt;&#39;],</span><br><span class="line"> id: &#39;&lt;%&#x3D; page.date %&gt;&#39;,</span><br><span class="line"> distractionFreeMode: &#39;&lt;%&#x3D;theme.gitalk.distractionFreeMode%&gt;&#39;</span><br><span class="line"> pageSize: &quot;&lt;%&#x3D; theme.gitalk.pageSize %&gt;&quot;</span><br><span class="line">&#125;)</span><br><span class="line">gitalk.render(&#39;gitalk-container&#39;) </span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>修改文件comment.scss</p>
@@ -1551,14 +1549,14 @@ var _hmt = _hmt || [];
 <li><p>修改<code>layout/_partial/article.ejs</code></p>
 <blockquote>
 <p>文件内新增gitalk相关的配置代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if(theme.gitalk.enable)&#123; %&gt;</span><br><span class="line">  &lt;%- partial(&#39;post&#x2F;gitalk&#39;, &#123;</span><br><span class="line">      key: post.slug,</span><br><span class="line">      title: post.title,</span><br><span class="line">      url: config.url+url_for(post.path)</span><br><span class="line">    &#125;) %&gt;</span><br><span class="line">  &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if ((theme.gitalk_type &#x3D;&#x3D;&#x3D; 2 || (theme.gitalk_type &#x3D;&#x3D;&#x3D; 1 &amp;&amp; post.gitalkenbale)) &amp;&amp; !index)&#123; %&gt;</span><br><span class="line">&lt;% if(theme.gitalk.enable)&#123; %&gt;</span><br><span class="line">&lt;%- partial(&#39;post&#x2F;gitalk&#39;, &#123;</span><br><span class="line">   key: post.slug,</span><br><span class="line">   title: post.title,</span><br><span class="line">   url: config.url+url_for(post.path)</span><br><span class="line"> &#125;) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>最后修改<code>theme/yilia/_config.yml</code></p>
 <blockquote>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">githubID:</span> <span class="string">github帐号</span>     </span><br><span class="line">  <span class="attr">repo:</span> <span class="string">仓库名称</span> <span class="string">(</span> <span class="string">用来存放评论的仓库名</span> <span class="string">)</span>   <span class="string">例如：blog-comments</span></span><br><span class="line">  <span class="attr">ClientID:</span> <span class="string">Client</span> <span class="string">ID</span></span><br><span class="line">  <span class="attr">ClientSecret:</span> <span class="string">Client</span> <span class="string">Secret</span></span><br><span class="line">  <span class="attr">adminUser:</span> <span class="string">github帐号</span>   <span class="comment">#指定可初始化评论账户</span></span><br><span class="line">  <span class="attr">distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk_type:</span>  <span class="number">1</span> <span class="comment">#0 关闭评论  2全开评论  1需要再文章md开头加入gitalkenbale: true</span></span><br><span class="line"><span class="attr">gitalk:</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">githubID:</span> <span class="string">github帐号</span>     </span><br><span class="line"><span class="attr">repo:</span> <span class="string">仓库名称</span> <span class="string">(</span> <span class="string">用来存放评论的仓库名</span> <span class="string">)</span>   <span class="string">例如：blog-comments</span></span><br><span class="line"><span class="attr">ClientID:</span> <span class="string">Client</span> <span class="string">ID</span></span><br><span class="line"><span class="attr">ClientSecret:</span> <span class="string">Client</span> <span class="string">Secret</span></span><br><span class="line"><span class="attr">adminUser:</span> <span class="string">github帐号</span>   <span class="comment">#指定可初始化评论账户</span></span><br><span class="line"><span class="attr">distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span>  <span class="literal">true</span></span><br><span class="line">  <span class="attr">githubID:</span>  <span class="string">'Chthollists'</span>   </span><br><span class="line">  <span class="attr">repo:</span>  <span class="string">'chthollists.github.io'</span> <span class="comment">#这里可以另开一个也可以就用你博客的那个repo</span></span><br><span class="line">  <span class="attr">ClientID:</span>  <span class="string">'xxxxxx'</span></span><br><span class="line">  <span class="attr">ClientSecret:</span>  <span class="string">'xxxxxxxxxxxxxxxxxxxxxxxxx'</span></span><br><span class="line">  <span class="attr">adminUser:</span>  <span class="string">'Chthollists'</span> </span><br><span class="line">  <span class="attr">distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line"><span class="attr">enable:</span>  <span class="literal">true</span></span><br><span class="line"><span class="attr">githubID:</span>  <span class="string">'Chthollists'</span>   </span><br><span class="line"><span class="attr">repo:</span>  <span class="string">'chthollists.github.io'</span> <span class="comment">#这里可以另开一个也可以就用你博客的那个repo</span></span><br><span class="line"><span class="attr">ClientID:</span>  <span class="string">'xxxxxx'</span></span><br><span class="line"><span class="attr">ClientSecret:</span>  <span class="string">'xxxxxxxxxxxxxxxxxxxxxxxxx'</span></span><br><span class="line"><span class="attr">adminUser:</span>  <span class="string">'Chthollists'</span> </span><br><span class="line"><span class="attr">distractionFreeMode:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>注意：在Github创建OAuth APP时：</p>
@@ -1652,7 +1650,33 @@ var _hmt = _hmt || [];
 
 <!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
 
-  <div class="declare" hidden="hidden"></div>
+  <div class="declare">
+    <strong class="author">本文作者：</strong>
+    
+      Code.Yang
+    
+    <br>
+    <strong class="create-time">发布时间：</strong>
+    2020-07-28 20:18:58
+    <br>
+    <strong class="update-time">最后更新：</strong>
+    2020-07-31 10:11:42
+    <br>
+    <strong class="article-titles">本文标题：</strong>
+    <a href="https://chthollists.github.io/post/46255f42.html" title="简易博客搭建——Windows系统" target="_blank">简易博客搭建——Windows系统</a>
+    <br>
+    <strong class="article-url">本文链接：</strong>
+    <a href="https://chthollists.github.io/post/46255f42.html" title="简易博客搭建——Windows系统" target="_blank">https://chthollists.github.io/post/46255f42.html</a>
+    <br>
+    <strong class="copyright">版权声明：</strong>
+    本作品采用
+    <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议">CC BY-NC-SA 4.0</a>
+    许可协议进行许可。转载请注明作者和出处！
+    
+      <br>
+      <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+    
+  </div>
 
 <!-- 添加版权声明》 -->
         
@@ -1711,19 +1735,11 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Blog</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">npm cnpm</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -1794,7 +1810,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://chthollists.github.io/-pages.com/post/46255f42.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://chthollists.github.io/g-pages.com/post/46255f42.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -1872,7 +1888,8 @@ var _hmt = _hmt || [];
 
 
 
-  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
+
+<div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
@@ -1887,11 +1904,13 @@ if(true){
     admin: ['Chthollists'],
     id: 'Tue Jul 28 2020 20:18:58 GMT+0800',
     distractionFreeMode: 'true'
+
 })
 gitalk.render('gitalk-container') 
 }
 </script>
-  
+
+
 
           </div>
         </div>
@@ -2010,14 +2029,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
@@ -2026,11 +2037,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">npm cnpm</a>
+                <a href="javascript:void(0)" class="js-tag color2">Live2D</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Live2D</a>
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
               </li>
             
             <div class="clearfix"></div>
@@ -2082,7 +2097,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="http://mfln8n.coding-pages.com" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
             </li>
           
             <li class="search-li">
