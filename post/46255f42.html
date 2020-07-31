@@ -7,13 +7,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="https://mfln8n.coding-pages.com">
+  <link rel="dns-prefetch" href="https://chthollists.github.io">
   <title>简易博客搭建——Windows系统 | Chthollists的平凡之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="利用Hexo搭建的一个Yilia主题静态博客，并对博客进行了美化和功能扩展。 主要功能：文章加密、文章置顶、背景音乐、点击爱心、百度统计、不蒜子统计、SEO优化、百度收录、版权信息、Gitalk评论系统、Live2D">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简易博客搭建——Windows系统">
-<meta property="og:url" content="https://mfln8n.coding-pages.com/post/46255f42.html">
+<meta property="og:url" content="https://chthollists.github.io/post/46255f42.html">
 <meta property="og:site_name" content="Chthollists的平凡之路">
 <meta property="og:description" content="利用Hexo搭建的一个Yilia主题静态博客，并对博客进行了美化和功能扩展。 主要功能：文章加密、文章置顶、背景音乐、点击爱心、百度统计、不蒜子统计、SEO优化、百度收录、版权信息、Gitalk评论系统、Live2D">
 <meta property="og:locale" content="zh_CN">
@@ -124,7 +124,7 @@ var _hmt = _hmt || [];
 		</nav>
 		
 		<!-- # <nav>
-				Total: 8
+				Total: 9
 			</nav> -->
 			
 		
@@ -1439,7 +1439,7 @@ var _hmt = _hmt || [];
 <h3 id="14-百度推送收录功能"><a href="#14-百度推送收录功能" class="headerlink" title="14. 百度推送收录功能"></a>14. 百度推送收录功能</h3><ul>
 <li>除了通过提交SiteMap文件推送网站的地址外，还有自动提交：主动推送、自动推送，手动提交方式。详情参考<a href="https://zhuanlan.zhihu.com/p/100922816" target="_blank" rel="noopener">Hexo实现百度收录</a></li>
 <li>由于Github Pages上禁止百度爬虫，所以需要把Hexo博客部署到双线服务器上，选择Coding Pages，详情参考<a href="https://blog.csdn.net/qq_36759224/article/details/100879609" target="_blank" rel="noopener">Hexo双线部署CodingPages</a></li>
-<li><a href="http://mfln8n.coding-pages.com/">Hexo博客+Coding Pages</a></li>
+<li><a href="http://mfln8n.coding-pages.com/" target="_blank" rel="noopener">Hexo博客+Coding Pages</a></li>
 </ul>
 <h4 id="14-1-新增博客文章页面自动推送"><a href="#14-1-新增博客文章页面自动推送" class="headerlink" title="14.1 新增博客文章页面自动推送"></a>14.1 新增博客文章页面自动推送</h4><ul>
 <li><p>修改文件 &lt;博客根目录&gt;/themes/yilia/layout/_partial/article.ejs</p>
@@ -1873,7 +1873,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://chthollists.github.io/g-pages.com/post/46255f42.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://chthollists.github.io/github.io/post/46255f42.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -1985,7 +1985,7 @@ gitalk.render('gitalk-container')
 		
 			<!-- # <font color="purple" face="Microsoft YaHei" size= 5><b>内容<br> </b></font> -->
 			
-    		<font color="red" face="Microsoft YaHei" size= 3><b>&copy; 2020 Code.Yang&nbsp;&nbsp;总文章数: 8</b></font>
+    		<font color="red" face="Microsoft YaHei" size= 3><b>&copy; 2020 Code.Yang&nbsp;&nbsp;总文章数: 9</b></font>
 			
     	</div>
       	<div class="footer-right">
@@ -2032,6 +2032,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 <!--页面点击小红心-->
 <script type="text/javascript" src="/clicklove.js"></script>
+
+ <!-- 雪花特效2 -->
+
+  <script type="text/javascript" src="/snow2.js"></script>
+ 
     
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
@@ -2265,5 +2270,43 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
+  
+  
+ <!--代码雨-->
+
+
+<!--动态线条背景-->
+
+    <script type="text/javascript" color="219,112,147" opacity="0.8" 
+        zIndex="100" count="150" 
+        src="/canvas-nest.min.js">
+    </script>
+
+
+
+<!--雪花特效-->
+
+  <script type="text/javascript" src="/snow.js"></script>
+  <script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
+  <script>
+    snow.down();
+    $(window).resize(function() {
+      $("canvas").css("z-index","500").remove();
+      snow.down();
+    });
+  </script>
+  
+  
+ <!-- 雪花特效2 -->
+
+  <script type="text/javascript" src="/snow2.js"></script>
+  <script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
+ 
+  
+  
+  
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/poi.model.json"},"display":{"position":"right","width":250,"height":300},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>
+
+
+
