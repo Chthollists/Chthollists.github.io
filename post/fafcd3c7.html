@@ -8,19 +8,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://chthollists.github.io">
-  <title>HexoBlog Chapter2 | Chthollists的平凡之路</title>
+  <title>Hexo博客搭建系列Chapter2——Git教程 | Chthollists的平凡之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="HexoBlog Chapter2">
+  <meta name="description" content="在Windows系统上利用Hexo搭建博客系列——Chapter2 Chapter2：主要分享了利用Hexo搭建博客的前提条件 Git 分布式版本控制系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客搭建系列Chapter2——Git教程">
 <meta property="og:url" content="https://chthollists.github.io/post/fafcd3c7.html">
 <meta property="og:site_name" content="Chthollists的平凡之路">
+<meta property="og:description" content="在Windows系统上利用Hexo搭建博客系列——Chapter2 Chapter2：主要分享了利用Hexo搭建博客的前提条件 Git 分布式版本控制系统">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-31T07:48:05.000Z">
-<meta property="article:modified_time" content="2020-07-31T08:03:20.123Z">
+<meta property="article:modified_time" content="2020-07-31T11:44:59.535Z">
 <meta property="article:author" content="Code.Yang">
-<meta property="article:tag" content="Code">
-<meta property="article:tag" content="Python">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Git">
+<meta property="article:tag" content="Github">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Chthollists的平凡之路" type="application/atom+xml">
@@ -121,7 +122,7 @@ var _hmt = _hmt || [];
 		</nav>
 		
 		<!-- # <nav>
-				Total: 9
+				Total: 14
 			</nav> -->
 			
 		
@@ -142,7 +143,7 @@ var _hmt = _hmt || [];
 				<!-- 网易云音乐插件 -->
 				
 				<div style="position:absolute; bottom:120px left:auto; width:85%">
-					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=228 height=52 src="//music.163.com/outchain/player?type=4&id=349623778&auto=0&height=32"></iframe>
+					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=218 height=52 src="//music.163.com/outchain/player?type=4&id=349623778&auto=0&height=32"></iframe>
 				</div>
 				
 		</nav>
@@ -244,7 +245,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      HexoBlog Chapter2
+      Hexo博客搭建系列Chapter2——Git教程
     </h1>
   
 
@@ -275,7 +276,7 @@ var _hmt = _hmt || [];
         <i class="fa fa-keyboard-o"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  博文字数统计 : </span></b></font>
         <!--自定义样式-->
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">0字</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">1.8k字</span>
       </span></b></font>
     </span>
 
@@ -284,7 +285,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  阅读所需时长 : </span></b></font>
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">1分</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">7分</span>
       </span></b></font>
     </span>
 </div>
@@ -306,7 +307,7 @@ var _hmt = _hmt || [];
 	<div id="toc-article" class="toc-article">
 	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 		<strong class="toc-title">文章目录</strong>
-           
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo博客搭建系列——Chapter-2"><span class="toc-number">1.</span> <span class="toc-text">Hexo博客搭建系列——Chapter 2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二、Git与Github"><span class="toc-number">1.1.</span> <span class="toc-text">二、Git与Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Git安装与配置"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. Git安装与配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Git创建仓库及管理"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. Git创建仓库及管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Git远程仓库"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. Git远程仓库</span></a></li></ol></li></ol></li></ol>
          </div>
    <script type="text/javascript">
 	function showToc(){
@@ -327,7 +328,192 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <hr>
+<ul>
+<li>在Windows系统上利用Hexo搭建博客系列——Chapter2</li>
+<li>Chapter2：主要分享了利用Hexo搭建博客的前提条件 Git 分布式版本控制系统</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="Hexo博客搭建系列——Chapter-2"><a href="#Hexo博客搭建系列——Chapter-2" class="headerlink" title="Hexo博客搭建系列——Chapter 2"></a>Hexo博客搭建系列——Chapter 2</h1><hr>
+<h2 id="二、Git与Github"><a href="#二、Git与Github" class="headerlink" title="二、Git与Github"></a>二、Git与Github</h2><ul>
+<li><p>教程</p>
+<blockquote>
+<p><a href="https://www.liaoxuefeng.com/" target="_blank" rel="noopener">Git教程——廖雪峰</a></p>
+<p><a href="https://blog.csdn.net/qq_39387475/article/details/84996173" target="_blank" rel="noopener">Git教程</a></p>
+</blockquote>
+</li>
+</ul>
+<h3 id="1-Git安装与配置"><a href="#1-Git安装与配置" class="headerlink" title="1. Git安装与配置"></a>1. Git安装与配置</h3><ul>
+<li><p>Git 分布式版本控制系统原理</p>
+<blockquote>
+<p>版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，无法追踪图片、音频、视频等的改动。</p>
+</blockquote>
+<ul>
+<li><p>工作区(Working Directory)：就是电脑本地看到的目录。</p>
+</li>
+<li><p>暂存区：英文叫stage, 或index。</p>
+<blockquote>
+<p>一般存放在 “.git目录下” 下的index文件（.git/index）中，所以我们把暂存区有时也叫作索引（index）。</p>
+</blockquote>
+</li>
+<li><p>版本库(Repository)：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。</p>
+</li>
+</ul>
+</li>
+<li><p>安装包下载</p>
+<blockquote>
+<p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git官网</a></p>
+</blockquote>
+</li>
+<li><p>在Git bash中配置本地用户名及邮箱</p>
+<blockquote>
+<p>如果用了 –global 选项，那么更改的配置文件就是位于你用户主目录下的那个，以后你所有的项目都会默认使用这里配置的用户信息。</p>
+<p>如果要在某个特定的项目中使用其他名字或者电邮，只要去掉 –global 选项重新配置即可，新的设定保存在当前项目的 .git/config 文件里。</p>
+</blockquote>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看配置</span></span><br><span class="line">git config --list ：</span><br><span class="line"><span class="comment"># 设置全局用户名</span></span><br><span class="line">git config --global user.name "your name"   </span><br><span class="line"><span class="comment"># 设置全局邮箱</span></span><br><span class="line">git config --global user.email "your email" </span><br><span class="line"><span class="comment"># 查看本目录下仓库的用户名</span></span><br><span class="line">git config user.name</span><br><span class="line"><span class="comment"># 修改本目录下仓库的用户名</span></span><br><span class="line">git config user.name "用户名"</span><br><span class="line"><span class="comment"># 查看本目录下仓库的邮箱 ；</span></span><br><span class="line">git config user.email </span><br><span class="line"><span class="comment"># 修改本目录下仓库的邮箱 ； </span></span><br><span class="line">git config user.email "邮箱"   </span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>编辑、删除全局配置</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除全局配置，终端执行命令</span></span><br><span class="line">git config --global --unset user.name</span><br><span class="line"></span><br><span class="line"><span class="comment"># 编辑配置文件</span></span><br><span class="line">git config --global --edit</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="2-Git创建仓库及管理"><a href="#2-Git创建仓库及管理" class="headerlink" title="2. Git创建仓库及管理"></a>2. Git创建仓库及管理</h3><blockquote>
+<p>所有命令均在Git bash 命令行中完成 $</p>
+</blockquote>
+<ul>
+<li><p>创建仓库</p>
+<ul>
+<li><p>在路径下创建空目录</p>
+<blockquote>
+<p>可以修改新建路径，默认C/Users/you</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir newrepo</span><br><span class="line">cd newrepo</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>在新建的目录下完成初始化</p>
+<blockquote>
+<p>在目录下会出现一个名为 .git 的目录，所有 Git 需要的数据和资源都存放在这个目录中</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line"><span class="comment"># 或者直接把创建目录和初始化一步完成</span></span><br><span class="line">git init newrepo</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>本地仓库管理(文件版本管理)</p>
+<blockquote>
+<p>所有要管理的文件必须放在仓库中</p>
+</blockquote>
+<ul>
+<li><p>添加文件</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 把文件从工作区Working Directory添加到缓存index</span></span><br><span class="line"><span class="comment">#  git add 文件名</span></span><br><span class="line"><span class="comment"># 文件名有空格时，需要写在引号中</span></span><br><span class="line">git add CodeAlgorithm.md</span><br><span class="line"><span class="comment"># 把全部文件添加到缓存区</span></span><br><span class="line">git add --all</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把文件从缓存区index提交到Git仓库中master</span></span><br><span class="line"><span class="comment"># 可以一次提交多个文件，即多次add后再commit</span></span><br><span class="line"><span class="comment"># git commit -m "提交说明"</span></span><br><span class="line">git commit -m "test"</span><br><span class="line"><span class="comment"># 跳过添加成缓存步骤，直接添加到仓库中  -a</span></span><br><span class="line">git commit -a</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>查看改动</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看缓存区index文件</span></span><br><span class="line"><span class="comment"># A 表示缓存区</span></span><br><span class="line"><span class="comment"># AM 表示该文件添加进缓存区后被改动过，此时需要再次add</span></span><br><span class="line"><span class="comment"># ??表示不再缓存区</span></span><br><span class="line">git status -s</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看具体改动</span></span><br><span class="line"><span class="comment"># 查看执行 git status 的结果的详细信息</span></span><br><span class="line"><span class="comment"># 尚未缓存的改动</span></span><br><span class="line">git diff</span><br><span class="line"><span class="comment"># 查看已缓存的改动</span></span><br><span class="line">git diff --cached</span><br><span class="line"><span class="comment"># 查看已缓存的与未缓存的所有改动</span></span><br><span class="line">git diff HEAD</span><br><span class="line"><span class="comment"># 显示摘要而非整个 diff</span></span><br><span class="line">git diff --stat</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li><p>查看历史记录</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 详细历史日志</span></span><br><span class="line">git log</span><br><span class="line"><span class="comment"># 单行简易输出</span></span><br><span class="line">git log --pretty=oneline</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>文件版本回溯</p>
+</li>
+</ul>
+<blockquote>
+<p>在Git中，用<code>HEAD</code>表示当前版本，上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，往上100个版本简写成<code>HEAD~100</code>。</p>
+<p>Git在内部有个指向当前版本的<code>HEAD</code>指针，回溯版本实际上是改变指针的对象。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 版本回溯 --旧版</span></span><br><span class="line"><span class="comment"># git reset 版本(HEAD表示法、或者log下显示的版本号---输入前几位即可自动匹配)</span></span><br><span class="line">git reset --hard HEAD^</span><br><span class="line">git reset --hard xxxxxx</span><br><span class="line"></span><br><span class="line"><span class="comment"># 版本回溯 --新版</span></span><br><span class="line"><span class="comment"># 从master恢复暂存区</span></span><br><span class="line">git resotre --worktree File</span><br><span class="line"><span class="comment"># 从暂存区恢复工作区</span></span><br><span class="line">git restore --staged </span><br><span class="line"><span class="comment"># 从master同时恢复工作区和暂存区</span></span><br><span class="line">git restore --source=HEAD --staged --worktree 文件名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看当前记录、版本号</span></span><br><span class="line">git log</span><br><span class="line"><span class="comment"># 查看之前指令的相关记录---可以看到版本号</span></span><br><span class="line">git reflog</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li><p>文件撤销修改</p>
+<blockquote>
+<p>把文件在工作区的修改全部撤销，这里有两种情况：</p>
+</blockquote>
+<ul>
+<li>一种是文件自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>一种是文件已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</p>
+<ul>
+<li>总之，就是让这个文件回到最近一次<code>git commit</code>或<code>git add</code>时的状态。</li>
+</ul>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 旧版</span></span><br><span class="line">git checkout -- 文件名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新版</span></span><br><span class="line">git restore 文件名</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li><p>文件删除与恢复</p>
+<blockquote>
+<p>工作区的文件被删除后，在删除版本库中的文件</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rm  文件名</span><br><span class="line">git commit -m "说明remove "</span><br></pre></td></tr></table></figure>
+
+<p>工作区的文佳误删后，通过版本库恢复文件</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm '文件名'</span><br><span class="line">git restore 文件名</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li><p>创建、切换、删除分支</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认主分支master</span></span><br><span class="line"><span class="comment"># 创建一个叫做"feature_x"的分支，并切换过去：-b</span></span><br><span class="line">git checkout -b feature_x</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换回主分支：</span></span><br><span class="line">git checkout master</span><br><span class="line"></span><br><span class="line"><span class="comment"># 再把新建的分支删掉：-d</span></span><br><span class="line">git branch -d feature_x</span><br><span class="line"></span><br><span class="line"><span class="comment"># 除非你将分支推送到远端仓库，不然该分支就是 不为他人所见的：</span></span><br><span class="line">git push origin &lt;branch&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="3-Git远程仓库"><a href="#3-Git远程仓库" class="headerlink" title="3. Git远程仓库"></a>3. Git远程仓库</h3><blockquote>
+<p>将文件push到远程仓库的流程</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在目标路径下Git bash</span></span><br><span class="line">git init</span><br><span class="line">git add -all</span><br><span class="line">git commit -m 'readme'</span><br><span class="line">git remote add origin git@server-name:path/repo-name.git</span><br><span class="line"><span class="comment"># git remote -v</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li><p>创建SSH Key</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 会在用户主目录下，生成.ssh目录，里面有id_rsa私钥、id_ras.pub公钥文件</span><br><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p><a href="mailto:youremail@example.com">youremail@example.com</a>使用注册Github、Gitee时的邮箱</p>
+</blockquote>
+</li>
+<li><p>登陆Github，Add SSH Key</p>
+<blockquote>
+<p>打开“Account settings”，“SSH Keys”页面，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴<code>id_rsa.pub</code>文件的内容</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 验证是否成功</span></span><br><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>在Github上创建新的库并关联remote，将本地库推送到远程库push</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 关联远程库</span></span><br><span class="line">git remote add origin git@server-name:path/repo-name.git</span><br><span class="line">git remote add origin(远程库名，默认origin) git@github.com:Github用户名/远程库名</span><br><span class="line">git remote add origin git@github.com:Amaduess/newrepo.git</span><br><span class="line"><span class="comment"># 删除已有的关联origin</span></span><br><span class="line">git remote rm origin</span><br><span class="line"><span class="comment"># 查看现有的关联</span></span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># 推送push</span></span><br><span class="line"><span class="comment"># 第一次push -u 将本地master与远程master关联</span></span><br><span class="line">git push -u origin master</span><br><span class="line"><span class="comment"># 之后push</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>从远程库克隆到本地库</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone git@server-name:path/repo-name.git</span><br><span class="line">git clone git@github.com:Github用户名/远程库名</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>克隆后可以更新本地库pull</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在当前工作目录中 获取（fetch） 并 合并（merge） 远端的改动</span></span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>其他</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 内建的图形化 git：</span></span><br><span class="line">gitk</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建标签</span></span><br><span class="line">git tag 1.0.0  ID(前十位字符)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 彩色的 git 输出：</span></span><br><span class="line">git config color.ui true</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示历史记录时，每个提交的信息只显示一行：</span></span><br><span class="line">git config format.pretty oneline</span><br><span class="line"></span><br><span class="line"><span class="comment"># 交互式添加文件到暂存区：</span></span><br><span class="line">git add -i</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+
       
 	  
 <!-- 《添加版权声明 -->
@@ -347,13 +533,13 @@ var _hmt = _hmt || [];
     2020-07-31 15:48:05
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-07-31 16:03:20
+    2020-07-31 19:44:59
     <br>
     <strong class="article-titles">本文标题：</strong>
-    <a href="https://chthollists.github.io/post/fafcd3c7.html" title="HexoBlog Chapter2" target="_blank">HexoBlog Chapter2</a>
+    <a href="https://chthollists.github.io/post/fafcd3c7.html" title="Hexo博客搭建系列Chapter2——Git教程" target="_blank">Hexo博客搭建系列Chapter2——Git教程</a>
     <br>
     <strong class="article-url">本文链接：</strong>
-    <a href="https://chthollists.github.io/post/fafcd3c7.html" title="HexoBlog Chapter2" target="_blank">https://chthollists.github.io/post/fafcd3c7.html</a>
+    <a href="https://chthollists.github.io/post/fafcd3c7.html" title="Hexo博客搭建系列Chapter2——Git教程" target="_blank">https://chthollists.github.io/post/fafcd3c7.html</a>
     <br>
     <strong class="copyright">版权声明：</strong>
     本作品采用
@@ -408,7 +594,33 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Github</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/others//" class="article-tag-list-link color2">others</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -476,14 +688,14 @@ var _hmt = _hmt || [];
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          HexoBlog Chapter3
+          Hexo博客搭建系列Chapter3——Hexo教程
         
       </div>
     </a>
   
   
     <a href="/post/63f5827d.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">HexoBlog Chapter1</div>
+      <div class="article-nav-title">Hexo博客搭建系列Chapter1——简介</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -510,7 +722,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    该文章没有设置目录......
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo博客搭建系列——Chapter-2"><span class="toc-number">1.</span> <span class="toc-text">Hexo博客搭建系列——Chapter 2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二、Git与Github"><span class="toc-number">1.1.</span> <span class="toc-text">二、Git与Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Git安装与配置"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. Git安装与配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Git创建仓库及管理"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. Git创建仓库及管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Git远程仓库"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. Git远程仓库</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -570,7 +782,7 @@ gitalk.render('gitalk-container')
 		
 			<!-- # <font color="purple" face="Microsoft YaHei" size= 5><b>内容<br> </b></font> -->
 			
-    		<font color="red" face="Microsoft YaHei" size= 3><b>&copy; 2020 Code.Yang&nbsp;&nbsp;总文章数: 9</b></font>
+    		<font color="red" face="Microsoft YaHei" size= 3><b>&copy; 2020 Code.Yang&nbsp;&nbsp;总文章数: 14</b></font>
 			
     	</div>
       	<div class="footer-right">
@@ -587,7 +799,12 @@ gitalk.render('gitalk-container')
       	</div>
     </div>
   </div>
+
+
 </footer>
+
+
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -618,10 +835,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 <!--页面点击小红心-->
 <script type="text/javascript" src="/clicklove.js"></script>
 
- <!-- 雪花特效2 -->
 
-  <script type="text/javascript" src="/snow2.js"></script>
- 
     
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
@@ -678,6 +892,130 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hugo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">WordPress</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VuePress</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Jekyllrb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">toc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">busuanzi</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Live2D</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Coding Pages</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gitalk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">hexo-deployer-git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">top</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">api.qrserver.com</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Valine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Leancloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Gitment</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">hexo-helper-live2d</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">declare</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">love</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo-wordcount</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">hexo-blog-encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SEO</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">SiteMap</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Robots</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">hexo-baidu-url-submit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">baidu-analytics</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Blog</a>
               </li>
              
@@ -686,19 +1024,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Live2D</a>
               </li>
             
             <div class="clearfix"></div>
@@ -859,14 +1185,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
   
  <!--代码雨-->
 
+      <!-- 数字雨 -->
+      <canvas id="code_rain_canvas" width="1440" height="900"></canvas>
+      <script type="text/javascript" src="/code_rain.js">
+        <style>
+            #code_rain_canvas {
+              position: fixed;
+              right: 0px;
+              bottom: 0px;
+              min-width: 100%;
+              min-height: 100%;
+              height: auto;
+              width: auto;
+              z-index: 4;
+            }
+        </style>
+    </script>
+
+
 
 <!--动态线条背景-->
 
     <script type="text/javascript" color="219,112,147" opacity="0.8" 
-        zIndex="100" count="150" 
+        zIndex="-1" count="150" 
         src="/canvas-nest.min.js">
     </script>
-
 
 
 <!--雪花特效-->
@@ -885,9 +1228,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
  <!-- 雪花特效2 -->
 
   <script type="text/javascript" src="/snow2.js"></script>
-  <script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
  
-  
   
   
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/poi.model.json"},"display":{"position":"right","width":250,"height":300},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>

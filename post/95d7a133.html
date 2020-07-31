@@ -8,19 +8,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://chthollists.github.io">
-  <title>HexoBlog-Chapter5 | Chthollists的平凡之路</title>
+  <title>Hexo博客搭建系列Chapter5——Hexo博客功能扩展(1/5) | Chthollists的平凡之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="HexoBlog-Chapter5">
+  <meta name="description" content="在Windows系统上利用Hexo搭建博客系列——Chapter5 Chapter5： 在Yilia主题自带功能的基础上 扩展了微信分享功能、文章置顶功能、文章分类功能 扩展了404默认公益网页、头像旋转、文章默认格式功能">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客搭建系列Chapter5——Hexo博客功能扩展(1&#x2F;5)">
 <meta property="og:url" content="https://chthollists.github.io/post/95d7a133.html">
 <meta property="og:site_name" content="Chthollists的平凡之路">
+<meta property="og:description" content="在Windows系统上利用Hexo搭建博客系列——Chapter5 Chapter5： 在Yilia主题自带功能的基础上 扩展了微信分享功能、文章置顶功能、文章分类功能 扩展了404默认公益网页、头像旋转、文章默认格式功能">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-31T08:27:15.000Z">
-<meta property="article:modified_time" content="2020-07-31T08:28:44.104Z">
+<meta property="article:modified_time" content="2020-07-31T12:15:51.007Z">
 <meta property="article:author" content="Code.Yang">
-<meta property="article:tag" content="Code">
-<meta property="article:tag" content="Python">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="top">
+<meta property="article:tag" content="api.qrserver.com">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Chthollists的平凡之路" type="application/atom+xml">
@@ -121,7 +123,7 @@ var _hmt = _hmt || [];
 		</nav>
 		
 		<!-- # <nav>
-				Total: 9
+				Total: 14
 			</nav> -->
 			
 		
@@ -142,7 +144,7 @@ var _hmt = _hmt || [];
 				<!-- 网易云音乐插件 -->
 				
 				<div style="position:absolute; bottom:120px left:auto; width:85%">
-					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=228 height=52 src="//music.163.com/outchain/player?type=4&id=349623778&auto=0&height=32"></iframe>
+					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=218 height=52 src="//music.163.com/outchain/player?type=4&id=349623778&auto=0&height=32"></iframe>
 				</div>
 				
 		</nav>
@@ -244,7 +246,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      HexoBlog-Chapter5
+      Hexo博客搭建系列Chapter5——Hexo博客功能扩展(1/5)
     </h1>
   
 
@@ -275,7 +277,7 @@ var _hmt = _hmt || [];
         <i class="fa fa-keyboard-o"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  博文字数统计 : </span></b></font>
         <!--自定义样式-->
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">0字</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">1.5k字</span>
       </span></b></font>
     </span>
 
@@ -284,7 +286,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  阅读所需时长 : </span></b></font>
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">1分</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">6分</span>
       </span></b></font>
     </span>
 </div>
@@ -306,7 +308,7 @@ var _hmt = _hmt || [];
 	<div id="toc-article" class="toc-article">
 	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 		<strong class="toc-title">文章目录</strong>
-           
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo博客搭建系列——Chapter-5"><span class="toc-number">1.</span> <span class="toc-text">Hexo博客搭建系列——Chapter 5</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#五、高级功能实现"><span class="toc-number">1.1.</span> <span class="toc-text">五、高级功能实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-微信分享功能"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 微信分享功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-文章置顶功能"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 文章置顶功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-安装插件"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">2.1 安装插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-配置置顶标准"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2.2 配置置顶标准</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-配置文章"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">2.3 配置文章</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-优先级配置"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">2.4 优先级配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-文章标签分类功能"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 文章标签分类功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-文章分类功能"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">3.1 文章分类功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-文章标签分类功能"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">3.2 文章标签分类功能</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-添加404网页"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 添加404网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-头像旋转功能"><span class="toc-number">1.1.5.</span> <span class="toc-text">5. 头像旋转功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-修改默认文章格式"><span class="toc-number">1.1.6.</span> <span class="toc-text">6. 修改默认文章格式</span></a></li></ol></li></ol></li></ol>
          </div>
    <script type="text/javascript">
 	function showToc(){
@@ -327,7 +329,162 @@ var _hmt = _hmt || [];
 	
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <hr>
+<ul>
+<li>在Windows系统上利用Hexo搭建博客系列——Chapter5</li>
+<li>Chapter5：</li>
+<li>在Yilia主题自带功能的基础上</li>
+<li>扩展了微信分享功能、文章置顶功能、文章分类功能</li>
+<li>扩展了404默认公益网页、头像旋转、文章默认格式功能</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="Hexo博客搭建系列——Chapter-5"><a href="#Hexo博客搭建系列——Chapter-5" class="headerlink" title="Hexo博客搭建系列——Chapter 5"></a>Hexo博客搭建系列——Chapter 5</h1><hr>
+<h2 id="五、高级功能实现"><a href="#五、高级功能实现" class="headerlink" title="五、高级功能实现"></a>五、高级功能实现</h2><ul>
+<li>各功能教程超链接汇总<ul>
+<li><a href="http://dongshuyan.com/2019/05/24/hexo%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" target="_blank" rel="noopener">微信分享</a></li>
+<li><a href="https://blog.csdn.net/qq_37939980/article/details/104390332" target="_blank" rel="noopener">版权信息</a></li>
+<li><a href="https://blog.csdn.net/qq_40922859/article/details/97035497?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param" target="_blank" rel="noopener">不蒜子统计</a></li>
+<li><a href="https://blog.csdn.net/qq_40922859/article/details/97035497?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param" target="_blank" rel="noopener">爱心功能、评论系统</a></li>
+<li><a href="https://blog.csdn.net/weixin_41287260/article/details/97693850" target="_blank" rel="noopener">音乐功能、404页面、头像旋转</a></li>
+<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" target="_blank" rel="noopener">分类、随笔、标签</a></li>
+<li><a href="https://blog.csdn.net/weixin_41287260/article/details/97693850" target="_blank" rel="noopener">字数统计、阅读时长</a></li>
+<li><a href="http://dongshuyan.com/2019/05/24/hexo%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" target="_blank" rel="noopener">live2D、转载说明</a></li>
+<li><a href="https://blog.csdn.net/qq_40922859/article/details/97035497?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param" target="_blank" rel="noopener">文章加密</a></li>
+<li><a href="http://dongshuyan.com/2019/05/24/hexo%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" target="_blank" rel="noopener">更多功能</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="1-微信分享功能"><a href="#1-微信分享功能" class="headerlink" title="1. 微信分享功能"></a>1. 微信分享功能</h3><blockquote>
+<p>初始时微信分享功能有问题</p>
+<p>解决方法：修改<code>themes\yilia\layout\_partial\post\share.ejs</code>文件</p>
+</blockquote>
+<ul>
+<li><p>由于百度云已经不支持二维码生成功能，修改share.ejs的度盘链接，改为qrserver.com的api</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找</span></span><br><span class="line">//pan.baidu.com/share/qrcode?url=</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改为</span></span><br><span class="line">//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>查找share.ejs中的</p>
+<blockquote>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找</span></span><br><span class="line">var sUrl = url.replace(/index\.html$/, '');</span><br><span class="line"><span class="attr">sUrl</span> = /^(http:|https:)\/\//.test(sUrl) ? sUrl : <span class="string">'http:'</span> + sUrl<span class="comment">;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 后面添加</span></span><br><span class="line"><span class="comment"># 20与博客地址的长度相关</span></span><br><span class="line"><span class="attr">test</span>=sUrl.substring(<span class="number">20</span>)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>再将share.ejs中的</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找</span></span><br><span class="line">'//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=' + sUrl</span><br><span class="line"></span><br><span class="line"><span class="comment"># 改为</span></span><br><span class="line">'//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=你的主页网址' + test</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>最终结果</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 修改后代码</span><br><span class="line">&lt;div class&#x3D;&quot;page-modal wx-share js-wx-box&quot;&gt;</span><br><span class="line"> &lt;a class&#x3D;&quot;close js-modal-close&quot; href&#x3D;&quot;javascript:;&quot;&gt;&lt;i class&#x3D;&quot;icon icon-close&quot;&gt;&lt;&#x2F;i&gt;&lt;&#x2F;a&gt;</span><br><span class="line"> &lt;p&gt;扫一扫，分享到微信&lt;&#x2F;p&gt;</span><br><span class="line"> &lt;div class&#x3D;&quot;wx-qrcode&quot;&gt;</span><br><span class="line">   &lt;img src&#x3D;&quot;&lt;%- &#39;qrcode&#39; in locals ? qrcode(sUrl) : &#39;&#x2F;&#x2F;api.qrserver.com&#x2F;v1&#x2F;create-qr-code&#x2F;?size&#x3D;150x150&amp;data&#x3D;https:&#x2F;&#x2F;damonxiang.github.io&#39; + test  %&gt;&quot; alt&#x3D;&quot;微信分享二维码&quot;&gt;</span><br><span class="line"> &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="2-文章置顶功能"><a href="#2-文章置顶功能" class="headerlink" title="2. 文章置顶功能"></a>2. 文章置顶功能</h3><h4 id="2-1-安装插件"><a href="#2-1-安装插件" class="headerlink" title="2.1 安装插件"></a>2.1 安装插件</h4><ul>
+<li><p>安装 hexo-generator-index-pin-top 模块</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="2-2-配置置顶标准"><a href="#2-2-配置置顶标准" class="headerlink" title="2.2 配置置顶标准"></a>2.2 配置置顶标准</h4><ul>
+<li><p>打开<code>/themes/yilia/layout/post.ejs</code>在最前面加入代码</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (page.top) &#123; %&gt;</span><br><span class="line">&lt;i class&#x3D;&quot;fa fa-thumb-tack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">&lt;font color&#x3D;7D26CD&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">&lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="2-3-配置文章"><a href="#2-3-配置文章" class="headerlink" title="2.3 配置文章"></a>2.3 配置文章</h4><ul>
+<li><p>在需要置顶的文章的Front-matter中加上top属性</p>
+<blockquote>
+<p>top后面的数字越大，优先级越高</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">博客简介</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">xxx</span></span><br><span class="line"><span class="attr">top:</span> <span class="number">5</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="2-4-优先级配置"><a href="#2-4-优先级配置" class="headerlink" title="2.4 优先级配置"></a>2.4 优先级配置</h4><ul>
+<li><p>修改根目录配置文件/_config.yml,top值-1标示根据top值倒序（正序设置为1即可），同样date也是根据创建日期倒序。</p>
+<blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">''</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">10</span></span><br><span class="line"><span class="attr">order_by:</span> <span class="string">-date</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 改为</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">''</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">10</span></span><br><span class="line"><span class="attr">order_by:</span></span><br><span class="line"> <span class="attr">top:</span> <span class="number">-1</span></span><br><span class="line"> <span class="attr">date:</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="3-文章标签分类功能"><a href="#3-文章标签分类功能" class="headerlink" title="3. 文章标签分类功能"></a>3. 文章标签分类功能</h3><h4 id="3-1-文章分类功能"><a href="#3-1-文章分类功能" class="headerlink" title="3.1 文章分类功能"></a>3.1 文章分类功能</h4><ul>
+<li><p>通过hexo新建一个页面，命名为 categories </p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categoties</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>编辑刚新建的页面，将页面的类型<code>type</code>设置为 categories ，主题将自动为这个页面显示所有分类。</p>
+<blockquote>
+<p>通过设置categoties，并在menu中添加对应链接来实现博文分类</p>
+<p>categoties是不同级的，适合纵向文件分类    </p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">分类</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020</span><span class="number">-07</span><span class="number">-29</span> <span class="number">10</span><span class="string">:36:40</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"categories"</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>菜单中添加链接。编辑主题的<code>_config.yml</code> ，将categories添加到menu中</p>
+<blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">home:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">/categories</span></span><br><span class="line"><span class="attr">archives:</span> <span class="string">/archives</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">/tags</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="3-2-文章标签分类功能"><a href="#3-2-文章标签分类功能" class="headerlink" title="3.2 文章标签分类功能"></a>3.2 文章标签分类功能</h4><ul>
+<li><p>MarkDown 各种标签设置</p>
+<blockquote>
+<p>通过设置tags，并在menu中添加对应链接来实现博文分类   </p>
+<p>tags标签是同级的，适合横向文件分类 </p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> 				 <span class="comment">#文章标题</span></span><br><span class="line"><span class="attr">subtitle:</span>                            <span class="comment">#子标题</span></span><br><span class="line"><span class="attr">categories:</span>                       <span class="comment">#文章分類目錄 可以省略    </span></span><br><span class="line"><span class="attr">toc:</span> <span class="literal">true</span>                            <span class="comment">#目录 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">reward:</span> <span class="literal">true</span>                      <span class="comment">#打赏 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">declare:</span> <span class="literal">true</span>                      <span class="comment">#版权 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">date:</span>                                   <span class="comment">#文章日期</span></span><br><span class="line"><span class="attr">header-img:</span>                        <span class="comment">#顶部背景图片</span></span><br><span class="line"><span class="attr">tags:</span>                                    <span class="comment">#标签</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="4-添加404网页"><a href="#4-添加404网页" class="headerlink" title="4. 添加404网页"></a>4. 添加404网页</h3><ul>
+<li><p>参考：<a href="https://docs.github.com/cn/github/working-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site" target="_blank" rel="noopener">自定义Github Pages</a></p>
+</li>
+<li><p>在<code>/source/</code>目录下新建<code>404.md</code>在头部添加属性<code>permalink: /404.html</code>，页面内容可以自定义。</p>
+<blockquote>
+<p>推荐使用<a href="https://www.qq.com/404/" target="_blank" rel="noopener">腾讯公益404页面</a>（注意要把首页链接换成自己的）</p>
+<p><code>404.md</code>文件内容</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"># example 404.md </span><br><span class="line"></span><br><span class="line">title: 404 Not Found：该页无法显示 </span><br><span class="line"></span><br><span class="line">date: 2019-07-26 21:51:29 </span><br><span class="line"></span><br><span class="line">permalink: /404.html</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">title</span>&gt;</span>404<span class="tag">&lt;/<span class="name">title</span>&gt;</span>                              </span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span>    </span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js"</span> <span class="attr">homePageName</span>=<span class="string">"返回首页"</span> <span class="attr">homePageUrl</span>=<span class="string">"https://chthollists.github.io/"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="5-头像旋转功能"><a href="#5-头像旋转功能" class="headerlink" title="5. 头像旋转功能"></a>5. 头像旋转功能</h3><ul>
+<li><p>在<code>themes\yilia\source\</code>文件夹下增加一个css文件<code>avatarrotation.css</code>用来旋转360度</p>
+<blockquote>
+<p><code>avatarrotation.css</code>内容</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.left-col</span> <span class="selector-id">#header</span> <span class="selector-class">.profilepic</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">	<span class="comment">/* 控制旋转速度时间*/</span></span><br><span class="line"><span class="attribute">-webkit-transition</span>: -webkit-transform <span class="number">1.0s</span> ease-out;</span><br><span class="line"><span class="attribute">-moz-transition</span>: -moz-transform <span class="number">1.0s</span> ease-out;</span><br><span class="line"><span class="attribute">transition</span>: transform <span class="number">1.0s</span> ease-out;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.left-col</span> <span class="selector-id">#header</span> <span class="selector-class">.profilepic</span> <span class="selector-tag">img</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">	<span class="comment">/* 鼠标经过360% */</span></span><br><span class="line"><span class="attribute">-webkit-transform</span>: <span class="built_in">rotateZ</span>(<span class="number">360deg</span>);</span><br><span class="line"><span class="attribute">-moz-transform</span>: <span class="built_in">rotateZ</span>(<span class="number">360deg</span>);</span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">rotateZ</span>(<span class="number">360deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>然后在<code>themes\yilia\layout\_partial\head.ejs</code>文件中添加进去创建的<code>css</code>文件：<br>找到<code>&lt;%- partial(&#39;css&#39;) %&gt;</code>，在它的下面添加代码，把刚才写的文件添加进去，</p>
+<blockquote>
+<p><strong>注意！！是在它的下面添加，不然旋转速度将不会生效</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.avatarrotation)&#123; %&gt;</span><br><span class="line">	&lt;link rel&#x3D;&quot;stylesheet&quot; type&#x3D;&quot;text&#x2F;css&quot; href&#x3D;&quot;&#x2F;.&#x2F;avatarrotation.css&quot;&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>最后在<code>theme\_config.yml</code>中添加</p>
+<blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#头像是否旋转(如果不要旋转取false)</span></span><br><span class="line"><span class="attr">avatarrotation:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="6-修改默认文章格式"><a href="#6-修改默认文章格式" class="headerlink" title="6. 修改默认文章格式"></a>6. 修改默认文章格式</h3><blockquote>
+<p>修改hexo new “article” 的Front-matter的属性</p>
+</blockquote>
+<ul>
+<li><p>修改根目录下的<code>scaffolds</code>文件夹的post.md`</p>
+<blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">&#123;&#123;</span> <span class="string">title</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">&#123;&#123;</span> <span class="string">date</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">subtitle:</span>                         <span class="comment">#子标题</span></span><br><span class="line"><span class="attr">categories:</span>                       <span class="comment">#文章分類目錄 可以省略    </span></span><br><span class="line"><span class="attr">toc:</span> <span class="literal">true</span>                         <span class="comment">#目录 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">reward:</span> <span class="literal">true</span>                      <span class="comment">#打赏 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">declare:</span> <span class="literal">true</span>                     <span class="comment">#版权 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">header-img:</span>                       <span class="comment">#顶部背景图片</span></span><br><span class="line"><span class="attr">top:</span> </span><br><span class="line"><span class="attr">password:</span> </span><br><span class="line"><span class="attr">abstract:</span> </span><br><span class="line"><span class="attr">message:</span> </span><br><span class="line"><span class="attr">tags:</span>                             <span class="comment">#标签</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+
       
 	  
 <!-- 《添加版权声明 -->
@@ -347,13 +504,13 @@ var _hmt = _hmt || [];
     2020-07-31 16:27:15
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-07-31 16:28:44
+    2020-07-31 20:15:51
     <br>
     <strong class="article-titles">本文标题：</strong>
-    <a href="https://chthollists.github.io/post/95d7a133.html" title="HexoBlog-Chapter5" target="_blank">HexoBlog-Chapter5</a>
+    <a href="https://chthollists.github.io/post/95d7a133.html" title="Hexo博客搭建系列Chapter5——Hexo博客功能扩展(1/5)" target="_blank">Hexo博客搭建系列Chapter5——Hexo博客功能扩展(1/5)</a>
     <br>
     <strong class="article-url">本文链接：</strong>
-    <a href="https://chthollists.github.io/post/95d7a133.html" title="HexoBlog-Chapter5" target="_blank">https://chthollists.github.io/post/95d7a133.html</a>
+    <a href="https://chthollists.github.io/post/95d7a133.html" title="Hexo博客搭建系列Chapter5——Hexo博客功能扩展(1/5)" target="_blank">https://chthollists.github.io/post/95d7a133.html</a>
     <br>
     <strong class="copyright">版权声明：</strong>
     本作品采用
@@ -408,7 +565,37 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">top</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">api.qrserver.com</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/others//" class="article-tag-list-link color2">others</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -472,9 +659,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/post/f9e02555.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Hexo博客搭建系列Chapter6——Hexo博客功能扩展(2/5)
+        
+      </div>
+    </a>
+  
   
     <a href="/post/139f76f2.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">HexoBlog Chapter4</div>
+      <div class="article-nav-title">Hexo博客搭建系列Chapter4——Hexo博客美化</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -501,7 +697,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    该文章没有设置目录......
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo博客搭建系列——Chapter-5"><span class="toc-number">1.</span> <span class="toc-text">Hexo博客搭建系列——Chapter 5</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#五、高级功能实现"><span class="toc-number">1.1.</span> <span class="toc-text">五、高级功能实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-微信分享功能"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 微信分享功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-文章置顶功能"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 文章置顶功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-安装插件"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">2.1 安装插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-配置置顶标准"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2.2 配置置顶标准</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-配置文章"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">2.3 配置文章</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-优先级配置"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">2.4 优先级配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-文章标签分类功能"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 文章标签分类功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-文章分类功能"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">3.1 文章分类功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-文章标签分类功能"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">3.2 文章标签分类功能</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-添加404网页"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 添加404网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-头像旋转功能"><span class="toc-number">1.1.5.</span> <span class="toc-text">5. 头像旋转功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-修改默认文章格式"><span class="toc-number">1.1.6.</span> <span class="toc-text">6. 修改默认文章格式</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -561,7 +757,7 @@ gitalk.render('gitalk-container')
 		
 			<!-- # <font color="purple" face="Microsoft YaHei" size= 5><b>内容<br> </b></font> -->
 			
-    		<font color="red" face="Microsoft YaHei" size= 3><b>&copy; 2020 Code.Yang&nbsp;&nbsp;总文章数: 9</b></font>
+    		<font color="red" face="Microsoft YaHei" size= 3><b>&copy; 2020 Code.Yang&nbsp;&nbsp;总文章数: 14</b></font>
 			
     	</div>
       	<div class="footer-right">
@@ -578,7 +774,12 @@ gitalk.render('gitalk-container')
       	</div>
     </div>
   </div>
+
+
 </footer>
+
+
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -609,10 +810,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 <!--页面点击小红心-->
 <script type="text/javascript" src="/clicklove.js"></script>
 
- <!-- 雪花特效2 -->
 
-  <script type="text/javascript" src="/snow2.js"></script>
- 
     
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
@@ -669,6 +867,130 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hugo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">WordPress</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VuePress</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Jekyllrb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">toc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">busuanzi</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Live2D</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Coding Pages</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gitalk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">hexo-deployer-git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">top</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">api.qrserver.com</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Valine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Leancloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Gitment</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">hexo-helper-live2d</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">declare</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">love</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo-wordcount</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">hexo-blog-encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SEO</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">SiteMap</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Robots</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">hexo-baidu-url-submit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">baidu-analytics</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Blog</a>
               </li>
              
@@ -677,19 +999,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Live2D</a>
               </li>
             
             <div class="clearfix"></div>
@@ -850,14 +1160,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
   
  <!--代码雨-->
 
+      <!-- 数字雨 -->
+      <canvas id="code_rain_canvas" width="1440" height="900"></canvas>
+      <script type="text/javascript" src="/code_rain.js">
+        <style>
+            #code_rain_canvas {
+              position: fixed;
+              right: 0px;
+              bottom: 0px;
+              min-width: 100%;
+              min-height: 100%;
+              height: auto;
+              width: auto;
+              z-index: 4;
+            }
+        </style>
+    </script>
+
+
 
 <!--动态线条背景-->
 
     <script type="text/javascript" color="219,112,147" opacity="0.8" 
-        zIndex="100" count="150" 
+        zIndex="-1" count="150" 
         src="/canvas-nest.min.js">
     </script>
-
 
 
 <!--雪花特效-->
@@ -876,9 +1203,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
  <!-- 雪花特效2 -->
 
   <script type="text/javascript" src="/snow2.js"></script>
-  <script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
  
-  
   
   
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/poi.model.json"},"display":{"position":"right","width":250,"height":300},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
