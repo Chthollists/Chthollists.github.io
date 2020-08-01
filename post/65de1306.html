@@ -5,6 +5,9 @@
 
   <meta charset="utf-8">
   
+  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">
+  
+  
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://chthollists.github.io">
@@ -18,7 +21,7 @@
 <meta property="og:description" content="在Windows系统上利用Hexo搭建博客系列——Chapter7 Chapter7： 扩展了版权信息功能；参考：添加版权信息 扩展了博客特效：点击爱心、自动光玉；更多特效教程参考：特效大全">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-31T12:10:53.000Z">
-<meta property="article:modified_time" content="2020-07-31T13:21:26.135Z">
+<meta property="article:modified_time" content="2020-08-01T05:13:54.716Z">
 <meta property="article:author" content="Code.Yang">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="declare">
@@ -278,7 +281,7 @@ var _hmt = _hmt || [];
         <i class="fa fa-keyboard-o"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  博文字数统计 : </span></b></font>
         <!--自定义样式-->
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">3.1k字</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">2.9k字</span>
       </span></b></font>
     </span>
 
@@ -287,7 +290,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  阅读所需时长 : </span></b></font>
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">16分</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">15分</span>
       </span></b></font>
     </span>
 </div>
@@ -386,7 +389,7 @@ var _hmt = _hmt || [];
 <li><p>新建文件<code>declare.ejs</code></p>
 <blockquote>
 <p>路径：<code>\themes\yilia\layout\_partial\post\</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 《添加版权声明 --&gt;</span><br><span class="line">&lt;%</span><br><span class="line">var sUrl &#x3D; url.replace(&#x2F;index\.html$&#x2F;, &#39;&#39;);</span><br><span class="line">sUrl &#x3D; &#x2F;^(http:|https:)\&#x2F;\&#x2F;&#x2F;.test(sUrl) ? sUrl : &#39;https:&#39; + sUrl;</span><br><span class="line">%&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 --&gt;</span><br><span class="line">&lt;% if ((theme.declare.declare_type &#x3D;&#x3D;&#x3D; 2 || (theme.declare.declare_type &#x3D;&#x3D;&#x3D; 1 &amp;&amp; post.declare)) &amp;&amp; !index)&#123; %&gt;</span><br><span class="line">&lt;div class&#x3D;&quot;declare&quot;&gt;</span><br><span class="line"> &lt;strong class&#x3D;&quot;author&quot;&gt;本文作者：&lt;&#x2F;strong&gt;</span><br><span class="line"> &lt;% if(config.author !&#x3D; undefined)&#123; %&gt;</span><br><span class="line">   &lt;%&#x3D; config.author%&gt;</span><br><span class="line"> &lt;% &#125;else&#123;%&gt;</span><br><span class="line">   &lt;font color&#x3D;&quot;red&quot;&gt;请在博客根目录“_config.yml”中填入正确的“author”&lt;&#x2F;font&gt;</span><br><span class="line"> &lt;%&#125;%&gt;</span><br><span class="line"> &lt;br&gt;</span><br><span class="line"> &lt;strong class&#x3D;&quot;create-time&quot;&gt;发布时间：&lt;&#x2F;strong&gt;</span><br><span class="line"> &lt;%- date(post.date, &#39;YYYY-MM-DD HH:mm:ss&#39;) %&gt;</span><br><span class="line"> &lt;br&gt;</span><br><span class="line"> &lt;strong class&#x3D;&quot;update-time&quot;&gt;最后更新：&lt;&#x2F;strong&gt;</span><br><span class="line"> &lt;%- date(post.updated, &#39;YYYY-MM-DD HH:mm:ss&#39;) %&gt;</span><br><span class="line"> &lt;br&gt;</span><br><span class="line"> &lt;strong class&#x3D;&quot;article-titles&quot;&gt;本文标题：&lt;&#x2F;strong&gt;</span><br><span class="line"> &lt;a href&#x3D;&quot;&lt;%&#x3D; config.url%&gt;&#x2F;&lt;%&#x3D; post.path %&gt;&quot; title&#x3D;&quot;&lt;%&#x3D; post.title %&gt;&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;%&#x3D; post.title %&gt;&lt;&#x2F;a&gt;</span><br><span class="line"> &lt;br&gt;</span><br><span class="line"> &lt;strong class&#x3D;&quot;article-url&quot;&gt;本文链接：&lt;&#x2F;strong&gt;</span><br><span class="line"> &lt;a href&#x3D;&quot;&lt;%&#x3D; config.url%&gt;&#x2F;&lt;%&#x3D; post.path  %&gt;&quot; title&#x3D;&quot;&lt;%&#x3D; post.title %&gt;&quot; target&#x3D;&quot;_blank&quot;&gt;&lt;%&#x3D; config.url%&gt;&#x2F;&lt;%&#x3D; page.path %&gt;&lt;&#x2F;a&gt;</span><br><span class="line"> &lt;br&gt;</span><br><span class="line"> &lt;strong class&#x3D;&quot;copyright&quot;&gt;版权声明：&lt;&#x2F;strong&gt;</span><br><span class="line"> 本作品采用</span><br><span class="line"> &lt;a rel&#x3D;&quot;license&quot; href&#x3D;&quot;&lt;%&#x3D; theme.declare.licensee_url%&gt;&quot; title&#x3D;&quot;&lt;%&#x3D; theme.declare.licensee_alias %&gt;&quot;&gt;&lt;%&#x3D; theme.declare.licensee_name%&gt;&lt;&#x2F;a&gt;</span><br><span class="line"> 许可协议进行许可。转载请注明作者和出处！</span><br><span class="line"> &lt;% if(theme.declare.licensee_img !&#x3D; undefined)&#123; %&gt;</span><br><span class="line">   &lt;br&gt;</span><br><span class="line">  &lt;!--版权logo如果加载不出来可以注释掉--&gt;</span><br><span class="line">   &lt;a rel&#x3D;&quot;license&quot; href&#x3D;&quot;&lt;%&#x3D; theme.declare.licensee_url%&gt;&quot;&gt;&lt;img alt&#x3D;&quot;知识共享许可协议&quot; style&#x3D;&quot;border-width:0&quot; src&#x3D;&quot;&lt;%&#x3D; theme.declare.licensee_img%&gt;&quot;&#x2F;&gt;&lt;&#x2F;a&gt;</span><br><span class="line"> &lt;% &#125; %&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;% &#125; else &#123;%&gt;</span><br><span class="line">&lt;div class&#x3D;&quot;declare&quot; hidden&#x3D;&quot;hidden&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;!-- 添加版权声明》 --&gt;     </span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;!<span class="selector-tag">--</span> 《添加版权声明 <span class="selector-tag">--</span>&gt;</span><br><span class="line">&lt;%</span><br><span class="line">var sUrl = url.replace(/index\.html$/, '');</span><br><span class="line">sUrl = /^(http:|https:)\/\//.test(sUrl) ? sUrl : 'https:' + sUrl;</span><br><span class="line">%&gt;</span><br><span class="line"></span><br><span class="line">&lt;!<span class="selector-tag">--</span> #版权基础设定：0<span class="selector-tag">-</span>关闭声明； 1<span class="selector-tag">-</span>文章对应的<span class="selector-tag">md</span>文件里有<span class="selector-tag">declare</span>: <span class="selector-tag">true</span>属性，才有版权声明； 2<span class="selector-tag">-</span>所有文章均有版权声明 <span class="selector-tag">--</span>&gt;</span><br><span class="line">&lt;% if ((theme.declare.declare_type === 2 || (theme.declare.declare_type === 1 &amp;&amp; post.declare)) &amp;&amp; !index)&#123; %&gt;</span><br><span class="line">&lt;div class="declare"&gt;</span><br><span class="line"> &lt;strong class="author"&gt;本文作者：&lt;/strong&gt;</span><br><span class="line"> &lt;% if(config.author != undefined)&#123; %&gt;</span><br><span class="line">   &lt;%= config.author%&gt;</span><br><span class="line"> &lt;% &#125;else&#123;%&gt;</span><br><span class="line">   &lt;font color="red"&gt;请在博客根目录“_config.yml”中填入正确的“author”&lt;/font&gt;</span><br><span class="line"> &lt;%&#125;%&gt;</span><br><span class="line"> &lt;<span class="selector-tag">br</span>&gt;</span><br><span class="line"> &lt;strong class="create-time"&gt;发布时间：&lt;/strong&gt;</span><br><span class="line"> &lt;%- date(post.date, 'YYYY-MM-DD HH:mm:ss') %&gt;</span><br><span class="line"> &lt;<span class="selector-tag">br</span>&gt;</span><br><span class="line"> &lt;strong class="update-time"&gt;最后更新：&lt;/strong&gt;</span><br><span class="line"> &lt;%- date(post.updated, 'YYYY-MM-DD HH:mm:ss') %&gt;</span><br><span class="line"> &lt;<span class="selector-tag">br</span>&gt;</span><br><span class="line"> &lt;strong class="article-titles"&gt;本文标题：&lt;/strong&gt;</span><br><span class="line"> &lt;a href="&lt;%= config.url%&gt;/&lt;%= post.path %&gt;" title="&lt;%= post.title %&gt;" target="_blank"&gt;&lt;%= post.title %&gt;&lt;/a&gt;</span><br><span class="line"> &lt;<span class="selector-tag">br</span>&gt;</span><br><span class="line"> &lt;strong class="article-url"&gt;本文链接：&lt;/strong&gt;</span><br><span class="line"> &lt;a href="&lt;%= config.url%&gt;/&lt;%= post.path  %&gt;" title="&lt;%= post.title %&gt;" target="_blank"&gt;&lt;%= config.url%&gt;/&lt;%= page.path %&gt;&lt;/a&gt;</span><br><span class="line"> &lt;<span class="selector-tag">br</span>&gt;</span><br><span class="line"> &lt;strong class="copyright"&gt;版权声明：&lt;/strong&gt;</span><br><span class="line"> 本作品采用</span><br><span class="line"> &lt;a rel="license" href="&lt;%= theme.declare.licensee_url%&gt;" title="&lt;%= theme.declare.licensee_alias %&gt;"&gt;&lt;%= theme.declare.licensee_name%&gt;&lt;/a&gt;</span><br><span class="line"> 许可协议进行许可。转载请注明作者和出处！</span><br><span class="line"> &lt;% if(theme.declare.licensee_img != undefined)&#123; %&gt;</span><br><span class="line">   &lt;<span class="selector-tag">br</span>&gt;</span><br><span class="line">  &lt;!<span class="selector-tag">--</span>版权<span class="selector-tag">logo</span>如果加载不出来可以注释掉<span class="selector-tag">--</span>&gt;</span><br><span class="line">   &lt;a rel="license" href="&lt;%= theme.declare.licensee_url%&gt;"&gt;&lt;img alt="知识共享许可协议" style="border-width:0" src="&lt;%= theme.declare.licensee_img%&gt;"/&gt;&lt;/a&gt;</span><br><span class="line"> &lt;% &#125; %&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;% &#125; else &#123;%&gt;</span><br><span class="line">&lt;div class="declare" hidden="hidden"&gt;&lt;/div&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;!<span class="selector-tag">--</span> 添加版权声明》 <span class="selector-tag">--</span>&gt;     </span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>修改文件<code>themes\yilia\layout\_partial\article.ejs</code></p>
@@ -492,7 +495,7 @@ var _hmt = _hmt || [];
     2020-07-31 20:10:53
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-07-31 21:21:26
+    2020-08-01 13:13:54
     <br>
     <strong class="article-titles">本文标题：</strong>
     <a href="https://chthollists.github.io/post/65de1306.html" title="Hexo博客搭建系列Chapter7——Hexo博客功能扩展(3/5)" target="_blank">Hexo博客搭建系列Chapter7——Hexo博客功能扩展(3/5)</a>
@@ -637,7 +640,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://chthollists.github.io/github.io/post/65de1306.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://chthollists.github.io/post/65de1306.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -859,6 +862,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">busuanzi</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Live2D</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Coding Pages</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gitalk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hugo</a>
               </li>
              
@@ -872,6 +891,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Jekyllrb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">hexo-deployer-git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -891,23 +922,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">hexo-deployer-git</a>
+                <a href="javascript:void(0)" class="js-tag color4">top</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">busuanzi</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Live2D</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Coding Pages</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gitalk</a>
+                <a href="javascript:void(0)" class="js-tag color2">api.qrserver.com</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -920,14 +939,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">encrypt</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -944,30 +955,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">hexo-helper-live2d</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">declare</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">love</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">top</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">api.qrserver.com</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -988,6 +975,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">baidu-analytics</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">declare</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">love</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1135,7 +1138,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 <!--动态线条背景-->
 
     <script type="text/javascript" color="219,112,147" opacity="0.8" 
-        zIndex="-2" count="150" 
+        zIndex="-1" count="300" 
         src="/canvas-nest.min.js">
     </script>
 
@@ -1160,6 +1163,12 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
  <!--代码雨-->
 
   
+
+<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+</script>  
   
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/poi.model.json"},"display":{"position":"right","width":250,"height":300},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>
