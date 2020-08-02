@@ -22,7 +22,7 @@ var snow = {
       c.push({
         x: Math.random() * f,
         y: Math.random() * g,
-        r: Math.random() * 4 + 1,
+        r: Math.random() * 6 + 1,
         n: Math.random() * 70
       })
     }
@@ -30,9 +30,9 @@ var snow = {
     var e = 0;
     setInterval(function () {
         b.clearRect(0, 0, f, g);
-        b.fillStyle = "rgba(233,235,154, 1)";
+        b.fillStyle = "rgba(255,255,240,1)";
         b.shadowBlur = 5;
-        b.shadowColor = "rgba(250,250,210 2)";
+        b.shadowColor = "rgba(255,255,0,1)";
         b.beginPath();
         for (var j = 0; j < 70; j++) {
           var h = c[j];
