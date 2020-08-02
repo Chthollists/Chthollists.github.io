@@ -21,7 +21,7 @@
 <meta property="og:description" content="在Windows系统上利用Hexo搭建博客系列——Chapter6 Chapter6： 扩展了不蒜子统计功能、字数统计功能、阅读时长功能 扩展了网易云音乐功能、文章加密功能">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-31T12:10:40.000Z">
-<meta property="article:modified_time" content="2020-07-31T13:21:26.138Z">
+<meta property="article:modified_time" content="2020-08-02T12:02:03.806Z">
 <meta property="article:author" content="Code.Yang">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="busuanzi">
@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
 	        
 				<li><a href="/archives/index.html">归档</a></li>
 	        
-				<li><a href="/categories/essays/">随笔</a></li>
+				<li><a href="/tags">标签</a></li>
 	        
 				<li><a href="/categories/algorithm">算法</a></li>
 	        
@@ -220,7 +220,7 @@ var _hmt = _hmt || [];
 		        
 					<li style="width: 14.285714285714286%"><a href="/archives/index.html">归档</a></li>
 		        
-					<li style="width: 14.285714285714286%"><a href="/categories/essays/">随笔</a></li>
+					<li style="width: 14.285714285714286%"><a href="/tags">标签</a></li>
 		        
 					<li style="width: 14.285714285714286%"><a href="/categories/algorithm">算法</a></li>
 		        
@@ -282,7 +282,7 @@ var _hmt = _hmt || [];
         <i class="fa fa-keyboard-o"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  博文字数统计 : </span></b></font>
         <!--自定义样式-->
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">2.5k字</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">2.2k字</span>
       </span></b></font>
     </span>
 
@@ -291,7 +291,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  阅读所需时长 : </span></b></font>
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">11分</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">10分</span>
       </span></b></font>
     </span>
 </div>
@@ -333,8 +333,12 @@ var _hmt = _hmt || [];
 <!-- 目录内容结束 -->
 	
     <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
+	
+<!-- 标签云和分类云 -->	
+			
+
+				
+					<hr>
 <ul>
 <li>在Windows系统上利用Hexo搭建博客系列——Chapter6</li>
 <li>Chapter6：</li>
@@ -349,7 +353,7 @@ var _hmt = _hmt || [];
 </li>
 <li><p>不蒜子用来统计博客的访问量在<code>themes\yilia\layout\_partial\after-footer.ejs</code>文件最后添加</p>
 <blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script  async  src&#x3D;&quot;https:&#x2F;&#x2F;busuanzi.ibruce.info&#x2F;busuanzi&#x2F;2.3&#x2F;busuanzi.pure.mini.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>  <span class="attr">async</span>  <span class="attr">src</span>=<span class="string">"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
@@ -357,12 +361,12 @@ var _hmt = _hmt || [];
 <li><p>在<code>themes\yilia\layout\_partial\footer.ejs</code>中</p>
 <blockquote>
 <p>在<code>&lt;div class=&quot;footer-right&quot;&gt;</code>标签内添加：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- # PV方式，单个用户连续点击 n 篇，记录 n 次记录值 --&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_pv&quot;&gt; 总访问量: &lt;span id&#x3D;&quot;busuanzi_value_site_pv&quot;&gt;&lt;&#x2F;span&gt; &#x2F;&lt;&#x2F;span&gt;</span><br><span class="line">&lt;!-- # UV方式，单个用户连续点击 n 篇，记录 1 次记录值 --&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_uv&quot;&gt;  访客数:&lt;span id&#x3D;&quot;busuanzi_value_site_uv&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- # PV方式，单个用户连续点击 n 篇，记录 n 次记录值 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span> 总访问量: <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span> /<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- # UV方式，单个用户连续点击 n 篇，记录 1 次记录值 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span>  访客数:<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>美化显示</p>
 <blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;font color&#x3D;&quot;red&quot; face&#x3D;&quot;Microsoft YaHei&quot; size&#x3D; 3&gt;&lt;b&gt; 内容：&lt;%&#x3D;content%&gt;&lt;&#x2F;b&gt;&lt;&#x2F;font&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"red"</span> <span class="attr">face</span>=<span class="string">"Microsoft YaHei"</span> <span class="attr">size</span>= <span class="string">3</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span> 内容：<span class="tag">&lt;<span class="name">%=content%</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>内容：&lt;%=content%&gt;根据需求改变</p>
 </blockquote>
@@ -371,20 +375,20 @@ var _hmt = _hmt || [];
 <h4 id="7-3-单篇文章点击量统计方法一"><a href="#7-3-单篇文章点击量统计方法一" class="headerlink" title="7.3 单篇文章点击量统计方法一"></a>7.3 单篇文章点击量统计方法一</h4><ul>
 <li><p>在<code>themes/yilia/layout/_partial/article.ejs</code>中</p>
 <blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- partial(&#39;post&#x2F;title&#39;, &#123;class_name: &#39;article-title&#39;&#125;) %&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">title</span>', &#123;<span class="attr">class_name:</span> '<span class="attr">article-title</span>'&#125;) %&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>后面添加如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--显示阅读次数--&gt;</span><br><span class="line">&lt;% if (!index &amp;&amp; post.comments)&#123; %&gt;</span><br><span class="line">&lt;br&#x2F;&gt;</span><br><span class="line">&lt;a class&#x3D;&quot;cloud-tie-join-count&quot; href&#x3D;&quot;javascript:void(0);&quot; style&#x3D;&quot;color:gray;font-size:14px;&quot;&gt;</span><br><span class="line">&lt;span class&#x3D;&quot;icon-sort&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_page_pv&quot; style&#x3D;&quot;color:#ef7522;font-size:14px;&quot;&gt;</span><br><span class="line">         阅读数: &lt;span id&#x3D;&quot;busuanzi_value_page_pv&quot;&gt;&lt;&#x2F;span&gt;次 &amp;nbsp;&amp;nbsp;</span><br><span class="line">&lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;a&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;!--显示阅读次数完毕--&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--显示阅读次数--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">post.comments</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"cloud-tie-join-count"</span> <span class="attr">href</span>=<span class="string">"javascript:void(0);"</span> <span class="attr">style</span>=<span class="string">"color:gray;font-size:14px;"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-sort"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_page_pv"</span> <span class="attr">style</span>=<span class="string">"color:#ef7522;font-size:14px;"</span>&gt;</span></span><br><span class="line">         阅读数: <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_page_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次 <span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line"><span class="comment">&lt;!--显示阅读次数完毕--&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
 <h4 id="7-4-单篇文章点击量统计方法二"><a href="#7-4-单篇文章点击量统计方法二" class="headerlink" title="7.4 单篇文章点击量统计方法二"></a>7.4 单篇文章点击量统计方法二</h4><ul>
 <li><p>找到<code>themes\yilia\layout\_partial\post\nav.ejs</code>，注释掉以下两行：大概在27行左右(无此代码请忽略)</p>
 <blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;span class&#x3D;&quot;post-meta-item-text&quot;&gt;本文阅读量 &lt;&#x2F;span&gt;</span><br><span class="line">&lt;span class&#x3D;&quot;leancloud-visitors-count&quot;&gt;8848&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-text"</span>&gt;</span>本文阅读量 <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"leancloud-visitors-count"</span>&gt;</span>8848<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>注释掉之后直接在这两行下面加上：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_page_pv&quot;&gt;</span><br><span class="line">     本文阅读量: &lt;span id&#x3D;&quot;busuanzi_value_page_pv&quot;&gt;&lt;&#x2F;span&gt;次</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_page_pv"</span>&gt;</span></span><br><span class="line">     本文阅读量: <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_page_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
@@ -397,17 +401,17 @@ var _hmt = _hmt || [];
 <ul>
 <li><p>不蒜子功能正常时</p>
 <blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_pv&quot;&gt;</span><br><span class="line"> |&amp;nbsp;&lt;i class&#x3D;&quot;far fa-eye&quot;&gt;&lt;&#x2F;i&gt;&amp;nbsp;总访问量:&amp;nbsp;&lt;span id&#x3D;&quot;busuanzi_value_site_pv&quot;</span><br><span class="line">     class&#x3D;&quot;white-color&quot;&gt;&lt;&#x2F;span&gt;&amp;nbsp;次</span><br><span class="line"> &lt;&#x2F;span&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_uv&quot;&gt;</span><br><span class="line"> |&amp;nbsp;&lt;i class&#x3D;&quot;fas fa-users&quot;&gt;&lt;&#x2F;i&gt;&amp;nbsp;总访问人数:&amp;nbsp;&lt;span id&#x3D;&quot;busuanzi_value_site_uv&quot;</span><br><span class="line">     class&#x3D;&quot;white-color&quot;&gt;&lt;&#x2F;span&gt;&amp;nbsp;人</span><br><span class="line"> &lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"far fa-eye"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问量:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>次</span><br><span class="line"> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fas fa-users"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问人数:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>人</span><br><span class="line"> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>不蒜子功能失效时</p>
 <blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_pv&quot; style&#x3D;&quot;display: none;&quot;&gt;</span><br><span class="line"> |&amp;nbsp;&lt;i class&#x3D;&quot;far fa-eye&quot;&gt;&lt;&#x2F;i&gt;&amp;nbsp;总访问量:&amp;nbsp;&lt;span id&#x3D;&quot;busuanzi_value_site_pv&quot; </span><br><span class="line">     class&#x3D;&quot;white-color&quot;&gt;2303950&lt;&#x2F;span&gt;&amp;nbsp;次</span><br><span class="line">&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_uv&quot; style&#x3D;&quot;display: none;&quot;&gt;</span><br><span class="line"> |&amp;nbsp;&lt;i class&#x3D;&quot;fas fa-users&quot;&gt;&lt;&#x2F;i&gt;&amp;nbsp;总访问人数:&amp;nbsp;&lt;span id&#x3D;&quot;busuanzi_value_site_uv&quot; </span><br><span class="line">     class&#x3D;&quot;white-color&quot;&gt;160644&lt;&#x2F;span&gt;&amp;nbsp;人</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"far fa-eye"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问量:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span>2303950<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fas fa-users"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问人数:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span>160644<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>人</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>所以导致失效的原因是多了一个display的属性值变成了none，从而不显示不蒜子统计</p>
 <blockquote>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">style="display:</span> <span class="string">none;"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">style="display: none;"</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
@@ -431,7 +435,7 @@ var _hmt = _hmt || [];
 </blockquote>
 <blockquote>
 <p>路径：<code>themes\yilia\layout\_partial\after-footer.ejs</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 原始</span><br><span class="line">&lt;script  async  src&#x3D;&quot;https:&#x2F;&#x2F;busuanzi.ibruce.info&#x2F;busuanzi&#x2F;2.3&#x2F;busuanzi.pure.mini.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line"># 修改为本地路径：&#x2F;busuanzi.pure.mini.js</span><br><span class="line">&lt;script  async  src&#x3D;&quot;&#x2F;busuanzi.pure.mini.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 原始</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>  <span class="attr">async</span>  <span class="attr">src</span>=<span class="string">"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"># 修改为本地路径：/busuanzi.pure.mini.js</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>  <span class="attr">async</span>  <span class="attr">src</span>=<span class="string">"/busuanzi.pure.mini.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
@@ -441,7 +445,7 @@ var _hmt = _hmt || [];
 <h3 id="8-字数统计和阅读时长功能"><a href="#8-字数统计和阅读时长功能" class="headerlink" title="8. 字数统计和阅读时长功能"></a>8. 字数统计和阅读时长功能</h3><h4 id="8-1-字数统计"><a href="#8-1-字数统计" class="headerlink" title="8.1 字数统计"></a>8.1 字数统计</h4><ul>
 <li><p>安装插件 hexo-wordcount</p>
 <blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -save hexo-wordcount</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -save hexo-wordcount</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>博客根目录<code>_config.yml</code>添加配置</p>
@@ -452,15 +456,15 @@ var _hmt = _hmt || [];
 <li><p>修改<code>themes\yilia\layout\_partial\article.ejs</code></p>
 <blockquote>
 <p>查找</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- partial(&#39;post&#x2F;date&#39;, &#123;class_name: &#39;archive-article-date&#39;, date_format: null&#125;) %&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">date</span>', &#123;<span class="attr">class_name:</span> '<span class="attr">archive-article-date</span>', <span class="attr">date_format:</span> <span class="attr">null</span>&#125;) %&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>后面添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if(theme.word_count &amp;&amp; !post.no_word_count)&#123;%&gt;</span><br><span class="line">       &lt;%- partial(&#39;post&#x2F;word&#39;) %&gt;</span><br><span class="line">       &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">theme.word_count</span> &amp;&amp; !<span class="attr">post.no_word_count</span>)&#123;%&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">word</span>') %&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>最后在<code>themes\yilia\layout\_partial\post</code>目录下新建<code>word.ejs</code>,内容如下</p>
 <blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;margin-top:10px;&quot;&gt;</span><br><span class="line"> &lt;span class&#x3D;&quot;post-time&quot;&gt;</span><br><span class="line">   &lt;span class&#x3D;&quot;post-meta-item-icon&quot;&gt;</span><br><span class="line">     &lt;i class&#x3D;&quot;fa fa-keyboard-o&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">     &lt;span class&#x3D;&quot;post-meta-item-text&quot; style&#x3D;&quot;font-size: 16px;color: grey&quot;&gt;  字数统计: &lt;&#x2F;span&gt;</span><br><span class="line">     &lt;!--这里样式可以自己定制--&gt;</span><br><span class="line">     &lt;span class&#x3D;&quot;post-count&quot; style&#x3D;&quot;font-size: 16px;color: grey&quot;&gt;&lt;%&#x3D; wordcount(post.content) %&gt;字&lt;&#x2F;span&gt;</span><br><span class="line">   &lt;&#x2F;span&gt;</span><br><span class="line"> &lt;&#x2F;span&gt;</span><br><span class="line"></span><br><span class="line"> &lt;span class&#x3D;&quot;post-time&quot;&gt;</span><br><span class="line">   &amp;nbsp; | &amp;nbsp;</span><br><span class="line">   &lt;span class&#x3D;&quot;post-meta-item-icon&quot;&gt;</span><br><span class="line">     &lt;i class&#x3D;&quot;fa fa-hourglass-half&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">     &lt;span class&#x3D;&quot;post-meta-item-text&quot; style&#x3D;&quot;font-size: 16px;color: grey&quot;&gt;  阅读时长: &lt;&#x2F;span&gt;</span><br><span class="line">     &lt;span class&#x3D;&quot;post-count&quot; style&#x3D;&quot;font-size: 16px;color: grey&quot;&gt;&lt;%&#x3D; min2read(post.content) %&gt;分&lt;&#x2F;span&gt;</span><br><span class="line">   &lt;&#x2F;span&gt;</span><br><span class="line"> &lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"margin-top:10px;"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-time"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-icon"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-keyboard-o"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-text"</span> <span class="attr">style</span>=<span class="string">"font-size: 16px;color: grey"</span>&gt;</span>  字数统计: <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">     <span class="comment">&lt;!--这里样式可以自己定制--&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-count"</span> <span class="attr">style</span>=<span class="string">"font-size: 16px;color: grey"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">wordcount</span>(<span class="attr">post.content</span>) %&gt;</span>字<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-time"</span>&gt;</span></span><br><span class="line">   <span class="symbol">&amp;nbsp;</span> | <span class="symbol">&amp;nbsp;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-icon"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-hourglass-half"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-text"</span> <span class="attr">style</span>=<span class="string">"font-size: 16px;color: grey"</span>&gt;</span>  阅读时长: <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-count"</span> <span class="attr">style</span>=<span class="string">"font-size: 16px;color: grey"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">min2read</span>(<span class="attr">post.content</span>) %&gt;</span>分<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
@@ -484,7 +488,9 @@ var _hmt = _hmt || [];
 </blockquote>
 </li>
 <li><p>将外链输入到文章中即可</p>
-<pre><code>&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=110 src=&quot;//music.163.com/outchain/player?type=4&amp;id=1217042&amp;auto=0&amp;height=90&quot;&gt;&lt;/iframe&gt;</code></pre></li>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">330</span> <span class="attr">height</span>=<span class="string">110</span> <span class="attr">src</span>=<span class="string">"//music.163.com/outchain/player?type=4&amp;id=1217042&amp;auto=0&amp;height=90"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
 </ul>
 <h4 id="9-2-主页背景音乐"><a href="#9-2-主页背景音乐" class="headerlink" title="9.2 主页背景音乐"></a>9.2 主页背景音乐</h4><ul>
 <li><p>获取外链</p>
@@ -498,7 +504,7 @@ var _hmt = _hmt || [];
 <p>在<code>themes/yilia/layout/_partial/left-col.ejs</code>文件<code>nav</code>标签中添加代码</p>
 <blockquote>
 <p> 注：放在<code>&lt;nav&gt;</code>和<code>&lt;/nav&gt;</code>之内</p>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 网易云音乐插件 --&gt;</span><br><span class="line">&lt;% <span class="keyword">if</span> (theme.music &amp;&amp; theme.music.enable)&#123; %&gt;</span><br><span class="line"> &lt;div style=<span class="string">"position:absolute; bottom:120px left:auto; width:85%"</span>&gt;</span><br><span class="line">    &lt;iframe frameborder=<span class="string">"no"</span> border=<span class="string">"0"</span> marginwidth=<span class="string">"0"</span> marginheight=<span class="string">"0"</span> width=<span class="number">228</span> height=<span class="number">52</span> src=<span class="string">"//music.163.com/outchain/player?type=4&amp;id=349623778&amp;auto=0&amp;height=32"</span>&gt;&lt;<span class="regexp">/iframe&gt;</span></span><br><span class="line"><span class="regexp"> &lt;/</span>div&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 网易云音乐插件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.music</span> &amp;&amp; <span class="attr">theme.music.enable</span>)&#123; %&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"position:absolute; bottom:120px left:auto; width:85%"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">228</span> <span class="attr">height</span>=<span class="string">52</span> <span class="attr">src</span>=<span class="string">"//music.163.com/outchain/player?type=4&amp;id=349623778&amp;auto=0&amp;height=32"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p> 通过设置marginheight=”0” width=330 height=110 来改变大小，美化界面</p>
 </blockquote>
@@ -525,7 +531,7 @@ var _hmt = _hmt || [];
 <ul>
 <li><p>添加以下内容到hosts文件C:\Windows\System32\drivers\etc\hosts</p>
 <blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解决ipv6开启后网易云音乐无法播放的问题</span></span><br><span class="line">111.19.136.246 m10.music.126.net</span><br><span class="line">111.20.255.169 p1.music.126.net</span><br><span class="line">223.252.199.66 music.163.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解决ipv6开启后网易云音乐无法播放的问题</span></span><br><span class="line">111.19.136.246 m10.music.126.net</span><br><span class="line">111.20.255.169 p1.music.126.net</span><br><span class="line">223.252.199.66 music.163.com</span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>直接停用IPv6功能，在网络和共享中心—网络状态—属性里面，不勾选TCP/IPv6。</p>
 </li>
@@ -554,7 +560,7 @@ var _hmt = _hmt || [];
 </li>
 <li><p>进入博客根目录，Git bash，安装</p>
 <blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">cnpm</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">cnpm</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
@@ -575,7 +581,259 @@ var _hmt = _hmt || [];
 </ul>
 <hr>
 
-      
+				
+			
+	  
+	  
+	  <!--    注释：
+        <hr>
+<ul>
+<li>在Windows系统上利用Hexo搭建博客系列——Chapter6</li>
+<li>Chapter6：</li>
+<li>扩展了不蒜子统计功能、字数统计功能、阅读时长功能</li>
+<li>扩展了网易云音乐功能、文章加密功能</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="Hexo博客搭建系列——Chapter-6"><a href="#Hexo博客搭建系列——Chapter-6" class="headerlink" title="Hexo博客搭建系列——Chapter 6"></a>Hexo博客搭建系列——Chapter 6</h1><hr>
+<h2 id="五、高级功能实现"><a href="#五、高级功能实现" class="headerlink" title="五、高级功能实现"></a>五、高级功能实现</h2><h3 id="7-不蒜子统计功能"><a href="#7-不蒜子统计功能" class="headerlink" title="7. 不蒜子统计功能"></a>7. 不蒜子统计功能</h3><h4 id="7-1-安装不蒜子统计脚本"><a href="#7-1-安装不蒜子统计脚本" class="headerlink" title="7.1 安装不蒜子统计脚本"></a>7.1 安装不蒜子统计脚本</h4><ul>
+<li><p><a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子官网</a></p>
+</li>
+<li><p>不蒜子用来统计博客的访问量在<code>themes\yilia\layout\_partial\after-footer.ejs</code>文件最后添加</p>
+<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>  <span class="attr">async</span>  <span class="attr">src</span>=<span class="string">"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="7-2-博客访问量统计"><a href="#7-2-博客访问量统计" class="headerlink" title="7.2 博客访问量统计"></a>7.2 博客访问量统计</h4><ul>
+<li><p>在<code>themes\yilia\layout\_partial\footer.ejs</code>中</p>
+<blockquote>
+<p>在<code>&lt;div class=&quot;footer-right&quot;&gt;</code>标签内添加：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- # PV方式，单个用户连续点击 n 篇，记录 n 次记录值 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span> 总访问量: <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span> /<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- # UV方式，单个用户连续点击 n 篇，记录 1 次记录值 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span>  访客数:<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>美化显示</p>
+<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"red"</span> <span class="attr">face</span>=<span class="string">"Microsoft YaHei"</span> <span class="attr">size</span>= <span class="string">3</span>&gt;</span><span class="tag">&lt;<span class="name">b</span>&gt;</span> 内容：<span class="tag">&lt;<span class="name">%=content%</span>&gt;</span><span class="tag">&lt;/<span class="name">b</span>&gt;</span><span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>内容：&lt;%=content%&gt;根据需求改变</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="7-3-单篇文章点击量统计方法一"><a href="#7-3-单篇文章点击量统计方法一" class="headerlink" title="7.3 单篇文章点击量统计方法一"></a>7.3 单篇文章点击量统计方法一</h4><ul>
+<li><p>在<code>themes/yilia/layout/_partial/article.ejs</code>中</p>
+<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">title</span>', &#123;<span class="attr">class_name:</span> '<span class="attr">article-title</span>'&#125;) %&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>后面添加如下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--显示阅读次数--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (!<span class="attr">index</span> &amp;&amp; <span class="attr">post.comments</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"cloud-tie-join-count"</span> <span class="attr">href</span>=<span class="string">"javascript:void(0);"</span> <span class="attr">style</span>=<span class="string">"color:gray;font-size:14px;"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"icon-sort"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_page_pv"</span> <span class="attr">style</span>=<span class="string">"color:#ef7522;font-size:14px;"</span>&gt;</span></span><br><span class="line">         阅读数: <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_page_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次 <span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line"><span class="comment">&lt;!--显示阅读次数完毕--&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="7-4-单篇文章点击量统计方法二"><a href="#7-4-单篇文章点击量统计方法二" class="headerlink" title="7.4 单篇文章点击量统计方法二"></a>7.4 单篇文章点击量统计方法二</h4><ul>
+<li><p>找到<code>themes\yilia\layout\_partial\post\nav.ejs</code>，注释掉以下两行：大概在27行左右(无此代码请忽略)</p>
+<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-text"</span>&gt;</span>本文阅读量 <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"leancloud-visitors-count"</span>&gt;</span>8848<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>注释掉之后直接在这两行下面加上：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_page_pv"</span>&gt;</span></span><br><span class="line">     本文阅读量: <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_page_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="7-5-不蒜子统计与Live2D冲突问题"><a href="#7-5-不蒜子统计与Live2D冲突问题" class="headerlink" title="7.5 不蒜子统计与Live2D冲突问题"></a>7.5 不蒜子统计与Live2D冲突问题</h4><ul>
+<li><p>参考：<a href="https://boyinthesun.cn/post/error-live2d-busuanzi/" target="_blank" rel="noopener">不蒜子功能失效</a></p>
+</li>
+<li><p>问题：当配置了Live2D功能后，不蒜子统计功能会与其发生冲突从而失效</p>
+</li>
+<li><p>分析：查看网页源码Ctrl+u，可以发现：</p>
+<ul>
+<li><p>不蒜子功能正常时</p>
+<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"far fa-eye"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问量:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>次</span><br><span class="line"> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fas fa-users"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问人数:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>人</span><br><span class="line"> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>不蒜子功能失效时</p>
+<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"far fa-eye"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问量:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span>2303950<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fas fa-users"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问人数:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span>160644<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>人</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>所以导致失效的原因是多了一个display的属性值变成了none，从而不显示不蒜子统计</p>
+<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">style="display: none;"</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>解决办法：</p>
+<ul>
+<li><p>打开不蒜子官网上的<a href="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" target="_blank" rel="noopener">busuanzi.pure.mini.js</a>文件，将其下载到本地，放到yilia主题下的路径中</p>
+<blockquote>
+<p>如：<code>theme/yilia/source</code>路径</p>
+</blockquote>
+</li>
+<li><p>修改busuanzi.pure.mini.js文件</p>
+<blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 找到</span></span><br><span class="line"><span class="string">b.style.display="none"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 改为</span></span><br><span class="line"><span class="string">b.style.display=''</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>修改不蒜子统计的调用语句</p>
+<blockquote>
+<p>原来是从不蒜子统计的服务器上调用busuanzi.pure.mini.js</p>
+<p>现在直接从本地调用，还可以避免不蒜子官网域名改变导致的功能失效问题</p>
+</blockquote>
+<blockquote>
+<p>路径：<code>themes\yilia\layout\_partial\after-footer.ejs</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 原始</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>  <span class="attr">async</span>  <span class="attr">src</span>=<span class="string">"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"># 修改为本地路径：/busuanzi.pure.mini.js</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>  <span class="attr">async</span>  <span class="attr">src</span>=<span class="string">"/busuanzi.pure.mini.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="8-字数统计和阅读时长功能"><a href="#8-字数统计和阅读时长功能" class="headerlink" title="8. 字数统计和阅读时长功能"></a>8. 字数统计和阅读时长功能</h3><h4 id="8-1-字数统计"><a href="#8-1-字数统计" class="headerlink" title="8.1 字数统计"></a>8.1 字数统计</h4><ul>
+<li><p>安装插件 hexo-wordcount</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -save hexo-wordcount</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>博客根目录<code>_config.yml</code>添加配置</p>
+<blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">word_count:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>修改<code>themes\yilia\layout\_partial\article.ejs</code></p>
+<blockquote>
+<p>查找</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">date</span>', &#123;<span class="attr">class_name:</span> '<span class="attr">archive-article-date</span>', <span class="attr">date_format:</span> <span class="attr">null</span>&#125;) %&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>后面添加</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">theme.word_count</span> &amp;&amp; !<span class="attr">post.no_word_count</span>)&#123;%&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">word</span>') %&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>最后在<code>themes\yilia\layout\_partial\post</code>目录下新建<code>word.ejs</code>,内容如下</p>
+<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"margin-top:10px;"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-time"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-icon"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-keyboard-o"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-text"</span> <span class="attr">style</span>=<span class="string">"font-size: 16px;color: grey"</span>&gt;</span>  字数统计: <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">     <span class="comment">&lt;!--这里样式可以自己定制--&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-count"</span> <span class="attr">style</span>=<span class="string">"font-size: 16px;color: grey"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">wordcount</span>(<span class="attr">post.content</span>) %&gt;</span>字<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-time"</span>&gt;</span></span><br><span class="line">   <span class="symbol">&amp;nbsp;</span> | <span class="symbol">&amp;nbsp;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-icon"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-hourglass-half"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-item-text"</span> <span class="attr">style</span>=<span class="string">"font-size: 16px;color: grey"</span>&gt;</span>  阅读时长: <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-count"</span> <span class="attr">style</span>=<span class="string">"font-size: 16px;color: grey"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">min2read</span>(<span class="attr">post.content</span>) %&gt;</span>分<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="8-2-阅读时长统计"><a href="#8-2-阅读时长统计" class="headerlink" title="8.2 阅读时长统计"></a>8.2 阅读时长统计</h4><blockquote>
+<p>步骤与7.1相同</p>
+</blockquote>
+<ul>
+<li>安装插件 hexo-wordcount</li>
+<li>博客根目录<code>_config.yml</code>添加配置</li>
+<li>修改<code>themes\yilia\layout\_partial\article.ejs</code></li>
+<li>最后在<code>themes\yilia\layout\_partial\post</code>目录下新建<code>word.ejs</code></li>
+</ul>
+<hr>
+<h3 id="9-背景音乐功能"><a href="#9-背景音乐功能" class="headerlink" title="9. 背景音乐功能"></a>9. 背景音乐功能</h3><blockquote>
+<p>使用网易云音乐</p>
+</blockquote>
+<h4 id="9-1-文章内音乐"><a href="#9-1-文章内音乐" class="headerlink" title="9.1 文章内音乐"></a>9.1 文章内音乐</h4><ul>
+<li><p>从网易云音乐获取音乐外链</p>
+<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">330</span> <span class="attr">height</span>=<span class="string">86</span> <span class="attr">src</span>=<span class="string">"//music.163.com/outchain/player?type=2&amp;id=468490592&amp;auto=0&amp;height=66"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>将外链输入到文章中即可</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">330</span> <span class="attr">height</span>=<span class="string">110</span> <span class="attr">src</span>=<span class="string">"//music.163.com/outchain/player?type=4&amp;id=1217042&amp;auto=0&amp;height=90"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="9-2-主页背景音乐"><a href="#9-2-主页背景音乐" class="headerlink" title="9.2 主页背景音乐"></a>9.2 主页背景音乐</h4><ul>
+<li><p>获取外链</p>
+<blockquote>
+<p>注意：要获取多个音乐的外链可以将其添加到歌单、电台中，获取外链</p>
+<p>auto 表示是否自动播放</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">330</span> <span class="attr">height</span>=<span class="string">86</span> <span class="attr">src</span>=<span class="string">"//music.163.com/outchain/player?type=2&amp;id=4993317&amp;auto=1&amp;height=66"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>引入播放器代码</p>
+<p>在<code>themes/yilia/layout/_partial/left-col.ejs</code>文件<code>nav</code>标签中添加代码</p>
+<blockquote>
+<p> 注：放在<code>&lt;nav&gt;</code>和<code>&lt;/nav&gt;</code>之内</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 网易云音乐插件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.music</span> &amp;&amp; <span class="attr">theme.music.enable</span>)&#123; %&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"position:absolute; bottom:120px left:auto; width:85%"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">228</span> <span class="attr">height</span>=<span class="string">52</span> <span class="attr">src</span>=<span class="string">"//music.163.com/outchain/player?type=4&amp;id=349623778&amp;auto=0&amp;height=32"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p> 通过设置marginheight=”0” width=330 height=110 来改变大小，美化界面</p>
+</blockquote>
+</li>
+<li><p>在yilia主题配置文件<code>_config.yml</code>中添加属性</p>
+<blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 网易云音乐插件</span></span><br><span class="line"><span class="attr">music:</span></span><br><span class="line"><span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="comment">#id: 1332647902  # 网易云分享的ID</span></span><br><span class="line"><span class="attr">autoplay:</span> <span class="literal">false</span>  <span class="comment"># 是否开启自动播放</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="9-3-遗留问题-未解决"><a href="#9-3-遗留问题-未解决" class="headerlink" title="9.3 遗留问题(未解决)"></a>9.3 遗留问题(未解决)</h4><ul>
+<li><p><strong>歌单外链错误 : music.163.com上的嵌入式页面显示资源加载失败</strong></p>
+<blockquote>
+<p>单首音乐对象直接生成外链、电台对象生成外链均不会出现资源加载失败问题；</p>
+<p>但是，使用歌单对象(即使歌单只有一首音乐)，会出现资源加载失败错问题；</p>
+<p>推测可能是歌单后台有bug，已反馈给网易云客服。</p>
+</blockquote>
+</li>
+<li><p><a href="https://blog.csdn.net/hubaoquanu/article/details/79084193" target="_blank" rel="noopener">解决办法</a></p>
+<ul>
+<li><p>原因：是由于开启了IPv6后使用了google的IPv6 DNS，音乐资源网站ip解析会直接错误解析到本地127.0.0.1</p>
+</li>
+<li><p>方法(均无效)：</p>
+<ul>
+<li><p>添加以下内容到hosts文件C:\Windows\System32\drivers\etc\hosts</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解决ipv6开启后网易云音乐无法播放的问题</span></span><br><span class="line">111.19.136.246 m10.music.126.net</span><br><span class="line">111.20.255.169 p1.music.126.net</span><br><span class="line">223.252.199.66 music.163.com</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>直接停用IPv6功能，在网络和共享中心—网络状态—属性里面，不勾选TCP/IPv6。</p>
+</li>
+<li><p>使用国内的IPv6DNS: 240c::6666，此时无法访问Google和Youtube。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="10-文章加密功能"><a href="#10-文章加密功能" class="headerlink" title="10. 文章加密功能"></a>10. 文章加密功能</h3><blockquote>
+<p>文章加密一般有两种方式：</p>
+<p>1.Nginx授权访问；</p>
+<p>2.Hexo-Blog-Encrypt；</p>
+<p>由于Nginx授权访问的前置条件是：Hexo博客搭在Nginx服务器；这里用Encrypt插件实现加密</p>
+</blockquote>
+<h4 id="10-1-引入加密插件"><a href="#10-1-引入加密插件" class="headerlink" title="10.1 引入加密插件"></a>10.1 引入加密插件</h4><ul>
+<li><p>安装加密插件Encrypt</p>
+<blockquote>
+<p>找到博客根目录下的<code>package.json</code>,最下面添加</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">"hexo-blog-encrypt":</span> <span class="string">"2.0.*"</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：添加时要记得给前一项加上  <strong>,</strong></p>
+</blockquote>
+</li>
+<li><p>进入博客根目录，Git bash，安装</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">cnpm</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="10-2-修改配置"><a href="#10-2-修改配置" class="headerlink" title="10.2 修改配置"></a>10.2 修改配置</h4><ul>
+<li><p>找到根目录下的<code>_config.yml</code>文件，添加</p>
+<blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Security</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="attr">encrypt:</span></span><br><span class="line"> <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="10-3-修改MD文章开头属性"><a href="#10-3-修改MD文章开头属性" class="headerlink" title="10.3 修改MD文章开头属性"></a>10.3 修改MD文章开头属性</h4><ul>
+<li><p>在需要加密的文章.md文件开头写入</p>
+<blockquote>
+<p>password: 这里填密码<br>abstract: 这里是博客简述(可见)<br>message: 输入密码提示语句</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">加密文章</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2019</span><span class="number">-05</span><span class="number">-30</span> <span class="number">22</span><span class="string">:02:07</span></span><br><span class="line"><span class="attr">password:</span> <span class="string">这里填密码</span></span><br><span class="line"><span class="attr">abstract:</span> <span class="string">这里是博客简述（能被访客看见）</span></span><br><span class="line"><span class="attr">message:</span> <span class="string">输入密码提示语句（例如：请输入密码）</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+
+       -->
+	        
+	  
+	  
+	  
 	  
 <!-- 《添加版权声明 -->
         
@@ -594,7 +852,7 @@ var _hmt = _hmt || [];
     2020-07-31 20:10:40
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-07-31 21:21:26
+    2020-08-02 20:02:03
     <br>
     <strong class="article-titles">本文标题：</strong>
     <a href="https://chthollists.github.io/post/f9e02555.html" title="Hexo博客搭建系列Chapter6——Hexo博客功能扩展(2/5)" target="_blank">Hexo博客搭建系列Chapter6——Hexo博客功能扩展(2/5)</a>
@@ -621,7 +879,7 @@ var _hmt = _hmt || [];
           <a href="javascript:;" class="page-reward-btn tooltip-top">
             <div class="tooltip tooltip-east">
             <span class="tooltip-item">
-              支持三连
+              支持
             </span>
             <span class="tooltip-content">
               <span class="tooltip-text">
@@ -690,6 +948,10 @@ var _hmt = _hmt || [];
         		<li class="article-tag-list-item">
         			<a href="/categories/others//" class="article-tag-list-link color2">others</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/others/Hexo//" class="article-tag-list-link color5">Hexo</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -750,9 +1012,16 @@ var _hmt = _hmt || [];
 <div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
+  
+	  
     </div>
   </div>
 </article>
+
+
+
+
+
 
   
 <nav id="article-nav">
@@ -842,6 +1111,10 @@ if(true){
 gitalk.render('gitalk-container') 
 }
 </script>
+
+
+
+
 
 
 
@@ -965,6 +1238,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">busuanzi</a>
               </li>
              
@@ -981,39 +1270,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hugo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">WordPress</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VuePress</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Jekyllrb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">hexo-deployer-git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo-wordcount</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+                <a href="javascript:void(0)" class="js-tag color3">hexo-blog-encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">declare</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">love</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1033,31 +1314,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo-wordcount</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hugo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">hexo-blog-encrypt</a>
+                <a href="javascript:void(0)" class="js-tag color5">WordPress</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">encrypt</a>
+                <a href="javascript:void(0)" class="js-tag color4">VuePress</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Valine</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Leancloud</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Gitment</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">hexo-helper-live2d</a>
+                <a href="javascript:void(0)" class="js-tag color4">Jekyllrb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1081,19 +1350,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Valine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Leancloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Gitment</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">hexo-helper-live2d</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">declare</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">love</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
               </li>
              
               <li class="article-tag-list-item">

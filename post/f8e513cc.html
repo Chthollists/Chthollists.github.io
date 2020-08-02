@@ -21,7 +21,7 @@
 <meta property="og:description" content="在Windows系统上利用Hexo搭建博客系列——Chapter8  Chapter8：  扩展了SEO优化功能：百度搜索资源平台  文章URL加密 站点地图SiteMap生成与提交 蜘蛛协议Robots   扩展了百度推送、收录功能  由于Github禁止百度爬虫，所以需要把Hexo博客双线部署到CodingPages上，从而实现百度收录功能  主动推送： hexo-baidu-url-su">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-31T12:11:06.000Z">
-<meta property="article:modified_time" content="2020-07-31T13:21:26.141Z">
+<meta property="article:modified_time" content="2020-08-02T12:05:31.676Z">
 <meta property="article:author" content="Code.Yang">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Coding Pages">
@@ -99,7 +99,7 @@ var _hmt = _hmt || [];
 	        
 				<li><a href="/archives/index.html">归档</a></li>
 	        
-				<li><a href="/categories/essays/">随笔</a></li>
+				<li><a href="/tags">标签</a></li>
 	        
 				<li><a href="/categories/algorithm">算法</a></li>
 	        
@@ -222,7 +222,7 @@ var _hmt = _hmt || [];
 		        
 					<li style="width: 14.285714285714286%"><a href="/archives/index.html">归档</a></li>
 		        
-					<li style="width: 14.285714285714286%"><a href="/categories/essays/">随笔</a></li>
+					<li style="width: 14.285714285714286%"><a href="/tags">标签</a></li>
 		        
 					<li style="width: 14.285714285714286%"><a href="/categories/algorithm">算法</a></li>
 		        
@@ -288,7 +288,7 @@ var _hmt = _hmt || [];
         <i class="fa fa-keyboard-o"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  博文字数统计 : </span></b></font>
         <!--自定义样式-->
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">1.9k字</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">1.8k字</span>
       </span></b></font>
     </span>
 
@@ -297,7 +297,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  阅读所需时长 : </span></b></font>
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">8分</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">7分</span>
       </span></b></font>
     </span>
 </div>
@@ -339,7 +339,262 @@ var _hmt = _hmt || [];
 <!-- 目录内容结束 -->
 	
     <div class="article-entry" itemprop="articleBody">
-      
+	
+<!-- 标签云和分类云 -->	
+			
+
+				
+					<hr>
+<ul>
+<li><p>在Windows系统上利用Hexo搭建博客系列——Chapter8</p>
+</li>
+<li><p>Chapter8：</p>
+</li>
+<li><p>扩展了SEO优化功能：<a href="https://ziyuan.baidu.com/" target="_blank" rel="noopener">百度搜索资源平台</a></p>
+<ul>
+<li>文章URL加密</li>
+<li>站点地图SiteMap生成与提交</li>
+<li>蜘蛛协议Robots</li>
+</ul>
+</li>
+<li><p>扩展了百度推送、收录功能</p>
+<ul>
+<li><p>由于Github禁止百度爬虫，所以需要把Hexo博客双线部署到CodingPages上，从而实现百度收录功能</p>
+</li>
+<li><p>主动推送： hexo-baidu-url-submit –save</p>
+</li>
+<li><p>自动推送</p>
+</li>
+</ul>
+</li>
+<li><p>扩展了百度统计功能：<a href="https://tongji.baidu.com" target="_blank" rel="noopener">百度统计官网</a></p>
+<ul>
+<li>准入秘钥token</li>
+<li>baidu-analytics</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="Hexo博客搭建系列——Chapter-8"><a href="#Hexo博客搭建系列——Chapter-8" class="headerlink" title="Hexo博客搭建系列——Chapter 8"></a>Hexo博客搭建系列——Chapter 8</h1><hr>
+<h2 id="五、高级功能实现"><a href="#五、高级功能实现" class="headerlink" title="五、高级功能实现"></a>五、高级功能实现</h2><h3 id="13-SEO优化"><a href="#13-SEO优化" class="headerlink" title="13. SEO优化"></a>13. SEO优化</h3><ul>
+<li><p>SEO(Search Engine Optimization)搜索引擎优化</p>
+<blockquote>
+<p>搜索引擎优化是一种利用搜索引擎的搜索规则来提高目的网站在有关搜索引擎内的排名的方式。</p>
+</blockquote>
+<ul>
+<li>针对个人网站的页面排版进行SEO的优化</li>
+<li>针对搜索引擎进行主动的优化</li>
+</ul>
+</li>
+</ul>
+<h4 id="13-1-加密文章URL"><a href="#13-1-加密文章URL" class="headerlink" title="13.1 加密文章URL"></a>13.1 加密文章URL</h4><blockquote>
+<p>博客默认的地址 <code>网址/年/月/日/文章名</code> 格式不便于搜索引擎抓取，需要进行优化</p>
+<p>注意：修改之后旧文章的统计数据(浏览量)会重新计数。</p>
+</blockquote>
+<ul>
+<li><p>安装插件 hexo-abbrlink </p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>修改根目录配置文件_config.yml</p>
+<blockquote>
+<p>查找</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span> </span><br></pre></td></tr></table></figure>
+
+<p>修改</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">post/:abbrlink.html</span></span><br></pre></td></tr></table></figure>
+
+<p>并在下面添加：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line"><span class="attr">alg:</span> <span class="string">crc32</span>  <span class="comment"># 算法</span></span><br><span class="line"><span class="attr">rep:</span> <span class="string">hex</span>    <span class="comment"># 进制</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="13-2-添加站点地图SiteMap"><a href="#13-2-添加站点地图SiteMap" class="headerlink" title="13.2 添加站点地图SiteMap"></a>13.2 添加站点地图SiteMap</h4><ul>
+<li><p>安装插件 hexo-generator-sitemap </p>
+</li>
+<li><p>安装插件 hexo-generator-baidu-sitemap </p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save     //默认的</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save    //百度专属</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>重新清理、渲染</p>
+<blockquote>
+<p>pulic文件夹下会生成一个sitmap.xml文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>注意：sitemap 的初衷是给搜索引擎看的，为了提高搜索引擎对自己站点的收录效果，可以：</p>
+<ul>
+<li>手动到 Google 和百度等搜索引擎提交 sitemap.xml</li>
+<li>添加蜘蛛协议 robots，新建robots.txt文件，添加以下文件内容，把robots.txt放在hexo站点的source文件下</li>
+</ul>
+</li>
+</ul>
+<h4 id="13-3-注册百度站长平台"><a href="#13-3-注册百度站长平台" class="headerlink" title="13.3 注册百度站长平台"></a>13.3 注册百度站长平台</h4><ul>
+<li><p>在百度站长平台添加网站</p>
+<blockquote>
+<p><a href="https://ziyuan.baidu.com/" target="_blank" rel="noopener">百度搜索资源平台</a>→用户中心→站点管理→添加网站</p>
+<p>添加需要管理的网站地址</p>
+</blockquote>
+</li>
+<li><p>验证网站：三种方法——本文选用html标签验证</p>
+<ul>
+<li><p>文件验证</p>
+<blockquote>
+<p>将百度验证文件放在网站首页下，即：博客根目录/source下</p>
+<p>但是hexo在渲染生成时，会修改html文件，导致验证失败</p>
+</blockquote>
+</li>
+<li><p>html标签验证</p>
+<blockquote>
+<p>将html验证代码添加到网站首页HTML代码的<head>标签之间</p>
+<p>在 根目录/themes/yourtheme/layout/_partial/head.ejs 中添加如下代码:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"baidu-site-verification"</span> <span class="attr">content</span>=<span class="string">"RdypQbGwZW"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>Cname</p>
+<blockquote>
+<p>将RdypQbGwZW.yoursite使用CNAME解析到ziyuan.baidu.com</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="13-4-针对百度搜索引擎的优化"><a href="#13-4-针对百度搜索引擎的优化" class="headerlink" title="13.4 针对百度搜索引擎的优化"></a>13.4 针对百度搜索引擎的优化</h4><ul>
+<li><p>提交SiteMap站点地图文件</p>
+<blockquote>
+<p>转到普通收录，选择自己的站点网址。</p>
+<p>自动提交，选择sitemap。按照提示的格式添加自己的sitemap文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://chthollists.github.io/sitemap.xml</span><br><span class="line">https://chthollists.github.io/baidusitemap.xml</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>添加<strong>蜘蛛协议</strong> robots</p>
+<blockquote>
+<p>新建robots.txt文件，添加以下文件内容，把robots.txt放在hexo站点的source文件下</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hexo robots.txt</span></span><br><span class="line"><span class="attr">User-agent:</span> <span class="string">*</span> <span class="attr">Allow:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">Allow:</span> <span class="string">/archives/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/vendors/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/js/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/css/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/fonts/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/vendors/</span></span><br><span class="line"><span class="attr">Disallow:</span> <span class="string">/fancybox/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">Sitemap:</span> <span class="string">https://chthollists.github.io/sitemap.xml</span></span><br><span class="line"><span class="attr">Sitemap:</span> <span class="string">https://chthollists.github.io/baidusitemap.xml</span></span><br></pre></td></tr></table></figure>
+
+<p>可以在<a href="https://ziyuan.baidu.com/" target="_blank" rel="noopener">百度搜索资源平台</a>验证文件是否生效</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="13-5-网站结构自身优化"><a href="#13-5-网站结构自身优化" class="headerlink" title="13.5 网站结构自身优化"></a>13.5 网站结构自身优化</h4><ul>
+<li><p>keywords 和 description</p>
+<blockquote>
+<p>在\scaffolds\post.md中添加如下代码，用于生成的文章中添加关键字和描述。</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">keywords:</span> <span class="comment">#文章关键词，多个关键词用英文逗号隔开</span></span><br><span class="line"><span class="attr">description:</span> <span class="comment">#文章描述，便于搜索引擎用关键词检索</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>文章地址优化</p>
+<blockquote>
+<p>参见13.1 加密URL</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="14-百度推送收录功能"><a href="#14-百度推送收录功能" class="headerlink" title="14. 百度推送收录功能"></a>14. 百度推送收录功能</h3><ul>
+<li>除了通过提交SiteMap文件推送网站的地址外，还有自动提交：主动推送、自动推送，手动提交方式。详情参考<a href="https://zhuanlan.zhihu.com/p/100922816" target="_blank" rel="noopener">Hexo实现百度收录</a></li>
+<li>由于Github Pages上禁止百度爬虫，所以需要把Hexo博客部署到双线服务器上，选择Coding Pages，详情参考<a href="https://blog.csdn.net/qq_36759224/article/details/100879609" target="_blank" rel="noopener">Hexo双线部署CodingPages</a></li>
+<li><a href="http://mfln8n.coding-pages.com/" target="_blank" rel="noopener">Hexo博客+Coding Pages</a></li>
+</ul>
+<h4 id="14-1-新增博客文章页面自动推送"><a href="#14-1-新增博客文章页面自动推送" class="headerlink" title="14.1 新增博客文章页面自动推送"></a>14.1 新增博客文章页面自动推送</h4><ul>
+<li><p>修改文件 &lt;博客根目录&gt;/themes/yilia/layout/_partial/article.ejs</p>
+<blockquote>
+<p>查找</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span></span></span><br><span class="line"><span class="tag">     <span class="attr">var</span> <span class="attr">sUrl</span> = <span class="string">url.replace(/index\.html$/,</span> '');</span></span><br><span class="line"><span class="tag">     <span class="attr">sUrl</span> = <span class="string">/^(http:|https:)\/\//.test(sUrl)</span> ? <span class="attr">sUrl</span> <span class="attr">:</span> '<span class="attr">https:</span>' + <span class="attr">sUrl</span>;</span></span><br><span class="line"><span class="tag">   %&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在<strong>前面</strong>添加</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">!-</span> 百度自动推送方式提交 <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">1</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="javascript">   <span class="keyword">var</span> bp = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span></span><br><span class="line"><span class="javascript">   <span class="keyword">var</span> curProtocol = <span class="built_in">window</span>.location.protocol.split(<span class="string">':'</span>)[<span class="number">0</span>];</span></span><br><span class="line"><span class="actionscript">   <span class="keyword">if</span> (curProtocol === <span class="string">'https'</span>) &#123;</span></span><br><span class="line"><span class="actionscript">       bp.src = <span class="string">'https://zz.bdstatic.com/linksubmit/push.js'</span>;</span></span><br><span class="line">   &#125;</span><br><span class="line"><span class="actionscript">   <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="actionscript">       bp.src = <span class="string">'http://push.zhanzhang.baidu.com/push.js'</span>;</span></span><br><span class="line">   &#125;</span><br><span class="line"><span class="javascript">   <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>];</span></span><br><span class="line">   s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">!-</span> 百度自动推送方式提交结束 <span class="attr">--</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>注意：只会主自动推送新增博客文章页面，不包括其他页面。</p>
+</li>
+</ul>
+<h4 id="14-2-主动推送"><a href="#14-2-主动推送" class="headerlink" title="14.2 主动推送"></a>14.2 主动推送</h4><blockquote>
+<p>主动推送最为快速的提交方式，是被百度收录最快的推送方式。</p>
+<p>其实现原理如下：</p>
+<p>新链接的产生， hexo generate 会产生一个文本文件，里面包含最新的链接；</p>
+<p>新链接的提交， hexo deploy 会从上述文件中读取链接，提交至百度搜索引擎。</p>
+</blockquote>
+<ul>
+<li><p>安装插件 hexo-baidu-url-submi</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>修改博客根目录配置文件_config.yml</p>
+<blockquote>
+<p>添加</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">baidu_url_submit:</span></span><br><span class="line"><span class="attr">count:</span> <span class="number">20</span> <span class="comment">## 提交最新的20个链接</span></span><br><span class="line"><span class="attr">host:</span> <span class="string">http://mfln8n.coding-pages.com/</span> <span class="comment">## 百度站长平台中注册的域名</span></span><br><span class="line"><span class="attr">token:</span>  <span class="comment">## 16位准入秘钥</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">baidu_urls.txt</span> <span class="comment">## 文本文档的地址， 新链接会保存在此文本文档里</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>获取准入秘钥</p>
+<blockquote>
+<p>在<a href="https://ziyuan.baidu.com/" target="_blank" rel="noopener">百度搜索资源平台</a>的平台收录中获取准入秘钥token —16位</p>
+</blockquote>
+</li>
+<li><p>查看根目录下的_config.yml文件中url的值， 必须包含是百度站长平台注册的域名</p>
+<blockquote>
+<p>如：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">http://mfln8n.coding-pages.com/</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>加入新的deployer:</p>
+<blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">   <span class="attr">repo:</span> <span class="string">git@github.com:xxxxx</span></span><br><span class="line">   <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">   <span class="comment"># 加入新的type</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">type:</span> <span class="string">baidu_url_submitter</span> <span class="comment">## 添加这里内容即可</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="14-3-自动推送"><a href="#14-3-自动推送" class="headerlink" title="14.3 自动推送"></a>14.3 自动推送</h4><ul>
+<li><p>安装自动推送JS代码的网页，在页面被访问时，页面URL将立即被推送给百度。</p>
+</li>
+<li><p>修改主题目录下的layout/post.ejs文件</p>
+<blockquote>
+<p>末尾添加自动推送代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="javascript"> <span class="keyword">var</span> bp = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span></span><br><span class="line"><span class="javascript"> <span class="keyword">var</span> curProtocol = <span class="built_in">window</span>.location.protocol.split(<span class="string">':'</span>)[<span class="number">0</span>];</span></span><br><span class="line"><span class="actionscript"> <span class="keyword">if</span> (curProtocol === <span class="string">'https'</span>) &#123;</span></span><br><span class="line"><span class="actionscript">     bp.src = <span class="string">'https://zz.bdstatic.com/linksubmit/push.js'</span>;</span></span><br><span class="line"> &#125;</span><br><span class="line"><span class="actionscript"> <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="actionscript">     bp.src = <span class="string">'http://push.zhanzhang.baidu.com/push.js'</span>;</span></span><br><span class="line"> &#125;</span><br><span class="line"><span class="javascript"> <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>];</span></span><br><span class="line"> s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="15-百度统计功能"><a href="#15-百度统计功能" class="headerlink" title="15. 百度统计功能"></a>15. 百度统计功能</h3><ul>
+<li><p>在<a href="https://tongji.baidu.com" target="_blank" rel="noopener">百度统计官网</a>上添加网站，获取统计代码</p>
+<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> _hmt = _hmt || [];</span></span><br><span class="line"><span class="actionscript">(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> hm = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</span></span><br><span class="line"><span class="actionscript">hm.src = <span class="string">"https://hm.baidu.com/hm.js?0113964bae57c4e8dcc0a90d835680c4"</span>;</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>]; </span></span><br><span class="line">s.parentNode.insertBefore(hm, s);</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>修改文件<code>themes/yilia/layout/_partial/baidu-analytics.ejs</code></p>
+</li>
+<li><p>或者新建文件<code>themes/yilia/layout/baidu-tongji.ejs</code></p>
+<blockquote>
+<p>将获取的统计代码添加进去</p>
+<p><code>baidu-analytics.ejs</code></p>
+<p>或者</p>
+<p>在<code>baidu-tongji.ejs</code>中</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.baidu_tongji</span>) &#123; %&gt;</span></span><br><span class="line">//这里添加统计代码</span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>修改主题的配置文件<code>themes/yilia/_config.yml</code></p>
+<blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">baidu_analytics:</span> <span class="string">''</span></span><br><span class="line"><span class="comment"># 改为</span></span><br><span class="line"><span class="attr">baidu_analytics:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line"><span class="comment"># 新建属性</span></span><br><span class="line"><span class="attr">baidu_tongji:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>注意：如果是新建的<code>baidu-tongji.ejs</code>文件</p>
+<blockquote>
+<p>还需要在<code>themes\yilia\layout\_partial\head.ejs</code>,在<code>&lt;/head&gt;</code>上面添加：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>("<span class="attr">baidu_tongji</span>") %&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>可以通过百度统计的<a href="https://tongji.baidu.com/sc-web/10000247748/home/js/check?siteId=15660763" target="_blank" rel="noopener">代码安装检查</a>功能来验证百度统计功能是否添加成功。</p>
+</li>
+</ul>
+<hr>
+
+				
+			
+	  
+	  
+	  <!--    注释：
         <hr>
 <ul>
 <li><p>在Windows系统上利用Hexo搭建博客系列——Chapter8</p>
@@ -391,7 +646,7 @@ var _hmt = _hmt || [];
 <ul>
 <li><p>安装插件 hexo-abbrlink </p>
 <blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>修改根目录配置文件_config.yml</p>
@@ -412,13 +667,13 @@ var _hmt = _hmt || [];
 </li>
 <li><p>安装插件 hexo-generator-baidu-sitemap </p>
 <blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save     //默认的</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save    //百度专属</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save     //默认的</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save    //百度专属</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>重新清理、渲染</p>
 <blockquote>
 <p>pulic文件夹下会生成一个sitmap.xml文件</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>注意：sitemap 的初衷是给搜索引擎看的，为了提高搜索引擎对自己站点的收录效果，可以：</p>
@@ -463,7 +718,7 @@ var _hmt = _hmt || [];
 <blockquote>
 <p>转到普通收录，选择自己的站点网址。</p>
 <p>自动提交，选择sitemap。按照提示的格式添加自己的sitemap文件</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://chthollists.github.io/sitemap.xml</span><br><span class="line">https://chthollists.github.io/baidusitemap.xml</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://chthollists.github.io/sitemap.xml</span><br><span class="line">https://chthollists.github.io/baidusitemap.xml</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>添加<strong>蜘蛛协议</strong> robots</p>
@@ -498,10 +753,10 @@ var _hmt = _hmt || [];
 <li><p>修改文件 &lt;博客根目录&gt;/themes/yilia/layout/_partial/article.ejs</p>
 <blockquote>
 <p>查找</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;%</span><br><span class="line">     var sUrl &#x3D; url.replace(&#x2F;index\.html$&#x2F;, &#39;&#39;);</span><br><span class="line">     sUrl &#x3D; &#x2F;^(http:|https:)\&#x2F;\&#x2F;&#x2F;.test(sUrl) ? sUrl : &#39;https:&#39; + sUrl;</span><br><span class="line">   %&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span></span></span><br><span class="line"><span class="tag">     <span class="attr">var</span> <span class="attr">sUrl</span> = <span class="string">url.replace(/index\.html$/,</span> '');</span></span><br><span class="line"><span class="tag">     <span class="attr">sUrl</span> = <span class="string">/^(http:|https:)\/\//.test(sUrl)</span> ? <span class="attr">sUrl</span> <span class="attr">:</span> '<span class="attr">https:</span>' + <span class="attr">sUrl</span>;</span></span><br><span class="line"><span class="tag">   %&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>在<strong>前面</strong>添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!- 百度自动推送方式提交 --&gt;</span><br><span class="line">&lt;% if (1)&#123; %&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">(function()&#123;</span><br><span class="line">   var bp &#x3D; document.createElement(&#39;script&#39;);</span><br><span class="line">   var curProtocol &#x3D; window.location.protocol.split(&#39;:&#39;)[0];</span><br><span class="line">   if (curProtocol &#x3D;&#x3D;&#x3D; &#39;https&#39;) &#123;</span><br><span class="line">       bp.src &#x3D; &#39;https:&#x2F;&#x2F;zz.bdstatic.com&#x2F;linksubmit&#x2F;push.js&#39;;</span><br><span class="line">   &#125;</span><br><span class="line">   else &#123;</span><br><span class="line">       bp.src &#x3D; &#39;http:&#x2F;&#x2F;push.zhanzhang.baidu.com&#x2F;push.js&#39;;</span><br><span class="line">   &#125;</span><br><span class="line">   var s &#x3D; document.getElementsByTagName(&quot;script&quot;)[0];</span><br><span class="line">   s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">&lt;!- 百度自动推送方式提交结束 --&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">!-</span> 百度自动推送方式提交 <span class="attr">--</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">1</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="javascript">   <span class="keyword">var</span> bp = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span></span><br><span class="line"><span class="javascript">   <span class="keyword">var</span> curProtocol = <span class="built_in">window</span>.location.protocol.split(<span class="string">':'</span>)[<span class="number">0</span>];</span></span><br><span class="line"><span class="actionscript">   <span class="keyword">if</span> (curProtocol === <span class="string">'https'</span>) &#123;</span></span><br><span class="line"><span class="actionscript">       bp.src = <span class="string">'https://zz.bdstatic.com/linksubmit/push.js'</span>;</span></span><br><span class="line">   &#125;</span><br><span class="line"><span class="actionscript">   <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="actionscript">       bp.src = <span class="string">'http://push.zhanzhang.baidu.com/push.js'</span>;</span></span><br><span class="line">   &#125;</span><br><span class="line"><span class="javascript">   <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>];</span></span><br><span class="line">   s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">!-</span> 百度自动推送方式提交结束 <span class="attr">--</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>注意：只会主自动推送新增博客文章页面，不包括其他页面。</p>
@@ -516,7 +771,7 @@ var _hmt = _hmt || [];
 <ul>
 <li><p>安装插件 hexo-baidu-url-submi</p>
 <blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>修改博客根目录配置文件_config.yml</p>
@@ -548,7 +803,7 @@ var _hmt = _hmt || [];
 <li><p>修改主题目录下的layout/post.ejs文件</p>
 <blockquote>
 <p>末尾添加自动推送代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">(function()&#123;</span><br><span class="line"> var bp &#x3D; document.createElement(&#39;script&#39;);</span><br><span class="line"> var curProtocol &#x3D; window.location.protocol.split(&#39;:&#39;)[0];</span><br><span class="line"> if (curProtocol &#x3D;&#x3D;&#x3D; &#39;https&#39;) &#123;</span><br><span class="line">     bp.src &#x3D; &#39;https:&#x2F;&#x2F;zz.bdstatic.com&#x2F;linksubmit&#x2F;push.js&#39;;</span><br><span class="line"> &#125;</span><br><span class="line"> else &#123;</span><br><span class="line">     bp.src &#x3D; &#39;http:&#x2F;&#x2F;push.zhanzhang.baidu.com&#x2F;push.js&#39;;</span><br><span class="line"> &#125;</span><br><span class="line"> var s &#x3D; document.getElementsByTagName(&quot;script&quot;)[0];</span><br><span class="line"> s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="javascript"> <span class="keyword">var</span> bp = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span></span><br><span class="line"><span class="javascript"> <span class="keyword">var</span> curProtocol = <span class="built_in">window</span>.location.protocol.split(<span class="string">':'</span>)[<span class="number">0</span>];</span></span><br><span class="line"><span class="actionscript"> <span class="keyword">if</span> (curProtocol === <span class="string">'https'</span>) &#123;</span></span><br><span class="line"><span class="actionscript">     bp.src = <span class="string">'https://zz.bdstatic.com/linksubmit/push.js'</span>;</span></span><br><span class="line"> &#125;</span><br><span class="line"><span class="actionscript"> <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="actionscript">     bp.src = <span class="string">'http://push.zhanzhang.baidu.com/push.js'</span>;</span></span><br><span class="line"> &#125;</span><br><span class="line"><span class="javascript"> <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>];</span></span><br><span class="line"> s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
@@ -556,7 +811,7 @@ var _hmt = _hmt || [];
 <h3 id="15-百度统计功能"><a href="#15-百度统计功能" class="headerlink" title="15. 百度统计功能"></a>15. 百度统计功能</h3><ul>
 <li><p>在<a href="https://tongji.baidu.com" target="_blank" rel="noopener">百度统计官网</a>上添加网站，获取统计代码</p>
 <blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">var _hmt &#x3D; _hmt || [];</span><br><span class="line">(function() &#123;</span><br><span class="line">var hm &#x3D; document.createElement(&quot;script&quot;);</span><br><span class="line">hm.src &#x3D; &quot;https:&#x2F;&#x2F;hm.baidu.com&#x2F;hm.js?0113964bae57c4e8dcc0a90d835680c4&quot;;</span><br><span class="line">var s &#x3D; document.getElementsByTagName(&quot;script&quot;)[0]; </span><br><span class="line">s.parentNode.insertBefore(hm, s);</span><br><span class="line">&#125;)();</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">var</span> _hmt = _hmt || [];</span></span><br><span class="line"><span class="actionscript">(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> hm = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</span></span><br><span class="line"><span class="actionscript">hm.src = <span class="string">"https://hm.baidu.com/hm.js?0113964bae57c4e8dcc0a90d835680c4"</span>;</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>]; </span></span><br><span class="line">s.parentNode.insertBefore(hm, s);</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>修改文件<code>themes/yilia/layout/_partial/baidu-analytics.ejs</code></p>
@@ -567,7 +822,7 @@ var _hmt = _hmt || [];
 <p><code>baidu-analytics.ejs</code></p>
 <p>或者</p>
 <p>在<code>baidu-tongji.ejs</code>中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.baidu_tongji) &#123; %&gt;</span><br><span class="line">&#x2F;&#x2F;这里添加统计代码</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.baidu_tongji</span>) &#123; %&gt;</span></span><br><span class="line">//这里添加统计代码</span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>修改主题的配置文件<code>themes/yilia/_config.yml</code></p>
@@ -578,7 +833,7 @@ var _hmt = _hmt || [];
 <li><p>注意：如果是新建的<code>baidu-tongji.ejs</code>文件</p>
 <blockquote>
 <p>还需要在<code>themes\yilia\layout\_partial\head.ejs</code>,在<code>&lt;/head&gt;</code>上面添加：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- partial(<span class="string">"baidu_tongji"</span>) %&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>("<span class="attr">baidu_tongji</span>") %&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>可以通过百度统计的<a href="https://tongji.baidu.com/sc-web/10000247748/home/js/check?siteId=15660763" target="_blank" rel="noopener">代码安装检查</a>功能来验证百度统计功能是否添加成功。</p>
@@ -586,7 +841,11 @@ var _hmt = _hmt || [];
 </ul>
 <hr>
 
-      
+       -->
+	        
+	  
+	  
+	  
 	  
 <!-- 《添加版权声明 -->
         
@@ -605,7 +864,7 @@ var _hmt = _hmt || [];
     2020-07-31 20:11:06
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-07-31 21:21:26
+    2020-08-02 20:05:31
     <br>
     <strong class="article-titles">本文标题：</strong>
     <a href="https://chthollists.github.io/post/f8e513cc.html" title="Hexo博客搭建系列Chapter8——Hexo博客功能扩展(4/5)" target="_blank">Hexo博客搭建系列Chapter8——Hexo博客功能扩展(4/5)</a>
@@ -632,7 +891,7 @@ var _hmt = _hmt || [];
           <a href="javascript:;" class="page-reward-btn tooltip-top">
             <div class="tooltip tooltip-east">
             <span class="tooltip-item">
-              支持三连
+              支持
             </span>
             <span class="tooltip-content">
               <span class="tooltip-text">
@@ -714,6 +973,10 @@ var _hmt = _hmt || [];
         		<li class="article-tag-list-item">
         			<a href="/categories/others//" class="article-tag-list-link color2">others</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/others/Hexo//" class="article-tag-list-link color5">Hexo</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -774,9 +1037,16 @@ var _hmt = _hmt || [];
 <div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
+  
+	  
     </div>
   </div>
 </article>
+
+
+
+
+
 
   
 <nav id="article-nav">
@@ -866,6 +1136,10 @@ if(true){
 gitalk.render('gitalk-container') 
 }
 </script>
+
+
+
+
 
 
 
@@ -989,6 +1263,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">busuanzi</a>
               </li>
              
@@ -1005,39 +1295,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hugo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">WordPress</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VuePress</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Jekyllrb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">hexo-deployer-git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo-wordcount</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+                <a href="javascript:void(0)" class="js-tag color3">hexo-blog-encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">declare</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">love</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1057,31 +1339,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo-wordcount</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hugo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">hexo-blog-encrypt</a>
+                <a href="javascript:void(0)" class="js-tag color5">WordPress</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">encrypt</a>
+                <a href="javascript:void(0)" class="js-tag color4">VuePress</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Valine</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Leancloud</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Gitment</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">hexo-helper-live2d</a>
+                <a href="javascript:void(0)" class="js-tag color4">Jekyllrb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1105,19 +1375,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Valine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Leancloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Gitment</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">hexo-helper-live2d</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">declare</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">love</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
               </li>
              
               <li class="article-tag-list-item">

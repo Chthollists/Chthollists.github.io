@@ -21,7 +21,7 @@
 <meta property="og:description" content="在Windows系统上利用Hexo搭建博客系列——Chapter10  Chapter10：  分析并解决了不蒜子统计与Live2D冲突导致的不蒜子统计功能失效问题  分析并解决了网易云音乐外链资源加载失败的问题，但歌单外链仍会失败  分析并解决了博客网站无法被百度收录的问题  分析了Gitalk评论出现Error : Network Error的原因及解决办法，但仍未解决 Tip：  如果有">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-31T12:11:20.000Z">
-<meta property="article:modified_time" content="2020-07-31T13:21:26.129Z">
+<meta property="article:modified_time" content="2020-08-02T12:09:41.263Z">
 <meta property="article:author" content="Code.Yang">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="busuanzi">
@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
 	        
 				<li><a href="/archives/index.html">归档</a></li>
 	        
-				<li><a href="/categories/essays/">随笔</a></li>
+				<li><a href="/tags">标签</a></li>
 	        
 				<li><a href="/categories/algorithm">算法</a></li>
 	        
@@ -220,7 +220,7 @@ var _hmt = _hmt || [];
 		        
 					<li style="width: 14.285714285714286%"><a href="/archives/index.html">归档</a></li>
 		        
-					<li style="width: 14.285714285714286%"><a href="/categories/essays/">随笔</a></li>
+					<li style="width: 14.285714285714286%"><a href="/tags">标签</a></li>
 		        
 					<li style="width: 14.285714285714286%"><a href="/categories/algorithm">算法</a></li>
 		        
@@ -286,7 +286,7 @@ var _hmt = _hmt || [];
         <i class="fa fa-keyboard-o"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  博文字数统计 : </span></b></font>
         <!--自定义样式-->
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">1.7k字</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">1.6k字</span>
       </span></b></font>
     </span>
 
@@ -295,7 +295,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  阅读所需时长 : </span></b></font>
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">7分</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">6分</span>
       </span></b></font>
     </span>
 </div>
@@ -337,8 +337,12 @@ var _hmt = _hmt || [];
 <!-- 目录内容结束 -->
 	
     <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
+	
+<!-- 标签云和分类云 -->	
+			
+
+				
+					<hr>
 <ul>
 <li><p>在Windows系统上利用Hexo搭建博客系列——Chapter10</p>
 </li>
@@ -370,12 +374,12 @@ var _hmt = _hmt || [];
 <ul>
 <li><p>不蒜子功能正常时</p>
 <blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_pv&quot;&gt;</span><br><span class="line"> |&amp;nbsp;&lt;i class&#x3D;&quot;far fa-eye&quot;&gt;&lt;&#x2F;i&gt;&amp;nbsp;总访问量:&amp;nbsp;&lt;span id&#x3D;&quot;busuanzi_value_site_pv&quot;</span><br><span class="line">     class&#x3D;&quot;white-color&quot;&gt;&lt;&#x2F;span&gt;&amp;nbsp;次</span><br><span class="line"> &lt;&#x2F;span&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_uv&quot;&gt;</span><br><span class="line"> |&amp;nbsp;&lt;i class&#x3D;&quot;fas fa-users&quot;&gt;&lt;&#x2F;i&gt;&amp;nbsp;总访问人数:&amp;nbsp;&lt;span id&#x3D;&quot;busuanzi_value_site_uv&quot;</span><br><span class="line">     class&#x3D;&quot;white-color&quot;&gt;&lt;&#x2F;span&gt;&amp;nbsp;人</span><br><span class="line"> &lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"far fa-eye"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问量:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>次</span><br><span class="line"> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fas fa-users"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问人数:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>人</span><br><span class="line"> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>不蒜子功能失效时</p>
 <blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_pv&quot; style&#x3D;&quot;display: none;&quot;&gt;</span><br><span class="line"> |&amp;nbsp;&lt;i class&#x3D;&quot;far fa-eye&quot;&gt;&lt;&#x2F;i&gt;&amp;nbsp;总访问量:&amp;nbsp;&lt;span id&#x3D;&quot;busuanzi_value_site_pv&quot; </span><br><span class="line">     class&#x3D;&quot;white-color&quot;&gt;2303950&lt;&#x2F;span&gt;&amp;nbsp;次</span><br><span class="line">&lt;&#x2F;span&gt;</span><br><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_uv&quot; style&#x3D;&quot;display: none;&quot;&gt;</span><br><span class="line"> |&amp;nbsp;&lt;i class&#x3D;&quot;fas fa-users&quot;&gt;&lt;&#x2F;i&gt;&amp;nbsp;总访问人数:&amp;nbsp;&lt;span id&#x3D;&quot;busuanzi_value_site_uv&quot; </span><br><span class="line">     class&#x3D;&quot;white-color&quot;&gt;160644&lt;&#x2F;span&gt;&amp;nbsp;人</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"far fa-eye"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问量:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span>2303950<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fas fa-users"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问人数:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span>160644<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>人</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>所以导致失效的原因是多了一个display的属性值变成了none，从而不显示不蒜子统计</p>
@@ -394,7 +398,7 @@ var _hmt = _hmt || [];
 </li>
 <li><p>修改busuanzi.pure.mini.js文件</p>
 <blockquote>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 找到</span></span><br><span class="line"><span class="string">b.style.display="none"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 改为</span></span><br><span class="line"><span class="string">b.style.display=''</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 找到</span><br><span class="line">b.style.display=<span class="string">"none"</span></span><br><span class="line"></span><br><span class="line"># 改为</span><br><span class="line">b.style.display=<span class="string">''</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>修改不蒜子统计的调用语句</p>
@@ -404,7 +408,7 @@ var _hmt = _hmt || [];
 </blockquote>
 <blockquote>
 <p>路径：<code>themes\yilia\layout\_partial\after-footer.ejs</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 原始</span><br><span class="line">&lt;script  async  src&#x3D;&quot;https:&#x2F;&#x2F;busuanzi.ibruce.info&#x2F;busuanzi&#x2F;2.3&#x2F;busuanzi.pure.mini.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line"># 修改为本地路径：&#x2F;busuanzi.pure.mini.js</span><br><span class="line">&lt;script  async  src&#x3D;&quot;&#x2F;busuanzi.pure.mini.js&quot;&gt;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 原始</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>  <span class="attr">async</span>  <span class="attr">src</span>=<span class="string">"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"># 修改为本地路径：/busuanzi.pure.mini.js</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>  <span class="attr">async</span>  <span class="attr">src</span>=<span class="string">"/busuanzi.pure.mini.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
@@ -425,7 +429,7 @@ var _hmt = _hmt || [];
 <ul>
 <li><p>添加以下内容到hosts文件C:\Windows\System32\drivers\etc\hosts</p>
 <blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解决ipv6开启后网易云音乐无法播放的问题</span></span><br><span class="line">111.19.136.246 m10.music.126.net</span><br><span class="line">111.20.255.169 p1.music.126.net</span><br><span class="line">223.252.199.66 music.163.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解决ipv6开启后网易云音乐无法播放的问题</span></span><br><span class="line">111.19.136.246 m10.music.126.net</span><br><span class="line">111.20.255.169 p1.music.126.net</span><br><span class="line">223.252.199.66 music.163.com</span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>直接停用IPv6功能，在网络和共享中心—网络状态—属性里面，不勾选TCP/IPv6。</p>
 </li>
@@ -480,7 +484,7 @@ var _hmt = _hmt || [];
 </li>
 <li><p>安装插件 hexo-baidu-url-submi</p>
 <blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>修改博客根目录配置文件_config.yml</p>
@@ -540,7 +544,218 @@ var _hmt = _hmt || [];
 <li>后续会继续跟进。</li>
 </ul>
 
-      
+				
+			
+	  
+	  
+	  <!--    注释：
+        <hr>
+<ul>
+<li><p>在Windows系统上利用Hexo搭建博客系列——Chapter10</p>
+</li>
+<li><p>Chapter10：</p>
+</li>
+<li><p>分析并解决了不蒜子统计与Live2D冲突导致的不蒜子统计功能失效问题</p>
+</li>
+<li><p>分析并解决了网易云音乐外链资源加载失败的问题，但歌单外链仍会失败</p>
+</li>
+<li><p>分析并解决了博客网站无法被百度收录的问题</p>
+</li>
+<li><p>分析了Gitalk评论出现Error : Network Error的原因及解决办法，但仍未解决</p>
+<p>Tip：</p>
+<ul>
+<li>如果有人解决了Gitalk的Error : Network Error问题，请在评论区分享或私信博主</li>
+<li>后面会把Hexo博客搭建、美化、功能扩展整个系列的内容整合到一个文章中</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="Hexo博客搭建系列——Chapter-10"><a href="#Hexo博客搭建系列——Chapter-10" class="headerlink" title="Hexo博客搭建系列——Chapter 10"></a>Hexo博客搭建系列——Chapter 10</h1><hr>
+<h2 id="重点：Hexo博客搭建中的遗留问题与解决方法"><a href="#重点：Hexo博客搭建中的遗留问题与解决方法" class="headerlink" title="重点：Hexo博客搭建中的遗留问题与解决方法"></a>重点：Hexo博客搭建中的遗留问题与解决方法</h2><h3 id="一、不蒜子统计与Live2D冲突"><a href="#一、不蒜子统计与Live2D冲突" class="headerlink" title="一、不蒜子统计与Live2D冲突"></a>一、不蒜子统计与Live2D冲突</h3><h4 id="1-不蒜子统计失效"><a href="#1-不蒜子统计失效" class="headerlink" title="1. 不蒜子统计失效"></a>1. 不蒜子统计失效</h4><ul>
+<li>问题：当配置了Live2D功能后，不蒜子统计功能会与其发生冲突从而失效</li>
+<li>参考：<a href="https://boyinthesun.cn/post/error-live2d-busuanzi/" target="_blank" rel="noopener">不蒜子功能失效</a></li>
+</ul>
+<h4 id="2-问题分析"><a href="#2-问题分析" class="headerlink" title="2. 问题分析"></a>2. 问题分析</h4><ul>
+<li><p>分析：查看网页源码Ctrl+u，可以发现：</p>
+<ul>
+<li><p>不蒜子功能正常时</p>
+<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"far fa-eye"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问量:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>次</span><br><span class="line"> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fas fa-users"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问人数:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span></span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>人</span><br><span class="line"> <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>不蒜子功能失效时</p>
+<blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_pv"</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"far fa-eye"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问量:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_pv"</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span>2303950<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span></span><br><span class="line"> |<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fas fa-users"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="symbol">&amp;nbsp;</span>总访问人数:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span> </span></span><br><span class="line"><span class="tag">     <span class="attr">class</span>=<span class="string">"white-color"</span>&gt;</span>160644<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="symbol">&amp;nbsp;</span>人</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>所以导致失效的原因是多了一个display的属性值变成了none，从而不显示不蒜子统计</p>
+<blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">style="display:</span> <span class="string">none;"</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-解决办法："><a href="#3-解决办法：" class="headerlink" title="3. 解决办法："></a>3. 解决办法：</h4><ul>
+<li><p>打开不蒜子官网上的<a href="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" target="_blank" rel="noopener">busuanzi.pure.mini.js</a>文件，将其下载到本地，放到yilia主题下的路径中</p>
+<blockquote>
+<p>如：<code>theme/yilia/source</code>路径</p>
+</blockquote>
+</li>
+<li><p>修改busuanzi.pure.mini.js文件</p>
+<blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 找到</span><br><span class="line">b.style.display=<span class="string">"none"</span></span><br><span class="line"></span><br><span class="line"># 改为</span><br><span class="line">b.style.display=<span class="string">''</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>修改不蒜子统计的调用语句</p>
+<blockquote>
+<p>原来是从不蒜子统计的服务器上调用busuanzi.pure.mini.js</p>
+<p>现在直接从本地调用，还可以避免不蒜子官网域名改变导致的功能失效问题</p>
+</blockquote>
+<blockquote>
+<p>路径：<code>themes\yilia\layout\_partial\after-footer.ejs</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 原始</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>  <span class="attr">async</span>  <span class="attr">src</span>=<span class="string">"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"># 修改为本地路径：/busuanzi.pure.mini.js</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>  <span class="attr">async</span>  <span class="attr">src</span>=<span class="string">"/busuanzi.pure.mini.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="4-结果：已解决"><a href="#4-结果：已解决" class="headerlink" title="4. 结果：已解决"></a>4. 结果：已解决</h4><hr>
+<h3 id="二、网易云外链资源加载失败"><a href="#二、网易云外链资源加载失败" class="headerlink" title="二、网易云外链资源加载失败"></a>二、网易云外链资源加载失败</h3><h4 id="1-网易云音乐加载失败"><a href="#1-网易云音乐加载失败" class="headerlink" title="1. 网易云音乐加载失败"></a>1. 网易云音乐加载失败</h4><ul>
+<li><p>问题</p>
+<blockquote>
+<p><strong>歌单外链错误 : music.163.com上的嵌入式页面显示资源加载失败</strong></p>
+</blockquote>
+</li>
+</ul>
+<h4 id="2-调研与分析"><a href="#2-调研与分析" class="headerlink" title="2. 调研与分析"></a>2. 调研与分析</h4><ul>
+<li><p>网上的解决办法参见：<a href="https://blog.csdn.net/hubaoquanu/article/details/79084193" target="_blank" rel="noopener">解决办法</a>；均无法解决该问题</p>
+</li>
+<li><p>原因：是由于开启了IPv6后使用了google的IPv6 DNS，音乐资源网站ip解析会直接错误解析到本地127.0.0.1</p>
+</li>
+<li><p>方法(均无效)：</p>
+<ul>
+<li><p>添加以下内容到hosts文件C:\Windows\System32\drivers\etc\hosts</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解决ipv6开启后网易云音乐无法播放的问题</span></span><br><span class="line">111.19.136.246 m10.music.126.net</span><br><span class="line">111.20.255.169 p1.music.126.net</span><br><span class="line">223.252.199.66 music.163.com</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>直接停用IPv6功能，在网络和共享中心—网络状态—属性里面，不勾选TCP/IPv6。</p>
+</li>
+<li><p>使用国内的IPv6DNS: 240c::6666，此时无法访问Google和Youtube。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-解决办法"><a href="#3-解决办法" class="headerlink" title="3. 解决办法"></a>3. 解决办法</h4><ul>
+<li><p>单首音乐对象直接生成外链、电台对象生成外链均不会出现资源加载失败问题；</p>
+</li>
+<li><p>但是，使用歌单对象(即使歌单只有一首音乐)，会出现资源加载失败错问题；</p>
+</li>
+<li><p>推测可能是歌单后台有bug，已反馈给网易云客服。</p>
+</li>
+</ul>
+<h4 id="4-结果：已解决-1"><a href="#4-结果：已解决-1" class="headerlink" title="4. 结果：已解决"></a>4. 结果：已解决</h4><hr>
+<h3 id="三、百度推送收录"><a href="#三、百度推送收录" class="headerlink" title="三、百度推送收录"></a>三、百度推送收录</h3><h4 id="1-博客无法被百度收录"><a href="#1-博客无法被百度收录" class="headerlink" title="1. 博客无法被百度收录"></a>1. 博客无法被百度收录</h4><ul>
+<li><p>原因：由于Github Pages上禁止百度爬虫，所以无法实现百度收录。</p>
+</li>
+<li><p>解决方法：将Hexo博客双线部署到Coding Pages上，再通过主动推送、自动推送、SiteMap来实现百度收录。</p>
+</li>
+</ul>
+<h4 id="2-Hexo博客双线部署"><a href="#2-Hexo博客双线部署" class="headerlink" title="2. Hexo博客双线部署"></a>2. Hexo博客双线部署</h4><ul>
+<li><p>详细教程：参考<a href="https://blog.csdn.net/qq_36759224/article/details/100879609" target="_blank" rel="noopener">Hexo双线部署CodingPages</a>、<a href="http://mfln8n.coding-pages.com/" target="_blank" rel="noopener">Hexo博客+Coding Pages</a></p>
+<blockquote>
+<p>具体方法与部署到Github上类似</p>
+</blockquote>
+</li>
+<li><p>注册Coding Pages</p>
+</li>
+<li><p>新建项目–repo库</p>
+</li>
+<li><p>绑定SSH公钥</p>
+</li>
+<li><p>Hexo部署到Coding Pages上</p>
+</li>
+<li><p>Coding Pages生成静态网站</p>
+</li>
+</ul>
+<h4 id="3-百度收录实现"><a href="#3-百度收录实现" class="headerlink" title="3. 百度收录实现"></a>3. 百度收录实现</h4><blockquote>
+<p>主动推送+SiteMap结合使用</p>
+</blockquote>
+<ul>
+<li><p>主动推送原理</p>
+<ul>
+<li><p>新链接的产生， hexo generate 会产生一个文本文件，里面包含最新的链接；</p>
+</li>
+<li><p>新链接的提交， hexo deploy 会从上述文件中读取链接，提交至百度搜索引擎。</p>
+</li>
+</ul>
+</li>
+<li><p>安装插件 hexo-baidu-url-submi</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>修改博客根目录配置文件_config.yml</p>
+<blockquote>
+<p>添加</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">baidu_url_submit:</span></span><br><span class="line"><span class="attr">count:</span> <span class="number">20</span> <span class="comment">## 提交最新的20个链接</span></span><br><span class="line"><span class="attr">host:</span> <span class="string">http://mfln8n.coding-pages.com/</span> <span class="comment">## 百度站长平台中注册的域名</span></span><br><span class="line"><span class="attr">token:</span>  <span class="comment">## 16位准入秘钥</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">baidu_urls.txt</span> <span class="comment">## 文本文档的地址， 新链接会保存在此文本文档里</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>获取准入秘钥</p>
+<blockquote>
+<p>在<a href="https://ziyuan.baidu.com/" target="_blank" rel="noopener">百度搜索资源平台</a>的平台收录中获取准入秘钥token —16位</p>
+</blockquote>
+</li>
+<li><p>查看根目录下的_config.yml文件中url的值， 必须包含是百度站长平台注册的域名</p>
+<blockquote>
+<p>如：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">http://mfln8n.coding-pages.com/</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>加入新的deployer:</p>
+<blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">   <span class="attr">repo:</span> <span class="string">git@github.com:xxxxx</span></span><br><span class="line">   <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">   <span class="comment"># 加入新的type</span></span><br><span class="line"> <span class="bullet">-</span> <span class="attr">type:</span> <span class="string">baidu_url_submitter</span> <span class="comment">## 添加这里内容即可</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h4 id="4-结果：已解决-2"><a href="#4-结果：已解决-2" class="headerlink" title="4. 结果：已解决"></a>4. 结果：已解决</h4><hr>
+<h3 id="四、Gitalk评论系统-Error：Network-Error-（未解决）"><a href="#四、Gitalk评论系统-Error：Network-Error-（未解决）" class="headerlink" title="四、Gitalk评论系统 Error：Network Error （未解决）"></a>四、Gitalk评论系统 Error：Network Error （未解决）</h3><h4 id="1-Error：Network-Error"><a href="#1-Error：Network-Error" class="headerlink" title="1. Error：Network Error"></a>1. Error：Network Error</h4><ul>
+<li>评论区显示Error : Network Error，用户无法登陆</li>
+<li>登录时会自动跳转回博客主页</li>
+</ul>
+<h4 id="2-分析"><a href="#2-分析" class="headerlink" title="2. 分析"></a>2. 分析</h4><ul>
+<li><p>参考：</p>
+<blockquote>
+<p><a href="https://www.cnblogs.com/liuurick/p/10713693.html" target="_blank" rel="noopener">Gitalk评论初始化无法登陆</a></p>
+<p><a href="https://blog.csdn.net/w47_csdn/article/details/88858343" target="_blank" rel="noopener">Gitalk评论初始化登录时跳转回首页</a></p>
+</blockquote>
+</li>
+<li><p>OAuth APP的callback URL设置导致的</p>
+</li>
+</ul>
+<h4 id="3-解决办法-1"><a href="#3-解决办法-1" class="headerlink" title="3. 解决办法"></a>3. 解决办法</h4><ul>
+<li><p>通过查看登录时的网页路径请求，来重新设置callback URL</p>
+</li>
+<li><p>解决方法：在Github创建OAuth APP时：</p>
+<ul>
+<li><p>如果博客只部署在一个云端，无论是Github Pages、Gitee Pages、Coding Pages还是个人搭建的云服务器，回调地址callback URL都选择博客主页</p>
+</li>
+<li><p>当博客双线部署在多个云端时，会出现Error : Network Error 错误，此时回调地址callback URL要与_config.yml配置文件中的 config.url 一致，不然会无法登陆。</p>
+<blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">callback URL:</span> <span class="string">http://mfln8n.coding-pages.com</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-结果：未解决"><a href="#4-结果：未解决" class="headerlink" title="4. 结果：未解决"></a>4. 结果：未解决</h4><ul>
+<li>后续会继续跟进。</li>
+</ul>
+
+       -->
+	        
+	  
+	  
+	  
 	  
 <!-- 《添加版权声明 -->
         
@@ -559,7 +774,7 @@ var _hmt = _hmt || [];
     2020-07-31 20:11:20
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-07-31 21:21:26
+    2020-08-02 20:09:41
     <br>
     <strong class="article-titles">本文标题：</strong>
     <a href="https://chthollists.github.io/post/a8cc0871.html" title="Hexo博客搭建系列Chapter10——Hexo博客遗留问题(完结)" target="_blank">Hexo博客搭建系列Chapter10——Hexo博客遗留问题(完结)</a>
@@ -586,7 +801,7 @@ var _hmt = _hmt || [];
           <a href="javascript:;" class="page-reward-btn tooltip-top">
             <div class="tooltip tooltip-east">
             <span class="tooltip-item">
-              支持三连
+              支持
             </span>
             <span class="tooltip-content">
               <span class="tooltip-text">
@@ -660,6 +875,10 @@ var _hmt = _hmt || [];
         		<li class="article-tag-list-item">
         			<a href="/categories/others//" class="article-tag-list-link color2">others</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/others/Hexo//" class="article-tag-list-link color5">Hexo</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -720,9 +939,16 @@ var _hmt = _hmt || [];
 <div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
+  
+	  
     </div>
   </div>
 </article>
+
+
+
+
+
 
   
 <nav id="article-nav">
@@ -812,6 +1038,10 @@ if(true){
 gitalk.render('gitalk-container') 
 }
 </script>
+
+
+
+
 
 
 
@@ -935,6 +1165,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">busuanzi</a>
               </li>
              
@@ -951,39 +1197,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hugo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">WordPress</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VuePress</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Jekyllrb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">hexo-deployer-git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo-wordcount</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+                <a href="javascript:void(0)" class="js-tag color3">hexo-blog-encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">declare</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">love</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1003,31 +1241,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo-wordcount</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hugo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">hexo-blog-encrypt</a>
+                <a href="javascript:void(0)" class="js-tag color5">WordPress</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">encrypt</a>
+                <a href="javascript:void(0)" class="js-tag color4">VuePress</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Valine</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Leancloud</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Gitment</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">hexo-helper-live2d</a>
+                <a href="javascript:void(0)" class="js-tag color4">Jekyllrb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1051,19 +1277,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Valine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Leancloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Gitment</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">hexo-helper-live2d</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">declare</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">love</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
               </li>
              
               <li class="article-tag-list-item">
