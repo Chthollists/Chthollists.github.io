@@ -11,21 +11,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://chthollists.github.io">
-  <title>404 Not Found：该页无法显示 | Chthollists的平凡之路</title>
+  <title>Python基础语法系列CP1——初识Python | Chthollists的平凡之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="404                                                           L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw&#x2F;&quot;,&quot;pluginJsPath&quot;:&quot;lib&#x2F;&quot;,&quot;pluginModelPath&quot;:&quot;assets&#x2F;&quot;,&quot;tagMode&quot;:false,&quot;deb">
-<meta property="og:type" content="website">
-<meta property="og:title" content="404 Not Found：该页无法显示">
-<meta property="og:url" content="https://chthollists.github.io/404.html">
+  <meta name="description" content="Python基础语法系列CP1——初识Python CP1主要分享了Python最基本的语法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础语法系列CP1——初识Python">
+<meta property="og:url" content="https://chthollists.github.io/post/6fa17b20.html">
 <meta property="og:site_name" content="Chthollists的平凡之路">
-<meta property="og:description" content="404                                                           L2Dwidget.init({&quot;pluginRootPath&quot;:&quot;live2dw&#x2F;&quot;,&quot;pluginJsPath&quot;:&quot;lib&#x2F;&quot;,&quot;pluginModelPath&quot;:&quot;assets&#x2F;&quot;,&quot;tagMode&quot;:false,&quot;deb">
+<meta property="og:description" content="Python基础语法系列CP1——初识Python CP1主要分享了Python最基本的语法">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-28T14:33:00.000Z">
-<meta property="article:modified_time" content="2020-07-29T02:11:05.627Z">
+<meta property="article:published_time" content="2020-08-03T00:48:10.000Z">
+<meta property="article:modified_time" content="2020-08-03T01:14:24.337Z">
 <meta property="article:author" content="Code.Yang">
-<meta property="article:tag" content="Code">
 <meta property="article:tag" content="Python">
-<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Chthollists的平凡之路" type="application/atom+xml">
@@ -245,14 +243,15 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            
+<article id="post-Python基础语法系列CP1——初识Python" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      404 Not Found：该页无法显示
+      Python基础语法系列CP1——初识Python
     </h1>
   
 
@@ -270,8 +269,8 @@ var _hmt = _hmt || [];
 		<!--显示阅读次数完毕-->
 
         
-        <a href="/404.html" class="archive-article-date">
-  	<time datetime="2020-07-28T14:33:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-28</time>
+        <a href="/post/6fa17b20.html" class="archive-article-date">
+  	<time datetime="2020-08-03T00:48:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
 </a>
 		
         <!-- 需要添加的位置 -->
@@ -283,7 +282,7 @@ var _hmt = _hmt || [];
         <i class="fa fa-keyboard-o"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  博文字数统计 : </span></b></font>
         <!--自定义样式-->
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">42字</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">439字</span>
       </span></b></font>
     </span>
 
@@ -292,7 +291,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  阅读所需时长 : </span></b></font>
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">1分</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">2分</span>
       </span></b></font>
     </span>
 </div>
@@ -307,6 +306,30 @@ var _hmt = _hmt || [];
 	
 <!-- 目录内容 -->
 
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+	<div id="toc-article" class="toc-article">
+	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+		<strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python基础语法系列CP1——初识Python"><span class="toc-number">1.</span> <span class="toc-text">Python基础语法系列CP1——初识Python</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-输入与输出"><span class="toc-number">1.1.</span> <span class="toc-text">1. 输入与输出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-输出：print"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 输出：print</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-输入：input"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 输入：input</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-数据类型及转换"><span class="toc-number">1.2.</span> <span class="toc-text">2. 数据类型及转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-主要数据类型"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 主要数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-数据类型转换"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 数据类型转换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-判断"><span class="toc-number">1.3.</span> <span class="toc-text">3. 判断</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-循环"><span class="toc-number">1.4.</span> <span class="toc-text">4. 循环</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-while循环"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 while循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-for循环"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 for循环</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-其他"><span class="toc-number">1.5.</span> <span class="toc-text">5. 其他</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-range"><span class="toc-number">1.5.1.</span> <span class="toc-text">5.1 range</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-enumerate"><span class="toc-number">1.5.2.</span> <span class="toc-text">5.2 enumerate</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-切片"><span class="toc-number">1.6.</span> <span class="toc-text">6. 切片</span></a></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+	function showToc(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:block");
+		show_toc_btn.setAttribute("style","display:none");
+		};
+	function showBtn(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:none");
+		show_toc_btn.setAttribute("style","display:block");
+		};
+   </script>
+      
 <!-- 目录内容结束 -->
 	
     <div class="article-entry" itemprop="articleBody">
@@ -315,34 +338,214 @@ var _hmt = _hmt || [];
 			
 
 				
-					<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>404</title>                              
-    <meta name="generator" content="Hexo 4.2.1"></head>    
-    <body>
-        <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" homePageName="返回首页" homePageUrl="https://chthollists.github.io/"></script> 
-    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/poi.model.json"},"display":{"position":"right","width":250,"height":300},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
-</html>
+					<hr>
+<ul>
+<li>Python基础语法系列CP1——初识Python</li>
+<li>CP1主要分享了Python最基本的语法</li>
+</ul>
+<a id="more"></a>
 
+<h1 id="Python基础语法系列CP1——初识Python"><a href="#Python基础语法系列CP1——初识Python" class="headerlink" title="Python基础语法系列CP1——初识Python"></a>Python基础语法系列CP1——初识Python</h1><h2 id="1-输入与输出"><a href="#1-输入与输出" class="headerlink" title="1. 输入与输出"></a>1. 输入与输出</h2><h3 id="1-1-输出：print"><a href="#1-1-输出：print" class="headerlink" title="1.1 输出：print"></a>1.1 输出：<code>print</code></h3><ul>
+<li><p>格式化输出%s %d %f %e</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">10</span></span><br><span class="line">b = <span class="number">5</span></span><br><span class="line">print(<span class="string">'练习%03d'</span> %a,end = <span class="string">'666'</span>)</span><br><span class="line">print(<span class="string">'练习%e,ABA%s'</span> %(a,b))</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h3 id="1-2-输入：input"><a href="#1-2-输入：input" class="headerlink" title="1.2 输入：input"></a>1.2 输入：input</h3><ul>
+<li><p>输入的数据会自动转化为str类型</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n = input(<span class="string">'输入：'</span>)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="2-数据类型及转换"><a href="#2-数据类型及转换" class="headerlink" title="2. 数据类型及转换"></a>2. 数据类型及转换</h2><h3 id="2-1-主要数据类型"><a href="#2-1-主要数据类型" class="headerlink" title="2.1 主要数据类型"></a>2.1 主要数据类型</h3><ul>
+<li><p>数值类</p>
+<ul>
+<li>int/long </li>
+<li>float </li>
+<li>bool </li>
+<li>str </li>
+</ul>
+</li>
+<li><p>容器类</p>
+<ul>
+<li><p>列表 list-[] </p>
+</li>
+<li><p>元组 tuple-()</p>
+</li>
+<li><p>集合 set-{}  </p>
+<blockquote>
+<p>可变<code>set()</code></p>
+<p>不可变<code>frozenset()</code></p>
+</blockquote>
+</li>
+<li><p>字典<code>dict = {&#39;key&#39;: &#39;value&#39;, ...}</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-数据类型转换"><a href="#2-2-数据类型转换" class="headerlink" title="2.2 数据类型转换"></a>2.2 数据类型转换</h3><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># base 表示进制</span></span><br><span class="line">n1 = int(n, base=<span class="number">10</span>)  <span class="comment"># int(n) int(n,10)</span></span><br><span class="line">print(n1,type(n1))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 匹配类型转换</span></span><br><span class="line">n2 = eval(n)  </span><br><span class="line">print(n2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复数</span></span><br><span class="line">n3 = complex(<span class="number">3</span>,imag=<span class="number">2</span>) </span><br><span class="line">print(n3)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将对象转换为表达式字符串</span></span><br><span class="line">n4 = repr(n) </span><br><span class="line">print(n4)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<h2 id="3-判断"><a href="#3-判断" class="headerlink" title="3. 判断"></a>3. 判断</h2><ul>
+<li><p>语法结构：<code>if elif else:</code></p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> n1&gt;<span class="number">3</span>:</span><br><span class="line">    d = n1*n1</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    d = n1+<span class="number">1</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="4-循环"><a href="#4-循环" class="headerlink" title="4. 循环"></a>4. 循环</h2><h3 id="4-1-while循环"><a href="#4-1-while循环" class="headerlink" title="4.1 while循环"></a>4.1 while循环</h3><ul>
+<li><p>语法结构：<code>while else：</code></p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">    print(i)</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'abc %d'</span> %i)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h3 id="4-2-for循环"><a href="#4-2-for循环" class="headerlink" title="4.2 for循环"></a>4.2 for循环</h3><ul>
+<li><p>语法结构：<code>for ... in ...</code> 和<code>break  continue</code>   </p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">'abcdefghijk'</span></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> str:</span><br><span class="line">    print(j)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'hi'</span>)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h2><h3 id="5-1-range"><a href="#5-1-range" class="headerlink" title="5.1 range"></a>5.1 range</h3><ul>
+<li><p><code>range(m,n,step)</code>用于生成序列，常与生成器联用</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">range(<span class="number">1</span>,<span class="number">10</span>,<span class="number">1</span>)   <span class="comment">#  返回值类型为range</span></span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">10</span>):</span><br><span class="line">    print(k)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h3 id="5-2-enumerate"><a href="#5-2-enumerate" class="headerlink" title="5.2 enumerate"></a>5.2 enumerate</h3><ul>
+<li><p>语法：<code>enumerate(&#39;可遍历序列&#39;, start = 0)</code></p>
+</li>
+<li><p>enumerate  返回值类型为元组tuple，元组第一项为index，第二项为对象原数据</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="string">'a'</span>,<span class="string">'c'</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">2.33</span>]</span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> enumerate(list1):</span><br><span class="line">    print(k,type(k))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拆包</span></span><br><span class="line"><span class="keyword">for</span> index,s <span class="keyword">in</span> enumerate(list1,start=<span class="number">1</span>):</span><br><span class="line">    print(<span class="string">'%d::%s ---%s'</span> %(index,s,type(s)))</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="6-切片"><a href="#6-切片" class="headerlink" title="6. 切片"></a>6. 切片</h2><ul>
+<li><p>下标(可正可负)</p>
+</li>
+<li><p>字符串、列表、元组均可切片</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(str[<span class="number">0</span>:<span class="number">6</span>])</span><br><span class="line">print(str[<span class="number">6</span>:<span class="number">0</span>:<span class="number">-1</span>])</span><br><span class="line">print(str[:<span class="number">5</span>:<span class="number">-1</span>])</span><br><span class="line">print(str[<span class="number">-1</span>:<span class="number">-3</span>:<span class="number">-1</span>])</span><br><span class="line">print(str[<span class="number">-4</span>-:<span class="number">1</span>:<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
 
 				
 			
 	  
 	  
 	  <!--    注释：
-        <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>404</title>                              
-    <meta name="generator" content="Hexo 4.2.1"></head>    
-    <body>
-        <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" homePageName="返回首页" homePageUrl="https://chthollists.github.io/"></script> 
-    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/poi.model.json"},"display":{"position":"right","width":250,"height":300},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/poi.model.json"},"display":{"position":"right","width":250,"height":300},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/poi.model.json"},"display":{"position":"right","width":250,"height":300},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
-</html>
+        <hr>
+<ul>
+<li>Python基础语法系列CP1——初识Python</li>
+<li>CP1主要分享了Python最基本的语法</li>
+</ul>
+<a id="more"></a>
 
+<h1 id="Python基础语法系列CP1——初识Python"><a href="#Python基础语法系列CP1——初识Python" class="headerlink" title="Python基础语法系列CP1——初识Python"></a>Python基础语法系列CP1——初识Python</h1><h2 id="1-输入与输出"><a href="#1-输入与输出" class="headerlink" title="1. 输入与输出"></a>1. 输入与输出</h2><h3 id="1-1-输出：print"><a href="#1-1-输出：print" class="headerlink" title="1.1 输出：print"></a>1.1 输出：<code>print</code></h3><ul>
+<li><p>格式化输出%s %d %f %e</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">10</span></span><br><span class="line">b = <span class="number">5</span></span><br><span class="line">print(<span class="string">'练习%03d'</span> %a,end = <span class="string">'666'</span>)</span><br><span class="line">print(<span class="string">'练习%e,ABA%s'</span> %(a,b))</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h3 id="1-2-输入：input"><a href="#1-2-输入：input" class="headerlink" title="1.2 输入：input"></a>1.2 输入：input</h3><ul>
+<li><p>输入的数据会自动转化为str类型</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">n = input(<span class="string">'输入：'</span>)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="2-数据类型及转换"><a href="#2-数据类型及转换" class="headerlink" title="2. 数据类型及转换"></a>2. 数据类型及转换</h2><h3 id="2-1-主要数据类型"><a href="#2-1-主要数据类型" class="headerlink" title="2.1 主要数据类型"></a>2.1 主要数据类型</h3><ul>
+<li><p>数值类</p>
+<ul>
+<li>int/long </li>
+<li>float </li>
+<li>bool </li>
+<li>str </li>
+</ul>
+</li>
+<li><p>容器类</p>
+<ul>
+<li><p>列表 list-[] </p>
+</li>
+<li><p>元组 tuple-()</p>
+</li>
+<li><p>集合 set-{}  </p>
+<blockquote>
+<p>可变<code>set()</code></p>
+<p>不可变<code>frozenset()</code></p>
+</blockquote>
+</li>
+<li><p>字典<code>dict = {&#39;key&#39;: &#39;value&#39;, ...}</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-数据类型转换"><a href="#2-2-数据类型转换" class="headerlink" title="2.2 数据类型转换"></a>2.2 数据类型转换</h3><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># base 表示进制</span></span><br><span class="line">n1 = int(n, base=<span class="number">10</span>)  <span class="comment"># int(n) int(n,10)</span></span><br><span class="line">print(n1,type(n1))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 匹配类型转换</span></span><br><span class="line">n2 = eval(n)  </span><br><span class="line">print(n2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复数</span></span><br><span class="line">n3 = complex(<span class="number">3</span>,imag=<span class="number">2</span>) </span><br><span class="line">print(n3)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将对象转换为表达式字符串</span></span><br><span class="line">n4 = repr(n) </span><br><span class="line">print(n4)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<h2 id="3-判断"><a href="#3-判断" class="headerlink" title="3. 判断"></a>3. 判断</h2><ul>
+<li><p>语法结构：<code>if elif else:</code></p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> n1&gt;<span class="number">3</span>:</span><br><span class="line">    d = n1*n1</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    d = n1+<span class="number">1</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="4-循环"><a href="#4-循环" class="headerlink" title="4. 循环"></a>4. 循环</h2><h3 id="4-1-while循环"><a href="#4-1-while循环" class="headerlink" title="4.1 while循环"></a>4.1 while循环</h3><ul>
+<li><p>语法结构：<code>while else：</code></p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> i % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">    print(i)</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'abc %d'</span> %i)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h3 id="4-2-for循环"><a href="#4-2-for循环" class="headerlink" title="4.2 for循环"></a>4.2 for循环</h3><ul>
+<li><p>语法结构：<code>for ... in ...</code> 和<code>break  continue</code>   </p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">'abcdefghijk'</span></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> str:</span><br><span class="line">    print(j)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'hi'</span>)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="5-其他"><a href="#5-其他" class="headerlink" title="5. 其他"></a>5. 其他</h2><h3 id="5-1-range"><a href="#5-1-range" class="headerlink" title="5.1 range"></a>5.1 range</h3><ul>
+<li><p><code>range(m,n,step)</code>用于生成序列，常与生成器联用</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">range(<span class="number">1</span>,<span class="number">10</span>,<span class="number">1</span>)   <span class="comment">#  返回值类型为range</span></span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">10</span>):</span><br><span class="line">    print(k)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<h3 id="5-2-enumerate"><a href="#5-2-enumerate" class="headerlink" title="5.2 enumerate"></a>5.2 enumerate</h3><ul>
+<li><p>语法：<code>enumerate(&#39;可遍历序列&#39;, start = 0)</code></p>
+</li>
+<li><p>enumerate  返回值类型为元组tuple，元组第一项为index，第二项为对象原数据</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="string">'a'</span>,<span class="string">'c'</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">2.33</span>]</span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> enumerate(list1):</span><br><span class="line">    print(k,type(k))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拆包</span></span><br><span class="line"><span class="keyword">for</span> index,s <span class="keyword">in</span> enumerate(list1,start=<span class="number">1</span>):</span><br><span class="line">    print(<span class="string">'%d::%s ---%s'</span> %(index,s,type(s)))</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="6-切片"><a href="#6-切片" class="headerlink" title="6. 切片"></a>6. 切片</h2><ul>
+<li><p>下标(可正可负)</p>
+</li>
+<li><p>字符串、列表、元组均可切片</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">print(str[<span class="number">0</span>:<span class="number">6</span>])</span><br><span class="line">print(str[<span class="number">6</span>:<span class="number">0</span>:<span class="number">-1</span>])</span><br><span class="line">print(str[:<span class="number">5</span>:<span class="number">-1</span>])</span><br><span class="line">print(str[<span class="number">-1</span>:<span class="number">-3</span>:<span class="number">-1</span>])</span><br><span class="line">print(str[<span class="number">-4</span>-:<span class="number">1</span>:<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
 
        -->
 	        
@@ -357,7 +560,33 @@ var _hmt = _hmt || [];
 
 <!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
 
-  <div class="declare" hidden="hidden"></div>
+  <div class="declare">
+    <strong class="author">本文作者：</strong>
+    
+      Code.Yang
+    
+    <br>
+    <strong class="create-time">发布时间：</strong>
+    2020-08-03 08:48:10
+    <br>
+    <strong class="update-time">最后更新：</strong>
+    2020-08-03 09:14:24
+    <br>
+    <strong class="article-titles">本文标题：</strong>
+    <a href="https://chthollists.github.io/post/6fa17b20.html" title="Python基础语法系列CP1——初识Python" target="_blank">Python基础语法系列CP1——初识Python</a>
+    <br>
+    <strong class="article-url">本文链接：</strong>
+    <a href="https://chthollists.github.io/post/6fa17b20.html" title="Python基础语法系列CP1——初识Python" target="_blank">https://chthollists.github.io/post/6fa17b20.html</a>
+    <br>
+    <strong class="copyright">版权声明：</strong>
+    本作品采用
+    <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议">CC BY-NC-SA 4.0</a>
+    许可协议进行许可。转载请注明作者和出处！
+    
+      <br>
+      <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+    
+  </div>
 
 <!-- 添加版权声明》 -->
         
@@ -402,7 +631,33 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Python/Syntax//" class="article-tag-list-link color2">Syntax</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -452,7 +707,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://chthollists.github.io/404.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://chthollists.github.io/post/6fa17b20.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -471,6 +726,16 @@ var _hmt = _hmt || [];
 
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/post/64db259f.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo博客搭建系列Chapter9——Hexo博客功能扩展(5/5)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -484,6 +749,19 @@ var _hmt = _hmt || [];
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python基础语法系列CP1——初识Python"><span class="toc-number">1.</span> <span class="toc-text">Python基础语法系列CP1——初识Python</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-输入与输出"><span class="toc-number">1.1.</span> <span class="toc-text">1. 输入与输出</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-输出：print"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 输出：print</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-输入：input"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 输入：input</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-数据类型及转换"><span class="toc-number">1.2.</span> <span class="toc-text">2. 数据类型及转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-主要数据类型"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 主要数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-数据类型转换"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 数据类型转换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-判断"><span class="toc-number">1.3.</span> <span class="toc-text">3. 判断</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-循环"><span class="toc-number">1.4.</span> <span class="toc-text">4. 循环</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-while循环"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 while循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-for循环"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 for循环</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-其他"><span class="toc-number">1.5.</span> <span class="toc-text">5. 其他</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-range"><span class="toc-number">1.5.1.</span> <span class="toc-text">5.1 range</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-enumerate"><span class="toc-number">1.5.2.</span> <span class="toc-text">5.2 enumerate</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-切片"><span class="toc-number">1.6.</span> <span class="toc-text">6. 切片</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -503,6 +781,29 @@ var _hmt = _hmt || [];
   
 
 
+
+
+
+<div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+
+if(true){
+  var gitalk = new Gitalk({
+    clientID: 'ef41cd3f6bb938f5b4c6',
+    clientSecret: '0a387b3802665d8a71757a618f93dfd8cb5ec7d8',
+    repo: 'Chthollists.github.io',
+    owner: 'Chthollists',
+    admin: ['Chthollists'],
+    id: 'Mon Aug 03 2020 08:48:10 GMT+0800',
+    distractionFreeMode: 'true'
+
+})
+gitalk.render('gitalk-container') 
+}
+</script>
 
 
 
@@ -548,7 +849,7 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
