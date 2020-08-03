@@ -11,21 +11,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://chthollists.github.io">
-  <title>Hexo博客搭建系列Chapter5——Hexo博客功能扩展(1/5) | Chthollists的平凡之路</title>
+  <title>Python基础语法系列CP1P2——字符串 | Chthollists的平凡之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在Windows系统上利用Hexo搭建博客系列——Chapter5 Chapter5： 在Yilia主题自带功能的基础上 扩展了微信分享功能、文章置顶功能、文章分类功能 扩展了404默认公益网页、头像旋转、文章默认格式功能">
+  <meta name="description" content="Python基础语法系列CP2——字符串 CP2主要分享了Python中的字符串数据类型的特点和操作">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo博客搭建系列Chapter5——Hexo博客功能扩展(1&#x2F;5)">
-<meta property="og:url" content="https://chthollists.github.io/post/95d7a133.html">
+<meta property="og:title" content="Python基础语法系列CP1P2——字符串">
+<meta property="og:url" content="https://chthollists.github.io/post/8c346747.html">
 <meta property="og:site_name" content="Chthollists的平凡之路">
-<meta property="og:description" content="在Windows系统上利用Hexo搭建博客系列——Chapter5 Chapter5： 在Yilia主题自带功能的基础上 扩展了微信分享功能、文章置顶功能、文章分类功能 扩展了404默认公益网页、头像旋转、文章默认格式功能">
+<meta property="og:description" content="Python基础语法系列CP2——字符串 CP2主要分享了Python中的字符串数据类型的特点和操作">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-31T08:27:15.000Z">
-<meta property="article:modified_time" content="2020-08-02T11:57:43.957Z">
+<meta property="article:published_time" content="2020-08-03T02:41:49.000Z">
+<meta property="article:modified_time" content="2020-08-03T03:08:00.187Z">
 <meta property="article:author" content="Code.Yang">
-<meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="top">
-<meta property="article:tag" content="api.qrserver.com">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Chthollists的平凡之路" type="application/atom+xml">
@@ -246,14 +244,14 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-HexoBlog-Chapter5" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-Python基础语法系列CP2——字符串" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo博客搭建系列Chapter5——Hexo博客功能扩展(1/5)
+      Python基础语法系列CP1P2——字符串
     </h1>
   
 
@@ -271,8 +269,8 @@ var _hmt = _hmt || [];
 		<!--显示阅读次数完毕-->
 
         
-        <a href="/post/95d7a133.html" class="archive-article-date">
-  	<time datetime="2020-07-31T08:27:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-31</time>
+        <a href="/post/8c346747.html" class="archive-article-date">
+  	<time datetime="2020-08-03T02:41:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
 </a>
 		
         <!-- 需要添加的位置 -->
@@ -284,7 +282,7 @@ var _hmt = _hmt || [];
         <i class="fa fa-keyboard-o"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  博文字数统计 : </span></b></font>
         <!--自定义样式-->
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">1.5k字</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">571字</span>
       </span></b></font>
     </span>
 
@@ -293,7 +291,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  阅读所需时长 : </span></b></font>
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">6分</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">2分</span>
       </span></b></font>
     </span>
 </div>
@@ -315,7 +313,7 @@ var _hmt = _hmt || [];
 	<div id="toc-article" class="toc-article">
 	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 		<strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo博客搭建系列——Chapter-5"><span class="toc-number">1.</span> <span class="toc-text">Hexo博客搭建系列——Chapter 5</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#五、高级功能实现"><span class="toc-number">1.1.</span> <span class="toc-text">五、高级功能实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-微信分享功能"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 微信分享功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-文章置顶功能"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 文章置顶功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-安装插件"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">2.1 安装插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-配置置顶标准"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2.2 配置置顶标准</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-配置文章"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">2.3 配置文章</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-优先级配置"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">2.4 优先级配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-文章标签分类功能"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 文章标签分类功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-文章分类功能"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">3.1 文章分类功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-文章标签分类功能"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">3.2 文章标签分类功能</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-添加404网页"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 添加404网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-头像旋转功能"><span class="toc-number">1.1.5.</span> <span class="toc-text">5. 头像旋转功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-修改默认文章格式"><span class="toc-number">1.1.6.</span> <span class="toc-text">6. 修改默认文章格式</span></a></li></ol></li></ol></li></ol>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python基础语法系列CP2——字符串"><span class="toc-number">1.</span> <span class="toc-text">Python基础语法系列CP2——字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-查找与计数"><span class="toc-number">1.1.</span> <span class="toc-text">1. 查找与计数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-查找：find"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 查找：find</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-查找：index"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 查找：index</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-查找计数：count"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3 查找计数：count</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-字符串修改"><span class="toc-number">1.2.</span> <span class="toc-text">2. 字符串修改</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-替换-replace"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 替换:replace</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-分割-split"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 分割:split</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-连接-join"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 连接:join</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-字符串操作"><span class="toc-number">1.3.</span> <span class="toc-text">3. 字符串操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-大小写转换"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 大小写转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-去两端空格"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 去两端空格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-字符串对齐"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3 字符串对齐</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-字符串判断"><span class="toc-number">1.4.</span> <span class="toc-text">4. 字符串判断</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-判断开头结尾"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 判断开头结尾</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-判断内容"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 判断内容</span></a></li></ol></li></ol></li></ol>
          </div>
    <script type="text/javascript">
 	function showToc(){
@@ -342,159 +340,116 @@ var _hmt = _hmt || [];
 				
 					<hr>
 <ul>
-<li>在Windows系统上利用Hexo搭建博客系列——Chapter5</li>
-<li>Chapter5：</li>
-<li>在Yilia主题自带功能的基础上</li>
-<li>扩展了微信分享功能、文章置顶功能、文章分类功能</li>
-<li>扩展了404默认公益网页、头像旋转、文章默认格式功能</li>
+<li>Python基础语法系列CP2——字符串</li>
+<li>CP2主要分享了Python中的字符串数据类型的特点和操作</li>
 </ul>
 <a id="more"></a>
 
-<h1 id="Hexo博客搭建系列——Chapter-5"><a href="#Hexo博客搭建系列——Chapter-5" class="headerlink" title="Hexo博客搭建系列——Chapter 5"></a>Hexo博客搭建系列——Chapter 5</h1><hr>
-<h2 id="五、高级功能实现"><a href="#五、高级功能实现" class="headerlink" title="五、高级功能实现"></a>五、高级功能实现</h2><ul>
-<li>各功能教程超链接汇总<ul>
-<li><a href="http://dongshuyan.com/2019/05/24/hexo%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" target="_blank" rel="noopener">微信分享</a></li>
-<li><a href="https://blog.csdn.net/qq_37939980/article/details/104390332" target="_blank" rel="noopener">版权信息</a></li>
-<li><a href="https://blog.csdn.net/qq_40922859/article/details/97035497?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param" target="_blank" rel="noopener">不蒜子统计</a></li>
-<li><a href="https://blog.csdn.net/qq_40922859/article/details/97035497?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param" target="_blank" rel="noopener">爱心功能、评论系统</a></li>
-<li><a href="https://blog.csdn.net/weixin_41287260/article/details/97693850" target="_blank" rel="noopener">音乐功能、404页面、头像旋转</a></li>
-<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" target="_blank" rel="noopener">分类、随笔、标签</a></li>
-<li><a href="https://blog.csdn.net/weixin_41287260/article/details/97693850" target="_blank" rel="noopener">字数统计、阅读时长</a></li>
-<li><a href="http://dongshuyan.com/2019/05/24/hexo%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" target="_blank" rel="noopener">live2D、转载说明</a></li>
-<li><a href="https://blog.csdn.net/qq_40922859/article/details/97035497?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param" target="_blank" rel="noopener">文章加密</a></li>
-<li><a href="http://dongshuyan.com/2019/05/24/hexo%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" target="_blank" rel="noopener">更多功能</a></li>
-</ul>
+<h1 id="Python基础语法系列CP2——字符串"><a href="#Python基础语法系列CP2——字符串" class="headerlink" title="Python基础语法系列CP2——字符串"></a>Python基础语法系列CP2——字符串</h1><h2 id="1-查找与计数"><a href="#1-查找与计数" class="headerlink" title="1. 查找与计数"></a>1. 查找与计数</h2><h3 id="1-1-查找：find"><a href="#1-1-查找：find" class="headerlink" title="1.1 查找：find"></a>1.1 查找：find</h3><ul>
+<li><p>语法格式：<code>find(&#39;子串&#39;)</code>默认左侧查找</p>
+</li>
+<li><p><code>rfind(&#39;子串&#39;)</code>从右侧查找</p>
+<blockquote>
+<p>查找成功返回子串位置下标</p>
+<p>查找失败返回 -1</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">'abcdefghijk poaykjakdljl'</span></span><br><span class="line">a1 = str.find(<span class="string">'bc'</span>)</span><br><span class="line">a2 = str.find(<span class="string">'a'</span>,<span class="number">10</span>,<span class="number">20</span>)</span><br><span class="line">a3 = str.find(<span class="string">'sss'</span>)</span><br><span class="line">print(a1,a2,a3)</span><br></pre></td></tr></table></figure>
+</blockquote>
 </li>
 </ul>
-<h3 id="1-微信分享功能"><a href="#1-微信分享功能" class="headerlink" title="1. 微信分享功能"></a>1. 微信分享功能</h3><blockquote>
-<p>初始时微信分享功能有问题</p>
-<p>解决方法：修改<code>themes\yilia\layout\_partial\post\share.ejs</code>文件</p>
-</blockquote>
-<ul>
-<li><p>由于百度云已经不支持二维码生成功能，修改share.ejs的度盘链接，改为qrserver.com的api</p>
+<h3 id="1-2-查找：index"><a href="#1-2-查找：index" class="headerlink" title="1.2 查找：index"></a>1.2 查找：index</h3><ul>
+<li><p>语法格式：<code>index(&#39;子串&#39;)</code>默认左侧查找</p>
+</li>
+<li><p><code>rindex(&#39;子串&#39;)</code>从右侧查找</p>
 <blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--查找--&gt;</span></span><br><span class="line">//pan.baidu.com/share/qrcode?url=</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 修改为--&gt;</span></span><br><span class="line">//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=</span><br></pre></td></tr></table></figure>
+<p>查找成功返回子串位置下标</p>
+<p>查找失败抛出异常——报错  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">b1 = str.index(<span class="string">'bc'</span>)</span><br><span class="line">b2 = str.index(<span class="string">'a'</span>,<span class="number">10</span>,<span class="number">20</span>)</span><br><span class="line">b3 = str.index(<span class="string">'sss'</span>)</span><br><span class="line">print(b1,b2)</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
-<li><p>查找share.ejs中的</p>
-<blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--查找--&gt;</span></span><br><span class="line">var sUrl = url.replace(/index\.html$/, '');</span><br><span class="line">sUrl = /^(http:|https:)\/\//.test(sUrl) ? sUrl : 'http:' + sUrl;</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--添加--&gt;</span></span><br><span class="line">test=sUrl.substring(20);</span><br><span class="line"><span class="comment">&lt;!-- 注意：substring截取的位数与你的主页网址长度相等&gt;</span></span><br><span class="line"><span class="comment">  &lt;!--注意：如果博客只部署在一个服务端，可以省略这一步，微信二维码分享的地方，直接使用sUrl&gt;</span></span><br><span class="line"><span class="comment">  &lt;!--注意：如果博客只部署在多个服务端，不可省略，使得二维码为主博客的网址&gt;</span></span><br></pre></td></tr></table></figure>
-</blockquote>
+</ul>
+<h3 id="1-3-查找计数：count"><a href="#1-3-查找计数：count" class="headerlink" title="1.3 查找计数：count"></a>1.3 查找计数：count</h3><ul>
+<li><p>语法格式：<code>count(&#39;子串&#39;)</code> </p>
 </li>
-<li><p>再将share.ejs中的</p>
+<li><p>返回子串的个数，包含0</p>
 <blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--查找--&gt;</span></span><br><span class="line">'//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=' + sUrl</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 修改为--&gt;</span></span><br><span class="line">'//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=你的主页网址' + test</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>最终结果</p>
-<blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 最终修改结果--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"page-modal wx-share js-wx-box"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"close js-modal-close"</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"icon icon-close"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">p</span>&gt;</span>扫一扫，分享到微信<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wx-qrcode"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"&lt;%- 'qrcode' in locals ? qrcode(sUrl) : '//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=https://damonxiang.github.io' + test  %&gt;"</span> <span class="attr">alt</span>=<span class="string">"微信分享二维码"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c1 = str.count(<span class="string">'a'</span>)</span><br><span class="line">c2 = str.count(<span class="string">'a'</span>,<span class="number">10</span>,<span class="number">20</span>)</span><br><span class="line">print(c1,c2)</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
 <hr>
-<h3 id="2-文章置顶功能"><a href="#2-文章置顶功能" class="headerlink" title="2. 文章置顶功能"></a>2. 文章置顶功能</h3><h4 id="2-1-安装插件"><a href="#2-1-安装插件" class="headerlink" title="2.1 安装插件"></a>2.1 安装插件</h4><ul>
-<li><p>安装 hexo-generator-index-pin-top 模块</p>
+<h2 id="2-字符串修改"><a href="#2-字符串修改" class="headerlink" title="2. 字符串修改"></a>2. 字符串修改</h2><h3 id="2-1-替换-replace"><a href="#2-1-替换-replace" class="headerlink" title="2.1 替换:replace"></a>2.1 替换:replace</h3><ul>
+<li><p>语法格式：<code>replace(旧子串，新子串，次数)</code></p>
 <blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">'abc and cba and nba and oop'</span></span><br><span class="line">new_str1 = str.replace(<span class="string">'and'</span>,<span class="string">'A'</span>)</span><br><span class="line">new_str2 = str.replace(<span class="string">'and'</span>,<span class="string">'A'</span>,<span class="number">1</span>)</span><br><span class="line">new_str3 = str.replace(<span class="string">'and'</span>,<span class="string">'A'</span>,<span class="number">100</span>) <span class="comment"># 次数超出，替换所有</span></span><br><span class="line">print(str+<span class="string">'\n'</span>+new_str1+<span class="string">'\n'</span>+new_str2+<span class="string">'\n'</span>+new_str3)</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
-<h4 id="2-2-配置置顶标准"><a href="#2-2-配置置顶标准" class="headerlink" title="2.2 配置置顶标准"></a>2.2 配置置顶标准</h4><ul>
-<li><p>打开<code>/themes/yilia/layout/post.ejs</code>在最前面加入代码</p>
+<h3 id="2-2-分割-split"><a href="#2-2-分割-split" class="headerlink" title="2.2 分割:split"></a>2.2 分割:split</h3><ul>
+<li><p>语法格式：<code>split(分割字符，次数)</code></p>
 <blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">page.top</span>) &#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-thumb-tack"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">7D26CD</span>&gt;</span>置顶<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-divider"</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list1 = str.split(<span class="string">' and'</span>)</span><br><span class="line">list2 = str.split(<span class="string">'and'</span>,<span class="number">2</span>)</span><br><span class="line">print(list1)</span><br><span class="line">print(list2)</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
-<h4 id="2-3-配置文章"><a href="#2-3-配置文章" class="headerlink" title="2.3 配置文章"></a>2.3 配置文章</h4><ul>
-<li><p>在需要置顶的文章的Front-matter中加上top属性</p>
+<h3 id="2-3-连接-join"><a href="#2-3-连接-join" class="headerlink" title="2.3 连接:join"></a>2.3 连接:join</h3><ul>
+<li><p>语法格式：<code>&#39;连接字符&#39;.join(多字符串序列-list/tuple/set)</code></p>
 <blockquote>
-<p>top后面的数字越大，优先级越高</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">博客简介</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">xxx</span></span><br><span class="line"><span class="attr">top:</span> <span class="number">5</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-<h4 id="2-4-优先级配置"><a href="#2-4-优先级配置" class="headerlink" title="2.4 优先级配置"></a>2.4 优先级配置</h4><ul>
-<li><p>修改根目录配置文件/_config.yml,top值-1标示根据top值倒序（正序设置为1即可），同样date也是根据创建日期倒序。</p>
-<blockquote>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">''</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">10</span></span><br><span class="line"><span class="attr">order_by:</span> <span class="string">-date</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 改为</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">''</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">10</span></span><br><span class="line"><span class="attr">order_by:</span></span><br><span class="line"> <span class="attr">top:</span> <span class="number">-1</span></span><br><span class="line"> <span class="attr">date:</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'...'</span>.join(list1)</span><br><span class="line">str2 = <span class="string">' and'</span>.join(tuple(list1))</span><br><span class="line">str3 = <span class="string">' 666'</span>.join(frozenset(list1))</span><br><span class="line">print(str1+<span class="string">'\n'</span>+str2+<span class="string">'\n'</span>+str3)</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
 <hr>
-<h3 id="3-文章标签分类功能"><a href="#3-文章标签分类功能" class="headerlink" title="3. 文章标签分类功能"></a>3. 文章标签分类功能</h3><h4 id="3-1-文章分类功能"><a href="#3-1-文章分类功能" class="headerlink" title="3.1 文章分类功能"></a>3.1 文章分类功能</h4><ul>
-<li><p>通过hexo新建一个页面，命名为 categories </p>
-<blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categoties</span><br></pre></td></tr></table></figure>
-</blockquote>
+<h2 id="3-字符串操作"><a href="#3-字符串操作" class="headerlink" title="3. 字符串操作"></a>3. 字符串操作</h2><h3 id="3-1-大小写转换"><a href="#3-1-大小写转换" class="headerlink" title="3.1 大小写转换"></a>3.1 大小写转换</h3><ul>
+<li><p>首字母大写：<code>capitalize()</code></p>
 </li>
-<li><p>编辑刚新建的页面，将页面的类型<code>type</code>设置为 categories ，主题将自动为这个页面显示所有分类。</p>
-<blockquote>
-<p>通过设置categoties，并在menu中添加对应链接来实现博文分类</p>
-<p>categoties是不同级的，适合纵向文件分类    </p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">分类</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020</span><span class="number">-07</span><span class="number">-29</span> <span class="number">10</span><span class="string">:36:40</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"categories"</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-</blockquote>
+<li><p>各个单词首字母大写：<code>title()</code></p>
 </li>
-<li><p>菜单中添加链接。编辑主题的<code>_config.yml</code> ，将categories添加到menu中</p>
+<li><p>全小写：<code>lower()</code></p>
+</li>
+<li><p>全大写：<code>upper()</code></p>
 <blockquote>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">home:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">/categories</span></span><br><span class="line"><span class="attr">archives:</span> <span class="string">/archives</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">/tags</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(new_str1+<span class="string">'\n'</span>+new_str1.capitalize()+<span class="string">'\n'</span>+new_str1.title()+<span class="string">'\n'</span>+new_str1.lower()+<span class="string">'\n'</span>+new_str1.upper())</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
-<h4 id="3-2-文章标签分类功能"><a href="#3-2-文章标签分类功能" class="headerlink" title="3.2 文章标签分类功能"></a>3.2 文章标签分类功能</h4><ul>
-<li><p>MarkDown 各种标签设置</p>
+<h3 id="3-2-去两端空格"><a href="#3-2-去两端空格" class="headerlink" title="3.2 去两端空格"></a>3.2 去两端空格</h3><ul>
+<li><p>两端均去除：<code>strip()</code> </p>
+</li>
+<li><p>左端去除：<code>lstrip()</code></p>
+</li>
+<li><p>右端去除：<code>rstrip()</code></p>
 <blockquote>
-<p>通过设置tags，并在menu中添加对应链接来实现博文分类   </p>
-<p>tags标签是同级的，适合横向文件分类 </p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> 				 <span class="comment">#文章标题</span></span><br><span class="line"><span class="attr">subtitle:</span>                            <span class="comment">#子标题</span></span><br><span class="line"><span class="attr">categories:</span>                       <span class="comment">#文章分類目錄 可以省略    </span></span><br><span class="line"><span class="attr">toc:</span> <span class="literal">true</span>                            <span class="comment">#目录 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">reward:</span> <span class="literal">true</span>                      <span class="comment">#打赏 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">declare:</span> <span class="literal">true</span>                      <span class="comment">#版权 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">date:</span>                                   <span class="comment">#文章日期</span></span><br><span class="line"><span class="attr">header-img:</span>                        <span class="comment">#顶部背景图片</span></span><br><span class="line"><span class="attr">tags:</span>                                    <span class="comment">#标签</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(str3.strip())</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
-<hr>
-<h3 id="4-添加404网页"><a href="#4-添加404网页" class="headerlink" title="4. 添加404网页"></a>4. 添加404网页</h3><ul>
-<li><p>参考：<a href="https://docs.github.com/cn/github/working-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site" target="_blank" rel="noopener">自定义Github Pages</a></p>
+<h3 id="3-3-字符串对齐"><a href="#3-3-字符串对齐" class="headerlink" title="3.3 字符串对齐"></a>3.3 字符串对齐</h3><ul>
+<li><p>左对齐：<code>ljust(长度,填充字符)</code></p>
 </li>
-<li><p>在<code>/source/</code>目录下新建<code>404.md</code>在头部添加属性<code>permalink: /404.html</code>，页面内容可以自定义。</p>
+<li><p>右对齐：<code>rjust(长度,填充字符)</code></p>
+</li>
+<li><p>居中对齐：<code>center(长度,填充字符)</code> </p>
 <blockquote>
-<p>推荐使用<a href="https://www.qq.com/404/" target="_blank" rel="noopener">腾讯公益404页面</a>（注意要把首页链接换成自己的）</p>
-<p><code>404.md</code>文件内容</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"># example 404.md </span><br><span class="line"></span><br><span class="line">title: 404 Not Found：该页无法显示 </span><br><span class="line"></span><br><span class="line">date: 2019-07-26 21:51:29 </span><br><span class="line"></span><br><span class="line">permalink: /404.html</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">title</span>&gt;</span>404<span class="tag">&lt;/<span class="name">title</span>&gt;</span>                              </span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span>    </span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js"</span> <span class="attr">homePageName</span>=<span class="string">"返回首页"</span> <span class="attr">homePageUrl</span>=<span class="string">"https://chthollists.github.io/"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'hello'</span>.ljust(<span class="number">10</span>,<span class="string">'.'</span>))</span><br><span class="line">print(<span class="string">'hello'</span>.rjust(<span class="number">10</span>,<span class="string">'.'</span>))</span><br><span class="line">print(<span class="string">'hello'</span>.center(<span class="number">10</span>,<span class="string">'.'</span>))</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
 <hr>
-<h3 id="5-头像旋转功能"><a href="#5-头像旋转功能" class="headerlink" title="5. 头像旋转功能"></a>5. 头像旋转功能</h3><ul>
-<li><p>在<code>themes\yilia\source\</code>文件夹下增加一个css文件<code>avatarrotation.css</code>用来旋转360度</p>
-<blockquote>
-<p><code>avatarrotation.css</code>内容</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.left-col</span> <span class="selector-id">#header</span> <span class="selector-class">.profilepic</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">	<span class="comment">/* 控制旋转速度时间*/</span></span><br><span class="line"><span class="attribute">-webkit-transition</span>: -webkit-transform <span class="number">1.0s</span> ease-out;</span><br><span class="line"><span class="attribute">-moz-transition</span>: -moz-transform <span class="number">1.0s</span> ease-out;</span><br><span class="line"><span class="attribute">transition</span>: transform <span class="number">1.0s</span> ease-out;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.left-col</span> <span class="selector-id">#header</span> <span class="selector-class">.profilepic</span> <span class="selector-tag">img</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">	<span class="comment">/* 鼠标经过360% */</span></span><br><span class="line"><span class="attribute">-webkit-transform</span>: <span class="built_in">rotateZ</span>(<span class="number">360deg</span>);</span><br><span class="line"><span class="attribute">-moz-transform</span>: <span class="built_in">rotateZ</span>(<span class="number">360deg</span>);</span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">rotateZ</span>(<span class="number">360deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
+<h2 id="4-字符串判断"><a href="#4-字符串判断" class="headerlink" title="4. 字符串判断"></a>4. 字符串判断</h2><h3 id="4-1-判断开头结尾"><a href="#4-1-判断开头结尾" class="headerlink" title="4.1 判断开头结尾"></a>4.1 判断开头结尾</h3><ul>
+<li><p>开头：<code>startswith(子串,开始下标,结束下标)</code>  </p>
 </li>
-<li><p>然后在<code>themes\yilia\layout\_partial\head.ejs</code>文件中添加进去创建的<code>css</code>文件：<br>找到<code>&lt;%- partial(&#39;css&#39;) %&gt;</code>，在它的下面添加代码，把刚才写的文件添加进去，</p>
+<li><p>结尾：<code>endswith(子串,开始下标,结束下标)</code></p>
 <blockquote>
-<p><strong>注意！！是在它的下面添加，不然旋转速度将不会生效</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.avatarrotation</span>)&#123; %&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"/./avatarrotation.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>最后在<code>theme\_config.yml</code>中添加</p>
-<blockquote>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#头像是否旋转(如果不要旋转取false)</span></span><br><span class="line"><span class="attr">avatarrotation:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'hello world '</span>.startswith(<span class="string">'he'</span>))</span><br><span class="line">print(<span class="string">'hello world '</span>.startswith(<span class="string">'he'</span>,<span class="number">3</span>))</span><br><span class="line">print(<span class="string">'hello world '</span>.endswith(<span class="string">'d '</span>))</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
-<hr>
-<h3 id="6-修改默认文章格式"><a href="#6-修改默认文章格式" class="headerlink" title="6. 修改默认文章格式"></a>6. 修改默认文章格式</h3><blockquote>
-<p>修改hexo new “article” 的Front-matter的属性</p>
-</blockquote>
-<ul>
-<li><p>修改根目录下的<code>scaffolds</code>文件夹的post.md`</p>
-<blockquote>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">&#123;&#123;</span> <span class="string">title</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">&#123;&#123;</span> <span class="string">date</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">subtitle:</span>                         <span class="comment">#子标题</span></span><br><span class="line"><span class="attr">categories:</span>                       <span class="comment">#文章分類目錄 可以省略    </span></span><br><span class="line"><span class="attr">toc:</span> <span class="literal">true</span>                         <span class="comment">#目录 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">reward:</span> <span class="literal">true</span>                      <span class="comment">#打赏 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">declare:</span> <span class="literal">true</span>                     <span class="comment">#版权 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">header-img:</span>                       <span class="comment">#顶部背景图片</span></span><br><span class="line"><span class="attr">top:</span> </span><br><span class="line"><span class="attr">password:</span> </span><br><span class="line"><span class="attr">abstract:</span> </span><br><span class="line"><span class="attr">message:</span> </span><br><span class="line"><span class="attr">tags:</span>                             <span class="comment">#标签</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
+<h3 id="4-2-判断内容"><a href="#4-2-判断内容" class="headerlink" title="4.2 判断内容"></a>4.2 判断内容</h3><ul>
+<li>全字母：<code>isalpha()</code></li>
+<li>全空格：<code>true isspace()</code></li>
+<li>全数字：<code>isdight()</code></li>
+<li>全字母+数字：<code>isalnum()</code></li>
 </ul>
-<hr>
 
 				
 			
@@ -503,159 +458,116 @@ var _hmt = _hmt || [];
 	  <!--    注释：
         <hr>
 <ul>
-<li>在Windows系统上利用Hexo搭建博客系列——Chapter5</li>
-<li>Chapter5：</li>
-<li>在Yilia主题自带功能的基础上</li>
-<li>扩展了微信分享功能、文章置顶功能、文章分类功能</li>
-<li>扩展了404默认公益网页、头像旋转、文章默认格式功能</li>
+<li>Python基础语法系列CP2——字符串</li>
+<li>CP2主要分享了Python中的字符串数据类型的特点和操作</li>
 </ul>
 <a id="more"></a>
 
-<h1 id="Hexo博客搭建系列——Chapter-5"><a href="#Hexo博客搭建系列——Chapter-5" class="headerlink" title="Hexo博客搭建系列——Chapter 5"></a>Hexo博客搭建系列——Chapter 5</h1><hr>
-<h2 id="五、高级功能实现"><a href="#五、高级功能实现" class="headerlink" title="五、高级功能实现"></a>五、高级功能实现</h2><ul>
-<li>各功能教程超链接汇总<ul>
-<li><a href="http://dongshuyan.com/2019/05/24/hexo%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" target="_blank" rel="noopener">微信分享</a></li>
-<li><a href="https://blog.csdn.net/qq_37939980/article/details/104390332" target="_blank" rel="noopener">版权信息</a></li>
-<li><a href="https://blog.csdn.net/qq_40922859/article/details/97035497?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param" target="_blank" rel="noopener">不蒜子统计</a></li>
-<li><a href="https://blog.csdn.net/qq_40922859/article/details/97035497?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param" target="_blank" rel="noopener">爱心功能、评论系统</a></li>
-<li><a href="https://blog.csdn.net/weixin_41287260/article/details/97693850" target="_blank" rel="noopener">音乐功能、404页面、头像旋转</a></li>
-<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" target="_blank" rel="noopener">分类、随笔、标签</a></li>
-<li><a href="https://blog.csdn.net/weixin_41287260/article/details/97693850" target="_blank" rel="noopener">字数统计、阅读时长</a></li>
-<li><a href="http://dongshuyan.com/2019/05/24/hexo%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" target="_blank" rel="noopener">live2D、转载说明</a></li>
-<li><a href="https://blog.csdn.net/qq_40922859/article/details/97035497?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param" target="_blank" rel="noopener">文章加密</a></li>
-<li><a href="http://dongshuyan.com/2019/05/24/hexo%E5%8D%9A%E5%AE%A2%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" target="_blank" rel="noopener">更多功能</a></li>
-</ul>
+<h1 id="Python基础语法系列CP2——字符串"><a href="#Python基础语法系列CP2——字符串" class="headerlink" title="Python基础语法系列CP2——字符串"></a>Python基础语法系列CP2——字符串</h1><h2 id="1-查找与计数"><a href="#1-查找与计数" class="headerlink" title="1. 查找与计数"></a>1. 查找与计数</h2><h3 id="1-1-查找：find"><a href="#1-1-查找：find" class="headerlink" title="1.1 查找：find"></a>1.1 查找：find</h3><ul>
+<li><p>语法格式：<code>find(&#39;子串&#39;)</code>默认左侧查找</p>
+</li>
+<li><p><code>rfind(&#39;子串&#39;)</code>从右侧查找</p>
+<blockquote>
+<p>查找成功返回子串位置下标</p>
+<p>查找失败返回 -1</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">'abcdefghijk poaykjakdljl'</span></span><br><span class="line">a1 = str.find(<span class="string">'bc'</span>)</span><br><span class="line">a2 = str.find(<span class="string">'a'</span>,<span class="number">10</span>,<span class="number">20</span>)</span><br><span class="line">a3 = str.find(<span class="string">'sss'</span>)</span><br><span class="line">print(a1,a2,a3)</span><br></pre></td></tr></table></figure>
+</blockquote>
 </li>
 </ul>
-<h3 id="1-微信分享功能"><a href="#1-微信分享功能" class="headerlink" title="1. 微信分享功能"></a>1. 微信分享功能</h3><blockquote>
-<p>初始时微信分享功能有问题</p>
-<p>解决方法：修改<code>themes\yilia\layout\_partial\post\share.ejs</code>文件</p>
-</blockquote>
-<ul>
-<li><p>由于百度云已经不支持二维码生成功能，修改share.ejs的度盘链接，改为qrserver.com的api</p>
+<h3 id="1-2-查找：index"><a href="#1-2-查找：index" class="headerlink" title="1.2 查找：index"></a>1.2 查找：index</h3><ul>
+<li><p>语法格式：<code>index(&#39;子串&#39;)</code>默认左侧查找</p>
+</li>
+<li><p><code>rindex(&#39;子串&#39;)</code>从右侧查找</p>
 <blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--查找--&gt;</span></span><br><span class="line">//pan.baidu.com/share/qrcode?url=</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 修改为--&gt;</span></span><br><span class="line">//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=</span><br></pre></td></tr></table></figure>
+<p>查找成功返回子串位置下标</p>
+<p>查找失败抛出异常——报错  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">b1 = str.index(<span class="string">'bc'</span>)</span><br><span class="line">b2 = str.index(<span class="string">'a'</span>,<span class="number">10</span>,<span class="number">20</span>)</span><br><span class="line">b3 = str.index(<span class="string">'sss'</span>)</span><br><span class="line">print(b1,b2)</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
-<li><p>查找share.ejs中的</p>
-<blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--查找--&gt;</span></span><br><span class="line">var sUrl = url.replace(/index\.html$/, '');</span><br><span class="line">sUrl = /^(http:|https:)\/\//.test(sUrl) ? sUrl : 'http:' + sUrl;</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--添加--&gt;</span></span><br><span class="line">test=sUrl.substring(20);</span><br><span class="line"><span class="comment">&lt;!-- 注意：substring截取的位数与你的主页网址长度相等&gt;</span></span><br><span class="line"><span class="comment">  &lt;!--注意：如果博客只部署在一个服务端，可以省略这一步，微信二维码分享的地方，直接使用sUrl&gt;</span></span><br><span class="line"><span class="comment">  &lt;!--注意：如果博客只部署在多个服务端，不可省略，使得二维码为主博客的网址&gt;</span></span><br></pre></td></tr></table></figure>
-</blockquote>
+</ul>
+<h3 id="1-3-查找计数：count"><a href="#1-3-查找计数：count" class="headerlink" title="1.3 查找计数：count"></a>1.3 查找计数：count</h3><ul>
+<li><p>语法格式：<code>count(&#39;子串&#39;)</code> </p>
 </li>
-<li><p>再将share.ejs中的</p>
+<li><p>返回子串的个数，包含0</p>
 <blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--查找--&gt;</span></span><br><span class="line">'//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=' + sUrl</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 修改为--&gt;</span></span><br><span class="line">'//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=你的主页网址' + test</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>最终结果</p>
-<blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 最终修改结果--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"page-modal wx-share js-wx-box"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"close js-modal-close"</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"icon icon-close"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">p</span>&gt;</span>扫一扫，分享到微信<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wx-qrcode"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"&lt;%- 'qrcode' in locals ? qrcode(sUrl) : '//api.qrserver.com/v1/create-qr-code/?size=150x150&amp;data=https://damonxiang.github.io' + test  %&gt;"</span> <span class="attr">alt</span>=<span class="string">"微信分享二维码"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">c1 = str.count(<span class="string">'a'</span>)</span><br><span class="line">c2 = str.count(<span class="string">'a'</span>,<span class="number">10</span>,<span class="number">20</span>)</span><br><span class="line">print(c1,c2)</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
 <hr>
-<h3 id="2-文章置顶功能"><a href="#2-文章置顶功能" class="headerlink" title="2. 文章置顶功能"></a>2. 文章置顶功能</h3><h4 id="2-1-安装插件"><a href="#2-1-安装插件" class="headerlink" title="2.1 安装插件"></a>2.1 安装插件</h4><ul>
-<li><p>安装 hexo-generator-index-pin-top 模块</p>
+<h2 id="2-字符串修改"><a href="#2-字符串修改" class="headerlink" title="2. 字符串修改"></a>2. 字符串修改</h2><h3 id="2-1-替换-replace"><a href="#2-1-替换-replace" class="headerlink" title="2.1 替换:replace"></a>2.1 替换:replace</h3><ul>
+<li><p>语法格式：<code>replace(旧子串，新子串，次数)</code></p>
 <blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">'abc and cba and nba and oop'</span></span><br><span class="line">new_str1 = str.replace(<span class="string">'and'</span>,<span class="string">'A'</span>)</span><br><span class="line">new_str2 = str.replace(<span class="string">'and'</span>,<span class="string">'A'</span>,<span class="number">1</span>)</span><br><span class="line">new_str3 = str.replace(<span class="string">'and'</span>,<span class="string">'A'</span>,<span class="number">100</span>) <span class="comment"># 次数超出，替换所有</span></span><br><span class="line">print(str+<span class="string">'\n'</span>+new_str1+<span class="string">'\n'</span>+new_str2+<span class="string">'\n'</span>+new_str3)</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
-<h4 id="2-2-配置置顶标准"><a href="#2-2-配置置顶标准" class="headerlink" title="2.2 配置置顶标准"></a>2.2 配置置顶标准</h4><ul>
-<li><p>打开<code>/themes/yilia/layout/post.ejs</code>在最前面加入代码</p>
+<h3 id="2-2-分割-split"><a href="#2-2-分割-split" class="headerlink" title="2.2 分割:split"></a>2.2 分割:split</h3><ul>
+<li><p>语法格式：<code>split(分割字符，次数)</code></p>
 <blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">page.top</span>) &#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-thumb-tack"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">7D26CD</span>&gt;</span>置顶<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"post-meta-divider"</span>&gt;</span>|<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list1 = str.split(<span class="string">' and'</span>)</span><br><span class="line">list2 = str.split(<span class="string">'and'</span>,<span class="number">2</span>)</span><br><span class="line">print(list1)</span><br><span class="line">print(list2)</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
-<h4 id="2-3-配置文章"><a href="#2-3-配置文章" class="headerlink" title="2.3 配置文章"></a>2.3 配置文章</h4><ul>
-<li><p>在需要置顶的文章的Front-matter中加上top属性</p>
+<h3 id="2-3-连接-join"><a href="#2-3-连接-join" class="headerlink" title="2.3 连接:join"></a>2.3 连接:join</h3><ul>
+<li><p>语法格式：<code>&#39;连接字符&#39;.join(多字符串序列-list/tuple/set)</code></p>
 <blockquote>
-<p>top后面的数字越大，优先级越高</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">博客简介</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">xxx</span></span><br><span class="line"><span class="attr">top:</span> <span class="number">5</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-<h4 id="2-4-优先级配置"><a href="#2-4-优先级配置" class="headerlink" title="2.4 优先级配置"></a>2.4 优先级配置</h4><ul>
-<li><p>修改根目录配置文件/_config.yml,top值-1标示根据top值倒序（正序设置为1即可），同样date也是根据创建日期倒序。</p>
-<blockquote>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查找</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">''</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">10</span></span><br><span class="line"><span class="attr">order_by:</span> <span class="string">-date</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 改为</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line"><span class="attr">path:</span> <span class="string">''</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">10</span></span><br><span class="line"><span class="attr">order_by:</span></span><br><span class="line"> <span class="attr">top:</span> <span class="number">-1</span></span><br><span class="line"> <span class="attr">date:</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'...'</span>.join(list1)</span><br><span class="line">str2 = <span class="string">' and'</span>.join(tuple(list1))</span><br><span class="line">str3 = <span class="string">' 666'</span>.join(frozenset(list1))</span><br><span class="line">print(str1+<span class="string">'\n'</span>+str2+<span class="string">'\n'</span>+str3)</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
 <hr>
-<h3 id="3-文章标签分类功能"><a href="#3-文章标签分类功能" class="headerlink" title="3. 文章标签分类功能"></a>3. 文章标签分类功能</h3><h4 id="3-1-文章分类功能"><a href="#3-1-文章分类功能" class="headerlink" title="3.1 文章分类功能"></a>3.1 文章分类功能</h4><ul>
-<li><p>通过hexo新建一个页面，命名为 categories </p>
-<blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categoties</span><br></pre></td></tr></table></figure>
-</blockquote>
+<h2 id="3-字符串操作"><a href="#3-字符串操作" class="headerlink" title="3. 字符串操作"></a>3. 字符串操作</h2><h3 id="3-1-大小写转换"><a href="#3-1-大小写转换" class="headerlink" title="3.1 大小写转换"></a>3.1 大小写转换</h3><ul>
+<li><p>首字母大写：<code>capitalize()</code></p>
 </li>
-<li><p>编辑刚新建的页面，将页面的类型<code>type</code>设置为 categories ，主题将自动为这个页面显示所有分类。</p>
-<blockquote>
-<p>通过设置categoties，并在menu中添加对应链接来实现博文分类</p>
-<p>categoties是不同级的，适合纵向文件分类    </p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">分类</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020</span><span class="number">-07</span><span class="number">-29</span> <span class="number">10</span><span class="string">:36:40</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"categories"</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-</blockquote>
+<li><p>各个单词首字母大写：<code>title()</code></p>
 </li>
-<li><p>菜单中添加链接。编辑主题的<code>_config.yml</code> ，将categories添加到menu中</p>
+<li><p>全小写：<code>lower()</code></p>
+</li>
+<li><p>全大写：<code>upper()</code></p>
 <blockquote>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">home:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">/categories</span></span><br><span class="line"><span class="attr">archives:</span> <span class="string">/archives</span></span><br><span class="line"><span class="attr">tags:</span> <span class="string">/tags</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(new_str1+<span class="string">'\n'</span>+new_str1.capitalize()+<span class="string">'\n'</span>+new_str1.title()+<span class="string">'\n'</span>+new_str1.lower()+<span class="string">'\n'</span>+new_str1.upper())</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
-<h4 id="3-2-文章标签分类功能"><a href="#3-2-文章标签分类功能" class="headerlink" title="3.2 文章标签分类功能"></a>3.2 文章标签分类功能</h4><ul>
-<li><p>MarkDown 各种标签设置</p>
+<h3 id="3-2-去两端空格"><a href="#3-2-去两端空格" class="headerlink" title="3.2 去两端空格"></a>3.2 去两端空格</h3><ul>
+<li><p>两端均去除：<code>strip()</code> </p>
+</li>
+<li><p>左端去除：<code>lstrip()</code></p>
+</li>
+<li><p>右端去除：<code>rstrip()</code></p>
 <blockquote>
-<p>通过设置tags，并在menu中添加对应链接来实现博文分类   </p>
-<p>tags标签是同级的，适合横向文件分类 </p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> 				 <span class="comment">#文章标题</span></span><br><span class="line"><span class="attr">subtitle:</span>                            <span class="comment">#子标题</span></span><br><span class="line"><span class="attr">categories:</span>                       <span class="comment">#文章分類目錄 可以省略    </span></span><br><span class="line"><span class="attr">toc:</span> <span class="literal">true</span>                            <span class="comment">#目录 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">reward:</span> <span class="literal">true</span>                      <span class="comment">#打赏 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">declare:</span> <span class="literal">true</span>                      <span class="comment">#版权 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">date:</span>                                   <span class="comment">#文章日期</span></span><br><span class="line"><span class="attr">header-img:</span>                        <span class="comment">#顶部背景图片</span></span><br><span class="line"><span class="attr">tags:</span>                                    <span class="comment">#标签</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(str3.strip())</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
-<hr>
-<h3 id="4-添加404网页"><a href="#4-添加404网页" class="headerlink" title="4. 添加404网页"></a>4. 添加404网页</h3><ul>
-<li><p>参考：<a href="https://docs.github.com/cn/github/working-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site" target="_blank" rel="noopener">自定义Github Pages</a></p>
+<h3 id="3-3-字符串对齐"><a href="#3-3-字符串对齐" class="headerlink" title="3.3 字符串对齐"></a>3.3 字符串对齐</h3><ul>
+<li><p>左对齐：<code>ljust(长度,填充字符)</code></p>
 </li>
-<li><p>在<code>/source/</code>目录下新建<code>404.md</code>在头部添加属性<code>permalink: /404.html</code>，页面内容可以自定义。</p>
+<li><p>右对齐：<code>rjust(长度,填充字符)</code></p>
+</li>
+<li><p>居中对齐：<code>center(长度,填充字符)</code> </p>
 <blockquote>
-<p>推荐使用<a href="https://www.qq.com/404/" target="_blank" rel="noopener">腾讯公益404页面</a>（注意要把首页链接换成自己的）</p>
-<p><code>404.md</code>文件内容</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"># example 404.md </span><br><span class="line"></span><br><span class="line">title: 404 Not Found：该页无法显示 </span><br><span class="line"></span><br><span class="line">date: 2019-07-26 21:51:29 </span><br><span class="line"></span><br><span class="line">permalink: /404.html</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">title</span>&gt;</span>404<span class="tag">&lt;/<span class="name">title</span>&gt;</span>                              </span><br><span class="line"> <span class="tag">&lt;/<span class="name">head</span>&gt;</span>    </span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js"</span> <span class="attr">homePageName</span>=<span class="string">"返回首页"</span> <span class="attr">homePageUrl</span>=<span class="string">"https://chthollists.github.io/"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'hello'</span>.ljust(<span class="number">10</span>,<span class="string">'.'</span>))</span><br><span class="line">print(<span class="string">'hello'</span>.rjust(<span class="number">10</span>,<span class="string">'.'</span>))</span><br><span class="line">print(<span class="string">'hello'</span>.center(<span class="number">10</span>,<span class="string">'.'</span>))</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
 <hr>
-<h3 id="5-头像旋转功能"><a href="#5-头像旋转功能" class="headerlink" title="5. 头像旋转功能"></a>5. 头像旋转功能</h3><ul>
-<li><p>在<code>themes\yilia\source\</code>文件夹下增加一个css文件<code>avatarrotation.css</code>用来旋转360度</p>
-<blockquote>
-<p><code>avatarrotation.css</code>内容</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.left-col</span> <span class="selector-id">#header</span> <span class="selector-class">.profilepic</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">	<span class="comment">/* 控制旋转速度时间*/</span></span><br><span class="line"><span class="attribute">-webkit-transition</span>: -webkit-transform <span class="number">1.0s</span> ease-out;</span><br><span class="line"><span class="attribute">-moz-transition</span>: -moz-transform <span class="number">1.0s</span> ease-out;</span><br><span class="line"><span class="attribute">transition</span>: transform <span class="number">1.0s</span> ease-out;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.left-col</span> <span class="selector-id">#header</span> <span class="selector-class">.profilepic</span> <span class="selector-tag">img</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">	<span class="comment">/* 鼠标经过360% */</span></span><br><span class="line"><span class="attribute">-webkit-transform</span>: <span class="built_in">rotateZ</span>(<span class="number">360deg</span>);</span><br><span class="line"><span class="attribute">-moz-transform</span>: <span class="built_in">rotateZ</span>(<span class="number">360deg</span>);</span><br><span class="line"><span class="attribute">transform</span>: <span class="built_in">rotateZ</span>(<span class="number">360deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
+<h2 id="4-字符串判断"><a href="#4-字符串判断" class="headerlink" title="4. 字符串判断"></a>4. 字符串判断</h2><h3 id="4-1-判断开头结尾"><a href="#4-1-判断开头结尾" class="headerlink" title="4.1 判断开头结尾"></a>4.1 判断开头结尾</h3><ul>
+<li><p>开头：<code>startswith(子串,开始下标,结束下标)</code>  </p>
 </li>
-<li><p>然后在<code>themes\yilia\layout\_partial\head.ejs</code>文件中添加进去创建的<code>css</code>文件：<br>找到<code>&lt;%- partial(&#39;css&#39;) %&gt;</code>，在它的下面添加代码，把刚才写的文件添加进去，</p>
+<li><p>结尾：<code>endswith(子串,开始下标,结束下标)</code></p>
 <blockquote>
-<p><strong>注意！！是在它的下面添加，不然旋转速度将不会生效</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.avatarrotation</span>)&#123; %&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"/./avatarrotation.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>最后在<code>theme\_config.yml</code>中添加</p>
-<blockquote>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#头像是否旋转(如果不要旋转取false)</span></span><br><span class="line"><span class="attr">avatarrotation:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'hello world '</span>.startswith(<span class="string">'he'</span>))</span><br><span class="line">print(<span class="string">'hello world '</span>.startswith(<span class="string">'he'</span>,<span class="number">3</span>))</span><br><span class="line">print(<span class="string">'hello world '</span>.endswith(<span class="string">'d '</span>))</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
-<hr>
-<h3 id="6-修改默认文章格式"><a href="#6-修改默认文章格式" class="headerlink" title="6. 修改默认文章格式"></a>6. 修改默认文章格式</h3><blockquote>
-<p>修改hexo new “article” 的Front-matter的属性</p>
-</blockquote>
-<ul>
-<li><p>修改根目录下的<code>scaffolds</code>文件夹的post.md`</p>
-<blockquote>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">&#123;&#123;</span> <span class="string">title</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">&#123;&#123;</span> <span class="string">date</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">subtitle:</span>                         <span class="comment">#子标题</span></span><br><span class="line"><span class="attr">categories:</span>                       <span class="comment">#文章分類目錄 可以省略    </span></span><br><span class="line"><span class="attr">toc:</span> <span class="literal">true</span>                         <span class="comment">#目录 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">reward:</span> <span class="literal">true</span>                      <span class="comment">#打赏 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">declare:</span> <span class="literal">true</span>                     <span class="comment">#版权 需要安装插件或者主题自带</span></span><br><span class="line"><span class="attr">header-img:</span>                       <span class="comment">#顶部背景图片</span></span><br><span class="line"><span class="attr">top:</span> </span><br><span class="line"><span class="attr">password:</span> </span><br><span class="line"><span class="attr">abstract:</span> </span><br><span class="line"><span class="attr">message:</span> </span><br><span class="line"><span class="attr">tags:</span>                             <span class="comment">#标签</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
+<h3 id="4-2-判断内容"><a href="#4-2-判断内容" class="headerlink" title="4.2 判断内容"></a>4.2 判断内容</h3><ul>
+<li>全字母：<code>isalpha()</code></li>
+<li>全空格：<code>true isspace()</code></li>
+<li>全数字：<code>isdight()</code></li>
+<li>全字母+数字：<code>isalnum()</code></li>
 </ul>
-<hr>
 
        -->
 	        
@@ -677,16 +589,16 @@ var _hmt = _hmt || [];
     
     <br>
     <strong class="create-time">发布时间：</strong>
-    2020-07-31 16:27:15
+    2020-08-03 10:41:49
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-08-02 19:57:43
+    2020-08-03 11:08:00
     <br>
     <strong class="article-titles">本文标题：</strong>
-    <a href="https://chthollists.github.io/post/95d7a133.html" title="Hexo博客搭建系列Chapter5——Hexo博客功能扩展(1/5)" target="_blank">Hexo博客搭建系列Chapter5——Hexo博客功能扩展(1/5)</a>
+    <a href="https://chthollists.github.io/post/8c346747.html" title="Python基础语法系列CP1P2——字符串" target="_blank">Python基础语法系列CP1P2——字符串</a>
     <br>
     <strong class="article-url">本文链接：</strong>
-    <a href="https://chthollists.github.io/post/95d7a133.html" title="Hexo博客搭建系列Chapter5——Hexo博客功能扩展(1/5)" target="_blank">https://chthollists.github.io/post/95d7a133.html</a>
+    <a href="https://chthollists.github.io/post/8c346747.html" title="Python基础语法系列CP1P2——字符串" target="_blank">https://chthollists.github.io/post/8c346747.html</a>
     <br>
     <strong class="copyright">版权声明：</strong>
     本作品采用
@@ -746,15 +658,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">top</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">api.qrserver.com</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
@@ -766,11 +670,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/others//" class="article-tag-list-link color2">others</a>
+        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/others/Hexo//" class="article-tag-list-link color5">Hexo</a>
+        			<a href="/categories/Python/Synax//" class="article-tag-list-link color1">Synax</a>
         		</li>
       		
 		</ul>
@@ -825,7 +729,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://chthollists.github.io/post/95d7a133.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://chthollists.github.io/post/8c346747.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -846,18 +750,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/post/f9e02555.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hexo博客搭建系列Chapter6——Hexo博客功能扩展(2/5)
-        
-      </div>
-    </a>
   
-  
-    <a href="/post/139f76f2.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo博客搭建系列Chapter4——Hexo博客美化</div>
+    <a href="/post/6fa17b20.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python基础语法系列CP1——初识Python</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -884,7 +779,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo博客搭建系列——Chapter-5"><span class="toc-number">1.</span> <span class="toc-text">Hexo博客搭建系列——Chapter 5</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#五、高级功能实现"><span class="toc-number">1.1.</span> <span class="toc-text">五、高级功能实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-微信分享功能"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 微信分享功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-文章置顶功能"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 文章置顶功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-安装插件"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">2.1 安装插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-配置置顶标准"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2.2 配置置顶标准</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-配置文章"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">2.3 配置文章</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-优先级配置"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">2.4 优先级配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-文章标签分类功能"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 文章标签分类功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-文章分类功能"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">3.1 文章分类功能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-文章标签分类功能"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">3.2 文章标签分类功能</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-添加404网页"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 添加404网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-头像旋转功能"><span class="toc-number">1.1.5.</span> <span class="toc-text">5. 头像旋转功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-修改默认文章格式"><span class="toc-number">1.1.6.</span> <span class="toc-text">6. 修改默认文章格式</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python基础语法系列CP2——字符串"><span class="toc-number">1.</span> <span class="toc-text">Python基础语法系列CP2——字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-查找与计数"><span class="toc-number">1.1.</span> <span class="toc-text">1. 查找与计数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-查找：find"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 查找：find</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-查找：index"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 查找：index</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-查找计数：count"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3 查找计数：count</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-字符串修改"><span class="toc-number">1.2.</span> <span class="toc-text">2. 字符串修改</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-替换-replace"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 替换:replace</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-分割-split"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 分割:split</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-连接-join"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 连接:join</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-字符串操作"><span class="toc-number">1.3.</span> <span class="toc-text">3. 字符串操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-大小写转换"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 大小写转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-去两端空格"><span class="toc-number">1.3.2.</span> <span class="toc-text">3.2 去两端空格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-字符串对齐"><span class="toc-number">1.3.3.</span> <span class="toc-text">3.3 字符串对齐</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-字符串判断"><span class="toc-number">1.4.</span> <span class="toc-text">4. 字符串判断</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-判断开头结尾"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 判断开头结尾</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-判断内容"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 判断内容</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -924,7 +819,7 @@ if(true){
     repo: 'Chthollists.github.io',
     owner: 'Chthollists',
     admin: ['Chthollists'],
-    id: 'Fri Jul 31 2020 16:27:15 GMT+0800',
+    id: 'Mon Aug 03 2020 10:41:49 GMT+0800',
     distractionFreeMode: 'true'
 
 })

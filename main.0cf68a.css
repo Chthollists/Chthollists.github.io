@@ -9,7 +9,7 @@
 
 color:#333;min-height:100%;/*background-color:#fff;*/
 background-color:linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
-    url('https://raw.githubusercontent.com/Chthollists/PicRepo/master/Chtholly06.jpg') no-repeat 0% 0%/ cover;
+    url('http://qefz7x7v9.bkt.clouddn.com/Chtholly06.jpg') no-repeat 0% 20%/ cover;
 }
 
 
@@ -89,7 +89,7 @@ a:active{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700
 .mid-col.show .article{background:hsla(0,0%,100%,.3)}
 
 .left-col{background:linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url('https://raw.githubusercontent.com/Chthollists/PicRepo/master/Chtholly10.jpg') no-repeat 0% 20%/ cover;
+    url('http://qefz7x7v9.bkt.clouddn.com/Chtholly10.jpg') no-repeat 0% 20%/ cover;
 width:300px;position:fixed;opacity:1;transition:all .2s ease-in;height:100%;z-index:999}
 .left-col .overlay{width:100%;height:180px;position:absolute}
 .left-col .intrude-less{width:76%;text-align:center;margin:112px auto 0}
