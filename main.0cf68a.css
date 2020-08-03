@@ -97,14 +97,15 @@ width:300px;position:fixed;opacity:1;transition:all .2s ease-in;height:100%;z-in
 .left-col #header a{color:#8A2BE2;text-decoration: none}
 .left-col #header a:hover{color:#FF4500}
 .left-col #header .header-subtitle{font-weight:5000;color:red;font-size:21px;margin-bottom:10px;line-height:30px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
-.left-col #header .header-menu{font-weight:5000;line-height:28px;text-transform:uppercase;float:none;min-height:150px;margin-left:-12px;text-align:center;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-pack:center;-webkit-box-align:center}
+.left-col #header .header-menu{font-weight:5000;line-height:23px;text-transform:uppercase;float:none;min-height:150px;margin-left:-12px;text-align:center;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-pack:center;-webkit-box-align:center}
 .left-col #header .header-menu li{cursor:default}
 .left-col #header .header-menu li a{text-decoration: none;font-weight:bold;font-size:17px;min-width:300px}
-.left-col #header .header-smart-menu{font-size:15px;margin-top:10px;margin-bottom:10px;font-weight:bold}
+.left-col #header .header-smart-menu{font-size:15px;margin-top:5px;margin-bottom:1px;font-weight:bold}
 .left-col #header .header-smart-menu a{text-decoration: none;color:blue}
 .left-col #header .header-smart-menu a:after{content:" &"}
 .left-col #header .header-smart-menu a:last-child:after{content:""}
-.left-col #header .profilepic{display:block;border:5px solid #fff;border-radius:300px;width:128px;height:128px;margin:0 auto;position:relative;overflow:hidden;background:#88acdb;-webkit-transition:all .2s ease-in;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-pack:center;-webkit-box-align:center;text-align:center}.left-col #header .profilepic img{border-radius:300px;opacity:1;-webkit-transition:all .2s ease-in}
+.left-col #header .profilepic{display:block;border:5px solid #fff;border-radius:300px;width:128px;height:128px;margin:0 auto;position:relative;overflow:hidden;background:#88acdb;-webkit-transition:all .2s ease-in;display:-webkit-box;-webkit-box-orient:horizontal;-webkit-box-pack:center;-webkit-box-align:center;text-align:center}
+.left-col #header .profilepic img{border-radius:300px;opacity:1;-webkit-transition:all .2s ease-in}
 .left-col #header .profilepic img.show{width:100%;height:100%;opacity:1}
 .left-col #header .header-author{text-align:center;margin:1%;font-family:Times New Roman,Microsoft YaHei,Roboto,serif;font-size:35px;transition:.3s}::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-button{width:0;height:0}::-webkit-scrollbar-button:end:decrement,::-webkit-scrollbar-button:start:increment{display:none}::-webkit-scrollbar-corner{display:block}::-webkit-scrollbar-thumb{border-radius:8px;background-color:rgba(0,0,0,.2)}::-webkit-scrollbar-thumb:hover{border-radius:8px;background-color:rgba(0,0,0,.5)}::-webkit-scrollbar-thumb,::-webkit-scrollbar-track{border-right:1px solid transparent;border-left:1px solid transparent}::-webkit-scrollbar-track:hover{background-color:rgba(0,0,0,.15)}::-webkit-scrollbar-button:start{width:10px;height:10px;background:url(./img/scrollbar_arrow.png) no-repeat 0 0}::-webkit-scrollbar-button:start:hover{background:url(./img/scrollbar_arrow.png) no-repeat -15px 0}::-webkit-scrollbar-button:start:active{background:url(./img/scrollbar_arrow.png) no-repeat -30px 0}::-webkit-scrollbar-button:end{width:10px;height:10px;background:url(./img/scrollbar_arrow.png) no-repeat 0 -18px}::-webkit-scrollbar-button:end:hover{background:url(./img/scrollbar_arrow.png) no-repeat -15px -18px}::-webkit-scrollbar-button:end:active{background:url(./img/scrollbar_arrow.png) no-repeat -30px -18px}
 
