@@ -21,7 +21,7 @@
 <meta property="og:description" content="数据库系列CP2——数据查询进阶操作 CP2主要分享了： where关键字语法 order、limit、group语法 聚合函数：sum&#x2F;avg&#x2F;count&#x2F;max&#x2F;min 分页查询 连接查询(内连接、外连接)、自连接查询 子查询">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-06T10:11:58.000Z">
-<meta property="article:modified_time" content="2020-08-06T12:28:57.034Z">
+<meta property="article:modified_time" content="2020-08-09T09:11:19.687Z">
 <meta property="article:author" content="Code.Yang">
 <meta property="article:tag" content="MySQL">
 <meta property="article:tag" content="子查询">
@@ -134,7 +134,7 @@ var _hmt = _hmt || [];
 		</nav>
 		
 		<!-- # <nav>
-				Total: 19
+				Total: 22
 			</nav> -->
 			
 		
@@ -753,8 +753,8 @@ var _hmt = _hmt || [];
 <li>子查询是⼀个完整的SQL语句 </li>
 <li>子查询分为三种    标量、行、列⼦查询 </li>
 <li>标量子查询返回的结果一行一列    </li>
-<li>列子查询使⽤格式：主查询 where 条件 in (列子查询)</li>
-<li>行子查询使⽤格式：主查询 where (字段1,2,…) = (行子查询</li>
+<li>列子查询使用格式：主查询 where 条件 in (列子查询)</li>
+<li>行子查询使用格式：主查询 where (字段1,2,…) = (行子查询)</li>
 </ul>
 </li>
 </ul>
@@ -1165,8 +1165,8 @@ var _hmt = _hmt || [];
 <li>子查询是⼀个完整的SQL语句 </li>
 <li>子查询分为三种    标量、行、列⼦查询 </li>
 <li>标量子查询返回的结果一行一列    </li>
-<li>列子查询使⽤格式：主查询 where 条件 in (列子查询)</li>
-<li>行子查询使⽤格式：主查询 where (字段1,2,…) = (行子查询</li>
+<li>列子查询使用格式：主查询 where 条件 in (列子查询)</li>
+<li>行子查询使用格式：主查询 where (字段1,2,…) = (行子查询)</li>
 </ul>
 </li>
 </ul>
@@ -1194,7 +1194,7 @@ var _hmt = _hmt || [];
     2020-08-06 18:11:58
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-08-06 20:28:57
+    2020-08-09 17:11:19
     <br>
     <strong class="article-titles">本文标题：</strong>
     <a href="https://chthollists.github.io/post/2db84f7e.html" title="数据库系列CP2——数据查询进阶操作" target="_blank">数据库系列CP2——数据查询进阶操作</a>
@@ -1360,6 +1360,15 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/post/428506b1.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          数据库系列CP3——MySQL数据库编程
+        
+      </div>
+    </a>
+  
   
     <a href="/post/4fd02982.html" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">数据库系列CP1——SQL语言基础语法</div>
@@ -1453,7 +1462,7 @@ gitalk.render('gitalk-container')
 		
 			<!-- # <font color="purple" face="Microsoft YaHei" size= 5><b>内容<br> </b></font> -->
 			
-    		<font color="red" face="Microsoft YaHei" size= 3><b>&copy; 2020 Code.Yang&nbsp;&nbsp;总文章数: 19</b></font>
+    		<font color="red" face="Microsoft YaHei" size= 3><b>&copy; 2020 Code.Yang&nbsp;&nbsp;总文章数: 22</b></font>
 			
     	</div>
       	<div class="footer-right">
@@ -1559,14 +1568,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">RDBMS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
@@ -1579,15 +1580,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">E-R模型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">视图和事务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">pymysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1607,6 +1612,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">RDBMS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">busuanzi</a>
               </li>
              
@@ -1623,6 +1644,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">hexo-deployer-git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
@@ -1631,15 +1656,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">索引</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">主从同步</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Yilia</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">toc</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">hexo-deployer-git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1660,26 +1689,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">sonw</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SEO</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">SiteMap</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Robots</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">hexo-baidu-url-submit</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">baidu-analytics</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1704,6 +1713,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">hexo-helper-live2d</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SEO</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">SiteMap</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Robots</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">hexo-baidu-url-submit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">baidu-analytics</a>
               </li>
              
               <li class="article-tag-list-item">
