@@ -11,22 +11,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://mfln8n.coding-pages.com">
-  <title>数据库系列CP3——MySQL数据库编程 | Chthollists的平凡之路</title>
+  <title>Python高阶语法系列CP4——GIL全局锁 | Chthollists的平凡之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据库系列CP3——MySQL数据库编程 CP3主要分享了： 外键约束 视图和事务 数据库三范式 E-R模型 Pyhton连接MySQL：connection Python操作MySQL：cursor SQL防注入">
+  <meta name="description" content="Python高阶语法系列CP4——GIL全局锁 CP4主要分享了 GIL全局解释器锁的概念和限制 GIL锁的解决方法 gcc编译环境的安装：MinGW Python导入C的扩展库：my_lib &#x3D; ctypes.cdll.LoadLibrary(&#39;导入库的路径&#39;) Python导入库时遇到32&#x2F;64位不匹配的解决方法 GIL锁面试问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据库系列CP3——MySQL数据库编程">
-<meta property="og:url" content="https://mfln8n.coding-pages.com/post/428506b1.html">
+<meta property="og:title" content="Python高阶语法系列CP4——GIL全局锁">
+<meta property="og:url" content="https://mfln8n.coding-pages.com/post/cf16f693.html">
 <meta property="og:site_name" content="Chthollists的平凡之路">
-<meta property="og:description" content="数据库系列CP3——MySQL数据库编程 CP3主要分享了： 外键约束 视图和事务 数据库三范式 E-R模型 Pyhton连接MySQL：connection Python操作MySQL：cursor SQL防注入">
+<meta property="og:description" content="Python高阶语法系列CP4——GIL全局锁 CP4主要分享了 GIL全局解释器锁的概念和限制 GIL锁的解决方法 gcc编译环境的安装：MinGW Python导入C的扩展库：my_lib &#x3D; ctypes.cdll.LoadLibrary(&#39;导入库的路径&#39;) Python导入库时遇到32&#x2F;64位不匹配的解决方法 GIL锁面试问题">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-09T09:13:58.000Z">
-<meta property="article:modified_time" content="2020-08-12T01:15:33.084Z">
+<meta property="article:published_time" content="2020-08-18T12:20:18.000Z">
+<meta property="article:modified_time" content="2020-08-18T12:22:54.708Z">
 <meta property="article:author" content="Code.Yang">
-<meta property="article:tag" content="MySQL">
-<meta property="article:tag" content="E-R模型">
-<meta property="article:tag" content="视图和事务">
-<meta property="article:tag" content="pymysql">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="GIL">
+<meta property="article:tag" content="gcc">
+<meta property="article:tag" content="ctypes">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Chthollists的平凡之路" type="application/atom+xml">
@@ -259,14 +259,14 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-Database/数据库系列CP3——MySQL数据库编程" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-Python/高阶语法/Python高阶语法系列CP4——GIL全局锁" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      数据库系列CP3——MySQL数据库编程
+      Python高阶语法系列CP4——GIL全局锁
     </h1>
   
 
@@ -284,8 +284,8 @@ var _hmt = _hmt || [];
 		<!--显示阅读次数完毕-->
 
         
-        <a href="/post/428506b1.html" class="archive-article-date">
-  	<time datetime="2020-08-09T09:13:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-09</time>
+        <a href="/post/cf16f693.html" class="archive-article-date">
+  	<time datetime="2020-08-18T12:20:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-18</time>
 </a>
 		
         <!-- 需要添加的位置 -->
@@ -297,7 +297,7 @@ var _hmt = _hmt || [];
         <i class="fa fa-keyboard-o"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  博文字数统计 : </span></b></font>
         <!--自定义样式-->
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">5.2k字</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">2k字</span>
       </span></b></font>
     </span>
 
@@ -306,7 +306,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  阅读所需时长 : </span></b></font>
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">21分</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">7分</span>
       </span></b></font>
     </span>
 </div>
@@ -328,7 +328,7 @@ var _hmt = _hmt || [];
 	<div id="toc-article" class="toc-article">
 	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 		<strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库系列CP3——MySQL数据库编程"><span class="toc-number">1.</span> <span class="toc-text">数据库系列CP3——MySQL数据库编程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#三、MySQL数据库编程"><span class="toc-number">1.1.</span> <span class="toc-text">三、MySQL数据库编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-数据库编程基础"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 数据库编程基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-数据库高阶操作"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">1.1 数据库高阶操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-外键约束"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">1.2 外键约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-数据库引擎"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">1.3 数据库引擎</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-视图"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">1.4 视图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-事务"><span class="toc-number">1.1.1.5.</span> <span class="toc-text">1.5 事务</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-数据库设计"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 数据库设计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-数据库三范式"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">2.1 数据库三范式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-数据库设计实例"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2.2 数据库设计实例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-E-R模型"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">2.3 E-R模型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Python连接操作数据库"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. Python连接操作数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-Python访问MySQL流程"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">3.1 Python访问MySQL流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-Python连接数据库"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">3.2 Python连接数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-Python操作数据库-Curd"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">3.3 Python操作数据库(Curd)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-SQL防注入"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">3.4 SQL防注入</span></a></li></ol></li></ol></li></ol></li></ol>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python高阶语法系列CP4——GIL全局锁"><span class="toc-number">1.</span> <span class="toc-text">Python高阶语法系列CP4——GIL全局锁</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#三、GIL锁"><span class="toc-number">1.1.</span> <span class="toc-text">三、GIL锁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-GIL锁简介"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. GIL锁简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-GIL锁引入"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">1.1 GIL锁引入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-GIL锁的概念"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">1.2 GIL锁的概念</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-GIL锁解决方法"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. GIL锁解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-GIL锁释放"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">2.1 GIL锁释放</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-GIL锁解决方案"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2.2 GIL锁解决方案</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-GIL面试常见问题"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. GIL面试常见问题</span></a></li></ol></li></ol></li></ol>
          </div>
    <script type="text/javascript">
 	function showToc(){
@@ -355,553 +355,177 @@ var _hmt = _hmt || [];
 				
 					<hr>
 <ul>
-<li>数据库系列CP3——MySQL数据库编程</li>
-<li>CP3主要分享了：</li>
-<li>外键约束</li>
-<li>视图和事务</li>
-<li>数据库三范式</li>
-<li>E-R模型</li>
-<li>Pyhton连接MySQL：connection</li>
-<li>Python操作MySQL：cursor</li>
-<li>SQL防注入</li>
+<li>Python高阶语法系列CP4——GIL全局锁</li>
+<li>CP4主要分享了</li>
+<li>GIL全局解释器锁的概念和限制</li>
+<li>GIL锁的解决方法</li>
+<li>gcc编译环境的安装：MinGW</li>
+<li>Python导入C的扩展库：<code>my_lib = ctypes.cdll.LoadLibrary(&#39;导入库的路径&#39;)</code></li>
+<li>Python导入库时遇到32/64位不匹配的解决方法</li>
+<li>GIL锁面试问题</li>
 </ul>
 <a id="more"></a>
 
-<h1 id="数据库系列CP3——MySQL数据库编程"><a href="#数据库系列CP3——MySQL数据库编程" class="headerlink" title="数据库系列CP3——MySQL数据库编程"></a>数据库系列CP3——MySQL数据库编程</h1><h2 id="三、MySQL数据库编程"><a href="#三、MySQL数据库编程" class="headerlink" title="三、MySQL数据库编程"></a>三、MySQL数据库编程</h2><ul>
-<li><p>时间：2020.08.07-2020.08.10</p>
+<h1 id="Python高阶语法系列CP4——GIL全局锁"><a href="#Python高阶语法系列CP4——GIL全局锁" class="headerlink" title="Python高阶语法系列CP4——GIL全局锁"></a>Python高阶语法系列CP4——GIL全局锁</h1><h2 id="三、GIL锁"><a href="#三、GIL锁" class="headerlink" title="三、GIL锁"></a>三、GIL锁</h2><ul>
+<li>时间：2020.08.21</li>
+</ul>
+<h3 id="1-GIL锁简介"><a href="#1-GIL锁简介" class="headerlink" title="1. GIL锁简介"></a>1. GIL锁简介</h3><ul>
+<li>时间：2020.08.21</li>
+</ul>
+<h4 id="1-1-GIL锁引入"><a href="#1-1-GIL锁引入" class="headerlink" title="1.1 GIL锁引入"></a>1.1 GIL锁引入</h4><ul>
+<li><p>查看CPU信息</p>
+<blockquote>
+<p>Linux 系统：<code>htop</code></p>
+<p>Windows 系统 ：<code>systeminfo</code>、<code>wmic</code>、<code>cpu get *</code></p>
+</blockquote>
 </li>
-<li><p>主要内容</p>
+<li><p>CPU与进程、线程</p>
 <ul>
-<li>外键约束</li>
-<li>视图和事务</li>
-<li>数据库三范式</li>
-<li>E-R模型</li>
-<li>Pyhton连接MySQL：connection</li>
-<li>Python操作MySQL：cursor</li>
-<li>SQL防注入</li>
-</ul>
+<li><p>单进程——单核CPU</p>
 </li>
-</ul>
-<h3 id="1-数据库编程基础"><a href="#1-数据库编程基础" class="headerlink" title="1. 数据库编程基础"></a>1. 数据库编程基础</h3><ul>
-<li>时间：2020.08.07</li>
-</ul>
-<h4 id="1-1-数据库高阶操作"><a href="#1-1-数据库高阶操作" class="headerlink" title="1.1 数据库高阶操作"></a>1.1 数据库高阶操作</h4><ul>
-<li><p>SQL练习</p>
+<li><p>多进程——多核CPU</p>
+</li>
+<li><p>多线程——多核CPU，但是每个CPU使用率较低</p>
 <blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> jingdong <span class="keyword">charset</span>=utf8;</span><br><span class="line"><span class="keyword">use</span> jingdong;</span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> goods(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">150</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    cate_name <span class="built_in">varchar</span>(<span class="number">40</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    brand_name <span class="built_in">varchar</span>(<span class="number">40</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    price <span class="built_in">decimal</span>(<span class="number">10</span>,<span class="number">3</span>) <span class="keyword">not</span> <span class="literal">null</span> <span class="keyword">default</span> <span class="number">0</span>,</span><br><span class="line">    is_show <span class="built_in">bit</span> <span class="keyword">not</span> <span class="literal">null</span> <span class="keyword">default</span> <span class="number">1</span>,</span><br><span class="line">    is_saleoff <span class="built_in">bit</span> <span class="keyword">not</span> <span class="literal">null</span> <span class="keyword">default</span> <span class="number">0</span></span><br><span class="line">);</span><br><span class="line">    </span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'r510vc 15.6英寸笔记本'</span>,<span class="string">'笔记本'</span>,<span class="string">'华硕'</span>,<span class="string">'3399'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'y400n 14.0英寸笔记本电脑'</span>,<span class="string">'笔记本'</span>,<span class="string">'联想'</span>,<span class="string">'4999'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'g150th 15.6英寸游戏本'</span>,<span class="string">'游戏本'</span>,<span class="string">'雷神'</span>,<span class="string">'8499'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'x550cc 15.6英寸笔记本'</span>,<span class="string">'笔记本'</span>,<span class="string">'华硕'</span>,<span class="string">'2799'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'x240 超极本'</span>,<span class="string">'超极本'</span>,<span class="string">'联想'</span>,<span class="string">'4880'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'u330p 13.3英寸超极本'</span>,<span class="string">'超极本'</span>,<span class="string">'联想'</span>,<span class="string">'4299'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'svp13226scb 触控超极本'</span>,<span class="string">'超极本'</span>,<span class="string">'索尼'</span>,<span class="string">'7999'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'ipad mini 7.9英寸平板电脑'</span>,<span class="string">'平板电脑'</span>,<span class="string">'苹果'</span>,<span class="string">'1998'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'ipad air 9.7英寸平板电脑'</span>,<span class="string">'平板电脑'</span>,<span class="string">'苹果'</span>,<span class="string">'3388'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'ipad mini 配备 retina 显示器'</span>,<span class="string">'平板电脑'</span>,<span class="string">'苹果'</span>,<span class="string">'2788'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'ideacenter c340 20英寸一体电脑'</span>,<span class="string">'台式机'</span>,<span class="string">'联想'</span>,<span class="string">'3499'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'vostro 3800-r1206 台式电脑'</span>,<span class="string">'台式机'</span>,<span class="string">'戴尔'</span>,<span class="string">'2899'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'imac me086ch/a 21.5英寸一体电脑'</span>,<span class="string">'台式机'</span>,<span class="string">'苹果'</span>,<span class="string">'9188'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'at7-7414lp 台式电脑 linux'</span>,<span class="string">'台式机'</span>,<span class="string">'宏基'</span>,<span class="string">'3699'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'z220sff f4f06pa工作站'</span>,<span class="string">'服务器/工作站'</span>,<span class="string">'惠普'</span>,<span class="string">'4288'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'poweredge ii服务器'</span>,<span class="string">'服务器/工作站'</span>,<span class="string">'戴尔'</span>,<span class="string">'5388'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'mac pro 专业级台式电脑'</span>,<span class="string">'服务器/工作站'</span>,<span class="string">'苹果'</span>,<span class="string">'28888'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'hmz-t3w 头戴显示设备'</span>,<span class="string">'笔记本配件'</span>,<span class="string">'索尼'</span>,<span class="string">'6999'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'商务双肩背包'</span>,<span class="string">'笔记本配件'</span>,<span class="string">'索尼'</span>,<span class="string">'99'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'x3250 m4机架式服务器'</span>,<span class="string">'服务器/工作站'</span>,<span class="string">'ibm'</span>,<span class="string">'6888'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'商务双肩背包'</span>,<span class="string">'笔记本配件'</span>,<span class="string">'索尼'</span>,<span class="string">'99'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询显示</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> goods;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 显示电脑的种类</span></span><br><span class="line"><span class="keyword">select</span> cate_name, <span class="keyword">count</span>(*) <span class="keyword">from</span> goods <span class="keyword">group</span> <span class="keyword">by</span> cate_name;</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> cate_name <span class="keyword">from</span> goods;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 分组查询</span></span><br><span class="line"><span class="keyword">select</span> cate_name, <span class="keyword">round</span>(<span class="keyword">avg</span>(price),<span class="number">2</span>) <span class="keyword">from</span> goods <span class="keyword">group</span> <span class="keyword">by</span> cate_name;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询价格大于平均价格的商品，按价格降序显示</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>, price <span class="keyword">from</span> goods <span class="keyword">where</span> price &gt; (<span class="keyword">select</span> <span class="keyword">round</span>(<span class="keyword">avg</span>(price),<span class="number">2</span>) <span class="keyword">as</span> price_avg <span class="keyword">from</span> goods) <span class="keyword">order</span> <span class="keyword">by</span> price <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
+<p>当程序为死循环时，单进程、多进程的单核、多核CPU使用率都为100%</p>
+<p>而多线程的多核CPU使用率只有百分之几十，说明在多线程时，CPU是轮询处理各个线程的</p>
+<p>即同一时间只有一个CPU在处理线程，这是由于GIL锁的限制。</p>
 </blockquote>
 </li>
-<li><p>表子查询——分组后查看全部信息</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> goods</span><br><span class="line"><span class="keyword">inner</span> <span class="keyword">join</span></span><br><span class="line">(<span class="keyword">select</span> cate_name <span class="keyword">as</span> s_catename, <span class="keyword">max</span>(price) <span class="keyword">as</span> price_max <span class="keyword">from</span> goods <span class="keyword">group</span> <span class="keyword">by</span> cate_name) <span class="keyword">as</span> max_price_goods</span><br><span class="line"><span class="keyword">on</span> goods.cate_name = max_price_goods.s_catename <span class="keyword">and</span> goods.price = max_price_goods.price_max;</span><br></pre></td></tr></table></figure>
-</blockquote>
+</ul>
 </li>
-<li><p>数据表优化：可变字段单独放入一个新表，并与主表关联，同时根据情况修改字段的名字和类型</p>
+</ul>
+<h4 id="1-2-GIL锁的概念"><a href="#1-2-GIL锁的概念" class="headerlink" title="1.2 GIL锁的概念"></a>1.2 GIL锁的概念</h4><ul>
+<li><p>GIL锁概念</p>
 <ul>
-<li><p>创建 goods_cates 表——商品分类表</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> goods_cates(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">40</span>) <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>插入数据:</p>
-<blockquote>
-<p>通过<strong>子查询</strong>提取表中数据插入新表，<strong>insert into 与 select 联用</strong></p>
-<p>注意：此时不用使用values，同时select语句需要() </p>
-</blockquote>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods_cates(<span class="keyword">name</span>) (<span class="keyword">select</span> cate_name <span class="keyword">from</span> goods <span class="keyword">group</span> <span class="keyword">by</span> cate_name);</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>更新 goods 表 cate_name 为 goods_cates.id</p>
-<blockquote>
-<p>通过两个表进行<strong>连接查询</strong>来关联更新，<strong>update set 与 inner join on 联用</strong></p>
-</blockquote>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> goods <span class="keyword">inner</span> <span class="keyword">join</span> goods_cates <span class="keyword">on</span> goods.cate_name = goods_cates.name <span class="keyword">set</span> goods.cate_name = goods_cates.id;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>修改 cate_name 为 cate_id，类型改为 int</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> goods <span class="keyword">change</span> cate_name cate_id <span class="built_in">int</span> <span class="keyword">unsigned</span> <span class="keyword">not</span> <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>创建 goods_brands 表——商品品牌表</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> goods_brands(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">40</span>) <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods_brands(<span class="keyword">name</span>) (<span class="keyword">select</span> brand_name <span class="keyword">from</span> goods <span class="keyword">group</span> <span class="keyword">by</span> brand_name );</span><br><span class="line"></span><br><span class="line"><span class="keyword">update</span> goods <span class="keyword">inner</span> <span class="keyword">join</span> goods_brands <span class="keyword">on</span> goods.brand_name = goods_brands.name <span class="keyword">set</span> goods.brand_name = goods_brands.id;</span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> goods <span class="keyword">change</span> brand_name brand_id <span class="built_in">int</span> <span class="keyword">unsigned</span> <span class="keyword">not</span> <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
+<li>GIL：Global Interpreter Lock，全局解释器锁</li>
+<li>任何Python线程执行前，必须先获得GIL锁，然后，每执行100条字节码，解释器就⾃动释放GIL锁，让其他线程有机会执行。</li>
+<li>这个GIL全局锁实际上把所有线程的执行代码都给上了锁，所以，多线程在Python中只能交替执行，使得多线程实现多任务时，在同一时间只能有一个线程使用一个CPU，即CPU轮询执行每个线程。</li>
 </ul>
 </li>
-</ul>
-<h4 id="1-2-外键约束"><a href="#1-2-外键约束" class="headerlink" title="1.2 外键约束"></a>1.2 外键约束</h4><ul>
-<li><p>外键的概念</p>
-<blockquote>
-<p>一个表的主键在另外一个表中出现，在另外一个表中称为外键</p>
-</blockquote>
-</li>
-<li><p>外键的作用</p>
-<blockquote>
-<p>表间的数据插入、更新的时候的一种约束，用来防止无效信息的插入</p>
-</blockquote>
-</li>
-<li><p>外键约束：关键字——foreign key</p>
+<li><p>GIL锁与Python</p>
 <ul>
-<li>foreign key约束指定某⼀个列或⼀组列作为外部键，其中包含外部键的表称为子表，包含外键所引用的键的表称为⽗表；</li>
-<li>对外键字段的值，在更新和插⼊时进行和引用的表中字段数据进行对比；</li>
-<li>只有 innodb 数据库引擎⽀持外键约束。</li>
+<li>GIL是Python解释器（Cpython）时引入的概念，在JPython、PyPy解释器中没有GIL；</li>
+<li>GIL并不是Python的语言缺陷，是解释器层级的锁，跟Python语⾔特性无关；</li>
+<li>GIL就是为了锁定整个解释器内部的全局资源，每个线程想要运行首先要获取GIL，而GIL本身又是⼀把互斥锁，造成所有线程只能⼀个⼀个one-by-one-并发-交替的执行。</li>
 </ul>
 </li>
-<li><p>外键语法</p>
+<li><p>GIL锁作用</p>
 <ul>
-<li><p>已有数据表，插入或创建外键约束的字段</p>
-<blockquote>
-<p>语法格式：<code>alter table 子表名 add foreign key (字段名) references 父表名 (字段名);</code></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> goods <span class="keyword">add</span> <span class="keyword">foreign</span> <span class="keyword">key</span> (cate_id) <span class="keyword">references</span> goods_cates (<span class="keyword">id</span>);</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> goods <span class="keyword">add</span> <span class="keyword">foreign</span> <span class="keyword">key</span> (brand_id) <span class="keyword">references</span> goods_brands (<span class="keyword">id</span>);</span><br></pre></td></tr></table></figure>
-</blockquote>
+<li><p>早期计算机都是单核CPU设计，GIL锁可以提高程序的稳定性</p>
 </li>
-<li><p>新建数据表的同时，创建外键约束</p>
+<li><p>CPython在执行多线程的时候并不是线程安全的，所以为了程序的稳定性，加⼀把全局解释锁，能够确保任何时候都只有⼀个Python线程执行(一个CPU)</p>
 <blockquote>
-<p>在创建表时添加外键约束语句</p>
-<p>语法格式：<code>foreign key(brand_id) references goods_brand(id)</code></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> goods_test(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">40</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    price <span class="built_in">decimal</span>(<span class="number">5</span>,<span class="number">2</span>),</span><br><span class="line">    cate_id <span class="built_in">int</span> <span class="keyword">unsigned</span>,</span><br><span class="line">    brand_id <span class="built_in">int</span> <span class="keyword">unsigned</span>,</span><br><span class="line">    <span class="keyword">foreign</span> <span class="keyword">key</span>(cate_id) <span class="keyword">references</span> goods_cates(<span class="keyword">id</span>),</span><br><span class="line">    <span class="keyword">foreign</span> <span class="keyword">key</span>(brand_id) <span class="keyword">references</span> goods_brands(<span class="keyword">id</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>删除外键约束：drop</p>
-<blockquote>
-<p>语法格式：<code>alter table 表名 drop foreign key 外键名;</code></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 获取有外键约束的字段的名称</span></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">create</span> <span class="keyword">table</span> goods_test;</span><br><span class="line"><span class="comment">-- 删除外键约束</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> goods_test <span class="keyword">drop</span> <span class="keyword">foreign</span> <span class="keyword">key</span> goods_test_ibfk_1;</span><br></pre></td></tr></table></figure>
-
-
-</blockquote>
-</li>
-<li><p>注意：</p>
-<blockquote>
-<p>外键名需要通过show来查看，一般格式为 <code>表名_ibfk_序号</code></p>
-<p>进行外键约束的两个表间的字段需要逻辑上对应，同时数据类型相同</p>
-<p>如果对已有数据表中的字段创建外键约束，需要预先将该表中不匹配外键约束的数据删去，以免报错</p>
-<p>使用外键约束会极大的降低表更新的效率,    所以在追求读写效率优先的场景下⼀般很少使用外键。</p>
+<p>在CPython解释内部运行多个线程的时候，每个线程都需要解释器内部申请相应的全局资源，由于C语⾔本身比较底层造成CPython在管理所有全局资源的时候并不能应对所有线程同时的资源请求，因此为了防止资源竞争而发生错误，对所有线程申请全局资源增加了限制全局解释器锁。</p>
 </blockquote>
 </li>
 </ul>
 </li>
-</ul>
-<h4 id="1-3-数据库引擎"><a href="#1-3-数据库引擎" class="headerlink" title="1.3 数据库引擎"></a>1.3 数据库引擎</h4><ul>
-<li><p>概念：</p>
-<blockquote>
-<p>数据库存储引擎是数据库底层软件组织；</p>
-<p>不同的存储引擎提供不同的存储机制、索引技巧、锁定水平等功能；</p>
-<p>使用不同的存储引擎，还可以获得特定的功能。</p>
-</blockquote>
-</li>
-<li><p>查看引擎</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 查看数据库服务器支持的表存储引擎</span></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">engines</span>;</span><br><span class="line"><span class="comment">-- 查看某个数据表的引擎是什么类型</span></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">create</span> <span class="keyword">table</span> goods ;</span><br></pre></td></tr></table></figure>
-
-<p>查看表的创建语句，可以看到 engine=innodb</p>
-</blockquote>
-</li>
-<li><p>注意：</p>
-<blockquote>
-<p>只有数据表的引擎类型是innodb类型时，才可以使用外键约束和事务</p>
-</blockquote>
-</li>
-</ul>
-<h4 id="1-4-视图"><a href="#1-4-视图" class="headerlink" title="1.4 视图"></a>1.4 视图</h4><ul>
-<li><p>视图的概念</p>
-<blockquote>
-<p>视图是一个虚拟表，仅仅支持查询，把复杂SQL语句的功能封装起来的一个虚表，为了简化操作；</p>
-</blockquote>
-</li>
-<li><p>视图特点</p>
-<blockquote>
-<p>视图是对若干张基本表的引用，是⼀张虚表，只查询语句执行结果的字段类型和约束，</p>
-<p>不存储具体的数据  (基本表数据发生了改变，视图也会跟着改变)</p>
-<p>当用户使用视图的时候，视图会从基本表中取出数据进行查询 </p>
-</blockquote>
-</li>
-<li><p>适用场景与作用</p>
-<blockquote>
-<p>查询多个表连接的数据，如商品名称、商品分类和商品品牌时，通过视图封装对多个表的复杂操作，从而简化操作</p>
-<p>通过视图可以对用户展示指定字段从而屏蔽其他字段数据，更加安全</p>
-</blockquote>
-<blockquote>
-<p>基本方法：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> g.name <span class="keyword">as</span> <span class="keyword">Name</span>, gc.name <span class="keyword">as</span> Cate, gb.name <span class="keyword">as</span> Brand <span class="keyword">from</span> goods <span class="keyword">as</span> g </span><br><span class="line">    <span class="keyword">inner</span> <span class="keyword">join</span> goods_cates <span class="keyword">as</span> gc <span class="keyword">on</span> g.cate_id = gc.id</span><br><span class="line">    <span class="keyword">inner</span> <span class="keyword">join</span> goods_brands <span class="keyword">as</span> gb <span class="keyword">on</span> g.brand_id = gb.id;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>视图语法</p>
+<li><p>GIL锁的缺陷</p>
 <ul>
-<li><p>视图创建</p>
-<blockquote>
-<p>语法格式：<code>create view 视图名称 as select语句;</code></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> v_goods_info <span class="keyword">as</span> </span><br><span class="line">    <span class="keyword">select</span> g.name <span class="keyword">as</span> <span class="keyword">Name</span>, gc.name <span class="keyword">as</span> Cate, gb.name <span class="keyword">as</span> Brand <span class="keyword">from</span> goods <span class="keyword">as</span> g </span><br><span class="line">        <span class="keyword">inner</span> <span class="keyword">join</span> goods_cates <span class="keyword">as</span> gc <span class="keyword">on</span> g.cate_id = gc.id</span><br><span class="line">        <span class="keyword">inner</span> <span class="keyword">join</span> goods_brands <span class="keyword">as</span> gb <span class="keyword">on</span> g.brand_id = gb.id;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>注意：</p>
-<blockquote>
-<p>视图同基本表的表结构一致</p>
-<p>视图在保存基本表字段信息的时候字段不能重复     </p>
-<p>因此需要对select结果集中的字段进行重命名——别名</p>
-</blockquote>
-</li>
-<li><p>视图使用</p>
-<blockquote>
-<p>与查询基础表的select语句一样</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> v_goods_info;</span><br><span class="line"><span class="comment">-- 条件查询</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> v_goods_info <span class="keyword">where</span> <span class="keyword">Name</span> = <span class="string">'xxx'</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>视图查看</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">tables</span>;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>视图删除</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">view</span> v_goods_info;</span><br><span class="line"><span class="comment">-- 对比</span></span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> goods_test;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
+<li>GIL对计算密集型的程序会产生影响。因为计算密集型的程序，需要占用系统资源；</li>
+<li>GIL的存在，相当于始终在进行单线程运算，降低程序运算的速度、效率； </li>
+<li>GIL对IO密集型程序影响不大，因为IO操作(input/output)的瓶颈在于输入所耗费的时间，线程大部分时间在等待，所以它们是多个⼀起等(多线程)还是单个(单线程)是区别不大的。</li>
 </ul>
-</li>
-</ul>
-<h4 id="1-5-事务"><a href="#1-5-事务" class="headerlink" title="1.5 事务"></a>1.5 事务</h4><ul>
-<li><p>事务概念：事务Transaction</p>
-<blockquote>
-<p>事务是指作为一个基本工作单元执行的一系列SQL语句的操作，要么全成功，要不全失败</p>
-</blockquote>
-</li>
-<li><p>作用：要么完全地执行，要么完全地都不执行</p>
-</li>
-<li><p>事务的四大特征 ACID：</p>
-<ul>
-<li><p>A ：原子性 ，事务的操作是原子的，不能分隔</p>
-<blockquote>
-<p>⼀个事务必须被视为⼀个不可分割的最小工作单元，整个事务中的所有操作要么全部提交成功， 要么全部失败回滚，对于⼀个事务来说，不可能只执行其中的⼀部分操作</p>
-</blockquote>
-</li>
-<li><p>C ：一致性，双方的结果要一致</p>
-<blockquote>
-<p>数据库总是从⼀个⼀致性的状态转换到另⼀个⼀致性的状态</p>
-</blockquote>
-</li>
-<li><p>I  ：隔离性， 同一时间只有一个事务在操作</p>
-<blockquote>
-<p>通常来说，⼀个事务所做的修改在最终提交以前，对其他事务是不可见的</p>
-</blockquote>
-</li>
-<li><p>D ：持久性， 操作完成结果持久不变</p>
-<blockquote>
-<p>⼀旦事务提交，则其所做的修改会永久保存到数据库</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>事务语法</p>
-<ul>
-<li><p>开启事务</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">begin</span>;</span><br><span class="line"><span class="comment">-- 或者</span></span><br><span class="line"><span class="keyword">start</span> <span class="keyword">transaction</span>;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>提交事务(完成)</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">commit</span>;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>回滚事务(撤销)</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">rollback</span>;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>事务流程小结——如：银行存储</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">start</span> <span class="keyword">transaction</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 操作 update、insert、delete</span></span><br><span class="line"><span class="keyword">select</span> balance <span class="keyword">from</span> checking <span class="keyword">where</span> customer_id = <span class="number">10233276</span>;</span><br><span class="line"><span class="keyword">update</span> checking <span class="keyword">set</span> balance = balance - <span class="number">200.00</span> <span class="keyword">where</span> customer_id = <span class="number">10233276</span>;</span><br><span class="line"><span class="keyword">update</span> savings <span class="keyword">set</span> balance = balance + <span class="number">200.00</span> <span class="keyword">where</span> customer_id = <span class="number">10233276</span>; </span><br><span class="line"></span><br><span class="line"><span class="keyword">commit</span>;</span><br><span class="line"><span class="comment">-- 或者</span></span><br><span class="line"><span class="keyword">rollback</span>;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>验证事务的ACID特性</p>
-<blockquote>
-<p>通过两个终端模拟两个用户来验证</p>
-</blockquote>
-<ul>
-<li><p>验证I 隔离性</p>
-<blockquote>
-<p>终端1修改表的数据，在commit前，通过终端2修改表的同一个数据</p>
-<p>终端2进⼊等待状态(因为终端1并没有进行commit)此事就可以说明事务的隔离性特点，多个事务之 间相互不可见、不影响</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>小结</p>
-<blockquote>
-<p>原⼦性强调事务中的多个操作是⼀个整体 </p>
-<p>⼀致性强调数据库中不会保存不⼀致状态 </p>
-<p>隔离性强调数据库中事务之间相互不可见</p>
-<p>持久性强调数据库能永久保存数据，⼀旦提交就不可撤销</p>
-</blockquote>
-<blockquote>
-<p>在mysql命令行中会自动提交事务，所以当insert语句执⾏完成后没有commit，数据库也看到了提交的数据</p>
-<p>如果不需要mysql命令行自动提交，键⼊<code>set autocommit=0</code></p>
-<p>不可撤销的操作(隐式提交):    除了对表数据 insert/update/delete 语句之外的绝大多数语句都是不能撤销的，如数据库、表结构的操作</p>
-</blockquote>
 </li>
 </ul>
 <hr>
-<h3 id="2-数据库设计"><a href="#2-数据库设计" class="headerlink" title="2. 数据库设计"></a>2. 数据库设计</h3><ul>
-<li><p>时间：2020.08.08</p>
-</li>
-<li><p>可以参考：<a href="https://mp.weixin.qq.com/s/Yjh_fPgrjuhhOZyVtRQ-SA?" target="_blank" rel="noopener">58到家数据库设计规范</a></p>
-</li>
+<h3 id="2-GIL锁解决方法"><a href="#2-GIL锁解决方法" class="headerlink" title="2. GIL锁解决方法"></a>2. GIL锁解决方法</h3><ul>
+<li>时间：2020.08.21</li>
 </ul>
-<h4 id="2-1-数据库三范式"><a href="#2-1-数据库三范式" class="headerlink" title="2.1 数据库三范式"></a>2.1 数据库三范式</h4><ul>
-<li><p>概念</p>
-<blockquote>
-<p>设计数据库的规范、原则，被称为范式(Normal Form) ，可以减少数据库的冗余数据；</p>
-<p>目前有迹可寻的共有8种范式，⼀般需要遵守3范式即可。</p>
-</blockquote>
+<h4 id="2-1-GIL锁释放"><a href="#2-1-GIL锁释放" class="headerlink" title="2.1 GIL锁释放"></a>2.1 GIL锁释放</h4><ul>
+<li>在当前线程执行超时后会自动释放 </li>
+<li>在当前线程执行阻塞操作时会自动释放 </li>
+<li>当前执行完成时，自动释放，去轮询下一个线程</li>
+</ul>
+<h4 id="2-2-GIL锁解决方案"><a href="#2-2-GIL锁解决方案" class="headerlink" title="2.2 GIL锁解决方案"></a>2.2 GIL锁解决方案</h4><ul>
+<li><p>方法一：使用JPython、PyPy等没有GIL锁限制的解释器。</p>
 </li>
-<li><p>三范式</p>
+<li><p>方法二：使用多进程代替多线程，虽然单个进程中仍然存在GIL锁，但是多进程可以同时利用多个CPU资源，执行速度增加，但是由于子进程会复制主进程的资源，所以会有资源占用的问题。</p>
+</li>
+<li><p>方法三：通过Python的胶水特性，将子线程要执行的部分用C语言编写，从而跨过CPython解释器。</p>
 <ul>
-<li><p>1NF：字段必须是原子的，不可分割</p>
-</li>
-<li><p>2NF：满足1NF，必须有主键， 非主键字段必须完全依赖主键，而不能部分依赖 (解决办法：分表)</p>
+<li><p>配置gcc编译环境</p>
 <blockquote>
-<p>当一个表的主键有多个字段时，即为复合主键时，需要表中其他字段完全依赖复合主键的每个字段</p>
-</blockquote>
-</li>
-<li><p>3NF：满足2NF，所有非主键字段必须直接依赖主键，不能存在传递依赖的情况。</p>
-<blockquote>
-<p>即不能存在：非主键列A依赖于非主键列B，非主键列B依赖于主键的情况。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="2-2-数据库设计实例"><a href="#2-2-数据库设计实例" class="headerlink" title="2.2 数据库设计实例"></a>2.2 数据库设计实例</h4><ul>
-<li><p>设计一个简易电商类的数据库</p>
-<blockquote>
-<p>包含有商品信息、订单信息和顾客(用户)信息</p>
-</blockquote>
-</li>
-<li><p>商品信息</p>
-<ul>
-<li>商品详情表：goods</li>
-<li>商品分类表：goods_cates</li>
-<li>商品品牌表：goods_brands</li>
-</ul>
-</li>
-<li><p>顾客信息</p>
-<blockquote>
-<p>顾客信息表：customer</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> customer(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">30</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    addr <span class="built_in">varchar</span>(<span class="number">100</span>),</span><br><span class="line">    tel <span class="built_in">varchar</span>(<span class="number">11</span>) <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>订单信息</p>
-<ul>
-<li><p>订信息单表：orders</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> orders(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    order_date_time datetime <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    customer_id <span class="built_in">int</span> <span class="keyword">unsigned</span>,</span><br><span class="line">    <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id) <span class="keyword">references</span> customer(<span class="keyword">id</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>订单详情表：order_detail</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> order_detail(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    order_id <span class="built_in">int</span> <span class="keyword">unsigned</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    goods_id <span class="built_in">int</span> <span class="keyword">unsigned</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    quantity <span class="built_in">tinyint</span> <span class="keyword">unsigned</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">foreign</span> <span class="keyword">key</span>(order_id) <span class="keyword">references</span> orders(<span class="keyword">id</span>),</span><br><span class="line">    <span class="keyword">foreign</span> <span class="keyword">key</span>(goods_id) <span class="keyword">references</span> goods(<span class="keyword">id</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="2-3-E-R模型"><a href="#2-3-E-R模型" class="headerlink" title="2.3 E-R模型"></a>2.3 E-R模型</h4><ul>
-<li><p>E-R模型简介</p>
-<blockquote>
-<p>E-R模型即E-R图。<br>E-R图即实体-联系图(Entity Relationship Diagram)，是指提供了表示实体型、属性和联系的方法，用来描述现实世界的概念模型，主要用来描述数据库中表结构。</p>
-</blockquote>
-</li>
-<li><p>E-R模型使用场景</p>
-<blockquote>
-<p>关系型数据库：关系模型的基础上，根据产品的设计策划，抽取出来模型与关系，制定出表结构，这是项⽬开始的第⼀步；<br>在设计阶段⼀般使⽤E-R模型进行建模。有很多设计数据库的软件，常用的如power designer，db desinger等，这些软件可以直观的看到实体及实体间的关系；</p>
-<p>关系模型：用⼆维表的形式表示实体和实体间联系的数据模型。</p>
-</blockquote>
-</li>
-<li><p>E-R模型的组成元素</p>
-<blockquote>
-<p>E-R图用：实体、联系和属性这3个概念来描述现实问题，分为这三种元素。</p>
+<p>Linux系统自带gcc，Windows下要自行安装配置，参考<a href="https://www.cnblogs.com/valor-xh/p/7371710.html" target="_blank" rel="noopener">Windows 下使用 GCC</a></p>
 </blockquote>
 <ul>
-<li><p>实体型(Entity)：具有相同属性的实体具有相同的特征和性质，用实体名及其属性名集合来抽象和刻画同类实体；在E-R图中用<strong>矩形</strong>表示，矩形框内写明实体名。如：电商购物系统中用户、购物车、订单。</p>
-</li>
-<li><p>属性(Attribute)：实体所具有的某⼀特性，⼀个实体可由若干个属性来刻画。在E-R图中用<strong>椭圆</strong>表示，并用无向边将其与相应的实体连接起来。如用户的ID、用户名、密码、昵称、身份证号等。</p>
-</li>
-<li><p>联系(Relationship)：实体彼此之间相互连接的方式称为联系，也称为关系。</p>
+<li><p>安装MinGW，MinGw 是 Minimal GNU on Windows 的缩写，允许在 GNU/Linux 和 Windows 平台生成本地的 Windows 程序而不需要第三方运行时库。</p>
 <blockquote>
-<p>联系可分为3种类型：⼀对⼀、⼀对多、多对多</p>
-<p>关系也是⼀种数据，需要通过⼀个字段存储在表中。</p>
+<p>下载 min-gw 安装程序：<a href="http://sourceforge.net/projects/mingw/files/" target="_blank" rel="noopener">下载链接</a>，下载 Download mingw-get-setup.exe 并安装</p>
 </blockquote>
 </li>
-<li><p>表间联系(关系)：</p>
-<ul>
-<li><p>一对一：一个表中的一条数据，能够和另外一个表的唯一一条数据对应（人和常住地址）</p>
+<li><p>配置环境变量，将MinGW/bin配置到系统环境变量Path中</p>
 </li>
-<li><p>一对多：一个表中的一条数据，能够和另外一个表的多条数据对应（一个班有多个学生）</p>
+<li><p>查看MinGW安装情况，在cmd中键入mingw-get，如果弹出 MinGw installation manager 窗口，说明安装正常。此时，关闭 MinGw installation manager 窗口，否则接下来的步骤会报错。</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mingw-get</span><br></pre></td></tr></table></figure>
+</blockquote>
 </li>
-<li><p>多对多：一个表中的一条数据，能够和另外一个表的多条数据对应，相反也成立。（学生和课程）</p>
+<li><p>安装gcc，在cmd中键入mingw-get install gcc</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mingw-get install gcc</span><br></pre></td></tr></table></figure>
+</blockquote>
 </li>
 </ul>
 </li>
-</ul>
+<li><p>将子线程要处理的部分写为C语言，例如：</p>
+<blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello world!!!"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
 </li>
-<li><p>E-R模型中不同类型联系的储存方法</p>
-<ul>
-<li>实体A对实体B为1对1，则在表A或表B中创建⼀个字段，存储另⼀个表的主键值；</li>
-<li>实体A对实体B为1对多，在表B中创建⼀个字段，存储表A的主键值；</li>
-<li>实体A对实体B为多对多，新建⼀张表C，这个表只有两个字段，⼀个⽤于存储A的主键值，⼀个用于存储B的主键值。</li>
-</ul>
+<li><p>使用gcc将其编译为so文件(Share Object)</p>
+<blockquote>
+<p>语法格式：<code>gcc 要编译的文件名 [-编译的格式] [-o] 保存的文件名</code></p>
+<p>-o 表示输出、编译格式有多种：S、E、I、默认为exe链接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gcc test.c -shared -o libtest.so</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>在Python中加载该C语言so库文件</p>
+<blockquote>
+<p>语法格式：<code>my_lib = ctypes.cdll.LoadLibrary(&#39;导入库的路径&#39;)</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ctypes</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载C语言编写的库so文件</span></span><br><span class="line">my_lib = ctypes.cdll.LoadLibrary(<span class="string">'./libtest.so'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 子线程</span></span><br><span class="line">t1 = threading.Thread(target=my_lib.main)</span><br><span class="line"></span><br><span class="line">t1.daemon = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">t1.start()</span><br></pre></td></tr></table></figure>
+</blockquote>
 </li>
 <li><p>注意：</p>
+<ul>
+<li><p><strong>如果出现 OSError: [WinError 193] %1 不是有效的 Win32 应用程序错误</strong></p>
+</li>
+<li><p>原因：Python位数与so位数不匹配，so是32位而python是64位，该错误同样会在一些其他库的导入时出现。</p>
+</li>
+<li><p>解决方法：创建虚拟环境，安装对应位数的Python，利用conda更方便</p>
 <blockquote>
-<p>多对多关系时，需要建立中间表(附加表)来储存数据。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看planform位数32/64</span></span><br><span class="line">$ conda info</span><br><span class="line"><span class="comment"># 查看Python的位数</span></span><br><span class="line">$ python</span><br><span class="line"><span class="comment"># 设置conda的platform位数为32，切换为64位只需要赋值为0</span></span><br><span class="line">$ <span class="built_in">set</span> conda_force_32bit=1</span><br><span class="line"><span class="comment"># 创建虚拟环境并安装Python</span></span><br><span class="line">$ conda create -n py37by32 python = 3.7</span><br><span class="line"><span class="comment"># 激活虚拟环境</span></span><br><span class="line">$ activate py37by32</span><br></pre></td></tr></table></figure>
+
+<p>同时修改项目的解释器路径为新建的32位Python路径。</p>
 </blockquote>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <hr>
-<h3 id="3-Python连接操作数据库"><a href="#3-Python连接操作数据库" class="headerlink" title="3. Python连接操作数据库"></a>3. Python连接操作数据库</h3><ul>
-<li><p>时间：2020.08.09</p>
+<h3 id="3-GIL面试常见问题"><a href="#3-GIL面试常见问题" class="headerlink" title="3. GIL面试常见问题"></a>3. GIL面试常见问题</h3><ul>
+<li><p>时间：2020.08.21</p>
 </li>
-<li><p>pymysql模块</p>
-</li>
-<li><p>connection连接对象</p>
-</li>
-<li><p>cursor 游标对象(操作数据库)</p>
-</li>
-</ul>
-<h4 id="3-1-Python访问MySQL流程"><a href="#3-1-Python访问MySQL流程" class="headerlink" title="3.1 Python访问MySQL流程"></a>3.1 Python访问MySQL流程</h4><blockquote>
-<p>Python DB API 访问数据库</p>
-</blockquote>
+<li><p>描述Python中GIL的概念，以及它对Python多线程的影响？</p>
 <ul>
-<li>导入pymysql模块</li>
-<li>建立连接：创建connection连接对象</li>
-<li>获取游标：创建cursor游标对象</li>
-<li>执行数据库操作(Curd) ：execute</li>
-<li>获取结果：fetchone、fetchall</li>
-<li>关闭游标</li>
-<li>关闭连接</li>
+<li>GIL是全局解释器锁，每个线程</li>
+<li>因此，GIL锁使得Python的多线程并发实际上为单线程运算，不能高效的利用CPU资源，降低程序运行的速度，对于计算密集型程序，影响较大，对于IO密集型，影响较小。</li>
+<li>GIL当遇到IO操作等引起的阻塞、执行超时、执行完成时会自动释放，</li>
 </ul>
-<h4 id="3-2-Python连接数据库"><a href="#3-2-Python连接数据库" class="headerlink" title="3.2 Python连接数据库"></a>3.2 Python连接数据库</h4><ul>
-<li><p>导入模块pymysql</p>
 </li>
-<li><p>建立连接</p>
+<li><p>编写⼀个多线程抓取网页的程序，并阐明多线程抓取是否可以比单线程性能有提升，并解释原因。</p>
 <ul>
-<li><p>语法格式：<code>pymysql.connect(参数列表)</code></p>
+<li>多线程爬虫，主要使用urllib模块请求网页资源、re模块正则匹配要获取的信息、pymysql模块用于将爬去的信息保存到数据库、threading模块用于实现多线程爬取信息。</li>
+<li>多线程爬虫比单线程效率高，虽然由于GIL锁的存在，多线程的实质也是同一时间只有一个线程在执行代码，但是爬虫过程中存在大量的IO操作，GIL锁遇到IO操作引起的阻塞会自动释放，使得某个线程阻塞时，会有另一个线程在工作，从而提高效率。</li>
+</ul>
 </li>
-<li><p>返回连接对象，建立与数据库的连接</p>
-</li>
-<li><p>参数列表：</p>
+<li><p>GIL锁与手动设置的Lock</p>
 <ul>
-<li>host：连接的mysql主机，如果本机是’localhost’ </li>
-<li>port：连接的mysql主机的端口，默认是3306 </li>
-<li>database：数据库的名称</li>
-<li>user：连接的用户名 </li>
-<li>password：连接的密码</li>
-<li>charset：通信采用的编码⽅式，推荐使用utf8</li>
-</ul>
-</li>
-<li><p>连接对象</p>
-<blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line">conn = pymysql.connect(host=<span class="string">'localhost'</span>, port=<span class="number">3306</span>, user=<span class="string">'root'</span>, password=<span class="string">'******'</span>, database=<span class="string">'jingdong'</span>, charset=<span class="string">'utf8'</span>)</span><br><span class="line"><span class="comment"># 获取游标</span></span><br><span class="line">conn.cursor()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交数据</span></span><br><span class="line">conn.commit()</span><br><span class="line"><span class="comment"># 回滚数据</span></span><br><span class="line">conn.rollback()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭连接</span></span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>获取游标对象</p>
-<ul>
-<li>语法格式：<code>连接对象.cursor()</code></li>
-<li>返回Cursor对象，用于执行sql语句并获得结果</li>
-</ul>
-</li>
-</ul>
-<h4 id="3-3-Python操作数据库-Curd"><a href="#3-3-Python操作数据库-Curd" class="headerlink" title="3.3 Python操作数据库(Curd)"></a>3.3 Python操作数据库(Curd)</h4><ul>
-<li><p>操作数据库</p>
-<ul>
-<li><p>语法格式：<code>游标对象.execute(sql语句 [,parameters])</code></p>
-</li>
-<li><p>主要用于执行select、insert、 update、delete语句(crud)，也可以执行create、alter、drop等语句</p>
-</li>
-<li><p>返回数据</p>
-<blockquote>
-<p>返回的数据类型为int；</p>
-<p>当SQL语句为查询语句时，返回数据表的总行数(总记录数)；</p>
-<p>当SQL语句为增删改语句时，返回受影响的行的个数；</p>
-<p>当SQL语句为create、alter、drop语句时，返回None；</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>获取结果</p>
-<ul>
-<li><p>语法格式：<code>游标对象.fetchone()</code></p>
-<blockquote>
-<p>获取结果集的一条记录(一行)，返回的数据类型为元组</p>
-</blockquote>
-</li>
-<li><p>语法格式：<code>游标对象.fetchall()</code></p>
-<blockquote>
-<p>获取结果集的所有记录(所有行)，返回的数据类型为元组</p>
-<p>一行构成⼀个元组，再将这些元组装入⼀个元组返回    </p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>数据库连接并查询</p>
-<blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python连接、操作MySQL数据库</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 导入模块</span></span><br><span class="line"><span class="comment"># from pymysql import connect</span></span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 建立连接，创建连接对象</span></span><br><span class="line">conn = pymysql.connect(host=<span class="string">'localhost'</span>, port=<span class="number">3306</span>, user=<span class="string">'root'</span>, password=<span class="string">'******'</span>, database=<span class="string">'jingdong'</span>, charset=<span class="string">'utf8'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 创建游标对象</span></span><br><span class="line">cur = conn.cursor()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 操作数据库</span></span><br><span class="line">sql = <span class="string">'select * from goods;'</span></span><br><span class="line">row_count = cur.execute(sql)</span><br><span class="line">print(<span class="string">'MySQL数据库受到操作的行数为:%d'</span> % row_count)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5. 获取结果</span></span><br><span class="line">result_one = cur.fetchone()</span><br><span class="line">print(result_one)</span><br><span class="line"></span><br><span class="line">result_list = cur.fetchall()</span><br><span class="line">print(result_list)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> result_list:</span><br><span class="line">    print(line)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 6. 关闭游标和连接</span></span><br><span class="line">cur.close()</span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>数据库增删改，以及创建修改删除数据表结构</p>
-<blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 导入模块</span></span><br><span class="line"><span class="comment"># from pymysql import connect</span></span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 建立连接，创建连接对象</span></span><br><span class="line">conn = pymysql.connect(host=<span class="string">'localhost'</span>, port=<span class="number">3306</span>, user=<span class="string">'root'</span>, password=<span class="string">'*****'</span>, database=<span class="string">'jingdong'</span>, charset=<span class="string">'utf8'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 创建游标对象</span></span><br><span class="line">cur = conn.cursor()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 操作数据库</span></span><br><span class="line"><span class="comment"># 4.1 SQL查询</span></span><br><span class="line">sql0 = <span class="string">"create table goods_cates_test("</span> \</span><br><span class="line">       <span class="string">"id int unsigned primary key auto_increment not null,"</span> \</span><br><span class="line">       <span class="string">"name varchar(30) not null);"</span></span><br><span class="line">sql1 = <span class="string">"alter table goods_cates_test add test int not null;"</span></span><br><span class="line">sql2 = <span class="string">'select * from goods_cates_test;'</span></span><br><span class="line">sql3 = <span class="string">"insert into goods_cates_test(name) (select cate_id from goods group by cate_id)"</span></span><br><span class="line">sql4 = <span class="string">"update goods inner join goods_cates_test as gct "</span> \</span><br><span class="line">       <span class="string">"on goods.cate_id = gct.name set goods.cate_id = gct.id;"</span></span><br><span class="line">sql5 = <span class="string">"delete from goods_cates_test where id &gt; 7 "</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.2 执行SQL</span></span><br><span class="line">row_count = cur.execute(sql5)</span><br><span class="line">print(<span class="string">'MySQL数据库受到操作的行数为:%d'</span> % row_count)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5. 提交数据或回滚</span></span><br><span class="line"><span class="comment"># conn.commit()</span></span><br><span class="line">conn.rollback()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 6. 关闭游标和连接</span></span><br><span class="line">cur.close()</span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>注意</p>
-<ul>
-<li><p>cur.execute()语句的返回值在SQL语句不同时，结果不同</p>
-<blockquote>
-<p>当SQL语句为查询语句时，返回数据表的总行数(总记录数)；</p>
-<p>当SQL语句为增删改语句时，返回受影响的行的个数；</p>
-<p>当SQL语句为create、alter、drop语句时，返回None；</p>
-</blockquote>
-</li>
-<li><p>只有SQL语句为查询语句时，才需要fetchone、fetchall语句来输出查询结果</p>
-</li>
-<li><p>当SQL语句为增删改语句时，必须执行cunn.commit()语句来提交数据，才会改变数据库的数据</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="3-4-SQL防注入"><a href="#3-4-SQL防注入" class="headerlink" title="3.4 SQL防注入"></a>3.4 SQL防注入</h4><ul>
-<li><p>SQL注⼊概念</p>
-<blockquote>
-<p>用户通过传入恶意数据，从而获取到数据库中大量数据，造成数据泄漏</p>
-</blockquote>
-</li>
-<li><p>产⽣原因：</p>
-<blockquote>
-<p>后台将用户提交的带有恶意的数据和SQL进行字符串方式的拼接，从而影响了SQL语句的语义，最终导致数据泄露的现象。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 存在SQL注入隐患的写法：字符串拼接</span></span><br><span class="line"><span class="comment"># 用户自定义查询内容</span></span><br><span class="line">input_name = input(<span class="string">'请输入要查询的数据的名称：'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># SQL查询</span></span><br><span class="line">sql = <span class="string">"select * from goods_cates_test where name = '%s';"</span> % input_name</span><br><span class="line"></span><br><span class="line">row_count = cur.execute(sql)</span><br><span class="line">print(<span class="string">'MySQL数据库受到操作的行数为:%d'</span> % row_count)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查询结果</span></span><br><span class="line">result_list = cur.fetchall()</span><br><span class="line">print(result_list)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> result_list:</span><br><span class="line">    print(line)</span><br></pre></td></tr></table></figure>
-
-<p>输入正常name时不会产生SQL注入，但如果输入’ or 1 or’ 则会SQL注入，数据泄露</p>
-</blockquote>
-</li>
-<li><p>解决方法：参数化列表</p>
-<blockquote>
-<p>sql中需要变化的地方，可以占位符 %s %d…</p>
-<p>将SQL语句中的所有数据参数存在⼀个列表中，传递给execute函数的第⼆个参数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解决SQL注入问题</span></span><br><span class="line"><span class="comment"># 用户自定义查询内容</span></span><br><span class="line">input_name = input(<span class="string">'请输入要查询的数据的名称：'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 创建一个列表，用来传递用户输入的参数</span></span><br><span class="line">params = [input_name]</span><br><span class="line"></span><br><span class="line"><span class="comment"># SQL查询</span></span><br><span class="line">sql = <span class="string">"select * from goods_cates_test where name = %s;"</span> </span><br><span class="line"></span><br><span class="line"><span class="comment"># 把列表传递给 execute(sql, 列表)</span></span><br><span class="line">row_count = cur.execute(sql，params)</span><br><span class="line">print(<span class="string">'MySQL数据库受到操作的行数为:%d'</span> % row_count)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查询结果</span></span><br><span class="line">result_list = cur.fetchall()</span><br><span class="line">print(result_list)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> result_list:</span><br><span class="line">    print(line)</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>注意：</p>
-<ul>
-<li>如果要是有多个参数，需要进行参数化</li>
-<li>params = [数值1, 数值2….]，此时sql语句中有多个%s即可</li>
-<li>SQL 可以出现多个占位符，后续列表中元素的个数要与之对应</li>
+<li>GIL锁和手动设置的锁同样是互斥锁，都是用于防止程序运行过程中出现资源竞争而导致出现错误的问题</li>
+<li>GIL锁是CPython解释器自带的全局锁，无法由用户控制其的锁定释放位置，所以仍需要对需要锁定的操作设置threading.Lock()</li>
 </ul>
 </li>
 </ul>
@@ -913,553 +537,177 @@ var _hmt = _hmt || [];
 	  <!--    注释：
         <hr>
 <ul>
-<li>数据库系列CP3——MySQL数据库编程</li>
-<li>CP3主要分享了：</li>
-<li>外键约束</li>
-<li>视图和事务</li>
-<li>数据库三范式</li>
-<li>E-R模型</li>
-<li>Pyhton连接MySQL：connection</li>
-<li>Python操作MySQL：cursor</li>
-<li>SQL防注入</li>
+<li>Python高阶语法系列CP4——GIL全局锁</li>
+<li>CP4主要分享了</li>
+<li>GIL全局解释器锁的概念和限制</li>
+<li>GIL锁的解决方法</li>
+<li>gcc编译环境的安装：MinGW</li>
+<li>Python导入C的扩展库：<code>my_lib = ctypes.cdll.LoadLibrary(&#39;导入库的路径&#39;)</code></li>
+<li>Python导入库时遇到32/64位不匹配的解决方法</li>
+<li>GIL锁面试问题</li>
 </ul>
 <a id="more"></a>
 
-<h1 id="数据库系列CP3——MySQL数据库编程"><a href="#数据库系列CP3——MySQL数据库编程" class="headerlink" title="数据库系列CP3——MySQL数据库编程"></a>数据库系列CP3——MySQL数据库编程</h1><h2 id="三、MySQL数据库编程"><a href="#三、MySQL数据库编程" class="headerlink" title="三、MySQL数据库编程"></a>三、MySQL数据库编程</h2><ul>
-<li><p>时间：2020.08.07-2020.08.10</p>
+<h1 id="Python高阶语法系列CP4——GIL全局锁"><a href="#Python高阶语法系列CP4——GIL全局锁" class="headerlink" title="Python高阶语法系列CP4——GIL全局锁"></a>Python高阶语法系列CP4——GIL全局锁</h1><h2 id="三、GIL锁"><a href="#三、GIL锁" class="headerlink" title="三、GIL锁"></a>三、GIL锁</h2><ul>
+<li>时间：2020.08.21</li>
+</ul>
+<h3 id="1-GIL锁简介"><a href="#1-GIL锁简介" class="headerlink" title="1. GIL锁简介"></a>1. GIL锁简介</h3><ul>
+<li>时间：2020.08.21</li>
+</ul>
+<h4 id="1-1-GIL锁引入"><a href="#1-1-GIL锁引入" class="headerlink" title="1.1 GIL锁引入"></a>1.1 GIL锁引入</h4><ul>
+<li><p>查看CPU信息</p>
+<blockquote>
+<p>Linux 系统：<code>htop</code></p>
+<p>Windows 系统 ：<code>systeminfo</code>、<code>wmic</code>、<code>cpu get *</code></p>
+</blockquote>
 </li>
-<li><p>主要内容</p>
+<li><p>CPU与进程、线程</p>
 <ul>
-<li>外键约束</li>
-<li>视图和事务</li>
-<li>数据库三范式</li>
-<li>E-R模型</li>
-<li>Pyhton连接MySQL：connection</li>
-<li>Python操作MySQL：cursor</li>
-<li>SQL防注入</li>
-</ul>
+<li><p>单进程——单核CPU</p>
 </li>
-</ul>
-<h3 id="1-数据库编程基础"><a href="#1-数据库编程基础" class="headerlink" title="1. 数据库编程基础"></a>1. 数据库编程基础</h3><ul>
-<li>时间：2020.08.07</li>
-</ul>
-<h4 id="1-1-数据库高阶操作"><a href="#1-1-数据库高阶操作" class="headerlink" title="1.1 数据库高阶操作"></a>1.1 数据库高阶操作</h4><ul>
-<li><p>SQL练习</p>
+<li><p>多进程——多核CPU</p>
+</li>
+<li><p>多线程——多核CPU，但是每个CPU使用率较低</p>
 <blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> jingdong <span class="keyword">charset</span>=utf8;</span><br><span class="line"><span class="keyword">use</span> jingdong;</span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> goods(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">150</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    cate_name <span class="built_in">varchar</span>(<span class="number">40</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    brand_name <span class="built_in">varchar</span>(<span class="number">40</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    price <span class="built_in">decimal</span>(<span class="number">10</span>,<span class="number">3</span>) <span class="keyword">not</span> <span class="literal">null</span> <span class="keyword">default</span> <span class="number">0</span>,</span><br><span class="line">    is_show <span class="built_in">bit</span> <span class="keyword">not</span> <span class="literal">null</span> <span class="keyword">default</span> <span class="number">1</span>,</span><br><span class="line">    is_saleoff <span class="built_in">bit</span> <span class="keyword">not</span> <span class="literal">null</span> <span class="keyword">default</span> <span class="number">0</span></span><br><span class="line">);</span><br><span class="line">    </span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'r510vc 15.6英寸笔记本'</span>,<span class="string">'笔记本'</span>,<span class="string">'华硕'</span>,<span class="string">'3399'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'y400n 14.0英寸笔记本电脑'</span>,<span class="string">'笔记本'</span>,<span class="string">'联想'</span>,<span class="string">'4999'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'g150th 15.6英寸游戏本'</span>,<span class="string">'游戏本'</span>,<span class="string">'雷神'</span>,<span class="string">'8499'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'x550cc 15.6英寸笔记本'</span>,<span class="string">'笔记本'</span>,<span class="string">'华硕'</span>,<span class="string">'2799'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'x240 超极本'</span>,<span class="string">'超极本'</span>,<span class="string">'联想'</span>,<span class="string">'4880'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'u330p 13.3英寸超极本'</span>,<span class="string">'超极本'</span>,<span class="string">'联想'</span>,<span class="string">'4299'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'svp13226scb 触控超极本'</span>,<span class="string">'超极本'</span>,<span class="string">'索尼'</span>,<span class="string">'7999'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'ipad mini 7.9英寸平板电脑'</span>,<span class="string">'平板电脑'</span>,<span class="string">'苹果'</span>,<span class="string">'1998'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'ipad air 9.7英寸平板电脑'</span>,<span class="string">'平板电脑'</span>,<span class="string">'苹果'</span>,<span class="string">'3388'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'ipad mini 配备 retina 显示器'</span>,<span class="string">'平板电脑'</span>,<span class="string">'苹果'</span>,<span class="string">'2788'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'ideacenter c340 20英寸一体电脑'</span>,<span class="string">'台式机'</span>,<span class="string">'联想'</span>,<span class="string">'3499'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'vostro 3800-r1206 台式电脑'</span>,<span class="string">'台式机'</span>,<span class="string">'戴尔'</span>,<span class="string">'2899'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'imac me086ch/a 21.5英寸一体电脑'</span>,<span class="string">'台式机'</span>,<span class="string">'苹果'</span>,<span class="string">'9188'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'at7-7414lp 台式电脑 linux'</span>,<span class="string">'台式机'</span>,<span class="string">'宏基'</span>,<span class="string">'3699'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'z220sff f4f06pa工作站'</span>,<span class="string">'服务器/工作站'</span>,<span class="string">'惠普'</span>,<span class="string">'4288'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'poweredge ii服务器'</span>,<span class="string">'服务器/工作站'</span>,<span class="string">'戴尔'</span>,<span class="string">'5388'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'mac pro 专业级台式电脑'</span>,<span class="string">'服务器/工作站'</span>,<span class="string">'苹果'</span>,<span class="string">'28888'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'hmz-t3w 头戴显示设备'</span>,<span class="string">'笔记本配件'</span>,<span class="string">'索尼'</span>,<span class="string">'6999'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'商务双肩背包'</span>,<span class="string">'笔记本配件'</span>,<span class="string">'索尼'</span>,<span class="string">'99'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'x3250 m4机架式服务器'</span>,<span class="string">'服务器/工作站'</span>,<span class="string">'ibm'</span>,<span class="string">'6888'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods <span class="keyword">value</span>(<span class="number">0</span>,<span class="string">'商务双肩背包'</span>,<span class="string">'笔记本配件'</span>,<span class="string">'索尼'</span>,<span class="string">'99'</span>,<span class="keyword">default</span>,<span class="keyword">default</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询显示</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> goods;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 显示电脑的种类</span></span><br><span class="line"><span class="keyword">select</span> cate_name, <span class="keyword">count</span>(*) <span class="keyword">from</span> goods <span class="keyword">group</span> <span class="keyword">by</span> cate_name;</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> cate_name <span class="keyword">from</span> goods;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 分组查询</span></span><br><span class="line"><span class="keyword">select</span> cate_name, <span class="keyword">round</span>(<span class="keyword">avg</span>(price),<span class="number">2</span>) <span class="keyword">from</span> goods <span class="keyword">group</span> <span class="keyword">by</span> cate_name;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 查询价格大于平均价格的商品，按价格降序显示</span></span><br><span class="line"><span class="keyword">select</span> <span class="keyword">name</span>, price <span class="keyword">from</span> goods <span class="keyword">where</span> price &gt; (<span class="keyword">select</span> <span class="keyword">round</span>(<span class="keyword">avg</span>(price),<span class="number">2</span>) <span class="keyword">as</span> price_avg <span class="keyword">from</span> goods) <span class="keyword">order</span> <span class="keyword">by</span> price <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
+<p>当程序为死循环时，单进程、多进程的单核、多核CPU使用率都为100%</p>
+<p>而多线程的多核CPU使用率只有百分之几十，说明在多线程时，CPU是轮询处理各个线程的</p>
+<p>即同一时间只有一个CPU在处理线程，这是由于GIL锁的限制。</p>
 </blockquote>
 </li>
-<li><p>表子查询——分组后查看全部信息</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> goods</span><br><span class="line"><span class="keyword">inner</span> <span class="keyword">join</span></span><br><span class="line">(<span class="keyword">select</span> cate_name <span class="keyword">as</span> s_catename, <span class="keyword">max</span>(price) <span class="keyword">as</span> price_max <span class="keyword">from</span> goods <span class="keyword">group</span> <span class="keyword">by</span> cate_name) <span class="keyword">as</span> max_price_goods</span><br><span class="line"><span class="keyword">on</span> goods.cate_name = max_price_goods.s_catename <span class="keyword">and</span> goods.price = max_price_goods.price_max;</span><br></pre></td></tr></table></figure>
-</blockquote>
+</ul>
 </li>
-<li><p>数据表优化：可变字段单独放入一个新表，并与主表关联，同时根据情况修改字段的名字和类型</p>
+</ul>
+<h4 id="1-2-GIL锁的概念"><a href="#1-2-GIL锁的概念" class="headerlink" title="1.2 GIL锁的概念"></a>1.2 GIL锁的概念</h4><ul>
+<li><p>GIL锁概念</p>
 <ul>
-<li><p>创建 goods_cates 表——商品分类表</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> goods_cates(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">40</span>) <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>插入数据:</p>
-<blockquote>
-<p>通过<strong>子查询</strong>提取表中数据插入新表，<strong>insert into 与 select 联用</strong></p>
-<p>注意：此时不用使用values，同时select语句需要() </p>
-</blockquote>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods_cates(<span class="keyword">name</span>) (<span class="keyword">select</span> cate_name <span class="keyword">from</span> goods <span class="keyword">group</span> <span class="keyword">by</span> cate_name);</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>更新 goods 表 cate_name 为 goods_cates.id</p>
-<blockquote>
-<p>通过两个表进行<strong>连接查询</strong>来关联更新，<strong>update set 与 inner join on 联用</strong></p>
-</blockquote>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> goods <span class="keyword">inner</span> <span class="keyword">join</span> goods_cates <span class="keyword">on</span> goods.cate_name = goods_cates.name <span class="keyword">set</span> goods.cate_name = goods_cates.id;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>修改 cate_name 为 cate_id，类型改为 int</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> goods <span class="keyword">change</span> cate_name cate_id <span class="built_in">int</span> <span class="keyword">unsigned</span> <span class="keyword">not</span> <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>创建 goods_brands 表——商品品牌表</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> goods_brands(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">40</span>) <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods_brands(<span class="keyword">name</span>) (<span class="keyword">select</span> brand_name <span class="keyword">from</span> goods <span class="keyword">group</span> <span class="keyword">by</span> brand_name );</span><br><span class="line"></span><br><span class="line"><span class="keyword">update</span> goods <span class="keyword">inner</span> <span class="keyword">join</span> goods_brands <span class="keyword">on</span> goods.brand_name = goods_brands.name <span class="keyword">set</span> goods.brand_name = goods_brands.id;</span><br><span class="line"></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> goods <span class="keyword">change</span> brand_name brand_id <span class="built_in">int</span> <span class="keyword">unsigned</span> <span class="keyword">not</span> <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
+<li>GIL：Global Interpreter Lock，全局解释器锁</li>
+<li>任何Python线程执行前，必须先获得GIL锁，然后，每执行100条字节码，解释器就⾃动释放GIL锁，让其他线程有机会执行。</li>
+<li>这个GIL全局锁实际上把所有线程的执行代码都给上了锁，所以，多线程在Python中只能交替执行，使得多线程实现多任务时，在同一时间只能有一个线程使用一个CPU，即CPU轮询执行每个线程。</li>
 </ul>
 </li>
-</ul>
-<h4 id="1-2-外键约束"><a href="#1-2-外键约束" class="headerlink" title="1.2 外键约束"></a>1.2 外键约束</h4><ul>
-<li><p>外键的概念</p>
-<blockquote>
-<p>一个表的主键在另外一个表中出现，在另外一个表中称为外键</p>
-</blockquote>
-</li>
-<li><p>外键的作用</p>
-<blockquote>
-<p>表间的数据插入、更新的时候的一种约束，用来防止无效信息的插入</p>
-</blockquote>
-</li>
-<li><p>外键约束：关键字——foreign key</p>
+<li><p>GIL锁与Python</p>
 <ul>
-<li>foreign key约束指定某⼀个列或⼀组列作为外部键，其中包含外部键的表称为子表，包含外键所引用的键的表称为⽗表；</li>
-<li>对外键字段的值，在更新和插⼊时进行和引用的表中字段数据进行对比；</li>
-<li>只有 innodb 数据库引擎⽀持外键约束。</li>
+<li>GIL是Python解释器（Cpython）时引入的概念，在JPython、PyPy解释器中没有GIL；</li>
+<li>GIL并不是Python的语言缺陷，是解释器层级的锁，跟Python语⾔特性无关；</li>
+<li>GIL就是为了锁定整个解释器内部的全局资源，每个线程想要运行首先要获取GIL，而GIL本身又是⼀把互斥锁，造成所有线程只能⼀个⼀个one-by-one-并发-交替的执行。</li>
 </ul>
 </li>
-<li><p>外键语法</p>
+<li><p>GIL锁作用</p>
 <ul>
-<li><p>已有数据表，插入或创建外键约束的字段</p>
-<blockquote>
-<p>语法格式：<code>alter table 子表名 add foreign key (字段名) references 父表名 (字段名);</code></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> goods <span class="keyword">add</span> <span class="keyword">foreign</span> <span class="keyword">key</span> (cate_id) <span class="keyword">references</span> goods_cates (<span class="keyword">id</span>);</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> goods <span class="keyword">add</span> <span class="keyword">foreign</span> <span class="keyword">key</span> (brand_id) <span class="keyword">references</span> goods_brands (<span class="keyword">id</span>);</span><br></pre></td></tr></table></figure>
-</blockquote>
+<li><p>早期计算机都是单核CPU设计，GIL锁可以提高程序的稳定性</p>
 </li>
-<li><p>新建数据表的同时，创建外键约束</p>
+<li><p>CPython在执行多线程的时候并不是线程安全的，所以为了程序的稳定性，加⼀把全局解释锁，能够确保任何时候都只有⼀个Python线程执行(一个CPU)</p>
 <blockquote>
-<p>在创建表时添加外键约束语句</p>
-<p>语法格式：<code>foreign key(brand_id) references goods_brand(id)</code></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> goods_test(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">40</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    price <span class="built_in">decimal</span>(<span class="number">5</span>,<span class="number">2</span>),</span><br><span class="line">    cate_id <span class="built_in">int</span> <span class="keyword">unsigned</span>,</span><br><span class="line">    brand_id <span class="built_in">int</span> <span class="keyword">unsigned</span>,</span><br><span class="line">    <span class="keyword">foreign</span> <span class="keyword">key</span>(cate_id) <span class="keyword">references</span> goods_cates(<span class="keyword">id</span>),</span><br><span class="line">    <span class="keyword">foreign</span> <span class="keyword">key</span>(brand_id) <span class="keyword">references</span> goods_brands(<span class="keyword">id</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>删除外键约束：drop</p>
-<blockquote>
-<p>语法格式：<code>alter table 表名 drop foreign key 外键名;</code></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 获取有外键约束的字段的名称</span></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">create</span> <span class="keyword">table</span> goods_test;</span><br><span class="line"><span class="comment">-- 删除外键约束</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> goods_test <span class="keyword">drop</span> <span class="keyword">foreign</span> <span class="keyword">key</span> goods_test_ibfk_1;</span><br></pre></td></tr></table></figure>
-
-
-</blockquote>
-</li>
-<li><p>注意：</p>
-<blockquote>
-<p>外键名需要通过show来查看，一般格式为 <code>表名_ibfk_序号</code></p>
-<p>进行外键约束的两个表间的字段需要逻辑上对应，同时数据类型相同</p>
-<p>如果对已有数据表中的字段创建外键约束，需要预先将该表中不匹配外键约束的数据删去，以免报错</p>
-<p>使用外键约束会极大的降低表更新的效率,    所以在追求读写效率优先的场景下⼀般很少使用外键。</p>
+<p>在CPython解释内部运行多个线程的时候，每个线程都需要解释器内部申请相应的全局资源，由于C语⾔本身比较底层造成CPython在管理所有全局资源的时候并不能应对所有线程同时的资源请求，因此为了防止资源竞争而发生错误，对所有线程申请全局资源增加了限制全局解释器锁。</p>
 </blockquote>
 </li>
 </ul>
 </li>
-</ul>
-<h4 id="1-3-数据库引擎"><a href="#1-3-数据库引擎" class="headerlink" title="1.3 数据库引擎"></a>1.3 数据库引擎</h4><ul>
-<li><p>概念：</p>
-<blockquote>
-<p>数据库存储引擎是数据库底层软件组织；</p>
-<p>不同的存储引擎提供不同的存储机制、索引技巧、锁定水平等功能；</p>
-<p>使用不同的存储引擎，还可以获得特定的功能。</p>
-</blockquote>
-</li>
-<li><p>查看引擎</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 查看数据库服务器支持的表存储引擎</span></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">engines</span>;</span><br><span class="line"><span class="comment">-- 查看某个数据表的引擎是什么类型</span></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">create</span> <span class="keyword">table</span> goods ;</span><br></pre></td></tr></table></figure>
-
-<p>查看表的创建语句，可以看到 engine=innodb</p>
-</blockquote>
-</li>
-<li><p>注意：</p>
-<blockquote>
-<p>只有数据表的引擎类型是innodb类型时，才可以使用外键约束和事务</p>
-</blockquote>
-</li>
-</ul>
-<h4 id="1-4-视图"><a href="#1-4-视图" class="headerlink" title="1.4 视图"></a>1.4 视图</h4><ul>
-<li><p>视图的概念</p>
-<blockquote>
-<p>视图是一个虚拟表，仅仅支持查询，把复杂SQL语句的功能封装起来的一个虚表，为了简化操作；</p>
-</blockquote>
-</li>
-<li><p>视图特点</p>
-<blockquote>
-<p>视图是对若干张基本表的引用，是⼀张虚表，只查询语句执行结果的字段类型和约束，</p>
-<p>不存储具体的数据  (基本表数据发生了改变，视图也会跟着改变)</p>
-<p>当用户使用视图的时候，视图会从基本表中取出数据进行查询 </p>
-</blockquote>
-</li>
-<li><p>适用场景与作用</p>
-<blockquote>
-<p>查询多个表连接的数据，如商品名称、商品分类和商品品牌时，通过视图封装对多个表的复杂操作，从而简化操作</p>
-<p>通过视图可以对用户展示指定字段从而屏蔽其他字段数据，更加安全</p>
-</blockquote>
-<blockquote>
-<p>基本方法：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> g.name <span class="keyword">as</span> <span class="keyword">Name</span>, gc.name <span class="keyword">as</span> Cate, gb.name <span class="keyword">as</span> Brand <span class="keyword">from</span> goods <span class="keyword">as</span> g </span><br><span class="line">    <span class="keyword">inner</span> <span class="keyword">join</span> goods_cates <span class="keyword">as</span> gc <span class="keyword">on</span> g.cate_id = gc.id</span><br><span class="line">    <span class="keyword">inner</span> <span class="keyword">join</span> goods_brands <span class="keyword">as</span> gb <span class="keyword">on</span> g.brand_id = gb.id;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>视图语法</p>
+<li><p>GIL锁的缺陷</p>
 <ul>
-<li><p>视图创建</p>
-<blockquote>
-<p>语法格式：<code>create view 视图名称 as select语句;</code></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> v_goods_info <span class="keyword">as</span> </span><br><span class="line">    <span class="keyword">select</span> g.name <span class="keyword">as</span> <span class="keyword">Name</span>, gc.name <span class="keyword">as</span> Cate, gb.name <span class="keyword">as</span> Brand <span class="keyword">from</span> goods <span class="keyword">as</span> g </span><br><span class="line">        <span class="keyword">inner</span> <span class="keyword">join</span> goods_cates <span class="keyword">as</span> gc <span class="keyword">on</span> g.cate_id = gc.id</span><br><span class="line">        <span class="keyword">inner</span> <span class="keyword">join</span> goods_brands <span class="keyword">as</span> gb <span class="keyword">on</span> g.brand_id = gb.id;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>注意：</p>
-<blockquote>
-<p>视图同基本表的表结构一致</p>
-<p>视图在保存基本表字段信息的时候字段不能重复     </p>
-<p>因此需要对select结果集中的字段进行重命名——别名</p>
-</blockquote>
-</li>
-<li><p>视图使用</p>
-<blockquote>
-<p>与查询基础表的select语句一样</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> v_goods_info;</span><br><span class="line"><span class="comment">-- 条件查询</span></span><br><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> v_goods_info <span class="keyword">where</span> <span class="keyword">Name</span> = <span class="string">'xxx'</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>视图查看</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">tables</span>;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>视图删除</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">view</span> v_goods_info;</span><br><span class="line"><span class="comment">-- 对比</span></span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> goods_test;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
+<li>GIL对计算密集型的程序会产生影响。因为计算密集型的程序，需要占用系统资源；</li>
+<li>GIL的存在，相当于始终在进行单线程运算，降低程序运算的速度、效率； </li>
+<li>GIL对IO密集型程序影响不大，因为IO操作(input/output)的瓶颈在于输入所耗费的时间，线程大部分时间在等待，所以它们是多个⼀起等(多线程)还是单个(单线程)是区别不大的。</li>
 </ul>
-</li>
-</ul>
-<h4 id="1-5-事务"><a href="#1-5-事务" class="headerlink" title="1.5 事务"></a>1.5 事务</h4><ul>
-<li><p>事务概念：事务Transaction</p>
-<blockquote>
-<p>事务是指作为一个基本工作单元执行的一系列SQL语句的操作，要么全成功，要不全失败</p>
-</blockquote>
-</li>
-<li><p>作用：要么完全地执行，要么完全地都不执行</p>
-</li>
-<li><p>事务的四大特征 ACID：</p>
-<ul>
-<li><p>A ：原子性 ，事务的操作是原子的，不能分隔</p>
-<blockquote>
-<p>⼀个事务必须被视为⼀个不可分割的最小工作单元，整个事务中的所有操作要么全部提交成功， 要么全部失败回滚，对于⼀个事务来说，不可能只执行其中的⼀部分操作</p>
-</blockquote>
-</li>
-<li><p>C ：一致性，双方的结果要一致</p>
-<blockquote>
-<p>数据库总是从⼀个⼀致性的状态转换到另⼀个⼀致性的状态</p>
-</blockquote>
-</li>
-<li><p>I  ：隔离性， 同一时间只有一个事务在操作</p>
-<blockquote>
-<p>通常来说，⼀个事务所做的修改在最终提交以前，对其他事务是不可见的</p>
-</blockquote>
-</li>
-<li><p>D ：持久性， 操作完成结果持久不变</p>
-<blockquote>
-<p>⼀旦事务提交，则其所做的修改会永久保存到数据库</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>事务语法</p>
-<ul>
-<li><p>开启事务</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">begin</span>;</span><br><span class="line"><span class="comment">-- 或者</span></span><br><span class="line"><span class="keyword">start</span> <span class="keyword">transaction</span>;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>提交事务(完成)</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">commit</span>;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>回滚事务(撤销)</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">rollback</span>;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>事务流程小结——如：银行存储</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">start</span> <span class="keyword">transaction</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 操作 update、insert、delete</span></span><br><span class="line"><span class="keyword">select</span> balance <span class="keyword">from</span> checking <span class="keyword">where</span> customer_id = <span class="number">10233276</span>;</span><br><span class="line"><span class="keyword">update</span> checking <span class="keyword">set</span> balance = balance - <span class="number">200.00</span> <span class="keyword">where</span> customer_id = <span class="number">10233276</span>;</span><br><span class="line"><span class="keyword">update</span> savings <span class="keyword">set</span> balance = balance + <span class="number">200.00</span> <span class="keyword">where</span> customer_id = <span class="number">10233276</span>; </span><br><span class="line"></span><br><span class="line"><span class="keyword">commit</span>;</span><br><span class="line"><span class="comment">-- 或者</span></span><br><span class="line"><span class="keyword">rollback</span>;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>验证事务的ACID特性</p>
-<blockquote>
-<p>通过两个终端模拟两个用户来验证</p>
-</blockquote>
-<ul>
-<li><p>验证I 隔离性</p>
-<blockquote>
-<p>终端1修改表的数据，在commit前，通过终端2修改表的同一个数据</p>
-<p>终端2进⼊等待状态(因为终端1并没有进行commit)此事就可以说明事务的隔离性特点，多个事务之 间相互不可见、不影响</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>小结</p>
-<blockquote>
-<p>原⼦性强调事务中的多个操作是⼀个整体 </p>
-<p>⼀致性强调数据库中不会保存不⼀致状态 </p>
-<p>隔离性强调数据库中事务之间相互不可见</p>
-<p>持久性强调数据库能永久保存数据，⼀旦提交就不可撤销</p>
-</blockquote>
-<blockquote>
-<p>在mysql命令行中会自动提交事务，所以当insert语句执⾏完成后没有commit，数据库也看到了提交的数据</p>
-<p>如果不需要mysql命令行自动提交，键⼊<code>set autocommit=0</code></p>
-<p>不可撤销的操作(隐式提交):    除了对表数据 insert/update/delete 语句之外的绝大多数语句都是不能撤销的，如数据库、表结构的操作</p>
-</blockquote>
 </li>
 </ul>
 <hr>
-<h3 id="2-数据库设计"><a href="#2-数据库设计" class="headerlink" title="2. 数据库设计"></a>2. 数据库设计</h3><ul>
-<li><p>时间：2020.08.08</p>
-</li>
-<li><p>可以参考：<a href="https://mp.weixin.qq.com/s/Yjh_fPgrjuhhOZyVtRQ-SA?" target="_blank" rel="noopener">58到家数据库设计规范</a></p>
-</li>
+<h3 id="2-GIL锁解决方法"><a href="#2-GIL锁解决方法" class="headerlink" title="2. GIL锁解决方法"></a>2. GIL锁解决方法</h3><ul>
+<li>时间：2020.08.21</li>
 </ul>
-<h4 id="2-1-数据库三范式"><a href="#2-1-数据库三范式" class="headerlink" title="2.1 数据库三范式"></a>2.1 数据库三范式</h4><ul>
-<li><p>概念</p>
-<blockquote>
-<p>设计数据库的规范、原则，被称为范式(Normal Form) ，可以减少数据库的冗余数据；</p>
-<p>目前有迹可寻的共有8种范式，⼀般需要遵守3范式即可。</p>
-</blockquote>
+<h4 id="2-1-GIL锁释放"><a href="#2-1-GIL锁释放" class="headerlink" title="2.1 GIL锁释放"></a>2.1 GIL锁释放</h4><ul>
+<li>在当前线程执行超时后会自动释放 </li>
+<li>在当前线程执行阻塞操作时会自动释放 </li>
+<li>当前执行完成时，自动释放，去轮询下一个线程</li>
+</ul>
+<h4 id="2-2-GIL锁解决方案"><a href="#2-2-GIL锁解决方案" class="headerlink" title="2.2 GIL锁解决方案"></a>2.2 GIL锁解决方案</h4><ul>
+<li><p>方法一：使用JPython、PyPy等没有GIL锁限制的解释器。</p>
 </li>
-<li><p>三范式</p>
+<li><p>方法二：使用多进程代替多线程，虽然单个进程中仍然存在GIL锁，但是多进程可以同时利用多个CPU资源，执行速度增加，但是由于子进程会复制主进程的资源，所以会有资源占用的问题。</p>
+</li>
+<li><p>方法三：通过Python的胶水特性，将子线程要执行的部分用C语言编写，从而跨过CPython解释器。</p>
 <ul>
-<li><p>1NF：字段必须是原子的，不可分割</p>
-</li>
-<li><p>2NF：满足1NF，必须有主键， 非主键字段必须完全依赖主键，而不能部分依赖 (解决办法：分表)</p>
+<li><p>配置gcc编译环境</p>
 <blockquote>
-<p>当一个表的主键有多个字段时，即为复合主键时，需要表中其他字段完全依赖复合主键的每个字段</p>
-</blockquote>
-</li>
-<li><p>3NF：满足2NF，所有非主键字段必须直接依赖主键，不能存在传递依赖的情况。</p>
-<blockquote>
-<p>即不能存在：非主键列A依赖于非主键列B，非主键列B依赖于主键的情况。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="2-2-数据库设计实例"><a href="#2-2-数据库设计实例" class="headerlink" title="2.2 数据库设计实例"></a>2.2 数据库设计实例</h4><ul>
-<li><p>设计一个简易电商类的数据库</p>
-<blockquote>
-<p>包含有商品信息、订单信息和顾客(用户)信息</p>
-</blockquote>
-</li>
-<li><p>商品信息</p>
-<ul>
-<li>商品详情表：goods</li>
-<li>商品分类表：goods_cates</li>
-<li>商品品牌表：goods_brands</li>
-</ul>
-</li>
-<li><p>顾客信息</p>
-<blockquote>
-<p>顾客信息表：customer</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> customer(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">30</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    addr <span class="built_in">varchar</span>(<span class="number">100</span>),</span><br><span class="line">    tel <span class="built_in">varchar</span>(<span class="number">11</span>) <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>订单信息</p>
-<ul>
-<li><p>订信息单表：orders</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> orders(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    order_date_time datetime <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    customer_id <span class="built_in">int</span> <span class="keyword">unsigned</span>,</span><br><span class="line">    <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id) <span class="keyword">references</span> customer(<span class="keyword">id</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>订单详情表：order_detail</p>
-<blockquote>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> order_detail(</span><br><span class="line">    <span class="keyword">id</span> <span class="built_in">int</span> <span class="keyword">unsigned</span> primary <span class="keyword">key</span> auto_increment <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    order_id <span class="built_in">int</span> <span class="keyword">unsigned</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    goods_id <span class="built_in">int</span> <span class="keyword">unsigned</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    quantity <span class="built_in">tinyint</span> <span class="keyword">unsigned</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">    <span class="keyword">foreign</span> <span class="keyword">key</span>(order_id) <span class="keyword">references</span> orders(<span class="keyword">id</span>),</span><br><span class="line">    <span class="keyword">foreign</span> <span class="keyword">key</span>(goods_id) <span class="keyword">references</span> goods(<span class="keyword">id</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="2-3-E-R模型"><a href="#2-3-E-R模型" class="headerlink" title="2.3 E-R模型"></a>2.3 E-R模型</h4><ul>
-<li><p>E-R模型简介</p>
-<blockquote>
-<p>E-R模型即E-R图。<br>E-R图即实体-联系图(Entity Relationship Diagram)，是指提供了表示实体型、属性和联系的方法，用来描述现实世界的概念模型，主要用来描述数据库中表结构。</p>
-</blockquote>
-</li>
-<li><p>E-R模型使用场景</p>
-<blockquote>
-<p>关系型数据库：关系模型的基础上，根据产品的设计策划，抽取出来模型与关系，制定出表结构，这是项⽬开始的第⼀步；<br>在设计阶段⼀般使⽤E-R模型进行建模。有很多设计数据库的软件，常用的如power designer，db desinger等，这些软件可以直观的看到实体及实体间的关系；</p>
-<p>关系模型：用⼆维表的形式表示实体和实体间联系的数据模型。</p>
-</blockquote>
-</li>
-<li><p>E-R模型的组成元素</p>
-<blockquote>
-<p>E-R图用：实体、联系和属性这3个概念来描述现实问题，分为这三种元素。</p>
+<p>Linux系统自带gcc，Windows下要自行安装配置，参考<a href="https://www.cnblogs.com/valor-xh/p/7371710.html" target="_blank" rel="noopener">Windows 下使用 GCC</a></p>
 </blockquote>
 <ul>
-<li><p>实体型(Entity)：具有相同属性的实体具有相同的特征和性质，用实体名及其属性名集合来抽象和刻画同类实体；在E-R图中用<strong>矩形</strong>表示，矩形框内写明实体名。如：电商购物系统中用户、购物车、订单。</p>
-</li>
-<li><p>属性(Attribute)：实体所具有的某⼀特性，⼀个实体可由若干个属性来刻画。在E-R图中用<strong>椭圆</strong>表示，并用无向边将其与相应的实体连接起来。如用户的ID、用户名、密码、昵称、身份证号等。</p>
-</li>
-<li><p>联系(Relationship)：实体彼此之间相互连接的方式称为联系，也称为关系。</p>
+<li><p>安装MinGW，MinGw 是 Minimal GNU on Windows 的缩写，允许在 GNU/Linux 和 Windows 平台生成本地的 Windows 程序而不需要第三方运行时库。</p>
 <blockquote>
-<p>联系可分为3种类型：⼀对⼀、⼀对多、多对多</p>
-<p>关系也是⼀种数据，需要通过⼀个字段存储在表中。</p>
+<p>下载 min-gw 安装程序：<a href="http://sourceforge.net/projects/mingw/files/" target="_blank" rel="noopener">下载链接</a>，下载 Download mingw-get-setup.exe 并安装</p>
 </blockquote>
 </li>
-<li><p>表间联系(关系)：</p>
-<ul>
-<li><p>一对一：一个表中的一条数据，能够和另外一个表的唯一一条数据对应（人和常住地址）</p>
+<li><p>配置环境变量，将MinGW/bin配置到系统环境变量Path中</p>
 </li>
-<li><p>一对多：一个表中的一条数据，能够和另外一个表的多条数据对应（一个班有多个学生）</p>
+<li><p>查看MinGW安装情况，在cmd中键入mingw-get，如果弹出 MinGw installation manager 窗口，说明安装正常。此时，关闭 MinGw installation manager 窗口，否则接下来的步骤会报错。</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mingw-get</span><br></pre></td></tr></table></figure>
+</blockquote>
 </li>
-<li><p>多对多：一个表中的一条数据，能够和另外一个表的多条数据对应，相反也成立。（学生和课程）</p>
+<li><p>安装gcc，在cmd中键入mingw-get install gcc</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mingw-get install gcc</span><br></pre></td></tr></table></figure>
+</blockquote>
 </li>
 </ul>
 </li>
-</ul>
+<li><p>将子线程要处理的部分写为C语言，例如：</p>
+<blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello world!!!"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
 </li>
-<li><p>E-R模型中不同类型联系的储存方法</p>
-<ul>
-<li>实体A对实体B为1对1，则在表A或表B中创建⼀个字段，存储另⼀个表的主键值；</li>
-<li>实体A对实体B为1对多，在表B中创建⼀个字段，存储表A的主键值；</li>
-<li>实体A对实体B为多对多，新建⼀张表C，这个表只有两个字段，⼀个⽤于存储A的主键值，⼀个用于存储B的主键值。</li>
-</ul>
+<li><p>使用gcc将其编译为so文件(Share Object)</p>
+<blockquote>
+<p>语法格式：<code>gcc 要编译的文件名 [-编译的格式] [-o] 保存的文件名</code></p>
+<p>-o 表示输出、编译格式有多种：S、E、I、默认为exe链接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gcc test.c -shared -o libtest.so</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>在Python中加载该C语言so库文件</p>
+<blockquote>
+<p>语法格式：<code>my_lib = ctypes.cdll.LoadLibrary(&#39;导入库的路径&#39;)</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ctypes</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载C语言编写的库so文件</span></span><br><span class="line">my_lib = ctypes.cdll.LoadLibrary(<span class="string">'./libtest.so'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 子线程</span></span><br><span class="line">t1 = threading.Thread(target=my_lib.main)</span><br><span class="line"></span><br><span class="line">t1.daemon = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">t1.start()</span><br></pre></td></tr></table></figure>
+</blockquote>
 </li>
 <li><p>注意：</p>
+<ul>
+<li><p><strong>如果出现 OSError: [WinError 193] %1 不是有效的 Win32 应用程序错误</strong></p>
+</li>
+<li><p>原因：Python位数与so位数不匹配，so是32位而python是64位，该错误同样会在一些其他库的导入时出现。</p>
+</li>
+<li><p>解决方法：创建虚拟环境，安装对应位数的Python，利用conda更方便</p>
 <blockquote>
-<p>多对多关系时，需要建立中间表(附加表)来储存数据。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看planform位数32/64</span></span><br><span class="line">$ conda info</span><br><span class="line"><span class="comment"># 查看Python的位数</span></span><br><span class="line">$ python</span><br><span class="line"><span class="comment"># 设置conda的platform位数为32，切换为64位只需要赋值为0</span></span><br><span class="line">$ <span class="built_in">set</span> conda_force_32bit=1</span><br><span class="line"><span class="comment"># 创建虚拟环境并安装Python</span></span><br><span class="line">$ conda create -n py37by32 python = 3.7</span><br><span class="line"><span class="comment"># 激活虚拟环境</span></span><br><span class="line">$ activate py37by32</span><br></pre></td></tr></table></figure>
+
+<p>同时修改项目的解释器路径为新建的32位Python路径。</p>
 </blockquote>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <hr>
-<h3 id="3-Python连接操作数据库"><a href="#3-Python连接操作数据库" class="headerlink" title="3. Python连接操作数据库"></a>3. Python连接操作数据库</h3><ul>
-<li><p>时间：2020.08.09</p>
+<h3 id="3-GIL面试常见问题"><a href="#3-GIL面试常见问题" class="headerlink" title="3. GIL面试常见问题"></a>3. GIL面试常见问题</h3><ul>
+<li><p>时间：2020.08.21</p>
 </li>
-<li><p>pymysql模块</p>
-</li>
-<li><p>connection连接对象</p>
-</li>
-<li><p>cursor 游标对象(操作数据库)</p>
-</li>
-</ul>
-<h4 id="3-1-Python访问MySQL流程"><a href="#3-1-Python访问MySQL流程" class="headerlink" title="3.1 Python访问MySQL流程"></a>3.1 Python访问MySQL流程</h4><blockquote>
-<p>Python DB API 访问数据库</p>
-</blockquote>
+<li><p>描述Python中GIL的概念，以及它对Python多线程的影响？</p>
 <ul>
-<li>导入pymysql模块</li>
-<li>建立连接：创建connection连接对象</li>
-<li>获取游标：创建cursor游标对象</li>
-<li>执行数据库操作(Curd) ：execute</li>
-<li>获取结果：fetchone、fetchall</li>
-<li>关闭游标</li>
-<li>关闭连接</li>
+<li>GIL是全局解释器锁，每个线程</li>
+<li>因此，GIL锁使得Python的多线程并发实际上为单线程运算，不能高效的利用CPU资源，降低程序运行的速度，对于计算密集型程序，影响较大，对于IO密集型，影响较小。</li>
+<li>GIL当遇到IO操作等引起的阻塞、执行超时、执行完成时会自动释放，</li>
 </ul>
-<h4 id="3-2-Python连接数据库"><a href="#3-2-Python连接数据库" class="headerlink" title="3.2 Python连接数据库"></a>3.2 Python连接数据库</h4><ul>
-<li><p>导入模块pymysql</p>
 </li>
-<li><p>建立连接</p>
+<li><p>编写⼀个多线程抓取网页的程序，并阐明多线程抓取是否可以比单线程性能有提升，并解释原因。</p>
 <ul>
-<li><p>语法格式：<code>pymysql.connect(参数列表)</code></p>
+<li>多线程爬虫，主要使用urllib模块请求网页资源、re模块正则匹配要获取的信息、pymysql模块用于将爬去的信息保存到数据库、threading模块用于实现多线程爬取信息。</li>
+<li>多线程爬虫比单线程效率高，虽然由于GIL锁的存在，多线程的实质也是同一时间只有一个线程在执行代码，但是爬虫过程中存在大量的IO操作，GIL锁遇到IO操作引起的阻塞会自动释放，使得某个线程阻塞时，会有另一个线程在工作，从而提高效率。</li>
+</ul>
 </li>
-<li><p>返回连接对象，建立与数据库的连接</p>
-</li>
-<li><p>参数列表：</p>
+<li><p>GIL锁与手动设置的Lock</p>
 <ul>
-<li>host：连接的mysql主机，如果本机是’localhost’ </li>
-<li>port：连接的mysql主机的端口，默认是3306 </li>
-<li>database：数据库的名称</li>
-<li>user：连接的用户名 </li>
-<li>password：连接的密码</li>
-<li>charset：通信采用的编码⽅式，推荐使用utf8</li>
-</ul>
-</li>
-<li><p>连接对象</p>
-<blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line">conn = pymysql.connect(host=<span class="string">'localhost'</span>, port=<span class="number">3306</span>, user=<span class="string">'root'</span>, password=<span class="string">'******'</span>, database=<span class="string">'jingdong'</span>, charset=<span class="string">'utf8'</span>)</span><br><span class="line"><span class="comment"># 获取游标</span></span><br><span class="line">conn.cursor()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交数据</span></span><br><span class="line">conn.commit()</span><br><span class="line"><span class="comment"># 回滚数据</span></span><br><span class="line">conn.rollback()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭连接</span></span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>获取游标对象</p>
-<ul>
-<li>语法格式：<code>连接对象.cursor()</code></li>
-<li>返回Cursor对象，用于执行sql语句并获得结果</li>
-</ul>
-</li>
-</ul>
-<h4 id="3-3-Python操作数据库-Curd"><a href="#3-3-Python操作数据库-Curd" class="headerlink" title="3.3 Python操作数据库(Curd)"></a>3.3 Python操作数据库(Curd)</h4><ul>
-<li><p>操作数据库</p>
-<ul>
-<li><p>语法格式：<code>游标对象.execute(sql语句 [,parameters])</code></p>
-</li>
-<li><p>主要用于执行select、insert、 update、delete语句(crud)，也可以执行create、alter、drop等语句</p>
-</li>
-<li><p>返回数据</p>
-<blockquote>
-<p>返回的数据类型为int；</p>
-<p>当SQL语句为查询语句时，返回数据表的总行数(总记录数)；</p>
-<p>当SQL语句为增删改语句时，返回受影响的行的个数；</p>
-<p>当SQL语句为create、alter、drop语句时，返回None；</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>获取结果</p>
-<ul>
-<li><p>语法格式：<code>游标对象.fetchone()</code></p>
-<blockquote>
-<p>获取结果集的一条记录(一行)，返回的数据类型为元组</p>
-</blockquote>
-</li>
-<li><p>语法格式：<code>游标对象.fetchall()</code></p>
-<blockquote>
-<p>获取结果集的所有记录(所有行)，返回的数据类型为元组</p>
-<p>一行构成⼀个元组，再将这些元组装入⼀个元组返回    </p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>数据库连接并查询</p>
-<blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python连接、操作MySQL数据库</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 导入模块</span></span><br><span class="line"><span class="comment"># from pymysql import connect</span></span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 建立连接，创建连接对象</span></span><br><span class="line">conn = pymysql.connect(host=<span class="string">'localhost'</span>, port=<span class="number">3306</span>, user=<span class="string">'root'</span>, password=<span class="string">'******'</span>, database=<span class="string">'jingdong'</span>, charset=<span class="string">'utf8'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 创建游标对象</span></span><br><span class="line">cur = conn.cursor()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 操作数据库</span></span><br><span class="line">sql = <span class="string">'select * from goods;'</span></span><br><span class="line">row_count = cur.execute(sql)</span><br><span class="line">print(<span class="string">'MySQL数据库受到操作的行数为:%d'</span> % row_count)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5. 获取结果</span></span><br><span class="line">result_one = cur.fetchone()</span><br><span class="line">print(result_one)</span><br><span class="line"></span><br><span class="line">result_list = cur.fetchall()</span><br><span class="line">print(result_list)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> result_list:</span><br><span class="line">    print(line)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 6. 关闭游标和连接</span></span><br><span class="line">cur.close()</span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>数据库增删改，以及创建修改删除数据表结构</p>
-<blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 导入模块</span></span><br><span class="line"><span class="comment"># from pymysql import connect</span></span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 建立连接，创建连接对象</span></span><br><span class="line">conn = pymysql.connect(host=<span class="string">'localhost'</span>, port=<span class="number">3306</span>, user=<span class="string">'root'</span>, password=<span class="string">'*****'</span>, database=<span class="string">'jingdong'</span>, charset=<span class="string">'utf8'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 创建游标对象</span></span><br><span class="line">cur = conn.cursor()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 操作数据库</span></span><br><span class="line"><span class="comment"># 4.1 SQL查询</span></span><br><span class="line">sql0 = <span class="string">"create table goods_cates_test("</span> \</span><br><span class="line">       <span class="string">"id int unsigned primary key auto_increment not null,"</span> \</span><br><span class="line">       <span class="string">"name varchar(30) not null);"</span></span><br><span class="line">sql1 = <span class="string">"alter table goods_cates_test add test int not null;"</span></span><br><span class="line">sql2 = <span class="string">'select * from goods_cates_test;'</span></span><br><span class="line">sql3 = <span class="string">"insert into goods_cates_test(name) (select cate_id from goods group by cate_id)"</span></span><br><span class="line">sql4 = <span class="string">"update goods inner join goods_cates_test as gct "</span> \</span><br><span class="line">       <span class="string">"on goods.cate_id = gct.name set goods.cate_id = gct.id;"</span></span><br><span class="line">sql5 = <span class="string">"delete from goods_cates_test where id &gt; 7 "</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.2 执行SQL</span></span><br><span class="line">row_count = cur.execute(sql5)</span><br><span class="line">print(<span class="string">'MySQL数据库受到操作的行数为:%d'</span> % row_count)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5. 提交数据或回滚</span></span><br><span class="line"><span class="comment"># conn.commit()</span></span><br><span class="line">conn.rollback()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 6. 关闭游标和连接</span></span><br><span class="line">cur.close()</span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>注意</p>
-<ul>
-<li><p>cur.execute()语句的返回值在SQL语句不同时，结果不同</p>
-<blockquote>
-<p>当SQL语句为查询语句时，返回数据表的总行数(总记录数)；</p>
-<p>当SQL语句为增删改语句时，返回受影响的行的个数；</p>
-<p>当SQL语句为create、alter、drop语句时，返回None；</p>
-</blockquote>
-</li>
-<li><p>只有SQL语句为查询语句时，才需要fetchone、fetchall语句来输出查询结果</p>
-</li>
-<li><p>当SQL语句为增删改语句时，必须执行cunn.commit()语句来提交数据，才会改变数据库的数据</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="3-4-SQL防注入"><a href="#3-4-SQL防注入" class="headerlink" title="3.4 SQL防注入"></a>3.4 SQL防注入</h4><ul>
-<li><p>SQL注⼊概念</p>
-<blockquote>
-<p>用户通过传入恶意数据，从而获取到数据库中大量数据，造成数据泄漏</p>
-</blockquote>
-</li>
-<li><p>产⽣原因：</p>
-<blockquote>
-<p>后台将用户提交的带有恶意的数据和SQL进行字符串方式的拼接，从而影响了SQL语句的语义，最终导致数据泄露的现象。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 存在SQL注入隐患的写法：字符串拼接</span></span><br><span class="line"><span class="comment"># 用户自定义查询内容</span></span><br><span class="line">input_name = input(<span class="string">'请输入要查询的数据的名称：'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># SQL查询</span></span><br><span class="line">sql = <span class="string">"select * from goods_cates_test where name = '%s';"</span> % input_name</span><br><span class="line"></span><br><span class="line">row_count = cur.execute(sql)</span><br><span class="line">print(<span class="string">'MySQL数据库受到操作的行数为:%d'</span> % row_count)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查询结果</span></span><br><span class="line">result_list = cur.fetchall()</span><br><span class="line">print(result_list)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> result_list:</span><br><span class="line">    print(line)</span><br></pre></td></tr></table></figure>
-
-<p>输入正常name时不会产生SQL注入，但如果输入’ or 1 or’ 则会SQL注入，数据泄露</p>
-</blockquote>
-</li>
-<li><p>解决方法：参数化列表</p>
-<blockquote>
-<p>sql中需要变化的地方，可以占位符 %s %d…</p>
-<p>将SQL语句中的所有数据参数存在⼀个列表中，传递给execute函数的第⼆个参数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解决SQL注入问题</span></span><br><span class="line"><span class="comment"># 用户自定义查询内容</span></span><br><span class="line">input_name = input(<span class="string">'请输入要查询的数据的名称：'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 创建一个列表，用来传递用户输入的参数</span></span><br><span class="line">params = [input_name]</span><br><span class="line"></span><br><span class="line"><span class="comment"># SQL查询</span></span><br><span class="line">sql = <span class="string">"select * from goods_cates_test where name = %s;"</span> </span><br><span class="line"></span><br><span class="line"><span class="comment"># 把列表传递给 execute(sql, 列表)</span></span><br><span class="line">row_count = cur.execute(sql，params)</span><br><span class="line">print(<span class="string">'MySQL数据库受到操作的行数为:%d'</span> % row_count)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查询结果</span></span><br><span class="line">result_list = cur.fetchall()</span><br><span class="line">print(result_list)</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> result_list:</span><br><span class="line">    print(line)</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>注意：</p>
-<ul>
-<li>如果要是有多个参数，需要进行参数化</li>
-<li>params = [数值1, 数值2….]，此时sql语句中有多个%s即可</li>
-<li>SQL 可以出现多个占位符，后续列表中元素的个数要与之对应</li>
+<li>GIL锁和手动设置的锁同样是互斥锁，都是用于防止程序运行过程中出现资源竞争而导致出现错误的问题</li>
+<li>GIL锁是CPython解释器自带的全局锁，无法由用户控制其的锁定释放位置，所以仍需要对需要锁定的操作设置threading.Lock()</li>
 </ul>
 </li>
 </ul>
@@ -1484,16 +732,16 @@ var _hmt = _hmt || [];
     
     <br>
     <strong class="create-time">发布时间：</strong>
-    2020-08-09 17:13:58
+    2020-08-18 20:20:18
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-08-12 09:15:33
+    2020-08-18 20:22:54
     <br>
     <strong class="article-titles">本文标题：</strong>
-    <a href="https://chthollists.github.io/post/428506b1.html" title="数据库系列CP3——MySQL数据库编程" target="_blank">数据库系列CP3——MySQL数据库编程</a>
+    <a href="https://chthollists.github.io/post/cf16f693.html" title="Python高阶语法系列CP4——GIL全局锁" target="_blank">Python高阶语法系列CP4——GIL全局锁</a>
     <br>
     <strong class="article-url">本文链接：</strong>
-    <a href="https://chthollists.github.io/post/428506b1.html" title="数据库系列CP3——MySQL数据库编程" target="_blank">https://chthollists.github.io/post/428506b1.html</a>
+    <a href="https://chthollists.github.io/post/cf16f693.html" title="Python高阶语法系列CP4——GIL全局锁" target="_blank">https://chthollists.github.io/post/cf16f693.html</a>
     <br>
     <strong class="copyright">版权声明：</strong>
     本作品采用
@@ -1553,19 +801,19 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">E-R模型</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">GIL</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">视图和事务</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">gcc</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">pymysql</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ctypes</a>
         		</li>
       		
 		</ul>
@@ -1577,11 +825,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/数据库//" class="article-tag-list-link color4">数据库</a>
+        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/数据库/MySQL//" class="article-tag-list-link color1">MySQL</a>
+        			<a href="/categories/Python/Advanced//" class="article-tag-list-link color4">Advanced</a>
         		</li>
       		
 		</ul>
@@ -1636,7 +884,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://chthollists.github.ioom/post/428506b1.html" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://chthollists.github.ioom/post/cf16f693.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -1657,18 +905,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/post/6f247b2e.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          博刊：今日物语：CP2——2020.08 一周目
-        
-      </div>
-    </a>
   
-  
-    <a href="/post/2db84f7e.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">数据库系列CP2——数据查询进阶操作</div>
+    <a href="/post/9fe65dd.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python高阶语法系列CP3——装饰器</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -1695,7 +934,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库系列CP3——MySQL数据库编程"><span class="toc-number">1.</span> <span class="toc-text">数据库系列CP3——MySQL数据库编程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#三、MySQL数据库编程"><span class="toc-number">1.1.</span> <span class="toc-text">三、MySQL数据库编程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-数据库编程基础"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 数据库编程基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-数据库高阶操作"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">1.1 数据库高阶操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-外键约束"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">1.2 外键约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-数据库引擎"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">1.3 数据库引擎</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-视图"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">1.4 视图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-事务"><span class="toc-number">1.1.1.5.</span> <span class="toc-text">1.5 事务</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-数据库设计"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 数据库设计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-数据库三范式"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">2.1 数据库三范式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-数据库设计实例"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2.2 数据库设计实例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-E-R模型"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">2.3 E-R模型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Python连接操作数据库"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. Python连接操作数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-Python访问MySQL流程"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">3.1 Python访问MySQL流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-Python连接数据库"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">3.2 Python连接数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-Python操作数据库-Curd"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">3.3 Python操作数据库(Curd)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-SQL防注入"><span class="toc-number">1.1.3.4.</span> <span class="toc-text">3.4 SQL防注入</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python高阶语法系列CP4——GIL全局锁"><span class="toc-number">1.</span> <span class="toc-text">Python高阶语法系列CP4——GIL全局锁</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#三、GIL锁"><span class="toc-number">1.1.</span> <span class="toc-text">三、GIL锁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-GIL锁简介"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. GIL锁简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-GIL锁引入"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">1.1 GIL锁引入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-GIL锁的概念"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">1.2 GIL锁的概念</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-GIL锁解决方法"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. GIL锁解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-GIL锁释放"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">2.1 GIL锁释放</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-GIL锁解决方案"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2.2 GIL锁解决方案</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-GIL面试常见问题"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. GIL面试常见问题</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -1735,7 +974,7 @@ if(true){
     repo: 'Chthollists.github.io',
     owner: 'Chthollists',
     admin: ['Chthollists'],
-    id: 'Sun Aug 09 2020 17:13:58 GMT+0800',
+    id: 'Tue Aug 18 2020 20:20:18 GMT+0800',
     distractionFreeMode: 'true'
 
 })

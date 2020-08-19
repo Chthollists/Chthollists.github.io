@@ -13,19 +13,20 @@
   <link rel="dns-prefetch" href="https://mfln8n.coding-pages.com">
   <title>Python高阶语法系列CP3——装饰器 | Chthollists的平凡之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Python高阶语法系列CP3——装饰器 CP3主要分享了 函数闭包 装饰器(含参、返回值) 装饰函数名：@functools.wraps(func)&#96; 装饰器工厂：外部变量 多重装饰器 类装饰器：init、call">
+  <meta name="description" content="Python高阶语法系列CP3——装饰器 CP3主要分享了 函数闭包 装饰器(含参、返回值) 装饰函数名：@functools.wraps(func)&#96; 装饰器工厂：外部变量 多重装饰器 类装饰器：init、call 类中Property属性的实现：装饰器方式、类属性方式 类方法：classmethod 静态方法：staticmethod">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python高阶语法系列CP3——装饰器">
 <meta property="og:url" content="https://mfln8n.coding-pages.com/post/9fe65dd.html">
 <meta property="og:site_name" content="Chthollists的平凡之路">
-<meta property="og:description" content="Python高阶语法系列CP3——装饰器 CP3主要分享了 函数闭包 装饰器(含参、返回值) 装饰函数名：@functools.wraps(func)&#96; 装饰器工厂：外部变量 多重装饰器 类装饰器：init、call">
+<meta property="og:description" content="Python高阶语法系列CP3——装饰器 CP3主要分享了 函数闭包 装饰器(含参、返回值) 装饰函数名：@functools.wraps(func)&#96; 装饰器工厂：外部变量 多重装饰器 类装饰器：init、call 类中Property属性的实现：装饰器方式、类属性方式 类方法：classmethod 静态方法：staticmethod">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-16T16:04:02.184Z">
-<meta property="article:modified_time" content="2020-08-16T16:08:23.601Z">
+<meta property="article:published_time" content="2020-08-18T12:18:30.000Z">
+<meta property="article:modified_time" content="2020-08-18T13:43:50.217Z">
 <meta property="article:author" content="Code.Yang">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="closure">
 <meta property="article:tag" content="Decorator">
+<meta property="article:tag" content="Property">
 <meta property="article:tag" content="functools">
 <meta name="twitter:card" content="summary">
   
@@ -135,7 +136,7 @@ var _hmt = _hmt || [];
 		</nav>
 		
 		<!-- # <nav>
-				Total: 25
+				Total: 26
 			</nav> -->
 			
 		
@@ -285,7 +286,7 @@ var _hmt = _hmt || [];
 
         
         <a href="/post/9fe65dd.html" class="archive-article-date">
-  	<time datetime="2020-08-16T16:04:02.184Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-17</time>
+  	<time datetime="2020-08-18T12:18:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-18</time>
 </a>
 		
         <!-- 需要添加的位置 -->
@@ -297,7 +298,7 @@ var _hmt = _hmt || [];
         <i class="fa fa-keyboard-o"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  博文字数统计 : </span></b></font>
         <!--自定义样式-->
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">2.6k字</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">5k字</span>
       </span></b></font>
     </span>
 
@@ -306,7 +307,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  阅读所需时长 : </span></b></font>
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">10分</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">20分</span>
       </span></b></font>
     </span>
 </div>
@@ -328,7 +329,7 @@ var _hmt = _hmt || [];
 	<div id="toc-article" class="toc-article">
 	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 		<strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python高阶语法系列CP3——装饰器"><span class="toc-number">1.</span> <span class="toc-text">Python高阶语法系列CP3——装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二、装饰器"><span class="toc-number">1.1.</span> <span class="toc-text">二、装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-函数闭包-closure"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 函数闭包(closure)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-基础知识"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">1.1 基础知识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-闭包中的变量问题"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">1.2 闭包中的变量问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-装饰器-Decorator"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 装饰器(Decorator)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-基础知识"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">2.1 基础知识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-装饰函数含参数"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2.2 装饰函数含参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-装饰函数有返回值"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">2.3 装饰函数有返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-装饰器工厂"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">2.4 装饰器工厂</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-多重装饰器"><span class="toc-number">1.1.2.5.</span> <span class="toc-text">2.5 多重装饰器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-类装饰器"><span class="toc-number">1.1.2.6.</span> <span class="toc-text">2.6 类装饰器</span></a></li></ol></li></ol></li></ol></li></ol>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python高阶语法系列CP3——装饰器"><span class="toc-number">1.</span> <span class="toc-text">Python高阶语法系列CP3——装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二、装饰器"><span class="toc-number">1.1.</span> <span class="toc-text">二、装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-函数闭包-closure"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 函数闭包(closure)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-基础知识"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">1.1 基础知识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-闭包中的变量问题"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">1.2 闭包中的变量问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-装饰器-Decorator"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 装饰器(Decorator)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-基础知识"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">2.1 基础知识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-装饰函数含参数"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2.2 装饰函数含参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-装饰函数有返回值"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">2.3 装饰函数有返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-装饰器工厂"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">2.4 装饰器工厂</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-多重装饰器"><span class="toc-number">1.1.2.5.</span> <span class="toc-text">2.5 多重装饰器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-类装饰器"><span class="toc-number">1.1.2.6.</span> <span class="toc-text">2.6 类装饰器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Property属性"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. Property属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-装饰器基本使用方法"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">3.1 装饰器基本使用方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-装饰器其他使用方法"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">3.2 装饰器其他使用方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-类属性方式"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">3.3 类属性方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-类方法和静态方法"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 类方法和静态方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-类方法"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">4.1 类方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-静态方法"><span class="toc-number">1.1.4.2.</span> <span class="toc-text">4.2 静态方法</span></a></li></ol></li></ol></li></ol></li></ol>
          </div>
    <script type="text/javascript">
 	function showToc(){
@@ -363,10 +364,19 @@ var _hmt = _hmt || [];
 <li>装饰器工厂：外部变量</li>
 <li>多重装饰器</li>
 <li>类装饰器：init、call</li>
+<li>类中Property属性的实现：装饰器方式、类属性方式</li>
+<li>类方法：classmethod</li>
+<li>静态方法：staticmethod</li>
 </ul>
 <a id="more"></a>
 
-<h1 id="Python高阶语法系列CP3——装饰器"><a href="#Python高阶语法系列CP3——装饰器" class="headerlink" title="Python高阶语法系列CP3——装饰器"></a>Python高阶语法系列CP3——装饰器</h1><h2 id="二、装饰器"><a href="#二、装饰器" class="headerlink" title="二、装饰器"></a>二、装饰器</h2><h3 id="1-函数闭包-closure"><a href="#1-函数闭包-closure" class="headerlink" title="1. 函数闭包(closure)"></a>1. 函数闭包(closure)</h3><h4 id="1-1-基础知识"><a href="#1-1-基础知识" class="headerlink" title="1.1 基础知识"></a>1.1 基础知识</h4><ul>
+<h1 id="Python高阶语法系列CP3——装饰器"><a href="#Python高阶语法系列CP3——装饰器" class="headerlink" title="Python高阶语法系列CP3——装饰器"></a>Python高阶语法系列CP3——装饰器</h1><h2 id="二、装饰器"><a href="#二、装饰器" class="headerlink" title="二、装饰器"></a>二、装饰器</h2><ul>
+<li>时间：2020.08.17~2020.08.20</li>
+</ul>
+<h3 id="1-函数闭包-closure"><a href="#1-函数闭包-closure" class="headerlink" title="1. 函数闭包(closure)"></a>1. 函数闭包(closure)</h3><ul>
+<li>时间：2020.08.17</li>
+</ul>
+<h4 id="1-1-基础知识"><a href="#1-1-基础知识" class="headerlink" title="1.1 基础知识"></a>1.1 基础知识</h4><ul>
 <li><p>函数的本质</p>
 <blockquote>
 <p>函数名实际上是一个特殊的变量，存储函数在内存中的首地址；</p>
@@ -417,10 +427,14 @@ var _hmt = _hmt || [];
 </blockquote>
 </li>
 </ul>
-<h3 id="2-装饰器-Decorator"><a href="#2-装饰器-Decorator" class="headerlink" title="2. 装饰器(Decorator)"></a>2. 装饰器(Decorator)</h3><h4 id="2-1-基础知识"><a href="#2-1-基础知识" class="headerlink" title="2.1 基础知识"></a>2.1 基础知识</h4><ul>
+<hr>
+<h3 id="2-装饰器-Decorator"><a href="#2-装饰器-Decorator" class="headerlink" title="2. 装饰器(Decorator)"></a>2. 装饰器(Decorator)</h3><ul>
+<li>时间：2020.08.18</li>
+</ul>
+<h4 id="2-1-基础知识"><a href="#2-1-基础知识" class="headerlink" title="2.1 基础知识"></a>2.1 基础知识</h4><ul>
 <li><p>装饰器概念</p>
 <blockquote>
-<p>在不改变函数的代码前提下，给函数添加新的功能</p>
+<p>在不改变函数的代码前提下，给函数添加新的功能，本质上是一个闭包函数。，本质上是一个闭包函数。</p>
 </blockquote>
 </li>
 <li><p>装饰器使用条件</p>
@@ -580,6 +594,219 @@ var _hmt = _hmt || [];
 </blockquote>
 </li>
 </ul>
+</li>
+</ul>
+<hr>
+<h3 id="3-Property属性"><a href="#3-Property属性" class="headerlink" title="3. Property属性"></a>3. Property属性</h3><ul>
+<li><p>时间：2020.08.19</p>
+</li>
+<li><p>Property属性实现方法：</p>
+<ul>
+<li>装饰器方式</li>
+<li>类属性方式</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-1-装饰器基本使用方法"><a href="#3-1-装饰器基本使用方法" class="headerlink" title="3.1 装饰器基本使用方法"></a>3.1 装饰器基本使用方法</h4><ul>
+<li><p>概念</p>
+<blockquote>
+<p>property是一种特殊的装饰器，使得类中的一些方法可以像属性一样调用；</p>
+<p>property属性内部进行⼀系列的逻辑计算，最终将计算结果返回；</p>
+<p>即调用被装饰的方法时，不必使用method()，直接使用method。</p>
+</blockquote>
+</li>
+<li><p>作用</p>
+<blockquote>
+<p>将⼀个属性的操作方法封装为⼀个属性，操作被装饰的方法时就和操作普通属性完全⼀致，从而简化对一个类的实例对象的属性的操作。</p>
+<p>可以使属性不直接暴露出来。</p>
+</blockquote>
+</li>
+<li><p>应用场景</p>
+<blockquote>
+<p>在使用类的一些属性的设置set与获取get方法时更加简便。</p>
+</blockquote>
+</li>
+<li><p>语法格式：直接在想要简化的方法定义前加上<code>@property</code></p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">     self.name =name</span><br><span class="line">   </span><br><span class="line"><span class="meta"> @property</span></span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">get_name</span><span class="params">(self)</span>:</span></span><br><span class="line">         <span class="keyword">return</span> self.name</span><br><span class="line"></span><br><span class="line">stu = Student(<span class="string">'li'</span>)</span><br><span class="line"><span class="comment"># 没有@property</span></span><br><span class="line">print(stu.get_name())</span><br><span class="line"><span class="comment"># 有@property</span></span><br><span class="line">print(stu.get_name)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>注意</p>
+<ul>
+<li>要想使用@property简化方法，该方法必须是只有一个参数：self</li>
+<li>使用@property后，调用该方法时的格式和调用属性相同</li>
+<li>如果被装饰的方法有return，则该方法名就等于该返回值，数据类型和内存地址也相同</li>
+</ul>
+</li>
+<li><p>实例：电商网页的分页显示，获取每页显示的起止商品编号</p>
+<ul>
+<li><p>无property装饰器</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Pager</span><span class="params">(object)</span>:</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, page_num, page_size)</span>:</span></span><br><span class="line">     self.current_pages = page_num</span><br><span class="line">     self.pages_size = page_size</span><br><span class="line">     self.total_num = self.get_total()</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">get_total</span><span class="params">(self)</span>:</span></span><br><span class="line">     conn = pymysql.connect(host=<span class="string">'localhost'</span>, user=<span class="string">'root'</span>, password=<span class="string">'ly666996'</span>, database=<span class="string">'python_test'</span>)</span><br><span class="line">     cur = conn.cursor()</span><br><span class="line">     sql = <span class="string">"select * from areas;"</span></span><br><span class="line">     total_num = cur.execute(sql)</span><br><span class="line">     cur.close()</span><br><span class="line">     conn.close()</span><br><span class="line">     <span class="keyword">return</span> total_num</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">get_start_num</span><span class="params">(self)</span>:</span></span><br><span class="line">     <span class="keyword">if</span> (self.current_pages - <span class="number">1</span>) * self.pages_size &gt;= self.total_num:</span><br><span class="line">         print(<span class="string">'该页数:%d页不存在！'</span> % self.current_pages)</span><br><span class="line">         start_num = <span class="literal">None</span></span><br><span class="line">     <span class="keyword">else</span>:</span><br><span class="line">         start_num = (self.current_pages - <span class="number">1</span>) * self.pages_size + <span class="number">1</span></span><br><span class="line">     <span class="keyword">return</span> start_num</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">get_end_num</span><span class="params">(self)</span>:</span></span><br><span class="line">     <span class="keyword">if</span> (self.current_pages - <span class="number">1</span>) * self.pages_size &lt; self.total_num &lt;= self.current_pages * self.pages_size:</span><br><span class="line">         print(<span class="string">'该页数:%d页为最后一页！'</span> % self.current_pages)</span><br><span class="line">         end_num = self.total_num</span><br><span class="line">     <span class="keyword">elif</span> self.current_pages * self.pages_size &lt; self.total_num:</span><br><span class="line">         end_num = self.current_pages * self.pages_size</span><br><span class="line">     <span class="keyword">else</span>:</span><br><span class="line">         print(<span class="string">'该页数:%d页不存在！'</span> % self.current_pages)</span><br><span class="line">         end_num = <span class="literal">None</span></span><br><span class="line">     <span class="keyword">return</span> end_num</span><br><span class="line"></span><br><span class="line"> <span class="comment"># 数据库中的商品的索引是从0开始的，但是编号为第一个的商品与索引间要有个转换，如商品编号为1</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">read_data</span><span class="params">(self)</span>:</span></span><br><span class="line">     start_num = self.get_start_num()</span><br><span class="line">     conn = pymysql.connect(host=<span class="string">'localhost'</span>, user=<span class="string">'root'</span>, password=<span class="string">'******'</span>, database=<span class="string">'python_test'</span>)</span><br><span class="line">     cur = conn.cursor()</span><br><span class="line">     sql = <span class="string">"select * from areas limit %d, %d;"</span> %(start_num<span class="number">-1</span>, self.pages_size)</span><br><span class="line">     cur.execute(sql)</span><br><span class="line">     result = cur.fetchall()</span><br><span class="line">     <span class="keyword">for</span> line <span class="keyword">in</span> result:</span><br><span class="line">         print(line)</span><br><span class="line">     cur.close()</span><br><span class="line">     conn.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pager = Pager(<span class="number">1</span>, <span class="number">10</span>)</span><br><span class="line">print(pager.total_num)</span><br><span class="line">print(pager.get_start_num())</span><br><span class="line">print(pager.get_end_num())</span><br><span class="line">pager.read_data()</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>使用property装饰器</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Pager</span><span class="params">(object)</span>:</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, page_num, page_size)</span>:</span></span><br><span class="line">     self.current_pages = page_num</span><br><span class="line">     self.pages_size = page_size</span><br><span class="line">     self.total_num = self.get_total()</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">get_total</span><span class="params">(self)</span>:</span></span><br><span class="line">     conn = pymysql.connect(host=<span class="string">'localhost'</span>, user=<span class="string">'root'</span>, password=<span class="string">'ly666996'</span>, database=<span class="string">'python_test'</span>)</span><br><span class="line">     cur = conn.cursor()</span><br><span class="line">     sql = <span class="string">"select * from areas;"</span></span><br><span class="line">     total_num = cur.execute(sql)</span><br><span class="line">     cur.close()</span><br><span class="line">     conn.close()</span><br><span class="line">     <span class="keyword">return</span> total_num</span><br><span class="line"></span><br><span class="line"><span class="meta"> @property</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">get_start_num</span><span class="params">(self)</span>:</span></span><br><span class="line">     <span class="keyword">if</span> (self.current_pages - <span class="number">1</span>) * self.pages_size &gt;= self.total_num:</span><br><span class="line">         print(<span class="string">'该页数:%d页不存在！'</span> % self.current_pages)</span><br><span class="line">         start_num = <span class="literal">None</span></span><br><span class="line">     <span class="keyword">else</span>:</span><br><span class="line">         start_num = (self.current_pages - <span class="number">1</span>) * self.pages_size + <span class="number">1</span></span><br><span class="line">     <span class="keyword">return</span> start_num</span><br><span class="line"></span><br><span class="line"><span class="meta"> @property</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">get_end_num</span><span class="params">(self)</span>:</span></span><br><span class="line">     <span class="keyword">if</span> (self.current_pages - <span class="number">1</span>) * self.pages_size &lt; self.total_num &lt;= self.current_pages * self.pages_size:</span><br><span class="line">         print(<span class="string">'该页数:%d页为最后一页！'</span> % self.current_pages)</span><br><span class="line">         end_num = self.total_num</span><br><span class="line">     <span class="keyword">elif</span> self.current_pages * self.pages_size &lt; self.total_num:</span><br><span class="line">         end_num = self.current_pages * self.pages_size</span><br><span class="line">     <span class="keyword">else</span>:</span><br><span class="line">         print(<span class="string">'该页数:%d页不存在！'</span> % self.current_pages)</span><br><span class="line">         end_num = <span class="literal">None</span></span><br><span class="line">     <span class="keyword">return</span> end_num</span><br><span class="line"></span><br><span class="line"> <span class="comment"># 数据库中的商品的索引是从0开始的，但是编号为第一个的商品与索引间要有个转换，如商品编号为1</span></span><br><span class="line"><span class="meta"> @property</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">read_data</span><span class="params">(self)</span>:</span></span><br><span class="line">     start_num = self.get_start_num</span><br><span class="line">     conn = pymysql.connect(host=<span class="string">'localhost'</span>, user=<span class="string">'root'</span>, password=<span class="string">'ly666996'</span>, database=<span class="string">'python_test'</span>)</span><br><span class="line">     cur = conn.cursor()</span><br><span class="line">     sql = <span class="string">"select * from areas limit %d, %d;"</span> %(start_num<span class="number">-1</span>, self.pages_size)</span><br><span class="line">     cur.execute(sql)</span><br><span class="line">     result = cur.fetchall()</span><br><span class="line">     <span class="keyword">for</span> line <span class="keyword">in</span> result:</span><br><span class="line">         print(line)</span><br><span class="line">     cur.close()</span><br><span class="line">     conn.close()</span><br><span class="line">     <span class="keyword">return</span> <span class="string">'Done'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pager = Pager(<span class="number">1</span>, <span class="number">10</span>)</span><br><span class="line">print(pager.total_num)</span><br><span class="line">print(pager.get_start_num)</span><br><span class="line">print(pager.get_end_num)</span><br><span class="line">print(pager.read_data)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-2-装饰器其他使用方法"><a href="#3-2-装饰器其他使用方法" class="headerlink" title="3.2 装饰器其他使用方法"></a>3.2 装饰器其他使用方法</h4><ul>
+<li><p>经典类与新式类</p>
+<ul>
+<li><p>经典类概念</p>
+<blockquote>
+<p> Python2及以前版本中的类，如果不是由任意内置类型派生出的类，称为经典类。</p>
+</blockquote>
+</li>
+<li><p>新式类概念</p>
+<blockquote>
+<p>Python2及以前版本中的类，如果是由任意内置类型派生出的类(只要一个内置类型位于类树的某个位置)，都属于新式类；而Python3中所有类默认都是新式类。</p>
+</blockquote>
+</li>
+<li><p>经典类的property装饰器只有一种形式：获取(get)</p>
+<ul>
+<li>@property</li>
+</ul>
+</li>
+<li><p>新式类的property装饰器具有三种形式：获取(get)、修改(set)、删除(delete)</p>
+<ul>
+<li>@property</li>
+<li>@method_name.setter</li>
+<li>@method_name.deleter</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>property的修改形式</p>
+<ul>
+<li><p>作用</p>
+<blockquote>
+<p>用来装饰需要传入其他参数的方法，从而通过传入的参数对实例属性进行修改</p>
+</blockquote>
+</li>
+<li><p>语法格式</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@method_name.setter</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">method_name</span><span class="params">(self, args)</span></span></span><br><span class="line">	self.prop = args</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>property的删除形式</p>
+<ul>
+<li><p>作用</p>
+<blockquote>
+<p>用来装饰实现一个删除属性的方法，从而释放内存</p>
+</blockquote>
+</li>
+<li><p>语法格式：</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@method_name.deleter</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">method_name</span><span class="params">(self)</span></span></span><br><span class="line"><span class="function">	<span class="title">del</span> <span class="title">self</span>.<span class="title">prop</span></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>实例：出生年与年龄</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, date)</span>:</span></span><br><span class="line">        self._birth = date</span><br><span class="line"></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">birth</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._birth</span><br><span class="line"></span><br><span class="line"><span class="meta">    @birth.setter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">birth</span><span class="params">(self, new_date)</span>:</span></span><br><span class="line">        self._birth = new_date</span><br><span class="line"></span><br><span class="line"><span class="meta">    @birth.deleter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">birth</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">del</span> self._birth</span><br><span class="line"></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_age</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">2020</span> - self._birth</span><br><span class="line"></span><br><span class="line">print(<span class="string">'-'</span> * <span class="number">30</span>)</span><br><span class="line">s = Student(<span class="number">2000</span>)</span><br><span class="line"></span><br><span class="line">print(s.birth)</span><br><span class="line">print(s.get_age)</span><br><span class="line">s.birth = <span class="number">1996</span></span><br><span class="line">print(s.birth)</span><br><span class="line">print(s.get_age)</span><br><span class="line"><span class="keyword">del</span> s.birth</span><br><span class="line"><span class="comment"># print(s.birth())   # TypeError: 'int' object is not callable</span></span><br><span class="line"><span class="comment"># s.get_age = 25      # error AttributeError: can't set attribute</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>注意</p>
+<ul>
+<li>要想使用property装饰器的修改、删除功能，需要先设置好@property；</li>
+<li>三种形式装饰的方法名必须相同。</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-3-类属性方式"><a href="#3-3-类属性方式" class="headerlink" title="3.3 类属性方式"></a>3.3 类属性方式</h4><ul>
+<li><p>property()方法概念</p>
+<blockquote>
+<p>通过property()方法可以将一个方法传递给一个类属性，从而通过调用该类属性来调用被传递的方法。</p>
+</blockquote>
+</li>
+<li><p>property()方法特点</p>
+<ul>
+<li>property()方法可以返回一个property对象，从而将类中的一个方法传递给一个类属性；</li>
+<li>当通过类调用该类属性时，值为property对象；</li>
+<li>当通过实例对象调用该类属性时，等价于直接调用property()方法作用的方法，执行该方法的代码，与property装饰器效果一致。</li>
+</ul>
+</li>
+<li><p>语法格式：<code>class_prop = property(method_name1, method_name2, method_name3, &#39;description&#39;)</code></p>
+<ul>
+<li>参数1：方法名，调用<code>对象.属性</code>时自动触发执行该方法，对应@property；</li>
+<li>参数2：方法名，调用<code>对象.属性 = value</code>时自动触发执行该方法，对应@method_name.setter；</li>
+<li>参数3：方法名，调用<code>del 对象.属性</code>时，自动触发执行该方法，对应@method_name.deleter；</li>
+<li>参数4：字符串，调用<code>类名.属性.__doc__</code>时，返回此字符串，表示该属性的描述信息。</li>
+</ul>
+</li>
+<li><p>实例：价格获取修改删除</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Goods</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        self.price = value</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_price</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(self.price, id(self.price))</span><br><span class="line">        print(<span class="string">'self.get_price:'</span>, id(self.get_price))</span><br><span class="line">        print(<span class="string">'--'</span> * <span class="number">20</span>)</span><br><span class="line">        <span class="comment"># self.set_price(1)</span></span><br><span class="line">        <span class="keyword">return</span> self.price</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">set_price</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        self.price = value</span><br><span class="line">        print(<span class="string">'self.set_price:'</span>, id(self.set_price))</span><br><span class="line">        <span class="keyword">return</span> self.price</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">del_price</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'self.del_price:'</span>, id(self.del_price))</span><br><span class="line">        <span class="keyword">del</span> self.price</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'del done'</span></span><br><span class="line"></span><br><span class="line">    cost = property(get_price, set_price, del_price, <span class="string">'Property()方法设置类属性'</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">property_method</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 类实例化，实例对象，及其实例属性</span></span><br><span class="line">    goods = Goods(<span class="number">100</span>)</span><br><span class="line">    print(goods.price)</span><br><span class="line">    <span class="comment"># 类.方法名，实例对象.方法名 及其地址</span></span><br><span class="line">    print(Goods.get_price, goods.get_price)</span><br><span class="line">    print(id(Goods.get_price), id(goods.get_price))</span><br><span class="line">    <span class="comment"># 实例方法</span></span><br><span class="line">    print(id(goods.get_price()))</span><br><span class="line">    <span class="comment"># 类.类属性(property)及其地址</span></span><br><span class="line">    print(Goods.cost, id(Goods.cost))</span><br><span class="line">    <span class="comment"># 实例对象.类属性(property)及其地址</span></span><br><span class="line">    print(id(goods.cost))</span><br><span class="line">    <span class="comment"># goods.cost  # 等价于 goods.get_price()</span></span><br><span class="line">    goods.cost = <span class="number">233</span>  <span class="comment"># 等价于 goods.set_price(args)</span></span><br><span class="line">    <span class="comment"># print(goods.price, id(goods.price))</span></span><br><span class="line">    print(id(goods.cost))</span><br><span class="line">    print(Goods.cost.__doc__)</span><br><span class="line">    <span class="comment"># print(goods.cost.__doc__)</span></span><br><span class="line">    <span class="keyword">del</span> goods.cost  <span class="comment"># 等价于 goods.del_price()</span></span><br><span class="line">    <span class="comment"># print(goods.cost)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># property_test()</span></span><br><span class="line">    property_method()</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>注意：</p>
+<ul>
+<li>定义property属性共有两种方式，分别是【装饰器】和【类属性】，而装饰器方式针对经典类和新式类⼜有所不同；</li>
+<li>使用property()方法将方法像属性一样调用时，与property装饰器不同，函数名要不同，一般设置为get_name、set_name、del_name这种形式；</li>
+<li>调用被传递的实例方法时与装饰器方式不同，只能通过实例对象，不能通过类调用，通过类调用不会执行被传递的函数，而是返回一个property对象。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="4-类方法和静态方法"><a href="#4-类方法和静态方法" class="headerlink" title="4. 类方法和静态方法"></a>4. 类方法和静态方法</h3><ul>
+<li>2020.08.20</li>
+</ul>
+<h4 id="4-1-类方法"><a href="#4-1-类方法" class="headerlink" title="4.1 类方法"></a>4.1 类方法</h4><ul>
+<li><p>概念</p>
+<blockquote>
+<p>类方法：通过classmethod装饰器修饰的方法</p>
+</blockquote>
+</li>
+<li><p>作用</p>
+<blockquote>
+<p>使用@classmethod装饰后的方法被称为类方法，类方法既可以被类的实例对象调用，也可以被类直接调用，普通的方法只能被实例对象调用。</p>
+</blockquote>
+</li>
+<li><p>适用场景</p>
+<blockquote>
+<p>类方法一般用于操作类属性或私有类属性，即该方法不传递实例对象，没有其他参数</p>
+</blockquote>
+</li>
+<li><p>语法格式</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    class_id = <span class="number">414</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_class_id</span><span class="params">(cls)</span>:</span></span><br><span class="line">        cls().get_name()</span><br><span class="line">        <span class="keyword">return</span> cls.class_id</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.name</span><br><span class="line"></span><br><span class="line">stu = Student(<span class="string">'li'</span>)</span><br><span class="line"><span class="comment"># 没有@classmethod</span></span><br><span class="line">print(stu.get_name())</span><br><span class="line">print(stu.get_class_id())</span><br><span class="line"><span class="comment"># print(Student.get_class_id())   # TypeError: get_class_id() missing 1 required positional argument: 'cls'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 有@classmethod</span></span><br><span class="line">print(stu.get_class_id())</span><br><span class="line">print(Student.get_class_id())</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>注意</p>
+<ul>
+<li>实际上，对于普通的方法，self表示的是实例对象本身，与实例对象内存地址相同；</li>
+<li>对于类方法，cls表示的是类本身，与类的内存地址相同。</li>
+<li>类方法的参数只能有一个，就是类本身cls。</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-2-静态方法"><a href="#4-2-静态方法" class="headerlink" title="4.2 静态方法"></a>4.2 静态方法</h4><ul>
+<li><p>概念</p>
+<blockquote>
+<p>静态方法：通过staticmethod装饰器修饰的方法</p>
+</blockquote>
+</li>
+<li><p>作用</p>
+<blockquote>
+<p>使用@staticmethod装饰后的方法被称为静态方法，静态方法同样既可以被类的实例对象调用，也可以被类直接调用，普通的方法只能被实例对象调用。</p>
+</blockquote>
+</li>
+<li><p>适用场景</p>
+<blockquote>
+<p>当方法中既不需要定义或传递实例对象，也不需要定义或传递类对象时，使用静态方法，减少参数传递、内存占用。</p>
+</blockquote>
+</li>
+<li><p>语法格式</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    class_id = <span class="number">414</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_class_id</span><span class="params">(cls)</span>:</span></span><br><span class="line">        cls().get_name()</span><br><span class="line">        <span class="keyword">return</span> cls.class_id</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.name</span><br><span class="line">    </span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print_info</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="comment"># print('说明信息')</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">'说明信息'</span></span><br><span class="line"></span><br><span class="line">stu = Student(<span class="string">'li'</span>)</span><br><span class="line"><span class="comment"># 没有@staticmethod</span></span><br><span class="line">print(stu.get_name())</span><br><span class="line">print(stu.print_info())</span><br><span class="line"><span class="comment"># print(Student.print_info())   # TypeError: get_class_id() missing 1 required positional argument: 'cls'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 有@staticmethod</span></span><br><span class="line">print(stu.print_info())</span><br><span class="line">print(Student.print_info())</span><br></pre></td></tr></table></figure>
+</blockquote>
 </li>
 </ul>
 
@@ -598,10 +825,19 @@ var _hmt = _hmt || [];
 <li>装饰器工厂：外部变量</li>
 <li>多重装饰器</li>
 <li>类装饰器：init、call</li>
+<li>类中Property属性的实现：装饰器方式、类属性方式</li>
+<li>类方法：classmethod</li>
+<li>静态方法：staticmethod</li>
 </ul>
 <a id="more"></a>
 
-<h1 id="Python高阶语法系列CP3——装饰器"><a href="#Python高阶语法系列CP3——装饰器" class="headerlink" title="Python高阶语法系列CP3——装饰器"></a>Python高阶语法系列CP3——装饰器</h1><h2 id="二、装饰器"><a href="#二、装饰器" class="headerlink" title="二、装饰器"></a>二、装饰器</h2><h3 id="1-函数闭包-closure"><a href="#1-函数闭包-closure" class="headerlink" title="1. 函数闭包(closure)"></a>1. 函数闭包(closure)</h3><h4 id="1-1-基础知识"><a href="#1-1-基础知识" class="headerlink" title="1.1 基础知识"></a>1.1 基础知识</h4><ul>
+<h1 id="Python高阶语法系列CP3——装饰器"><a href="#Python高阶语法系列CP3——装饰器" class="headerlink" title="Python高阶语法系列CP3——装饰器"></a>Python高阶语法系列CP3——装饰器</h1><h2 id="二、装饰器"><a href="#二、装饰器" class="headerlink" title="二、装饰器"></a>二、装饰器</h2><ul>
+<li>时间：2020.08.17~2020.08.20</li>
+</ul>
+<h3 id="1-函数闭包-closure"><a href="#1-函数闭包-closure" class="headerlink" title="1. 函数闭包(closure)"></a>1. 函数闭包(closure)</h3><ul>
+<li>时间：2020.08.17</li>
+</ul>
+<h4 id="1-1-基础知识"><a href="#1-1-基础知识" class="headerlink" title="1.1 基础知识"></a>1.1 基础知识</h4><ul>
 <li><p>函数的本质</p>
 <blockquote>
 <p>函数名实际上是一个特殊的变量，存储函数在内存中的首地址；</p>
@@ -652,10 +888,14 @@ var _hmt = _hmt || [];
 </blockquote>
 </li>
 </ul>
-<h3 id="2-装饰器-Decorator"><a href="#2-装饰器-Decorator" class="headerlink" title="2. 装饰器(Decorator)"></a>2. 装饰器(Decorator)</h3><h4 id="2-1-基础知识"><a href="#2-1-基础知识" class="headerlink" title="2.1 基础知识"></a>2.1 基础知识</h4><ul>
+<hr>
+<h3 id="2-装饰器-Decorator"><a href="#2-装饰器-Decorator" class="headerlink" title="2. 装饰器(Decorator)"></a>2. 装饰器(Decorator)</h3><ul>
+<li>时间：2020.08.18</li>
+</ul>
+<h4 id="2-1-基础知识"><a href="#2-1-基础知识" class="headerlink" title="2.1 基础知识"></a>2.1 基础知识</h4><ul>
 <li><p>装饰器概念</p>
 <blockquote>
-<p>在不改变函数的代码前提下，给函数添加新的功能</p>
+<p>在不改变函数的代码前提下，给函数添加新的功能，本质上是一个闭包函数。，本质上是一个闭包函数。</p>
 </blockquote>
 </li>
 <li><p>装饰器使用条件</p>
@@ -815,6 +1055,219 @@ var _hmt = _hmt || [];
 </blockquote>
 </li>
 </ul>
+</li>
+</ul>
+<hr>
+<h3 id="3-Property属性"><a href="#3-Property属性" class="headerlink" title="3. Property属性"></a>3. Property属性</h3><ul>
+<li><p>时间：2020.08.19</p>
+</li>
+<li><p>Property属性实现方法：</p>
+<ul>
+<li>装饰器方式</li>
+<li>类属性方式</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-1-装饰器基本使用方法"><a href="#3-1-装饰器基本使用方法" class="headerlink" title="3.1 装饰器基本使用方法"></a>3.1 装饰器基本使用方法</h4><ul>
+<li><p>概念</p>
+<blockquote>
+<p>property是一种特殊的装饰器，使得类中的一些方法可以像属性一样调用；</p>
+<p>property属性内部进行⼀系列的逻辑计算，最终将计算结果返回；</p>
+<p>即调用被装饰的方法时，不必使用method()，直接使用method。</p>
+</blockquote>
+</li>
+<li><p>作用</p>
+<blockquote>
+<p>将⼀个属性的操作方法封装为⼀个属性，操作被装饰的方法时就和操作普通属性完全⼀致，从而简化对一个类的实例对象的属性的操作。</p>
+<p>可以使属性不直接暴露出来。</p>
+</blockquote>
+</li>
+<li><p>应用场景</p>
+<blockquote>
+<p>在使用类的一些属性的设置set与获取get方法时更加简便。</p>
+</blockquote>
+</li>
+<li><p>语法格式：直接在想要简化的方法定义前加上<code>@property</code></p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">     self.name =name</span><br><span class="line">   </span><br><span class="line"><span class="meta"> @property</span></span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">get_name</span><span class="params">(self)</span>:</span></span><br><span class="line">         <span class="keyword">return</span> self.name</span><br><span class="line"></span><br><span class="line">stu = Student(<span class="string">'li'</span>)</span><br><span class="line"><span class="comment"># 没有@property</span></span><br><span class="line">print(stu.get_name())</span><br><span class="line"><span class="comment"># 有@property</span></span><br><span class="line">print(stu.get_name)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>注意</p>
+<ul>
+<li>要想使用@property简化方法，该方法必须是只有一个参数：self</li>
+<li>使用@property后，调用该方法时的格式和调用属性相同</li>
+<li>如果被装饰的方法有return，则该方法名就等于该返回值，数据类型和内存地址也相同</li>
+</ul>
+</li>
+<li><p>实例：电商网页的分页显示，获取每页显示的起止商品编号</p>
+<ul>
+<li><p>无property装饰器</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Pager</span><span class="params">(object)</span>:</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, page_num, page_size)</span>:</span></span><br><span class="line">     self.current_pages = page_num</span><br><span class="line">     self.pages_size = page_size</span><br><span class="line">     self.total_num = self.get_total()</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">get_total</span><span class="params">(self)</span>:</span></span><br><span class="line">     conn = pymysql.connect(host=<span class="string">'localhost'</span>, user=<span class="string">'root'</span>, password=<span class="string">'ly666996'</span>, database=<span class="string">'python_test'</span>)</span><br><span class="line">     cur = conn.cursor()</span><br><span class="line">     sql = <span class="string">"select * from areas;"</span></span><br><span class="line">     total_num = cur.execute(sql)</span><br><span class="line">     cur.close()</span><br><span class="line">     conn.close()</span><br><span class="line">     <span class="keyword">return</span> total_num</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">get_start_num</span><span class="params">(self)</span>:</span></span><br><span class="line">     <span class="keyword">if</span> (self.current_pages - <span class="number">1</span>) * self.pages_size &gt;= self.total_num:</span><br><span class="line">         print(<span class="string">'该页数:%d页不存在！'</span> % self.current_pages)</span><br><span class="line">         start_num = <span class="literal">None</span></span><br><span class="line">     <span class="keyword">else</span>:</span><br><span class="line">         start_num = (self.current_pages - <span class="number">1</span>) * self.pages_size + <span class="number">1</span></span><br><span class="line">     <span class="keyword">return</span> start_num</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">get_end_num</span><span class="params">(self)</span>:</span></span><br><span class="line">     <span class="keyword">if</span> (self.current_pages - <span class="number">1</span>) * self.pages_size &lt; self.total_num &lt;= self.current_pages * self.pages_size:</span><br><span class="line">         print(<span class="string">'该页数:%d页为最后一页！'</span> % self.current_pages)</span><br><span class="line">         end_num = self.total_num</span><br><span class="line">     <span class="keyword">elif</span> self.current_pages * self.pages_size &lt; self.total_num:</span><br><span class="line">         end_num = self.current_pages * self.pages_size</span><br><span class="line">     <span class="keyword">else</span>:</span><br><span class="line">         print(<span class="string">'该页数:%d页不存在！'</span> % self.current_pages)</span><br><span class="line">         end_num = <span class="literal">None</span></span><br><span class="line">     <span class="keyword">return</span> end_num</span><br><span class="line"></span><br><span class="line"> <span class="comment"># 数据库中的商品的索引是从0开始的，但是编号为第一个的商品与索引间要有个转换，如商品编号为1</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">read_data</span><span class="params">(self)</span>:</span></span><br><span class="line">     start_num = self.get_start_num()</span><br><span class="line">     conn = pymysql.connect(host=<span class="string">'localhost'</span>, user=<span class="string">'root'</span>, password=<span class="string">'******'</span>, database=<span class="string">'python_test'</span>)</span><br><span class="line">     cur = conn.cursor()</span><br><span class="line">     sql = <span class="string">"select * from areas limit %d, %d;"</span> %(start_num<span class="number">-1</span>, self.pages_size)</span><br><span class="line">     cur.execute(sql)</span><br><span class="line">     result = cur.fetchall()</span><br><span class="line">     <span class="keyword">for</span> line <span class="keyword">in</span> result:</span><br><span class="line">         print(line)</span><br><span class="line">     cur.close()</span><br><span class="line">     conn.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pager = Pager(<span class="number">1</span>, <span class="number">10</span>)</span><br><span class="line">print(pager.total_num)</span><br><span class="line">print(pager.get_start_num())</span><br><span class="line">print(pager.get_end_num())</span><br><span class="line">pager.read_data()</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>使用property装饰器</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Pager</span><span class="params">(object)</span>:</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, page_num, page_size)</span>:</span></span><br><span class="line">     self.current_pages = page_num</span><br><span class="line">     self.pages_size = page_size</span><br><span class="line">     self.total_num = self.get_total()</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">get_total</span><span class="params">(self)</span>:</span></span><br><span class="line">     conn = pymysql.connect(host=<span class="string">'localhost'</span>, user=<span class="string">'root'</span>, password=<span class="string">'ly666996'</span>, database=<span class="string">'python_test'</span>)</span><br><span class="line">     cur = conn.cursor()</span><br><span class="line">     sql = <span class="string">"select * from areas;"</span></span><br><span class="line">     total_num = cur.execute(sql)</span><br><span class="line">     cur.close()</span><br><span class="line">     conn.close()</span><br><span class="line">     <span class="keyword">return</span> total_num</span><br><span class="line"></span><br><span class="line"><span class="meta"> @property</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">get_start_num</span><span class="params">(self)</span>:</span></span><br><span class="line">     <span class="keyword">if</span> (self.current_pages - <span class="number">1</span>) * self.pages_size &gt;= self.total_num:</span><br><span class="line">         print(<span class="string">'该页数:%d页不存在！'</span> % self.current_pages)</span><br><span class="line">         start_num = <span class="literal">None</span></span><br><span class="line">     <span class="keyword">else</span>:</span><br><span class="line">         start_num = (self.current_pages - <span class="number">1</span>) * self.pages_size + <span class="number">1</span></span><br><span class="line">     <span class="keyword">return</span> start_num</span><br><span class="line"></span><br><span class="line"><span class="meta"> @property</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">get_end_num</span><span class="params">(self)</span>:</span></span><br><span class="line">     <span class="keyword">if</span> (self.current_pages - <span class="number">1</span>) * self.pages_size &lt; self.total_num &lt;= self.current_pages * self.pages_size:</span><br><span class="line">         print(<span class="string">'该页数:%d页为最后一页！'</span> % self.current_pages)</span><br><span class="line">         end_num = self.total_num</span><br><span class="line">     <span class="keyword">elif</span> self.current_pages * self.pages_size &lt; self.total_num:</span><br><span class="line">         end_num = self.current_pages * self.pages_size</span><br><span class="line">     <span class="keyword">else</span>:</span><br><span class="line">         print(<span class="string">'该页数:%d页不存在！'</span> % self.current_pages)</span><br><span class="line">         end_num = <span class="literal">None</span></span><br><span class="line">     <span class="keyword">return</span> end_num</span><br><span class="line"></span><br><span class="line"> <span class="comment"># 数据库中的商品的索引是从0开始的，但是编号为第一个的商品与索引间要有个转换，如商品编号为1</span></span><br><span class="line"><span class="meta"> @property</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">read_data</span><span class="params">(self)</span>:</span></span><br><span class="line">     start_num = self.get_start_num</span><br><span class="line">     conn = pymysql.connect(host=<span class="string">'localhost'</span>, user=<span class="string">'root'</span>, password=<span class="string">'ly666996'</span>, database=<span class="string">'python_test'</span>)</span><br><span class="line">     cur = conn.cursor()</span><br><span class="line">     sql = <span class="string">"select * from areas limit %d, %d;"</span> %(start_num<span class="number">-1</span>, self.pages_size)</span><br><span class="line">     cur.execute(sql)</span><br><span class="line">     result = cur.fetchall()</span><br><span class="line">     <span class="keyword">for</span> line <span class="keyword">in</span> result:</span><br><span class="line">         print(line)</span><br><span class="line">     cur.close()</span><br><span class="line">     conn.close()</span><br><span class="line">     <span class="keyword">return</span> <span class="string">'Done'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pager = Pager(<span class="number">1</span>, <span class="number">10</span>)</span><br><span class="line">print(pager.total_num)</span><br><span class="line">print(pager.get_start_num)</span><br><span class="line">print(pager.get_end_num)</span><br><span class="line">print(pager.read_data)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-2-装饰器其他使用方法"><a href="#3-2-装饰器其他使用方法" class="headerlink" title="3.2 装饰器其他使用方法"></a>3.2 装饰器其他使用方法</h4><ul>
+<li><p>经典类与新式类</p>
+<ul>
+<li><p>经典类概念</p>
+<blockquote>
+<p> Python2及以前版本中的类，如果不是由任意内置类型派生出的类，称为经典类。</p>
+</blockquote>
+</li>
+<li><p>新式类概念</p>
+<blockquote>
+<p>Python2及以前版本中的类，如果是由任意内置类型派生出的类(只要一个内置类型位于类树的某个位置)，都属于新式类；而Python3中所有类默认都是新式类。</p>
+</blockquote>
+</li>
+<li><p>经典类的property装饰器只有一种形式：获取(get)</p>
+<ul>
+<li>@property</li>
+</ul>
+</li>
+<li><p>新式类的property装饰器具有三种形式：获取(get)、修改(set)、删除(delete)</p>
+<ul>
+<li>@property</li>
+<li>@method_name.setter</li>
+<li>@method_name.deleter</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>property的修改形式</p>
+<ul>
+<li><p>作用</p>
+<blockquote>
+<p>用来装饰需要传入其他参数的方法，从而通过传入的参数对实例属性进行修改</p>
+</blockquote>
+</li>
+<li><p>语法格式</p>
+<blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@method_name.setter</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">method_name</span><span class="params">(self, args)</span></span></span><br><span class="line">	self.prop = args</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>property的删除形式</p>
+<ul>
+<li><p>作用</p>
+<blockquote>
+<p>用来装饰实现一个删除属性的方法，从而释放内存</p>
+</blockquote>
+</li>
+<li><p>语法格式：</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@method_name.deleter</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">method_name</span><span class="params">(self)</span></span></span><br><span class="line"><span class="function">	<span class="title">del</span> <span class="title">self</span>.<span class="title">prop</span></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>实例：出生年与年龄</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, date)</span>:</span></span><br><span class="line">        self._birth = date</span><br><span class="line"></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">birth</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._birth</span><br><span class="line"></span><br><span class="line"><span class="meta">    @birth.setter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">birth</span><span class="params">(self, new_date)</span>:</span></span><br><span class="line">        self._birth = new_date</span><br><span class="line"></span><br><span class="line"><span class="meta">    @birth.deleter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">birth</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">del</span> self._birth</span><br><span class="line"></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_age</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">2020</span> - self._birth</span><br><span class="line"></span><br><span class="line">print(<span class="string">'-'</span> * <span class="number">30</span>)</span><br><span class="line">s = Student(<span class="number">2000</span>)</span><br><span class="line"></span><br><span class="line">print(s.birth)</span><br><span class="line">print(s.get_age)</span><br><span class="line">s.birth = <span class="number">1996</span></span><br><span class="line">print(s.birth)</span><br><span class="line">print(s.get_age)</span><br><span class="line"><span class="keyword">del</span> s.birth</span><br><span class="line"><span class="comment"># print(s.birth())   # TypeError: 'int' object is not callable</span></span><br><span class="line"><span class="comment"># s.get_age = 25      # error AttributeError: can't set attribute</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>注意</p>
+<ul>
+<li>要想使用property装饰器的修改、删除功能，需要先设置好@property；</li>
+<li>三种形式装饰的方法名必须相同。</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-3-类属性方式"><a href="#3-3-类属性方式" class="headerlink" title="3.3 类属性方式"></a>3.3 类属性方式</h4><ul>
+<li><p>property()方法概念</p>
+<blockquote>
+<p>通过property()方法可以将一个方法传递给一个类属性，从而通过调用该类属性来调用被传递的方法。</p>
+</blockquote>
+</li>
+<li><p>property()方法特点</p>
+<ul>
+<li>property()方法可以返回一个property对象，从而将类中的一个方法传递给一个类属性；</li>
+<li>当通过类调用该类属性时，值为property对象；</li>
+<li>当通过实例对象调用该类属性时，等价于直接调用property()方法作用的方法，执行该方法的代码，与property装饰器效果一致。</li>
+</ul>
+</li>
+<li><p>语法格式：<code>class_prop = property(method_name1, method_name2, method_name3, &#39;description&#39;)</code></p>
+<ul>
+<li>参数1：方法名，调用<code>对象.属性</code>时自动触发执行该方法，对应@property；</li>
+<li>参数2：方法名，调用<code>对象.属性 = value</code>时自动触发执行该方法，对应@method_name.setter；</li>
+<li>参数3：方法名，调用<code>del 对象.属性</code>时，自动触发执行该方法，对应@method_name.deleter；</li>
+<li>参数4：字符串，调用<code>类名.属性.__doc__</code>时，返回此字符串，表示该属性的描述信息。</li>
+</ul>
+</li>
+<li><p>实例：价格获取修改删除</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Goods</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        self.price = value</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_price</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(self.price, id(self.price))</span><br><span class="line">        print(<span class="string">'self.get_price:'</span>, id(self.get_price))</span><br><span class="line">        print(<span class="string">'--'</span> * <span class="number">20</span>)</span><br><span class="line">        <span class="comment"># self.set_price(1)</span></span><br><span class="line">        <span class="keyword">return</span> self.price</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">set_price</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        self.price = value</span><br><span class="line">        print(<span class="string">'self.set_price:'</span>, id(self.set_price))</span><br><span class="line">        <span class="keyword">return</span> self.price</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">del_price</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'self.del_price:'</span>, id(self.del_price))</span><br><span class="line">        <span class="keyword">del</span> self.price</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'del done'</span></span><br><span class="line"></span><br><span class="line">    cost = property(get_price, set_price, del_price, <span class="string">'Property()方法设置类属性'</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">property_method</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 类实例化，实例对象，及其实例属性</span></span><br><span class="line">    goods = Goods(<span class="number">100</span>)</span><br><span class="line">    print(goods.price)</span><br><span class="line">    <span class="comment"># 类.方法名，实例对象.方法名 及其地址</span></span><br><span class="line">    print(Goods.get_price, goods.get_price)</span><br><span class="line">    print(id(Goods.get_price), id(goods.get_price))</span><br><span class="line">    <span class="comment"># 实例方法</span></span><br><span class="line">    print(id(goods.get_price()))</span><br><span class="line">    <span class="comment"># 类.类属性(property)及其地址</span></span><br><span class="line">    print(Goods.cost, id(Goods.cost))</span><br><span class="line">    <span class="comment"># 实例对象.类属性(property)及其地址</span></span><br><span class="line">    print(id(goods.cost))</span><br><span class="line">    <span class="comment"># goods.cost  # 等价于 goods.get_price()</span></span><br><span class="line">    goods.cost = <span class="number">233</span>  <span class="comment"># 等价于 goods.set_price(args)</span></span><br><span class="line">    <span class="comment"># print(goods.price, id(goods.price))</span></span><br><span class="line">    print(id(goods.cost))</span><br><span class="line">    print(Goods.cost.__doc__)</span><br><span class="line">    <span class="comment"># print(goods.cost.__doc__)</span></span><br><span class="line">    <span class="keyword">del</span> goods.cost  <span class="comment"># 等价于 goods.del_price()</span></span><br><span class="line">    <span class="comment"># print(goods.cost)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># property_test()</span></span><br><span class="line">    property_method()</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>注意：</p>
+<ul>
+<li>定义property属性共有两种方式，分别是【装饰器】和【类属性】，而装饰器方式针对经典类和新式类⼜有所不同；</li>
+<li>使用property()方法将方法像属性一样调用时，与property装饰器不同，函数名要不同，一般设置为get_name、set_name、del_name这种形式；</li>
+<li>调用被传递的实例方法时与装饰器方式不同，只能通过实例对象，不能通过类调用，通过类调用不会执行被传递的函数，而是返回一个property对象。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="4-类方法和静态方法"><a href="#4-类方法和静态方法" class="headerlink" title="4. 类方法和静态方法"></a>4. 类方法和静态方法</h3><ul>
+<li>2020.08.20</li>
+</ul>
+<h4 id="4-1-类方法"><a href="#4-1-类方法" class="headerlink" title="4.1 类方法"></a>4.1 类方法</h4><ul>
+<li><p>概念</p>
+<blockquote>
+<p>类方法：通过classmethod装饰器修饰的方法</p>
+</blockquote>
+</li>
+<li><p>作用</p>
+<blockquote>
+<p>使用@classmethod装饰后的方法被称为类方法，类方法既可以被类的实例对象调用，也可以被类直接调用，普通的方法只能被实例对象调用。</p>
+</blockquote>
+</li>
+<li><p>适用场景</p>
+<blockquote>
+<p>类方法一般用于操作类属性或私有类属性，即该方法不传递实例对象，没有其他参数</p>
+</blockquote>
+</li>
+<li><p>语法格式</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    class_id = <span class="number">414</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_class_id</span><span class="params">(cls)</span>:</span></span><br><span class="line">        cls().get_name()</span><br><span class="line">        <span class="keyword">return</span> cls.class_id</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.name</span><br><span class="line"></span><br><span class="line">stu = Student(<span class="string">'li'</span>)</span><br><span class="line"><span class="comment"># 没有@classmethod</span></span><br><span class="line">print(stu.get_name())</span><br><span class="line">print(stu.get_class_id())</span><br><span class="line"><span class="comment"># print(Student.get_class_id())   # TypeError: get_class_id() missing 1 required positional argument: 'cls'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 有@classmethod</span></span><br><span class="line">print(stu.get_class_id())</span><br><span class="line">print(Student.get_class_id())</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>注意</p>
+<ul>
+<li>实际上，对于普通的方法，self表示的是实例对象本身，与实例对象内存地址相同；</li>
+<li>对于类方法，cls表示的是类本身，与类的内存地址相同。</li>
+<li>类方法的参数只能有一个，就是类本身cls。</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-2-静态方法"><a href="#4-2-静态方法" class="headerlink" title="4.2 静态方法"></a>4.2 静态方法</h4><ul>
+<li><p>概念</p>
+<blockquote>
+<p>静态方法：通过staticmethod装饰器修饰的方法</p>
+</blockquote>
+</li>
+<li><p>作用</p>
+<blockquote>
+<p>使用@staticmethod装饰后的方法被称为静态方法，静态方法同样既可以被类的实例对象调用，也可以被类直接调用，普通的方法只能被实例对象调用。</p>
+</blockquote>
+</li>
+<li><p>适用场景</p>
+<blockquote>
+<p>当方法中既不需要定义或传递实例对象，也不需要定义或传递类对象时，使用静态方法，减少参数传递、内存占用。</p>
+</blockquote>
+</li>
+<li><p>语法格式</p>
+<blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    class_id = <span class="number">414</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_class_id</span><span class="params">(cls)</span>:</span></span><br><span class="line">        cls().get_name()</span><br><span class="line">        <span class="keyword">return</span> cls.class_id</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_name</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.name</span><br><span class="line">    </span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">print_info</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="comment"># print('说明信息')</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">'说明信息'</span></span><br><span class="line"></span><br><span class="line">stu = Student(<span class="string">'li'</span>)</span><br><span class="line"><span class="comment"># 没有@staticmethod</span></span><br><span class="line">print(stu.get_name())</span><br><span class="line">print(stu.print_info())</span><br><span class="line"><span class="comment"># print(Student.print_info())   # TypeError: get_class_id() missing 1 required positional argument: 'cls'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 有@staticmethod</span></span><br><span class="line">print(stu.print_info())</span><br><span class="line">print(Student.print_info())</span><br></pre></td></tr></table></figure>
+</blockquote>
 </li>
 </ul>
 
@@ -838,10 +1291,10 @@ var _hmt = _hmt || [];
     
     <br>
     <strong class="create-time">发布时间：</strong>
-    2020-08-17 00:04:02
+    2020-08-18 20:18:30
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-08-17 00:08:23
+    2020-08-18 21:43:50
     <br>
     <strong class="article-titles">本文标题：</strong>
     <a href="https://chthollists.github.io/post/9fe65dd.html" title="Python高阶语法系列CP3——装饰器" target="_blank">Python高阶语法系列CP3——装饰器</a>
@@ -916,6 +1369,10 @@ var _hmt = _hmt || [];
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Decorator</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Property</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -1011,6 +1468,15 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/post/cf16f693.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Python高阶语法系列CP4——GIL全局锁
+        
+      </div>
+    </a>
+  
   
     <a href="/post/86835662.html" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Python高阶语法系列CP2——协程</div>
@@ -1040,7 +1506,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python高阶语法系列CP3——装饰器"><span class="toc-number">1.</span> <span class="toc-text">Python高阶语法系列CP3——装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二、装饰器"><span class="toc-number">1.1.</span> <span class="toc-text">二、装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-函数闭包-closure"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 函数闭包(closure)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-基础知识"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">1.1 基础知识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-闭包中的变量问题"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">1.2 闭包中的变量问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-装饰器-Decorator"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 装饰器(Decorator)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-基础知识"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">2.1 基础知识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-装饰函数含参数"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2.2 装饰函数含参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-装饰函数有返回值"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">2.3 装饰函数有返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-装饰器工厂"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">2.4 装饰器工厂</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-多重装饰器"><span class="toc-number">1.1.2.5.</span> <span class="toc-text">2.5 多重装饰器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-类装饰器"><span class="toc-number">1.1.2.6.</span> <span class="toc-text">2.6 类装饰器</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python高阶语法系列CP3——装饰器"><span class="toc-number">1.</span> <span class="toc-text">Python高阶语法系列CP3——装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二、装饰器"><span class="toc-number">1.1.</span> <span class="toc-text">二、装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-函数闭包-closure"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 函数闭包(closure)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-基础知识"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">1.1 基础知识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-闭包中的变量问题"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">1.2 闭包中的变量问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-装饰器-Decorator"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 装饰器(Decorator)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-基础知识"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">2.1 基础知识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-装饰函数含参数"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2.2 装饰函数含参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-装饰函数有返回值"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">2.3 装饰函数有返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-装饰器工厂"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">2.4 装饰器工厂</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-多重装饰器"><span class="toc-number">1.1.2.5.</span> <span class="toc-text">2.5 多重装饰器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-类装饰器"><span class="toc-number">1.1.2.6.</span> <span class="toc-text">2.6 类装饰器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Property属性"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. Property属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-装饰器基本使用方法"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">3.1 装饰器基本使用方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-装饰器其他使用方法"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">3.2 装饰器其他使用方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-类属性方式"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">3.3 类属性方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-类方法和静态方法"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 类方法和静态方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-类方法"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">4.1 类方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-静态方法"><span class="toc-number">1.1.4.2.</span> <span class="toc-text">4.2 静态方法</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -1080,7 +1546,7 @@ if(true){
     repo: 'Chthollists.github.io',
     owner: 'Chthollists',
     admin: ['Chthollists'],
-    id: 'Mon Aug 17 2020 00:04:02 GMT+0800',
+    id: 'Tue Aug 18 2020 20:18:30 GMT+0800',
     distractionFreeMode: 'true'
 
 })
@@ -1104,7 +1570,7 @@ gitalk.render('gitalk-container')
 		
 			<!-- # <font color="purple" face="Microsoft YaHei" size= 5><b>内容<br> </b></font> -->
 			
-    		<font color="red" face="Microsoft YaHei" size= 3><b>&copy; 2020 Code.Yang&nbsp;&nbsp;总文章数: 25</b></font>
+    		<font color="red" face="Microsoft YaHei" size= 3><b>&copy; 2020 Code.Yang&nbsp;&nbsp;总文章数: 26</b></font>
 			
     	</div>
       	<div class="footer-right">
@@ -1210,23 +1676,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">RDBMS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">子查询</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">连接查询</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1234,11 +1684,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">hexo-deployer-git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1258,11 +1712,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">索引</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">主从同步</a>
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1275,18 +1725,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">pymysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Yilia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">toc</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">hexo-deployer-git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1306,11 +1744,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color4">子查询</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+                <a href="javascript:void(0)" class="js-tag color5">连接查询</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">toc</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1322,15 +1768,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">declare</a>
+                <a href="javascript:void(0)" class="js-tag color3">索引</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">love</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
+                <a href="javascript:void(0)" class="js-tag color5">主从同步</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1339,10 +1781,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">api.qrserver.com</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1362,7 +1800,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color3">declare</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">love</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">RDBMS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1386,10 +1852,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Coroutine</a>
               </li>
              
@@ -1406,11 +1868,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Iterator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Generator</a>
+                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1422,7 +1880,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Property</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">functools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">GIL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">gcc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ctypes</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Iterator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Generator</a>
               </li>
             
             <div class="clearfix"></div>

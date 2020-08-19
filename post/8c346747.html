@@ -21,7 +21,7 @@
 <meta property="og:description" content="Python基础语法系列CP2——字符串 CP2主要分享了Python中的字符串数据类型的特点和操作">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-03T02:41:49.000Z">
-<meta property="article:modified_time" content="2020-08-03T03:22:21.901Z">
+<meta property="article:modified_time" content="2020-08-17T09:58:07.327Z">
 <meta property="article:author" content="Code.Yang">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
@@ -132,7 +132,7 @@ var _hmt = _hmt || [];
 		</nav>
 		
 		<!-- # <nav>
-				Total: 25
+				Total: 26
 			</nav> -->
 			
 		
@@ -294,7 +294,7 @@ var _hmt = _hmt || [];
         <i class="fa fa-keyboard-o"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  博文字数统计 : </span></b></font>
         <!--自定义样式-->
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">571字</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">683字</span>
       </span></b></font>
     </span>
 
@@ -303,7 +303,7 @@ var _hmt = _hmt || [];
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  阅读所需时长 : </span></b></font>
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">2分</span>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">3分</span>
       </span></b></font>
     </span>
 </div>
@@ -407,6 +407,17 @@ var _hmt = _hmt || [];
 <li><p>语法格式：<code>&#39;连接字符&#39;.join(多字符串序列-list/tuple/set)</code></p>
 <blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'...'</span>.join(list1)</span><br><span class="line">str2 = <span class="string">' and'</span>.join(tuple(list1))</span><br><span class="line">str3 = <span class="string">' 666'</span>.join(frozenset(list1))</span><br><span class="line">print(str1+<span class="string">'\n'</span>+str2+<span class="string">'\n'</span>+str3)</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>注意</p>
+<blockquote>
+<p>join()操作的序列对象(如：list)，其中的元素必须是str类型，即list1=[‘1’, ‘2’, ‘3’]这种形式，才可以使用join连接。</p>
+</blockquote>
+</li>
+<li><p>实例：将元素非str型的list用join连接</p>
+<blockquote>
+<p>利用map函数和lambda匿名函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="comment"># 将list中的每个元素转变为str类型，再用join连接</span></span><br><span class="line">str1 = <span class="string">''</span>.join(map(<span class="keyword">lambda</span> x:str(x), list1))</span><br><span class="line">print(map(<span class="keyword">lambda</span> x:str(x), list1))   <span class="comment"># &lt;map object at 0x0383AD50&gt;</span></span><br><span class="line">print(str1)   <span class="comment"># 123</span></span><br><span class="line">print(list(str1))  <span class="comment"># ['1', '2', '3']</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
@@ -527,6 +538,17 @@ var _hmt = _hmt || [];
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'...'</span>.join(list1)</span><br><span class="line">str2 = <span class="string">' and'</span>.join(tuple(list1))</span><br><span class="line">str3 = <span class="string">' 666'</span>.join(frozenset(list1))</span><br><span class="line">print(str1+<span class="string">'\n'</span>+str2+<span class="string">'\n'</span>+str3)</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
+<li><p>注意</p>
+<blockquote>
+<p>join()操作的序列对象(如：list)，其中的元素必须是str类型，即list1=[‘1’, ‘2’, ‘3’]这种形式，才可以使用join连接。</p>
+</blockquote>
+</li>
+<li><p>实例：将元素非str型的list用join连接</p>
+<blockquote>
+<p>利用map函数和lambda匿名函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">list1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="comment"># 将list中的每个元素转变为str类型，再用join连接</span></span><br><span class="line">str1 = <span class="string">''</span>.join(map(<span class="keyword">lambda</span> x:str(x), list1))</span><br><span class="line">print(map(<span class="keyword">lambda</span> x:str(x), list1))   <span class="comment"># &lt;map object at 0x0383AD50&gt;</span></span><br><span class="line">print(str1)   <span class="comment"># 123</span></span><br><span class="line">print(list(str1))  <span class="comment"># ['1', '2', '3']</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
 </ul>
 <hr>
 <h2 id="3-字符串操作"><a href="#3-字符串操作" class="headerlink" title="3. 字符串操作"></a>3. 字符串操作</h2><h3 id="3-1-大小写转换"><a href="#3-1-大小写转换" class="headerlink" title="3.1 大小写转换"></a>3.1 大小写转换</h3><ul>
@@ -604,7 +626,7 @@ var _hmt = _hmt || [];
     2020-08-03 10:41:49
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-08-03 11:22:21
+    2020-08-17 17:58:07
     <br>
     <strong class="article-titles">本文标题：</strong>
     <a href="https://chthollists.github.io/post/8c346747.html" title="Python基础语法系列CP2——字符串" target="_blank">Python基础语法系列CP2——字符串</a>
@@ -864,7 +886,7 @@ gitalk.render('gitalk-container')
 		
 			<!-- # <font color="purple" face="Microsoft YaHei" size= 5><b>内容<br> </b></font> -->
 			
-    		<font color="red" face="Microsoft YaHei" size= 3><b>&copy; 2020 Code.Yang&nbsp;&nbsp;总文章数: 25</b></font>
+    		<font color="red" face="Microsoft YaHei" size= 3><b>&copy; 2020 Code.Yang&nbsp;&nbsp;总文章数: 26</b></font>
 			
     	</div>
       	<div class="footer-right">
@@ -970,23 +992,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">RDBMS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">子查询</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">连接查询</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -994,11 +1000,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">hexo-deployer-git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1018,11 +1028,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">索引</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">主从同步</a>
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1035,18 +1041,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">pymysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Yilia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">toc</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">hexo-deployer-git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1066,11 +1060,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color4">子查询</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+                <a href="javascript:void(0)" class="js-tag color5">连接查询</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">toc</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1082,15 +1084,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">declare</a>
+                <a href="javascript:void(0)" class="js-tag color3">索引</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">love</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
+                <a href="javascript:void(0)" class="js-tag color5">主从同步</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1099,10 +1097,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">api.qrserver.com</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1122,7 +1116,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color3">declare</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">love</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">RDBMS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1146,10 +1168,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Coroutine</a>
               </li>
              
@@ -1166,11 +1184,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Iterator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Generator</a>
+                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1182,7 +1196,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Property</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">functools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">GIL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">gcc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ctypes</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Iterator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Generator</a>
               </li>
             
             <div class="clearfix"></div>
