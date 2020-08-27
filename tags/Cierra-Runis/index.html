@@ -11,22 +11,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://mfln8n.coding-pages.com">
-  <title>Python高阶语法系列CP4——GIL全局锁 | Chthollists的平凡之路</title>
+  <title>Tag: Cierra Runis | Chthollists的平凡之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Python高阶语法系列CP4——GIL全局锁 CP4主要分享了 GIL全局解释器锁的概念和限制 GIL锁的解决方法 gcc编译环境的安装：MinGW Python导入C的扩展库：my_lib &#x3D; ctypes.cdll.LoadLibrary(&#39;导入库的路径&#39;) Python导入库时遇到32&#x2F;64位不匹配的解决方法 GIL锁面试问题">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Python高阶语法系列CP4——GIL全局锁">
-<meta property="og:url" content="https://mfln8n.coding-pages.com/post/cf16f693.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Chthollists的平凡之路">
+<meta property="og:url" content="https://mfln8n.coding-pages.com/tags/Cierra-Runis/index.html">
 <meta property="og:site_name" content="Chthollists的平凡之路">
-<meta property="og:description" content="Python高阶语法系列CP4——GIL全局锁 CP4主要分享了 GIL全局解释器锁的概念和限制 GIL锁的解决方法 gcc编译环境的安装：MinGW Python导入C的扩展库：my_lib &#x3D; ctypes.cdll.LoadLibrary(&#39;导入库的路径&#39;) Python导入库时遇到32&#x2F;64位不匹配的解决方法 GIL锁面试问题">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-18T12:20:18.000Z">
-<meta property="article:modified_time" content="2020-08-19T02:45:22.177Z">
 <meta property="article:author" content="Code.Yang">
+<meta property="article:tag" content="Code">
 <meta property="article:tag" content="Python">
-<meta property="article:tag" content="GIL">
-<meta property="article:tag" content="gcc">
-<meta property="article:tag" content="ctypes">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Chthollists的平凡之路" type="application/atom+xml">
@@ -259,742 +254,74 @@ var _hmt = _hmt || [];
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-Python/高阶语法/Python高阶语法系列CP4——GIL全局锁" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 class="article-title" itemprop="name">
-      Python高阶语法系列CP4——GIL全局锁
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/post/1b7a2178.html" class="archive-article-date">
+  	<time datetime="2020-08-27T04:12:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-27</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/post/1b7a2178.html">Cierra Runis</a>
     </h1>
   
 
-		
-		<!--显示阅读次数-->
-		
-		<br/>
-		<a class="cloud-tie-join-count" href="javascript:void(0);" style="color:red;font-size:18px;">
-		<b><span class="icon-sort"></span></b>
-		<font face="Microsoft YaHei"><b><span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:18px;">
-            浏览次数 : <font face="Times New Roman"><span id="busuanzi_value_page_pv"></span>&nbsp;次 &nbsp;&nbsp;
-		</span></b></font></font>	
-		</a>
-		
-		<!--显示阅读次数完毕-->
-
-        
-        <a href="/post/cf16f693.html" class="archive-article-date">
-  	<time datetime="2020-08-18T12:20:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-18</time>
-</a>
-		
-        <!-- 需要添加的位置 -->
-        <!-- 开始添加字数统计-->
-        
-          <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  博文字数统计 : </span></b></font>
-        <!--自定义样式-->
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue">2k字</span>
-      </span></b></font>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  阅读所需时长 : </span></b></font>
-        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red">7分</span>
-      </span></b></font>
-    </span>
-</div>
+        <div class="article-info info-on-right">
           
-        <!-- 添加完成 -->
-		
-		
-		
-      </header>
-    
-	
-	
-<!-- 目录内容 -->
-
-    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-          <span class="btn-bg"></span>
-          <span class="btn-text">文章导航</span>
-          </p>
-	<div id="toc-article" class="toc-article">
-	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-		<strong class="toc-title">文章目录</strong>
-           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python高阶语法系列CP4——GIL全局锁"><span class="toc-number">1.</span> <span class="toc-text">Python高阶语法系列CP4——GIL全局锁</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#三、GIL锁"><span class="toc-number">1.1.</span> <span class="toc-text">三、GIL锁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-GIL锁简介"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. GIL锁简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-GIL锁引入"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">1.1 GIL锁引入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-GIL锁的概念"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">1.2 GIL锁的概念</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-GIL锁解决方法"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. GIL锁解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-GIL锁释放"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">2.1 GIL锁释放</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-GIL锁解决方案"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2.2 GIL锁解决方案</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-GIL面试常见问题"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. GIL面试常见问题</span></a></li></ol></li></ol></li></ol>
-         </div>
-   <script type="text/javascript">
-	function showToc(){
-		var toc_article = document.getElementById("toc-article");
-		var show_toc_btn = document.getElementById("show-toc-btn");
-		toc_article.setAttribute("style","display:block");
-		show_toc_btn.setAttribute("style","display:none");
-		};
-	function showBtn(){
-		var toc_article = document.getElementById("toc-article");
-		var show_toc_btn = document.getElementById("show-toc-btn");
-		toc_article.setAttribute("style","display:none");
-		show_toc_btn.setAttribute("style","display:block");
-		};
-   </script>
-      
-<!-- 目录内容结束 -->
-	
-    <div class="article-entry" itemprop="articleBody">
-	
-<!-- 标签云和分类云 -->	
-			
-
-				
-					<hr>
-<ul>
-<li>Python高阶语法系列CP4——GIL全局锁</li>
-<li>CP4主要分享了</li>
-<li>GIL全局解释器锁的概念和限制</li>
-<li>GIL锁的解决方法</li>
-<li>gcc编译环境的安装：MinGW</li>
-<li>Python导入C的扩展库：<code>my_lib = ctypes.cdll.LoadLibrary(&#39;导入库的路径&#39;)</code></li>
-<li>Python导入库时遇到32/64位不匹配的解决方法</li>
-<li>GIL锁面试问题</li>
-</ul>
-<a id="more"></a>
-
-<h1 id="Python高阶语法系列CP4——GIL全局锁"><a href="#Python高阶语法系列CP4——GIL全局锁" class="headerlink" title="Python高阶语法系列CP4——GIL全局锁"></a>Python高阶语法系列CP4——GIL全局锁</h1><h2 id="三、GIL锁"><a href="#三、GIL锁" class="headerlink" title="三、GIL锁"></a>三、GIL锁</h2><ul>
-<li>时间：2020.08.21</li>
-</ul>
-<h3 id="1-GIL锁简介"><a href="#1-GIL锁简介" class="headerlink" title="1. GIL锁简介"></a>1. GIL锁简介</h3><ul>
-<li>时间：2020.08.21</li>
-</ul>
-<h4 id="1-1-GIL锁引入"><a href="#1-1-GIL锁引入" class="headerlink" title="1.1 GIL锁引入"></a>1.1 GIL锁引入</h4><ul>
-<li><p>查看CPU信息</p>
-<blockquote>
-<p>Linux 系统：<code>htop</code></p>
-<p>Windows 系统 ：<code>systeminfo</code>、<code>wmic</code>、<code>cpu get *</code></p>
-</blockquote>
-</li>
-<li><p>CPU与进程、线程</p>
-<ul>
-<li><p>单进程——单核CPU</p>
-</li>
-<li><p>多进程——多核CPU</p>
-</li>
-<li><p>多线程——多核CPU，但是每个CPU使用率较低</p>
-<blockquote>
-<p>当程序为死循环时，单进程、多进程的单核、多核CPU使用率都为100%</p>
-<p>而多线程的多核CPU使用率只有百分之几十，说明在多线程时，CPU是轮询处理各个线程的</p>
-<p>即同一时间只有一个CPU在处理线程，这是由于GIL锁的限制。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="1-2-GIL锁的概念"><a href="#1-2-GIL锁的概念" class="headerlink" title="1.2 GIL锁的概念"></a>1.2 GIL锁的概念</h4><ul>
-<li><p>GIL锁概念</p>
-<ul>
-<li>GIL：Global Interpreter Lock，全局解释器锁</li>
-<li>任何Python线程执行前，必须先获得GIL锁，然后，每执行100条字节码，解释器就⾃动释放GIL锁，让其他线程有机会执行。</li>
-<li>这个GIL全局锁实际上把所有线程的执行代码都给上了锁，所以，多线程在Python中只能交替执行，使得多线程实现多任务时，在同一时间只能有一个线程使用一个CPU，即CPU轮询执行每个线程。</li>
-</ul>
-</li>
-<li><p>GIL锁与Python</p>
-<ul>
-<li>GIL是Python解释器（Cpython）时引入的概念，在JPython、PyPy解释器中没有GIL；</li>
-<li>GIL并不是Python的语言缺陷，是解释器层级的锁，跟Python语⾔特性无关；</li>
-<li>GIL就是为了锁定整个解释器内部的全局资源，每个线程想要运行首先要获取GIL，而GIL本身又是⼀把互斥锁，造成所有线程只能⼀个⼀个one-by-one-并发-交替的执行。</li>
-</ul>
-</li>
-<li><p>GIL锁作用</p>
-<ul>
-<li><p>早期计算机都是单核CPU设计，GIL锁可以提高程序的稳定性</p>
-</li>
-<li><p>CPython在执行多线程的时候并不是线程安全的，所以为了程序的稳定性，加⼀把全局解释锁，能够确保任何时候都只有⼀个Python线程执行(一个CPU)</p>
-<blockquote>
-<p>在CPython解释内部运行多个线程的时候，每个线程都需要解释器内部申请相应的全局资源，由于C语⾔本身比较底层造成CPython在管理所有全局资源的时候并不能应对所有线程同时的资源请求，因此为了防止资源竞争而发生错误，对所有线程申请全局资源增加了限制全局解释器锁。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>GIL锁的缺陷</p>
-<ul>
-<li>GIL对计算密集型的程序会产生影响。因为计算密集型的程序，需要占用系统资源；</li>
-<li>GIL的存在，相当于始终在进行单线程运算，降低程序运算的速度、效率； </li>
-<li>GIL对IO密集型程序影响不大，因为IO操作(input/output)的瓶颈在于输入所耗费的时间，线程大部分时间在等待，所以它们是多个⼀起等(多线程)还是单个(单线程)是区别不大的。</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="2-GIL锁解决方法"><a href="#2-GIL锁解决方法" class="headerlink" title="2. GIL锁解决方法"></a>2. GIL锁解决方法</h3><ul>
-<li>时间：2020.08.21</li>
-</ul>
-<h4 id="2-1-GIL锁释放"><a href="#2-1-GIL锁释放" class="headerlink" title="2.1 GIL锁释放"></a>2.1 GIL锁释放</h4><ul>
-<li>在当前线程执行超时后会自动释放 </li>
-<li>在当前线程执行阻塞操作时会自动释放 </li>
-<li>当前执行完成时，自动释放，去轮询下一个线程</li>
-</ul>
-<h4 id="2-2-GIL锁解决方案"><a href="#2-2-GIL锁解决方案" class="headerlink" title="2.2 GIL锁解决方案"></a>2.2 GIL锁解决方案</h4><ul>
-<li><p>方法一：使用JPython、PyPy等没有GIL锁限制的解释器。</p>
-</li>
-<li><p>方法二：使用多进程代替多线程，虽然单个进程中仍然存在GIL锁，但是多进程可以同时利用多个CPU资源，执行速度增加，但是由于子进程会复制主进程的资源，所以会有资源占用的问题。</p>
-</li>
-<li><p>方法三：通过Python的胶水特性，将子线程要执行的部分用C语言编写，从而跨过CPython解释器。</p>
-<ul>
-<li><p>配置gcc编译环境</p>
-<blockquote>
-<p>Linux系统自带gcc，Windows下要自行安装配置，参考<a href="https://www.cnblogs.com/valor-xh/p/7371710.html" target="_blank" rel="noopener">Windows 下使用 GCC</a></p>
-</blockquote>
-<ul>
-<li><p>安装MinGW，MinGw 是 Minimal GNU on Windows 的缩写，允许在 GNU/Linux 和 Windows 平台生成本地的 Windows 程序而不需要第三方运行时库。</p>
-<blockquote>
-<p>下载 min-gw 安装程序：<a href="http://sourceforge.net/projects/mingw/files/" target="_blank" rel="noopener">下载链接</a>，下载 Download mingw-get-setup.exe 并安装</p>
-</blockquote>
-</li>
-<li><p>配置环境变量，将MinGW/bin配置到系统环境变量Path中</p>
-</li>
-<li><p>查看MinGW安装情况，在cmd中键入mingw-get，如果弹出 MinGw installation manager 窗口，说明安装正常。此时，关闭 MinGw installation manager 窗口，否则接下来的步骤会报错。</p>
-<blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mingw-get</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>安装gcc，在cmd中键入mingw-get install gcc</p>
-<blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mingw-get install gcc</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>将子线程要处理的部分写为C语言，例如：</p>
-<blockquote>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello world!!!"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>使用gcc将其编译为so文件(Share Object)</p>
-<blockquote>
-<p>语法格式：<code>gcc 要编译的文件名 [-编译的格式] [-o] 保存的文件名</code></p>
-<p>-o 表示输出、编译格式有多种：S、E、I、默认为exe链接</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gcc test.c -shared -o libtest.so</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>在Python中加载该C语言so库文件</p>
-<blockquote>
-<p>语法格式：<code>my_lib = ctypes.cdll.LoadLibrary(&#39;导入库的路径&#39;)</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ctypes</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载C语言编写的库so文件</span></span><br><span class="line">my_lib = ctypes.cdll.LoadLibrary(<span class="string">'./libtest.so'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 子线程</span></span><br><span class="line">t1 = threading.Thread(target=my_lib.main)</span><br><span class="line"></span><br><span class="line">t1.daemon = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">t1.start()</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>注意：</p>
-<ul>
-<li><p><strong>如果出现 OSError: [WinError 193] %1 不是有效的 Win32 应用程序错误</strong></p>
-</li>
-<li><p>原因：Python位数与so位数不匹配，so是32位而python是64位，该错误同样会在一些其他库的导入时出现。</p>
-</li>
-<li><p>解决方法：创建虚拟环境，安装对应位数的Python，利用conda更方便</p>
-<blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看planform位数32/64</span></span><br><span class="line">$ conda info</span><br><span class="line"><span class="comment"># 查看Python的位数</span></span><br><span class="line">$ python</span><br><span class="line"><span class="comment"># 设置conda的platform位数为32，切换为64位只需要赋值为0</span></span><br><span class="line">$ <span class="built_in">set</span> conda_force_32bit=1</span><br><span class="line"><span class="comment"># 创建虚拟环境并安装Python</span></span><br><span class="line">$ conda create -n py37by32 python = 3.7</span><br><span class="line"><span class="comment"># 激活虚拟环境</span></span><br><span class="line">$ activate py37by32</span><br></pre></td></tr></table></figure>
-
-<p>同时修改项目的解释器路径为新建的32位Python路径。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="3-GIL面试常见问题"><a href="#3-GIL面试常见问题" class="headerlink" title="3. GIL面试常见问题"></a>3. GIL面试常见问题</h3><ul>
-<li><p>时间：2020.08.21</p>
-</li>
-<li><p>描述Python中GIL的概念，以及它对Python多线程的影响？</p>
-<ul>
-<li>GIL是全局解释器锁，每个线程</li>
-<li>因此，GIL锁使得Python的多线程并发实际上为单线程运算，不能高效的利用CPU资源，降低程序运行的速度，对于计算密集型程序，影响较大，对于IO密集型，影响较小。</li>
-<li>GIL当遇到IO操作等引起的阻塞、执行超时、执行完成时会自动释放，</li>
-</ul>
-</li>
-<li><p>编写⼀个多线程抓取网页的程序，并阐明多线程抓取是否可以比单线程性能有提升，并解释原因。</p>
-<ul>
-<li>多线程爬虫，主要使用urllib模块请求网页资源、re模块正则匹配要获取的信息、pymysql模块用于将爬去的信息保存到数据库、threading模块用于实现多线程爬取信息。</li>
-<li>多线程爬虫比单线程效率高，虽然由于GIL锁的存在，多线程的实质也是同一时间只有一个线程在执行代码，但是爬虫过程中存在大量的IO操作，GIL锁遇到IO操作引起的阻塞会自动释放，使得某个线程阻塞时，会有另一个线程在工作，从而提高效率。</li>
-</ul>
-</li>
-<li><p>GIL锁与手动设置的Lock</p>
-<ul>
-<li>GIL锁和手动设置的锁同样是互斥锁，都是用于防止程序运行过程中出现资源竞争而导致出现错误的问题</li>
-<li>GIL锁是CPython解释器自带的全局锁，无法由用户控制其的锁定释放位置，所以仍需要对需要锁定的操作设置threading.Lock()</li>
-</ul>
-</li>
-</ul>
-
-				
-			
-	  
-	  
-	  <!--    注释：
-        <hr>
-<ul>
-<li>Python高阶语法系列CP4——GIL全局锁</li>
-<li>CP4主要分享了</li>
-<li>GIL全局解释器锁的概念和限制</li>
-<li>GIL锁的解决方法</li>
-<li>gcc编译环境的安装：MinGW</li>
-<li>Python导入C的扩展库：<code>my_lib = ctypes.cdll.LoadLibrary(&#39;导入库的路径&#39;)</code></li>
-<li>Python导入库时遇到32/64位不匹配的解决方法</li>
-<li>GIL锁面试问题</li>
-</ul>
-<a id="more"></a>
-
-<h1 id="Python高阶语法系列CP4——GIL全局锁"><a href="#Python高阶语法系列CP4——GIL全局锁" class="headerlink" title="Python高阶语法系列CP4——GIL全局锁"></a>Python高阶语法系列CP4——GIL全局锁</h1><h2 id="三、GIL锁"><a href="#三、GIL锁" class="headerlink" title="三、GIL锁"></a>三、GIL锁</h2><ul>
-<li>时间：2020.08.21</li>
-</ul>
-<h3 id="1-GIL锁简介"><a href="#1-GIL锁简介" class="headerlink" title="1. GIL锁简介"></a>1. GIL锁简介</h3><ul>
-<li>时间：2020.08.21</li>
-</ul>
-<h4 id="1-1-GIL锁引入"><a href="#1-1-GIL锁引入" class="headerlink" title="1.1 GIL锁引入"></a>1.1 GIL锁引入</h4><ul>
-<li><p>查看CPU信息</p>
-<blockquote>
-<p>Linux 系统：<code>htop</code></p>
-<p>Windows 系统 ：<code>systeminfo</code>、<code>wmic</code>、<code>cpu get *</code></p>
-</blockquote>
-</li>
-<li><p>CPU与进程、线程</p>
-<ul>
-<li><p>单进程——单核CPU</p>
-</li>
-<li><p>多进程——多核CPU</p>
-</li>
-<li><p>多线程——多核CPU，但是每个CPU使用率较低</p>
-<blockquote>
-<p>当程序为死循环时，单进程、多进程的单核、多核CPU使用率都为100%</p>
-<p>而多线程的多核CPU使用率只有百分之几十，说明在多线程时，CPU是轮询处理各个线程的</p>
-<p>即同一时间只有一个CPU在处理线程，这是由于GIL锁的限制。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="1-2-GIL锁的概念"><a href="#1-2-GIL锁的概念" class="headerlink" title="1.2 GIL锁的概念"></a>1.2 GIL锁的概念</h4><ul>
-<li><p>GIL锁概念</p>
-<ul>
-<li>GIL：Global Interpreter Lock，全局解释器锁</li>
-<li>任何Python线程执行前，必须先获得GIL锁，然后，每执行100条字节码，解释器就⾃动释放GIL锁，让其他线程有机会执行。</li>
-<li>这个GIL全局锁实际上把所有线程的执行代码都给上了锁，所以，多线程在Python中只能交替执行，使得多线程实现多任务时，在同一时间只能有一个线程使用一个CPU，即CPU轮询执行每个线程。</li>
-</ul>
-</li>
-<li><p>GIL锁与Python</p>
-<ul>
-<li>GIL是Python解释器（Cpython）时引入的概念，在JPython、PyPy解释器中没有GIL；</li>
-<li>GIL并不是Python的语言缺陷，是解释器层级的锁，跟Python语⾔特性无关；</li>
-<li>GIL就是为了锁定整个解释器内部的全局资源，每个线程想要运行首先要获取GIL，而GIL本身又是⼀把互斥锁，造成所有线程只能⼀个⼀个one-by-one-并发-交替的执行。</li>
-</ul>
-</li>
-<li><p>GIL锁作用</p>
-<ul>
-<li><p>早期计算机都是单核CPU设计，GIL锁可以提高程序的稳定性</p>
-</li>
-<li><p>CPython在执行多线程的时候并不是线程安全的，所以为了程序的稳定性，加⼀把全局解释锁，能够确保任何时候都只有⼀个Python线程执行(一个CPU)</p>
-<blockquote>
-<p>在CPython解释内部运行多个线程的时候，每个线程都需要解释器内部申请相应的全局资源，由于C语⾔本身比较底层造成CPython在管理所有全局资源的时候并不能应对所有线程同时的资源请求，因此为了防止资源竞争而发生错误，对所有线程申请全局资源增加了限制全局解释器锁。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>GIL锁的缺陷</p>
-<ul>
-<li>GIL对计算密集型的程序会产生影响。因为计算密集型的程序，需要占用系统资源；</li>
-<li>GIL的存在，相当于始终在进行单线程运算，降低程序运算的速度、效率； </li>
-<li>GIL对IO密集型程序影响不大，因为IO操作(input/output)的瓶颈在于输入所耗费的时间，线程大部分时间在等待，所以它们是多个⼀起等(多线程)还是单个(单线程)是区别不大的。</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="2-GIL锁解决方法"><a href="#2-GIL锁解决方法" class="headerlink" title="2. GIL锁解决方法"></a>2. GIL锁解决方法</h3><ul>
-<li>时间：2020.08.21</li>
-</ul>
-<h4 id="2-1-GIL锁释放"><a href="#2-1-GIL锁释放" class="headerlink" title="2.1 GIL锁释放"></a>2.1 GIL锁释放</h4><ul>
-<li>在当前线程执行超时后会自动释放 </li>
-<li>在当前线程执行阻塞操作时会自动释放 </li>
-<li>当前执行完成时，自动释放，去轮询下一个线程</li>
-</ul>
-<h4 id="2-2-GIL锁解决方案"><a href="#2-2-GIL锁解决方案" class="headerlink" title="2.2 GIL锁解决方案"></a>2.2 GIL锁解决方案</h4><ul>
-<li><p>方法一：使用JPython、PyPy等没有GIL锁限制的解释器。</p>
-</li>
-<li><p>方法二：使用多进程代替多线程，虽然单个进程中仍然存在GIL锁，但是多进程可以同时利用多个CPU资源，执行速度增加，但是由于子进程会复制主进程的资源，所以会有资源占用的问题。</p>
-</li>
-<li><p>方法三：通过Python的胶水特性，将子线程要执行的部分用C语言编写，从而跨过CPython解释器。</p>
-<ul>
-<li><p>配置gcc编译环境</p>
-<blockquote>
-<p>Linux系统自带gcc，Windows下要自行安装配置，参考<a href="https://www.cnblogs.com/valor-xh/p/7371710.html" target="_blank" rel="noopener">Windows 下使用 GCC</a></p>
-</blockquote>
-<ul>
-<li><p>安装MinGW，MinGw 是 Minimal GNU on Windows 的缩写，允许在 GNU/Linux 和 Windows 平台生成本地的 Windows 程序而不需要第三方运行时库。</p>
-<blockquote>
-<p>下载 min-gw 安装程序：<a href="http://sourceforge.net/projects/mingw/files/" target="_blank" rel="noopener">下载链接</a>，下载 Download mingw-get-setup.exe 并安装</p>
-</blockquote>
-</li>
-<li><p>配置环境变量，将MinGW/bin配置到系统环境变量Path中</p>
-</li>
-<li><p>查看MinGW安装情况，在cmd中键入mingw-get，如果弹出 MinGw installation manager 窗口，说明安装正常。此时，关闭 MinGw installation manager 窗口，否则接下来的步骤会报错。</p>
-<blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mingw-get</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>安装gcc，在cmd中键入mingw-get install gcc</p>
-<blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mingw-get install gcc</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>将子线程要处理的部分写为C语言，例如：</p>
-<blockquote>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"hello world!!!"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>使用gcc将其编译为so文件(Share Object)</p>
-<blockquote>
-<p>语法格式：<code>gcc 要编译的文件名 [-编译的格式] [-o] 保存的文件名</code></p>
-<p>-o 表示输出、编译格式有多种：S、E、I、默认为exe链接</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gcc test.c -shared -o libtest.so</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>在Python中加载该C语言so库文件</p>
-<blockquote>
-<p>语法格式：<code>my_lib = ctypes.cdll.LoadLibrary(&#39;导入库的路径&#39;)</code></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ctypes</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载C语言编写的库so文件</span></span><br><span class="line">my_lib = ctypes.cdll.LoadLibrary(<span class="string">'./libtest.so'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 子线程</span></span><br><span class="line">t1 = threading.Thread(target=my_lib.main)</span><br><span class="line"></span><br><span class="line">t1.daemon = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">t1.start()</span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>注意：</p>
-<ul>
-<li><p><strong>如果出现 OSError: [WinError 193] %1 不是有效的 Win32 应用程序错误</strong></p>
-</li>
-<li><p>原因：Python位数与so位数不匹配，so是32位而python是64位，该错误同样会在一些其他库的导入时出现。</p>
-</li>
-<li><p>解决方法：创建虚拟环境，安装对应位数的Python，利用conda更方便</p>
-<blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看planform位数32/64</span></span><br><span class="line">$ conda info</span><br><span class="line"><span class="comment"># 查看Python的位数</span></span><br><span class="line">$ python</span><br><span class="line"><span class="comment"># 设置conda的platform位数为32，切换为64位只需要赋值为0</span></span><br><span class="line">$ <span class="built_in">set</span> conda_force_32bit=1</span><br><span class="line"><span class="comment"># 创建虚拟环境并安装Python</span></span><br><span class="line">$ conda create -n py37by32 python = 3.7</span><br><span class="line"><span class="comment"># 激活虚拟环境</span></span><br><span class="line">$ activate py37by32</span><br></pre></td></tr></table></figure>
-
-<p>同时修改项目的解释器路径为新建的32位Python路径。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="3-GIL面试常见问题"><a href="#3-GIL面试常见问题" class="headerlink" title="3. GIL面试常见问题"></a>3. GIL面试常见问题</h3><ul>
-<li><p>时间：2020.08.21</p>
-</li>
-<li><p>描述Python中GIL的概念，以及它对Python多线程的影响？</p>
-<ul>
-<li>GIL是全局解释器锁，每个线程</li>
-<li>因此，GIL锁使得Python的多线程并发实际上为单线程运算，不能高效的利用CPU资源，降低程序运行的速度，对于计算密集型程序，影响较大，对于IO密集型，影响较小。</li>
-<li>GIL当遇到IO操作等引起的阻塞、执行超时、执行完成时会自动释放，</li>
-</ul>
-</li>
-<li><p>编写⼀个多线程抓取网页的程序，并阐明多线程抓取是否可以比单线程性能有提升，并解释原因。</p>
-<ul>
-<li>多线程爬虫，主要使用urllib模块请求网页资源、re模块正则匹配要获取的信息、pymysql模块用于将爬去的信息保存到数据库、threading模块用于实现多线程爬取信息。</li>
-<li>多线程爬虫比单线程效率高，虽然由于GIL锁的存在，多线程的实质也是同一时间只有一个线程在执行代码，但是爬虫过程中存在大量的IO操作，GIL锁遇到IO操作引起的阻塞会自动释放，使得某个线程阻塞时，会有另一个线程在工作，从而提高效率。</li>
-</ul>
-</li>
-<li><p>GIL锁与手动设置的Lock</p>
-<ul>
-<li>GIL锁和手动设置的锁同样是互斥锁，都是用于防止程序运行过程中出现资源竞争而导致出现错误的问题</li>
-<li>GIL锁是CPython解释器自带的全局锁，无法由用户控制其的锁定释放位置，所以仍需要对需要锁定的操作设置threading.Lock()</li>
-</ul>
-</li>
-</ul>
-
-       -->
-	        
-	  
-	  
-	  
-	  
-<!-- 《添加版权声明 -->
-        
-            <!-- 《添加版权声明 -->
-
-
-<!-- #版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明 -->
-
-  <div class="declare">
-    <strong class="author">本文作者：</strong>
-    
-      <a href="https://chthollists.github.io"title="Code.Yang" target="_blank">Code.Yang</a>
-    
-    <br>
-    <strong class="create-time">发布时间：</strong>
-    2020-08-18 20:20:18
-    <br>
-    <strong class="update-time">最后更新：</strong>
-    2020-08-19 10:45:22
-    <br>
-    <strong class="article-titles">本文标题：</strong>
-    <a href="https://chthollists.github.io/post/cf16f693.html" title="Python高阶语法系列CP4——GIL全局锁" target="_blank">Python高阶语法系列CP4——GIL全局锁</a>
-    <br>
-    <strong class="article-url">本文链接：</strong>
-    <a href="https://chthollists.github.io/post/cf16f693.html" title="Python高阶语法系列CP4——GIL全局锁" target="_blank">https://chthollists.github.io/post/cf16f693.html</a>
-    <br>
-    <strong class="copyright">版权声明：</strong>
-    本作品采用
-    <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议">CC BY-NC-SA 4.0</a>
-    许可协议进行许可。转载请注明作者和出处！
-    
-      <br>
-      <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
-    
-  </div>
-
-<!-- 添加版权声明》 -->
-        
-<!-- 添加版权声明》 -->
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              支持
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢您的支持<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/payforwechat.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-	
-	
-	
-    <div class="article-info article-info-index">
-      
-      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Cierra Runis</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">GIL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">gcc</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ctypes</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Overidea</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Python/Advanced//" class="article-tag-list-link color4">Advanced</a>
+        			<a href="/categories/essays//" class="article-tag-list-link color2">essays</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://chthollists.github.ioom/post/cf16f693.html" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-  
-	  
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-
-
-
-
-  
-<nav id="article-nav">
-  
-    <a href="/post/d497e4d0.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Python高阶语法系列CP5——Excel文件操作
-        
-      </div>
-    </a>
   
   
-    <a href="/post/9fe65dd.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Python高阶语法系列CP3——装饰器</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python高阶语法系列CP4——GIL全局锁"><span class="toc-number">1.</span> <span class="toc-text">Python高阶语法系列CP4——GIL全局锁</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#三、GIL锁"><span class="toc-number">1.1.</span> <span class="toc-text">三、GIL锁</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-GIL锁简介"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. GIL锁简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-GIL锁引入"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">1.1 GIL锁引入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-GIL锁的概念"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">1.2 GIL锁的概念</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-GIL锁解决方法"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. GIL锁解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-GIL锁释放"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">2.1 GIL锁释放</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-GIL锁解决方案"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">2.2 GIL锁解决方案</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-GIL面试常见问题"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. GIL面试常见问题</span></a></li></ol></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-
-
-
-
-
-<div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-  var gitalk = new Gitalk({
-    clientID: 'ef41cd3f6bb938f5b4c6',
-    clientSecret: '0a387b3802665d8a71757a618f93dfd8cb5ec7d8',
-    repo: 'Chthollists.github.io',
-    owner: 'Chthollists',
-    admin: ['Chthollists'],
-    id: 'Tue Aug 18 2020 20:20:18 GMT+0800',
-    distractionFreeMode: 'true'
-
-})
-gitalk.render('gitalk-container') 
-}
-</script>
-
-
-
-
-
+    
 
 
           </div>
@@ -1035,9 +362,9 @@ gitalk.render('gitalk-container')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
