@@ -321,7 +321,9 @@ body {
     color: #333;
     min-height: 100%;
     /*background-color:#fff;*/
-    background-color: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('http://qefz7x7v9.bkt.clouddn.com/Chtholly06.jpg') no-repeat 0% 20%/ cover;
+    /* background-color: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('http://qfpro7zhq.hd-bkt.clouddn.com/Chtholly06.jpg') no-repeat 0% 20%/ cover; */
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('http://qfpro7zhq.hd-bkt.clouddn.com/Cierra01.jpg') no-repeat 0% 20%/ cover;
+
 }
 
 article,
@@ -927,7 +929,7 @@ html {
 }
 
 .left-col {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('http://qefz7x7v9.bkt.clouddn.com/Chtholly10.jpg') no-repeat 0% 20%/ cover;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('http://qfpro7zhq.hd-bkt.clouddn.com/Chtholly10.jpg') no-repeat 0% 20%/ cover;
     width: 300px;
     position: fixed;
     opacity: 1;
