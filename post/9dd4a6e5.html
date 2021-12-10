@@ -21,7 +21,7 @@
 <meta property="og:description" content="Python实战框架MiniWeb框架CP2——基本框架 CP2主要分享了 miniWeb框架的Web服务器(OOP+多进程) miniWebServer.py   miniWeb框架的Web框架应用程序(接口) app.py utils.py   模板文件的加载与数据库内容替换">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-31T13:30:18.000Z">
-<meta property="article:modified_time" content="2020-08-25T06:49:46.290Z">
+<meta property="article:modified_time" content="2020-09-11T08:07:41.285Z">
 <meta property="article:author" content="Code.Yang">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="MiniWeb">
@@ -134,7 +134,7 @@ var _hmt = _hmt || [];
 		</nav>
 		
 		<!-- # <nav>
-				Total: 37
+				Total: 39
 			</nav> -->
 			
 		
@@ -392,7 +392,7 @@ var _hmt = _hmt || [];
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> application <span class="keyword">import</span> utils</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_response_headers</span><span class="params">(status, headers)</span>:</span></span><br><span class="line"> <span class="string">"""这个方法，会在 web框架中被默认调用"""</span></span><br><span class="line"> response_header_default = [(<span class="string">"Server"</span>, <span class="string">"MiniWeb Server WSGI/2.1"</span>), ]</span><br><span class="line"> <span class="comment"># 将状态码/相应头信息存储起来</span></span><br><span class="line"> <span class="comment"># [字符串, [xxxxx, xxx2]]</span></span><br><span class="line"></span><br><span class="line"> headers = [status, response_header_default + headers]</span><br><span class="line"> <span class="keyword">return</span> headers</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">application</span><span class="params">(resource_path, ip_port)</span>:</span></span><br><span class="line"> <span class="string">"""</span></span><br><span class="line"><span class="string"> 生成响应报文，返回响应报文</span></span><br><span class="line"><span class="string"> :param resource_path: 文件路径</span></span><br><span class="line"><span class="string"> :param ip_port: 客户端地址</span></span><br><span class="line"><span class="string"> :return: response_data : 响应报文</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"> """</span></span><br><span class="line"> <span class="comment"># 一、静态资源获取，资源路径非.py结尾。</span></span><br><span class="line"> <span class="keyword">if</span> <span class="keyword">not</span> resource_path.endswith(<span class="string">'.py'</span>):</span><br><span class="line">     print(<span class="string">'客户端:[%s]正在请求路径:%s的资源!'</span> % (str(ip_port), resource_path))</span><br><span class="line"></span><br><span class="line">     <span class="comment"># 10.5 异常捕获，如果没有该路径文件，显示404网页</span></span><br><span class="line">     <span class="keyword">try</span>:</span><br><span class="line">         <span class="keyword">with</span> open(resource_path, <span class="string">'rb'</span>) <span class="keyword">as</span> file:</span><br><span class="line">             <span class="comment"># 响应报文：静态资源 200</span></span><br><span class="line">             status = <span class="string">'200 OK'</span></span><br><span class="line">             response_body = file.read()</span><br><span class="line">             response_data = utils.create_response(status, response_body)</span><br><span class="line">     <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">         <span class="comment"># 重新设置响应报文 404</span></span><br><span class="line">         print(<span class="string">"资源路径:%s不存在! Error:%s"</span> % (resource_path, e))</span><br><span class="line">         status = <span class="string">'404 Not Found'</span></span><br><span class="line">         response_body = <span class="string">"Error!! %s"</span> % str(e)</span><br><span class="line">         response_body = response_body.encode()</span><br><span class="line">         response_data = utils.create_response(status, response_body)</span><br><span class="line"></span><br><span class="line"> <span class="comment"># 二、动态资源获取，资源路径以.py结尾。</span></span><br><span class="line"> <span class="keyword">else</span>:</span><br><span class="line">     <span class="comment"># 请求信息字典，初始为空</span></span><br><span class="line">     <span class="comment"># env = dict()</span></span><br><span class="line">     env = &#123;<span class="string">'status'</span>: <span class="string">'200 OK'</span>, <span class="string">'PATH_INFO'</span>: <span class="string">'./index.html'</span>&#125;</span><br><span class="line">     <span class="comment"># 响应报文：动态资源 200</span></span><br><span class="line">     headers, response_body = utils.get_response(env, set_response_headers)</span><br><span class="line">     response_line = <span class="string">"HTTP/1.1 &#123;status&#125;\r\n"</span>.format(status=headers[<span class="number">0</span>])</span><br><span class="line">     response_header = <span class="string">"Content-Type: text/html; charset=utf-8\r\n"</span></span><br><span class="line">     <span class="keyword">for</span> temp_head <span class="keyword">in</span> headers[<span class="number">1</span>]:</span><br><span class="line">         response_header += <span class="string">"&#123;0&#125;:&#123;1&#125;\r\n"</span>.format(*temp_head)</span><br><span class="line">     response_header += <span class="string">"Content-Length: %d\r\n"</span> % len(response_body)</span><br><span class="line">     response_blank = <span class="string">"\r\n"</span></span><br><span class="line">     response_data = (response_line + response_header + response_blank + response_body).encode()</span><br><span class="line"></span><br><span class="line">     <span class="comment"># status = '200 OK'</span></span><br><span class="line">     <span class="comment"># # response_body 应该与数据库、模板文件交互</span></span><br><span class="line">     <span class="comment"># response_body = ('Dynamic Web Page ! at %s' % time.ctime()).encode()</span></span><br><span class="line">     <span class="comment"># response_data = utils.create_response(status, response_body)</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">return</span> response_data</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
-<li><p><code>application\util.py</code></p>
+<li><p><code>application\utils.py</code></p>
 <blockquote>
 <p>拼接响应报文。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_response</span><span class="params">(status, response_body)</span>:</span></span><br><span class="line"> <span class="comment"># 10、根据请求路径生成响应报文</span></span><br><span class="line"> <span class="comment"># 10.1 响应行</span></span><br><span class="line"> response_line = <span class="string">'HTTP/1.1 %s\r\n'</span> % status</span><br><span class="line"> <span class="comment"># 10.2 响应头</span></span><br><span class="line"> response_header = <span class="string">"Server:MiniWeb Server WSGI/2.1\r\n"</span></span><br><span class="line"> <span class="comment"># 响应头加一个"Content-Type:text/html\r\n"，使得浏览器可以正确响应数据</span></span><br><span class="line"> <span class="comment"># response_header += "Content-Type: text/html; charset=utf-8\r\n"</span></span><br><span class="line"> response_header += <span class="string">"charset=utf-8\r\n"</span></span><br><span class="line"> response_header += <span class="string">"Content-Length: %d\r\n"</span> % (len(response_body))</span><br><span class="line"></span><br><span class="line"> <span class="comment"># 10.3 响应空行</span></span><br><span class="line"> response_blank = <span class="string">"\r\n"</span></span><br><span class="line"></span><br><span class="line"> <span class="comment"># 10.4 响应主体---打开并读取资源路径对应的html文件</span></span><br><span class="line"> <span class="comment"># response_body = "Hello World!".encode()</span></span><br><span class="line"> response_body = response_body</span><br><span class="line"></span><br><span class="line"> <span class="comment"># 11、拼接响应报文</span></span><br><span class="line"> response_data = (response_line + response_header + response_blank).encode() + response_body</span><br><span class="line"> <span class="keyword">return</span> response_data</span><br><span class="line"></span><br><span class="line"><span class="comment"># application(environ, start_response)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_response</span><span class="params">(environ, start_response)</span>:</span></span><br><span class="line"> status = environ[<span class="string">'status'</span>]</span><br><span class="line"> <span class="comment"># 要添加到响应报文的响应头中的内容</span></span><br><span class="line"> response_headers = [(<span class="string">"Data"</span>, time.ctime())]</span><br><span class="line"> headers = start_response(status, response_headers)</span><br><span class="line"> response_body = <span class="string">'WSGI Dynamic Web Page ! at %s'</span> % time.ctime()</span><br><span class="line"> <span class="keyword">return</span> headers, response_body</span><br></pre></td></tr></table></figure>
@@ -502,7 +502,7 @@ var _hmt = _hmt || [];
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> application <span class="keyword">import</span> utils</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_response_headers</span><span class="params">(status, headers)</span>:</span></span><br><span class="line"> <span class="string">"""这个方法，会在 web框架中被默认调用"""</span></span><br><span class="line"> response_header_default = [(<span class="string">"Server"</span>, <span class="string">"MiniWeb Server WSGI/2.1"</span>), ]</span><br><span class="line"> <span class="comment"># 将状态码/相应头信息存储起来</span></span><br><span class="line"> <span class="comment"># [字符串, [xxxxx, xxx2]]</span></span><br><span class="line"></span><br><span class="line"> headers = [status, response_header_default + headers]</span><br><span class="line"> <span class="keyword">return</span> headers</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">application</span><span class="params">(resource_path, ip_port)</span>:</span></span><br><span class="line"> <span class="string">"""</span></span><br><span class="line"><span class="string"> 生成响应报文，返回响应报文</span></span><br><span class="line"><span class="string"> :param resource_path: 文件路径</span></span><br><span class="line"><span class="string"> :param ip_port: 客户端地址</span></span><br><span class="line"><span class="string"> :return: response_data : 响应报文</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"> """</span></span><br><span class="line"> <span class="comment"># 一、静态资源获取，资源路径非.py结尾。</span></span><br><span class="line"> <span class="keyword">if</span> <span class="keyword">not</span> resource_path.endswith(<span class="string">'.py'</span>):</span><br><span class="line">     print(<span class="string">'客户端:[%s]正在请求路径:%s的资源!'</span> % (str(ip_port), resource_path))</span><br><span class="line"></span><br><span class="line">     <span class="comment"># 10.5 异常捕获，如果没有该路径文件，显示404网页</span></span><br><span class="line">     <span class="keyword">try</span>:</span><br><span class="line">         <span class="keyword">with</span> open(resource_path, <span class="string">'rb'</span>) <span class="keyword">as</span> file:</span><br><span class="line">             <span class="comment"># 响应报文：静态资源 200</span></span><br><span class="line">             status = <span class="string">'200 OK'</span></span><br><span class="line">             response_body = file.read()</span><br><span class="line">             response_data = utils.create_response(status, response_body)</span><br><span class="line">     <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">         <span class="comment"># 重新设置响应报文 404</span></span><br><span class="line">         print(<span class="string">"资源路径:%s不存在! Error:%s"</span> % (resource_path, e))</span><br><span class="line">         status = <span class="string">'404 Not Found'</span></span><br><span class="line">         response_body = <span class="string">"Error!! %s"</span> % str(e)</span><br><span class="line">         response_body = response_body.encode()</span><br><span class="line">         response_data = utils.create_response(status, response_body)</span><br><span class="line"></span><br><span class="line"> <span class="comment"># 二、动态资源获取，资源路径以.py结尾。</span></span><br><span class="line"> <span class="keyword">else</span>:</span><br><span class="line">     <span class="comment"># 请求信息字典，初始为空</span></span><br><span class="line">     <span class="comment"># env = dict()</span></span><br><span class="line">     env = &#123;<span class="string">'status'</span>: <span class="string">'200 OK'</span>, <span class="string">'PATH_INFO'</span>: <span class="string">'./index.html'</span>&#125;</span><br><span class="line">     <span class="comment"># 响应报文：动态资源 200</span></span><br><span class="line">     headers, response_body = utils.get_response(env, set_response_headers)</span><br><span class="line">     response_line = <span class="string">"HTTP/1.1 &#123;status&#125;\r\n"</span>.format(status=headers[<span class="number">0</span>])</span><br><span class="line">     response_header = <span class="string">"Content-Type: text/html; charset=utf-8\r\n"</span></span><br><span class="line">     <span class="keyword">for</span> temp_head <span class="keyword">in</span> headers[<span class="number">1</span>]:</span><br><span class="line">         response_header += <span class="string">"&#123;0&#125;:&#123;1&#125;\r\n"</span>.format(*temp_head)</span><br><span class="line">     response_header += <span class="string">"Content-Length: %d\r\n"</span> % len(response_body)</span><br><span class="line">     response_blank = <span class="string">"\r\n"</span></span><br><span class="line">     response_data = (response_line + response_header + response_blank + response_body).encode()</span><br><span class="line"></span><br><span class="line">     <span class="comment"># status = '200 OK'</span></span><br><span class="line">     <span class="comment"># # response_body 应该与数据库、模板文件交互</span></span><br><span class="line">     <span class="comment"># response_body = ('Dynamic Web Page ! at %s' % time.ctime()).encode()</span></span><br><span class="line">     <span class="comment"># response_data = utils.create_response(status, response_body)</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">return</span> response_data</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
-<li><p><code>application\util.py</code></p>
+<li><p><code>application\utils.py</code></p>
 <blockquote>
 <p>拼接响应报文。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_response</span><span class="params">(status, response_body)</span>:</span></span><br><span class="line"> <span class="comment"># 10、根据请求路径生成响应报文</span></span><br><span class="line"> <span class="comment"># 10.1 响应行</span></span><br><span class="line"> response_line = <span class="string">'HTTP/1.1 %s\r\n'</span> % status</span><br><span class="line"> <span class="comment"># 10.2 响应头</span></span><br><span class="line"> response_header = <span class="string">"Server:MiniWeb Server WSGI/2.1\r\n"</span></span><br><span class="line"> <span class="comment"># 响应头加一个"Content-Type:text/html\r\n"，使得浏览器可以正确响应数据</span></span><br><span class="line"> <span class="comment"># response_header += "Content-Type: text/html; charset=utf-8\r\n"</span></span><br><span class="line"> response_header += <span class="string">"charset=utf-8\r\n"</span></span><br><span class="line"> response_header += <span class="string">"Content-Length: %d\r\n"</span> % (len(response_body))</span><br><span class="line"></span><br><span class="line"> <span class="comment"># 10.3 响应空行</span></span><br><span class="line"> response_blank = <span class="string">"\r\n"</span></span><br><span class="line"></span><br><span class="line"> <span class="comment"># 10.4 响应主体---打开并读取资源路径对应的html文件</span></span><br><span class="line"> <span class="comment"># response_body = "Hello World!".encode()</span></span><br><span class="line"> response_body = response_body</span><br><span class="line"></span><br><span class="line"> <span class="comment"># 11、拼接响应报文</span></span><br><span class="line"> response_data = (response_line + response_header + response_blank).encode() + response_body</span><br><span class="line"> <span class="keyword">return</span> response_data</span><br><span class="line"></span><br><span class="line"><span class="comment"># application(environ, start_response)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_response</span><span class="params">(environ, start_response)</span>:</span></span><br><span class="line"> status = environ[<span class="string">'status'</span>]</span><br><span class="line"> <span class="comment"># 要添加到响应报文的响应头中的内容</span></span><br><span class="line"> response_headers = [(<span class="string">"Data"</span>, time.ctime())]</span><br><span class="line"> headers = start_response(status, response_headers)</span><br><span class="line"> response_body = <span class="string">'WSGI Dynamic Web Page ! at %s'</span> % time.ctime()</span><br><span class="line"> <span class="keyword">return</span> headers, response_body</span><br></pre></td></tr></table></figure>
@@ -590,7 +590,7 @@ var _hmt = _hmt || [];
     2020-08-31 21:30:18
     <br>
     <strong class="update-time">最后更新：</strong>
-    2020-08-25 14:49:46
+    2020-09-11 16:07:41
     <br>
     <strong class="article-titles">本文标题：</strong>
     <a href="https://chthollists.github.io/post/9dd4a6e5.html" title="Python实战框架MiniWeb框架CP2——基本框架" target="_blank">Python实战框架MiniWeb框架CP2——基本框架</a>
@@ -760,11 +760,11 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/post/7db5d861.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/post/4a816cad.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Python实战框架MiniWeb框架CP3——路由字典与路由装饰器
+          博刊：今日物语：CP4——2020.08 三周目
         
       </div>
     </a>
@@ -862,7 +862,7 @@ gitalk.render('gitalk-container')
 		
 			<!-- # <font color="purple" face="Microsoft YaHei" size= 5><b>内容<br> </b></font> -->
 			
-    		<font color="red" face="Microsoft YaHei" size= 3><b>&copy; 2020 Code.Yang&nbsp;&nbsp;总文章数: 37</b></font>
+    		<font color="red" face="Microsoft YaHei" size= 3><b>&copy; 2021 Code.Yang&nbsp;&nbsp;总文章数: 39</b></font>
 			
     	</div>
       	<div class="footer-right">
@@ -972,15 +972,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">E-R模型</a>
+                <a href="javascript:void(0)" class="js-tag color4">子查询</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">视图和事务</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">pymysql</a>
+                <a href="javascript:void(0)" class="js-tag color5">连接查询</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -992,34 +988,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Cierra Runis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Overidea</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">子查询</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">连接查询</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">索引</a>
               </li>
              
@@ -1028,23 +996,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">busuanzi</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Live2D</a>
+                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Coding Pages</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Gitalk</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">hexo-deployer-git</a>
+                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1064,11 +1024,43 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Blog</a>
+                <a href="javascript:void(0)" class="js-tag color1">Yilia</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Encrypt</a>
+                <a href="javascript:void(0)" class="js-tag color4">toc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">E-R模型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">视图和事务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">pymysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">hexo-deployer-git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Cierra Runis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Overidea</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1080,11 +1072,67 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Yilia</a>
+                <a href="javascript:void(0)" class="js-tag color4">busuanzi</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">toc</a>
+                <a href="javascript:void(0)" class="js-tag color2">Live2D</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Coding Pages</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Gitalk</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo-wordcount</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">hexo-blog-encrypt</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Valine</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Leancloud</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Gitment</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">hexo-helper-live2d</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">declare</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">love</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">GIL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1108,50 +1156,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo-wordcount</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">hexo-blog-encrypt</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">declare</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">love</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">sonw</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ReadMe</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Valine</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Leancloud</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Gitment</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">hexo-helper-live2d</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
              
@@ -1160,11 +1164,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">listdir</a>
+                <a href="javascript:void(0)" class="js-tag color1">route</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">WSGI</a>
+                <a href="javascript:void(0)" class="js-tag color4">Iterator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Generator</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1188,6 +1196,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">gcc</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ctypes</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">deepcopy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MRO</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">metaclass</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ORM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">closure</a>
               </li>
              
@@ -1204,43 +1240,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">route</a>
+                <a href="javascript:void(0)" class="js-tag color5">WSGI</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">GIL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">gcc</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ctypes</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Iterator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Generator</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">deepcopy</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">metaclass</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ORM</a>
+                <a href="javascript:void(0)" class="js-tag color3">listdir</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1249,10 +1253,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">format</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MRO</a>
               </li>
              
               <li class="article-tag-list-item">
