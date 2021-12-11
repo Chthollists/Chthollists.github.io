@@ -1,0 +1,207 @@
+# Header
+
+menu:
+  # home
+  主页: /
+  # archives
+  归档:  /archives/index.html
+  # tags
+  标签: /tags
+  # essays
+  随笔: /categories/essays 
+  # Encrypt
+  限权: /tags/Encrypt  
+  # categories/algorithm
+  算法: /categories/Algorithm  
+  # Hexo
+  Hexo: /tags/Hexo/ 
+  # categories/java
+  Java: /categories/Java
+  # categories/python
+  Python: /categories/Python  
+  # Encrypt
+  # 受限： /tags/Encrypt/ 
+
+
+
+# SubNav
+subnav:
+  github: "https://github.com/Chthollists"
+  #weibo: "#"
+  #rss: "#"
+  #zhihu: "#"
+  qq: "/assets/qq.jpg"
+  weixin: "/assets/wechat.jpg"
+  #jianshu: "#"
+  #douban: "#"
+  #segmentfault: "#"
+  bilibili: "https://space.bilibili.com/2030799"
+  #acfun: "#"
+  mail: "mailto:amedeusmaho@163.com"
+  #facebook: "#"
+  #google: "#"
+  #twitter: "#"
+  #linkedin: "#"
+
+rss: /atom.xml
+
+# 是否需要修改 root 路径
+# 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，
+# 请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。
+root: /
+
+# Content
+
+# 文章太长，截断按钮文字
+# excerpt_link: more
+# 文章卡片右下角常驻链接，不需要请设置为false
+show_all_link: '展开全文'
+# 数学公式
+mathjax: false
+# 是否在新窗口打开链接
+open_in_new: false
+
+# 打赏
+# 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
+reward_type: 2
+# 打赏wording
+reward_wording: '感谢您的支持'
+# 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
+alipay: /assets/alipay.jpg
+# 微信二维码图片地址
+weixin: /assets/payforwechat.jpg
+
+# 目录
+# 目录设定：0-不显示目录； 1-文章对应的md文件里有toc:true属性，才有目录； 2-所有文章均显示目录
+toc: 1 
+# 根据自己的习惯来设置，如果你的目录标题习惯有标号，置为true即可隐藏hexo重复的序号；否则置为false
+toc_hide_index: true
+# 目录为空时的提示
+toc_empty_wording: '该文章没有设置目录......'
+
+# 是否有快速回到顶部的按钮
+top: true
+
+# Miscellaneous
+baidu_analytics: true
+google_analytics: ''
+favicon: /assets/favicon.png
+
+#你的头像url
+avatar: /assets/avatar.jpg
+#头像是否旋转(如果不要旋转取false)
+avatarrotation: true
+
+#是否开启分享
+share_jia: true
+
+#评论：1、多说；2、网易云跟帖；3、畅言；4、Disqus；5、Gitment
+#不需要使用某项，直接设置值为false，或注释掉
+#具体请参考wiki：https://github.com/litten/hexo-theme-yilia/wiki/
+
+#1、多说
+duoshuo: false
+
+#2、网易云跟帖
+wangyiyun: false
+# 网易云音乐插件
+music:
+  enable: true
+  #id: 1332647902  # 网易云分享的ID
+  # 是否开启自动播放
+  autoplay: false  
+
+
+
+#3、畅言
+changyan_appid: false
+changyan_conf: false
+
+#4、Disqus 在hexo根目录的config里也有disqus_shortname字段，优先使用yilia的
+disqus: false
+
+#5、Gitment
+gitment_owner: false      #你的 GitHub ID
+gitment_repo: ''          #存储评论的 repo
+gitment_oauth:
+  client_id: ''           #client ID
+  client_secret: ''       #client secret
+
+# 样式定制 - 一般不需要修改，除非有很强的定制欲望…
+style:
+  # 头像上面的背景颜色
+  header: '#4d4d4d'
+  # 右滑板块背景
+  slider: 'linear-gradient(200deg,#a0cfe4,#e8c37e)'
+
+# slider的设置
+slider:
+  # 是否默认展开tags板块
+  showTags: false
+  
+  
+# 版权声明
+#在需要进行版权声明的文章的md文件头部，设置属性declare: true。
+#版权基础设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明
+declare:
+  declare_type: 1
+  licensee_url: https://creativecommons.org/licenses/by-nc-sa/4.0/        #当前应用的版权协议地址。
+  licensee_name: 'CC BY-NC-SA 4.0'                                        #版权协议的名称
+  licensee_alias: '知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议'       # alias别名
+  licensee_img: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png    #版权协议的Logo
+  
+  
+
+# 评论功能
+#0 关闭评论  2全开评论  1需要再文章md开头加入gitalkenable: true
+gitalk_type: 1
+gitalk:
+  enable:  true
+  githubID:  'Chthollists'   
+  repo:  'Chthollists.github.io' #这里可以另开一个也可以就用你博客的那个repo
+  ClientID:  'ef41cd3f6bb938f5b4c6'
+  ClientSecret:  '0a387b3802665d8a71757a618f93dfd8cb5ec7d8'
+  adminUser:  'Chthollists' 
+  distractionFreeMode: true
+
+
+  
+# https://github.com/hustcc/canvas-nest.js
+# 配置详见： https://github.com/hustcc/canvas-nest.js#configuration
+# 动态线条效果，会向鼠标集中
+canvas_nest:
+  enable: true
+  color: '138,43,226'        # color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+  pointColor: '148,0,211'     # color of points, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+  opacity: '0.8'               # the opacity of line (0~1), default: 0.5.
+  count: '168'                  # the number of lines, default: 99.
+  zIndex: '-1'                 # z-index property of the background, default: -1.  
+  
+  
+
+# 飘雪特效
+# https://github.com/MlgmXyysd/snow.js
+snow: true
+
+# 雪花特效2
+snow2: false
+
+# 代码雨
+code_rain: false
+
+
+# 智能菜单
+# 如不需要，将该对应项置为false
+# 比如
+#smart_menu:
+#  friends: false
+smart_menu:
+  innerArchive: '所有文章'
+  friends: '友链'
+  aboutme: '个性签名'
+
+friends:
+  My Coding Pages: http://mfln8n.coding-pages.com
+
+
+aboutme: <font color="purple" face="Microsoft YaHei" size= 5><b>待到雄图卷毕 &nbsp;&nbsp;隐居山水里<br>坐看炊烟旖旎 &nbsp;&nbsp;浅池戏双鲤<br> </b></font>

@@ -1,0 +1,88 @@
+<%- partial('_partial/head') %>
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      <%- partial('_partial/left-col', null, {cache: !config.relative_link}) %>
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <%- body %>
+          </div>
+        </div>
+      </div>
+      <%- partial('_partial/footer') %>
+    </div>
+    <%- partial('_partial/after-footer') %>
+    <%- partial('_partial/tools') %>
+    <%- partial('_partial/viewer') %>
+  </div>
+  
+  
+
+
+<!--动态线条背景-->
+<% if (theme.canvas_nest.enable){ %>
+    <script type="text/javascript" color="<%=theme.canvas_nest.color %>" opacity="<%=theme.canvas_nest.opacity %>" 
+        zIndex="<%=theme.canvas_nest.zIndex %>" count="<%=theme.canvas_nest.count %>" 
+        src="/canvas-nest.min.js">
+    </script>
+<% } %>
+
+<!--雪花特效-->
+<% if (theme.snow){ %>
+  <script type="text/javascript" src="<%- url_for('snow.js') %>"></script>
+  <script type="text/javascript" src="<%- url_for('jquery-2.1.4.min.js') %>"></script>
+  <script>
+    snow.down();
+    $(window).resize(function() {
+      $("canvas").css("z-index","500").remove();
+      snow.down();
+    });
+  </script>
+  <% } %>
+  
+ <!-- 雪花特效2 -->
+<% if (theme.snow2){ %>
+  <script type="text/javascript" src="/snow2.js"></script>
+<% } %> 
+  
+  
+ <!--代码雨-->
+<% if (theme.code_rain){ %>
+      <!-- 数字雨 -->
+      <canvas id="code_rain_canvas" width="1440" height="900"></canvas>
+      <script type="text/javascript" src="/code_rain.js">
+        <style>
+            #code_rain_canvas {
+              position: fixed;
+              right: 0px;
+              bottom: 0px;
+              min-width: 100%;
+              min-height: 100%;
+              height: auto;
+              width: auto;
+              z-index: 4;
+            }
+        </style>
+    </script>
+<% } %>
+  
+
+<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+</script>  
+  
+</body>
+</html>
+
+
+

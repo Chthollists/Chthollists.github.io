@@ -1,0 +1,22 @@
+/* 版权声明 */
+.declare {
+	background-color: #eaeaea;
+	margin-top: 2em;
+	border-left: 3px solid #ff1700;
+	padding: .5em 1em;
+}
+ul.declare li {
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+/* 版权声明移动端 */
+@media screen and (max-width:800px){
+	li.declare_article-url{
+		display: none;
+	}
+  ul.declare li{
+		font-weight: normal;
+		font-size: 16px;
+	}
+}

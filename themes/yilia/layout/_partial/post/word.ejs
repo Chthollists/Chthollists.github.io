@@ -1,0 +1,19 @@
+<div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  博文字数统计 : </span></b></font>
+        <!--自定义样式-->
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: blue"><%= wordcount(post.content) %>字</span>
+      </span></b></font>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <font face= "Microsoft YaHei"><b><span class="post-meta-item-text" style="font-size: 16px;color: purple">  阅读所需时长 : </span></b></font>
+        <font face= "Microsoft YaHei"><b><span class="post-count" style="font-size: 16px;color: red"><%= min2read(post.content) %>分</span>
+      </span></b></font>
+    </span>
+</div>
