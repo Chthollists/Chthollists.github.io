@@ -1,5 +1,5 @@
 ---
-title: Tech-Share系列(一)——Log4j漏洞
+title: Tech-Share系列CP1——Log4j漏洞
 reward: true
 declare: true
 gitalkenable: true
@@ -19,7 +19,7 @@ date: 2021-12-12 22:18:36
 
 <!-- more -->
 
-# Tech-Share系列(一)——Log4j漏洞
+# Tech-Share系列CP1——Log4j漏洞
 
 ## 1. Log4j的简介
 
