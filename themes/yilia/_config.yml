@@ -11,14 +11,22 @@ menu:
   随笔: /categories/essays 
   # Encrypt
   限权: /tags/Encrypt  
-  # categories/algorithm
-  算法: /categories/Algorithm  
-  # Hexo
-  Hexo: /tags/Hexo/ 
   # categories/java
   Java: /categories/Java
   # categories/python
-  Python: /categories/Python  
+  Python: /categories/Python 
+  # categories/algorithm
+  算法: /categories/Algorithm  
+  # Spring, MyBatis, etc.
+  框架: /categories/Frame
+  # MySQL, Redis, RabbitMQ, Kafka, etc
+  中间件: /categories/Middleware
+  # 八股文、面经
+  面试: /categories/Interview
+  # Other: Log4j, etc.
+  技术: /categories/Technology
+  # Hexo Blog
+  Hexo: /tags/Hexo/   
   # Encrypt
   # 受限： /tags/Encrypt/ 
 
