@@ -24,18 +24,13 @@ date: 2020-07-31 20:11:20
 
 * Chapter10：
 
-* 分析并解决了不蒜子统计与Live2D冲突导致的不蒜子统计功能失效问题
-
-* 分析并解决了网易云音乐外链资源加载失败的问题，但歌单外链仍会失败
-
-* 分析并解决了博客网站无法被百度收录的问题
-
-* 分析了Gitalk评论出现Error : Network Error的原因及解决办法，但仍未解决
-
-  Tip：
-
-  * 如果有人解决了Gitalk的Error : Network Error问题，请在评论区分享或私信博主
-  * 后面会把Hexo博客搭建、美化、功能扩展整个系列的内容整合到一个文章中
+  * 分析并解决了不蒜子统计与Live2D冲突导致的不蒜子统计功能失效问题
+  * 分析并解决了网易云音乐外链资源加载失败的问题，但歌单外链仍会失败
+  * 分析并解决了博客网站无法被百度收录的问题
+  * 分析了Gitalk评论出现`Error : Network Error`的原因及解决办法，但仍未解决
+* Tip：
+  * 如果有人解决了Gitalk的`Error : Network Error`问题，请在评论区分享或私信博主
+  * 后面会介绍如何在多台设备上一起更新博客
 
 <!-- more -->
 
@@ -43,7 +38,7 @@ date: 2020-07-31 20:11:20
 
 ---
 
-## 重点：Hexo博客搭建中的遗留问题与解决方法
+## Hexo博客搭建中的遗留问题与解决方法
 
 ### 一、不蒜子统计与Live2D冲突
 
@@ -95,26 +90,23 @@ date: 2020-07-31 20:11:20
 
   > 如：`theme/yilia/source`路径
 
-* 修改busuanzi.pure.mini.js文件
+* 修改`busuanzi.pure.mini.js`文件
 
   > ```js
-  > # 找到
+  > // 找到
   > b.style.display="none"
   > 
-  > # 改为
+  > // 改为
   > b.style.display=''
   > ```
 
-* 修改不蒜子统计的调用语句
+* 修改不蒜子统计的调用语句：路径：`themes\yilia\layout\_partial\after-footer.ejs`
 
-  > 原来是从不蒜子统计的服务器上调用busuanzi.pure.mini.js
-  >
-  > 现在直接从本地调用，还可以避免不蒜子官网域名改变导致的功能失效问题
-
-  > 路径：`themes\yilia\layout\_partial\after-footer.ejs`
-  >
+  * 原来是从不蒜子统计的服务器上调用busuanzi.pure.mini.js
+  * 现在直接从本地调用，还可以避免不蒜子官网域名改变导致的功能失效问题
+  
   > ```html
-  > # 原始
+  ># 原始
   > <script  async  src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   > 
   > # 修改为本地路径：/busuanzi.pure.mini.js
@@ -129,19 +121,18 @@ date: 2020-07-31 20:11:20
 
 #### 1. 网易云音乐加载失败
 
-* 问题
+* 问题：**歌单外链错误 : music.163.com上的嵌入式页面显示资源加载失败**
 
-  > **歌单外链错误 : music.163.com上的嵌入式页面显示资源加载失败**
 
 #### 2. 调研与分析
 
 * 网上的解决办法参见：[解决办法](https://blog.csdn.net/hubaoquanu/article/details/79084193)；均无法解决该问题
 
-* 原因：是由于开启了IPv6后使用了google的IPv6 DNS，音乐资源网站ip解析会直接错误解析到本地127.0.0.1
+* 原因：是由于开启了IPv6后使用了google的IPv6 DNS，音乐资源网站ip解析会直接错误解析到本地`127.0.0.1`
 
-* 方法(均无效)：
+* 解决方法
 
-  * 添加以下内容到hosts文件C:\Windows\System32\drivers\etc\hosts
+  * 添加以下内容到hosts文件`C:\Windows\System32\drivers\etc\hosts`
 
     > ```bash
     > # 解决ipv6开启后网易云音乐无法播放的问题
@@ -150,17 +141,17 @@ date: 2020-07-31 20:11:20
     > 223.252.199.66 music.163.com
     > ```
 
-    直接停用IPv6功能，在网络和共享中心---网络状态---属性里面，不勾选TCP/IPv6。
+  * 直接停用IPv6功能，在网络和共享中心---网络状态---属性里面，不勾选TCP/IPv6。
 
   * 使用国内的IPv6DNS: 240c::6666，此时无法访问Google和Youtube。
 
 #### 3. 解决办法
 
-* 单首音乐对象直接生成外链、电台对象生成外链均不会出现资源加载失败问题；
+* 单首音乐对象直接生成外链、电台对象生成外链均不会出现资源加载失败问题
 
-* 但是，使用歌单对象(即使歌单只有一首音乐)，会出现资源加载失败错问题；
+* 但是，使用歌单对象(即使歌单只有一首音乐)，会出现资源加载失败错问题
 
-* 推测可能是歌单后台有bug，已反馈给网易云客服。
+* 推测可能是歌单后台有bug，已反馈给网易云客服
 
 #### 4. 结果：已解决
 
@@ -176,23 +167,16 @@ date: 2020-07-31 20:11:20
 
 #### 2. Hexo博客双线部署
 
-* 详细教程：参考[Hexo双线部署CodingPages](https://blog.csdn.net/qq_36759224/article/details/100879609)、[Hexo博客+Coding Pages](http://mfln8n.coding-pages.com/)
-
-  > 具体方法与部署到Github上类似
-
+* 详细教程：具体方法与部署到Github上类似
+  * [Hexo双线部署CodingPages](https://blog.csdn.net/qq_36759224/article/details/100879609)、
+  * [Hexo博客+Coding Pages](http://mfln8n.coding-pages.com/)
 * 注册Coding Pages
-
 * 新建项目--repo库
-
 * 绑定SSH公钥
-
 * Hexo部署到Coding Pages上
-
 * Coding Pages生成静态网站
 
-#### 3. 百度收录实现
-
-> 主动推送+SiteMap结合使用
+#### 3. 百度收录实现：主动推送+SiteMap
 
 * 主动推送原理
 
@@ -200,39 +184,35 @@ date: 2020-07-31 20:11:20
 
   * 新链接的提交， hexo deploy 会从上述文件中读取链接，提交至百度搜索引擎。
 
-* 安装插件 hexo-baidu-url-submi
+* 安装插件：`hexo-baidu-url-submit`
 
   > ```bash
   > npm install hexo-baidu-url-submit --save
   > ```
 
-* 修改博客根目录配置文件_config.yml
+* 修改博客根目录配置文件`_config.yml`，添加
 
-  > 添加
-  >
   > ```yml
-  > baidu_url_submit:
+  >baidu_url_submit:
   > count: 20 ## 提交最新的20个链接
   > host: http://mfln8n.coding-pages.com/ ## 百度站长平台中注册的域名
   > token:  ## 16位准入秘钥
   > path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
   > ```
-
+  
 * 获取准入秘钥
 
   > 在[百度搜索资源平台](https://ziyuan.baidu.com/)的平台收录中获取准入秘钥token ---16位
 
-* 查看根目录下的_config.yml文件中url的值， 必须包含是百度站长平台注册的域名
+* 查看根目录下的`_config.yml`文件中url的值， 必须包含是百度站长平台注册的域名
 
-  > 如：
-  >
   > ```yml
-  > # URL
+  ># URL
   > url: http://mfln8n.coding-pages.com/
   > root: /
   > ```
-
-* 加入新的deployer:
+  
+* 加入新的deployer
 
   > ```yml
   > deploy:
@@ -256,13 +236,13 @@ date: 2020-07-31 20:11:20
 
 #### 2. 分析
 
-* 参考：
+* 参考
 
   > [Gitalk评论初始化无法登陆](https://www.cnblogs.com/liuurick/p/10713693.html)
   >
   > [Gitalk评论初始化登录时跳转回首页](https://blog.csdn.net/w47_csdn/article/details/88858343)
 
-* OAuth APP的callback URL设置导致的
+* OAuth APP的`callback URL`设置导致的
 
 #### 3. 解决办法
 
@@ -280,5 +260,5 @@ date: 2020-07-31 20:11:20
 
 #### 4. 结果：未解决
 
-* 后续会继续跟进。
+* 后续会继续跟进
 

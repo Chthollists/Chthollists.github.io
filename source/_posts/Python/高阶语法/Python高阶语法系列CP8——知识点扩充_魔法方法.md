@@ -9,7 +9,7 @@ categories:
   - Advanced
 tags:
   - Python
-  - getattr
+  - OOP
 abbrlink: 3d92fe76
 date: 2020-08-27 20:20:59
 top:
@@ -19,21 +19,21 @@ top:
 
 * Python高阶语法系列CP8——知识点扩充：魔法属性与方法(3/4)
 * CP8主要分享了
-* 常见的魔法属性
-  * `__doc__`
-  * `__module__`、`__class__`
-  * `__dict__`
-* 常见的魔法方法
-  * `__new__()`：元类
-  * `__init__()`、`__call__()`：装饰器
-  * `__dir__()`：`__dict__`是dir的子集
-  * `__str__()`、`__repr__()`：调用对象时字符串输出
-  * `__iter__()`、`__next__()`：迭代器、生成器
-* 用于访问属性的魔法方法：API调用链接
-  * `__getattr__(self, name)`、`__getattribute__(self, name)`、`__setattr__(self, name, value)`、`__delattr__(self, name)`
-  * 重写该方法时要注意调用父类的该方法
-* 用于索引、字典操作的魔法方法：斐波那契数列
-  * `__getitem__()`、`__setitem__()`、`__delitem__()`
+  * 常见的魔法属性
+    * `__doc__`
+    * `__module__`、`__class__`
+    * `__dict__`
+  * 常见的魔法方法
+    * `__new__()`：元类
+    * `__init__()`、`__call__()`：装饰器
+    * `__dir__()`：`__dict__`是dir的子集
+    * `__str__()`、`__repr__()`：调用对象时字符串输出
+    * `__iter__()`、`__next__()`：迭代器、生成器
+  * 用于访问属性的魔法方法：API调用链接
+    * `__getattr__(self, name)`、`__getattribute__(self, name)`、`__setattr__(self, name, value)`、`__delattr__(self, name)`
+    * 重写该方法时要注意调用父类的该方法
+  * 用于索引、字典操作的魔法方法：斐波那契数列
+    * `__getitem__()`、`__setitem__()`、`__delitem__()`
 
 <!-- more -->
 

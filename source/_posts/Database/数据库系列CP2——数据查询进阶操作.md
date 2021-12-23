@@ -9,8 +9,6 @@ categories:
   - MySQL
 tags:
   - MySQL
-  - 子查询
-  - 连接查询
 abbrlink: 2db84f7e
 date: 2020-08-06 18:11:58
 top:
@@ -20,12 +18,12 @@ top:
 
 * 数据库系列CP2——数据查询进阶操作
 * CP2主要分享了：
-* where关键字语法
-* order、limit、group语法
-* 聚合函数：sum/avg/count/max/min
-* 分页查询
-* 连接查询(内连接、外连接)、自连接查询
-* 子查询
+  * where关键字语法
+  * order、limit、group语法
+  * 聚合函数：sum/avg/count/max/min
+  * 分页查询
+  * 连接查询(内连接、外连接)、自连接查询
+  * 子查询
 
 <!-- more -->
 

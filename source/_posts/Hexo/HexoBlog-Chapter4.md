@@ -44,9 +44,9 @@ tags:
 
 ### 1. 主题更换 ：Yilia
 
-* 下载开源的主题，存放在HexoBlog/theme目录下
+* 下载开源的主题，存放在`HexoBlog/themes`目录下
 
-  > 选择Github上很多人star的[Yilia主题](https://github.com/litten/hexo-theme-yilia.git themes/yilia)，此外，还有[Yilia-plus主题](https://zhousiwei.gitee.io/2019/07/25/hexo%E4%B8%BB%E9%A2%98%E4%B9%8Bhexo-theme-yilia-plus/)、Next主题等。
+  > 选择Github上很多人Star的[Yilia主题](https://github.com/litten/hexo-theme-yilia.git themes/yilia)，此外，还有[Yilia-plus主题](https://zhousiwei.gitee.io/2019/07/25/hexo%E4%B8%BB%E9%A2%98%E4%B9%8Bhexo-theme-yilia-plus/)、Next主题等。
   >
   > ```bash
   ># 在HexoBlog目录下Git bash
@@ -116,7 +116,7 @@ tags:
 
 #### 3.1 显示文章摘要
 
-* 在你MD 格式文章正文,一般在标题后插入 `<!-- more -->`
+* 在MD格式文章正文，一般在标题后插入 `<!-- more -->`
 
   > 同时需要注释掉 `themes/yilia/_config.yml`内的`excerpt_link: more`项。
   >
@@ -368,7 +368,7 @@ tags:
 
 * 修改ejs文件：
 
-  > 找到`themes\yilia\layout\_partial\article.ejs`,在 `</header> <% } %>`下面加入
+  > 找到`themes\yilia\layout\_partial\article.ejs`，在 `</header> <% } %>`下面加入
   >
   > ```html
   > <!-- 目录内容 -->
@@ -405,16 +405,14 @@ tags:
   > ```yml
   > ---
   > title: 				 #文章标题
-  > categories:                       #文章分類目錄 可以省略    
-  > toc: true                            #目录 需要安装插件或者主题自带
-  > date:                                   #文章日期
-  > tags:                                    #标签
+  > categories:          #文章分类路径，可以省略    
+  > toc: true            #是否显示目录，需要安装插件或者主题自带
+  > date:                #文章日期
+  > tags:                #标签
   > ---
   > ```
 
 #### 3.5 字体美化
-
-* 代码字体美化、颜色设置
 
 * 正文字体美化
 
@@ -481,3 +479,4 @@ tags:
   > ```
 
 ---
+

@@ -22,15 +22,15 @@ top:
 
 * Python高阶语法系列CP3——装饰器
 * CP3主要分享了
-* 函数闭包
-* 装饰器(含参、返回值)
-* 装饰函数名：@functools.wraps(func)`
-* 装饰器工厂：外部变量
-* 多重装饰器
-* 类装饰器：init、call
-* 类中Property属性的实现：装饰器方式、类属性方式
-* 类方法：classmethod
-* 静态方法：staticmethod
+  * 函数闭包
+  * 装饰器(含参、返回值)
+  * 装饰函数名：@functools.wraps(func)`
+  * 装饰器工厂：外部变量
+  * 多重装饰器
+  * 类装饰器：init、call
+  * 类中Property属性的实现：装饰器方式、类属性方式
+  * 类方法：classmethod
+  * 静态方法：staticmethod
 
 <!-- more -->
 

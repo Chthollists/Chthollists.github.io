@@ -11,6 +11,7 @@ categories:
 - Hexo
 top: 
 tags:
+- Hexo
 - Git
 - Github 
 ---

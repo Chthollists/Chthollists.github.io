@@ -19,12 +19,12 @@ top:
 
 * Python高阶语法系列CP5——Excel文件操作
 * CP5主要分享了
-* Python操作Excel文件的相关模块
-* xlrd模块 ：读xls文件
-* xlwt模块：写xls文件，只能新建一个文件写入，无法追加内容
-* xlutils.copy()函数：复制Excel文件，复制后可用xlwt来覆盖写入
-* xlsxwriter模块：写入xlsx文件
-* openpyxl模块：读、写、追加xlsx、xlsm文件
+  * Python操作Excel文件的相关模块
+  * xlrd模块 ：读xls文件
+  * xlwt模块：写xls文件，只能新建一个文件写入，无法追加内容
+  * xlutils.copy()函数：复制Excel文件，复制后可用xlwt来覆盖写入
+  * xlsxwriter模块：写入xlsx文件
+  * openpyxl模块：读、写、追加xlsx、xlsm文件
 
 <!-- more -->
 

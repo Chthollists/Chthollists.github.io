@@ -22,10 +22,10 @@ top:
 
 * Python高阶语法系列CP2——协程
 * CP2主要分享了
-* 协程(Coroutine)的基本概念和作用
-* 协程的创建：greenlet、gevent
-* 协程实战：多协程文件下载器
-* 协程实战：多协程Web服务器
+  * 协程(Coroutine)的基本概念和作用
+  * 协程的创建：greenlet、gevent
+  * 协程实战：多协程文件下载器
+  * 协程实战：多协程Web服务器
 
 <!-- more -->
 

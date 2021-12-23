@@ -9,8 +9,7 @@ categories:
   - Advanced
 tags:
   - Python
-  - contextmanager
-  - format
+  - ContextManager
 abbrlink: 1aab2355
 date: 2020-08-29 12:08:45
 top:
@@ -20,10 +19,10 @@ top:
 
 * Python高阶语法系列CP9——知识点扩充：with与format(4/4)
 * CP9主要分享了
-* 上下文管理器
-* 自定义上下文管理类
-* 用于上下文管理的装饰器
-* format格式化输出的格式符与语法
+  * 上下文管理器
+  * 自定义上下文管理类
+  * 用于上下文管理的装饰器
+  * format格式化输出的格式符与语法
 
 <!-- more -->
 

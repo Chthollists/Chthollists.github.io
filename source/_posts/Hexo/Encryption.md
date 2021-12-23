@@ -9,7 +9,6 @@ categories:
 - Hexo
 tags:
   - Hexo
-  - Blog
   - Encrypt
 abbrlink: 7496a9d6
 date: 2020-07-29 14:09:29

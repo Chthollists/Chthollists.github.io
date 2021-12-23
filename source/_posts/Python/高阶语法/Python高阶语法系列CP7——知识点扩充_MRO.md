@@ -9,7 +9,7 @@ categories:
   - Advanced
 tags:
   - Python
-  - MRO
+  - MRO类搜索顺序
 abbrlink: 98bf047c
 date: 2020-08-25 09:16:28
 top:
@@ -21,19 +21,19 @@ top:
 
 * CP7主要分享了
 
-* m模块导入
+  * 模块导入
 
-  * 路径搜索与`sys.path`
+    * 路径搜索与`sys.path`
 
-  * 私有变量与`from module_name import *`
-  * 同名模块重新导入：reload()
-  * `__import__()`动态导入加载模块、类、函数
+    * 私有变量与`from module_name import *`
+    * 同名模块重新导入：reload()
+    * `__import__()`动态导入加载模块、类、函数
 
-* 函数传递时的拆包：`*args, **kwargs`
+  * 函数传递时的拆包：`*args, **kwargs`
 
-* 单继承的父类方法覆盖、super()调用父类方法
+  * 单继承的父类方法覆盖、super()调用父类方法
 
-* 多继承时的MRO顺序
+  * 多继承时的MRO顺序
 
 <!-- more -->
 

@@ -8,8 +8,6 @@ categories:
   - Middleware
   - MySQL
 tags:
-  - RDBMS
-  - SQL
   - MySQL
 abbrlink: 4fd02982
 date: 2020-08-04 00:13:14
@@ -20,9 +18,9 @@ top:
 
 * 数据库系列CP1——SQL语言基础语法
 * CP1主要分享了：
-* 数据库的基本概念、数据库管理系统RDBMS
-* MySQL数据库的环境搭建
-* SQL基础语法：数据库操作、数据表操作、数据(字段、记录)的增删改查(Crud)
+  * 数据库的基本概念、数据库管理系统RDBMS
+  * MySQL数据库的环境搭建
+  * SQL基础语法：数据库操作、数据表操作、数据(字段、记录)的增删改查(Crud)
 
 <!-- more -->
 

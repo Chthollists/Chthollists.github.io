@@ -27,9 +27,9 @@ date: 2020-07-29 15:00:55
 
 [**Chthollists的平凡之路**](https://chthollists.github.io/)
 
-* 本博客是基于Hexo搭建的一个简易静态博客；
-* 本博客主题为Github上的[Yilia主题](https://github.com/dongshuyan/live2dDemo)，风格简约美观，不过可惜的是，原作者已经停止更新了；
-* 本博客在Yilia主题上进行了深入的配置，并扩展了一些额外功能，具体内容会在Hexo博客搭建系列中更新。
+* 本博客是基于Hexo搭建的一个简易静态博客
+* 本博客主题为Github上的[Yilia主题](https://github.com/dongshuyan/live2dDemo)，风格简约美观，不过可惜的是，原作者已经停止更新了
+* 本博客在Yilia主题上进行了深入的配置，并扩展了一些额外功能，具体内容会在Hexo博客搭建系列中更新
 
 ---
 
@@ -39,9 +39,9 @@ date: 2020-07-29 15:00:55
 
 > 由于Author研究生即将毕业，且准备转行CS，所以博客主要为CS相关内容。
 
-* Author自学CS领域知识时的笔记、心得；
-* 刷题笔记；
-* 莫须有的随笔。
+* Author自学CS领域知识时的笔记、心得
+* 刷题笔记
+* 莫须有的随笔
 
 ### 2.1 Python
 
@@ -49,8 +49,7 @@ date: 2020-07-29 15:00:55
 * 面向对象
 * web基础
 * 数据库
-* 前端开发
-* web全栈开发+框架
+* web框架
 * 爬虫框架
 * 数据分析
 * 机器学习
@@ -60,25 +59,23 @@ date: 2020-07-29 15:00:55
 
 ### 2.2 Java
 
-* 基础语法javaSE
-* javaweb
-* 数据库
-* 前端开发
-* 动态网页
-* 项目框架
-* 项目管理工具
-* 分布式架构
-* 服务器中间件
-* 服务器技术
-* 容器技术
+* JavaSE：基础语法、面向对象、泛型、反射
+* 数据库：MySQL、JDBC
+* JavaWeb：前端开发、Servlet、Filter、Listener、Ajax、Tomcat
+* 动态网页：JSP
+* JavaEE(框架)：Spring、SpringMVC、SpringBoot、MyBatis、MyBatisPlus
+* 项目管理工具：Maven、Git
+* 分布式架构：SpringCloud、Dubbo、Nacos、Zookeeper
+* 中间件：Redis、Kafka、RabbitMQ、ActiveMQ、RocketMQ
+* 容器技术：Docker、K8S
+* 其他框架、中间件：SpringData、JPA、SpringSecurity、Hibernate
 
 ---
 
 ### 2.3 算法
 
-* 数据结构
-* 算法导论
-* 排序，递归，动态规划，贪心，搜索等算法
+* 数据结构：数组、链表、哈希表、树、图
+* 算法导论：排序、递归、动态规划、回溯、贪心、搜索
 * 刷题
   * [LeetCode](https://leetcode-cn.com/problemset/all/)
   * [nowcoder](https://www.nowcoder.com/activity/oj)
@@ -106,9 +103,9 @@ date: 2020-07-29 15:00:55
 
 > 前面的博客内容列了不少，算是超高校级的Flag的了，为了实现目标，还请大家监督。
 
-* 记录自学笔记，每日物语；
-* 自我监督、互相监督；
-* 留下青春的痕迹。
+* 记录自学笔记，每日物语
+* 自我监督、互相监督
+* 留下青春的印记
 
 ---
 

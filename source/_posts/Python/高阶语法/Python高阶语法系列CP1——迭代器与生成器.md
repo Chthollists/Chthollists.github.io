@@ -20,10 +20,10 @@ top:
 
 * Python高阶语法系列CP1——迭代器与生成器
 * CP1主要分享了
-* 可迭代对象(Iterable)：iter
-* 迭代器(Iterator)：iter、next
-* 生成器(Generator)：yield、return、send
-* 实例：斐波那契数列、素数、回文数
+  * 可迭代对象(Iterable)：iter
+  * 迭代器(Iterator)：iter、next
+  * 生成器(Generator)：yield、return、send
+  * 实例：斐波那契数列、素数、回文数
 
 <!-- more -->
 

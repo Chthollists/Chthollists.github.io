@@ -9,9 +9,7 @@ categories:
   - Advanced
 tags:
   - Python
-  - GIL
-  - gcc
-  - ctypes
+  - GIL全局锁
 abbrlink: cf16f693
 date: 2020-08-18 20:20:18
 top:
@@ -21,12 +19,12 @@ top:
 
 * Python高阶语法系列CP4——GIL全局锁
 * CP4主要分享了
-* GIL全局解释器锁的概念和限制
-* GIL锁的解决方法
-* gcc编译环境的安装：MinGW
-* Python导入C的扩展库：`my_lib = ctypes.cdll.LoadLibrary('导入库的路径')`
-* Python导入库时遇到32/64位不匹配的解决方法
-* GIL锁面试问题
+  * GIL全局解释器锁的概念和限制
+  * GIL锁的解决方法
+  * gcc编译环境的安装：MinGW
+  * Python导入C的扩展库：`my_lib = ctypes.cdll.LoadLibrary('导入库的路径')`
+  * Python导入库时遇到32/64位不匹配的解决方法
+  * GIL锁面试问题
 
 <!-- more -->
 

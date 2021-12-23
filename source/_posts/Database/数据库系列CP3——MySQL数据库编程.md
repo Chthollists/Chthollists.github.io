@@ -9,8 +9,6 @@ categories:
   - MySQL
 tags:
   - MySQL
-  - E-R模型
-  - 视图和事务
   - pymysql
 abbrlink: 428506b1
 date: 2020-08-09 17:13:58
@@ -21,13 +19,13 @@ top:
 
 * 数据库系列CP3——MySQL数据库编程
 * CP3主要分享了：
-* 外键约束
-* 视图和事务
-* 数据库三范式
-* E-R模型
-* Pyhton连接MySQL：connection
-* Python操作MySQL：cursor
-* SQL防注入
+  * 外键约束
+  * 视图和事务
+  * 数据库三范式
+  * E-R模型
+  * Pyhton连接MySQL：connection
+  * Python操作MySQL：cursor
+  * SQL防注入
 
 <!-- more -->
 
