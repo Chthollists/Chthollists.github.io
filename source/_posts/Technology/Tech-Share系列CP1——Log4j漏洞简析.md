@@ -8,6 +8,7 @@ toc: true
 top: 6
 tags:
   - Log4j
+abbrlink: 6c3cc74d
 date: 2021-12-12 22:18:36
 ---
 ---

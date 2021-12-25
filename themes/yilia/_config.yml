@@ -16,7 +16,9 @@ menu:
   # categories/python
   Python: /categories/Python 
   # categories/algorithm
-  算法: /categories/Algorithm  
+  算法: /categories/Algorithm
+  # categories/codeRecord 刷题
+  码录: /categories/CodeRecord    
   # Spring, MyBatis, etc.
   框架: /categories/Frame
   # MySQL, Redis, RabbitMQ, Kafka, etc
