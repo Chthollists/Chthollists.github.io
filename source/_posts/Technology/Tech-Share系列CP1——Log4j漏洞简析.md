@@ -21,13 +21,15 @@ date: 2021-12-12 22:18:36
   * **问题思考：JNDI与目前主流框架的配置文件的思想和原理是否类似**
   * 本人技术小白，欢迎大神交流指导
 
+---
+
 <!-- more -->
 
 # Tech-Share系列CP1——Log4j漏洞
 
 ## 1. Log4j代码执行漏洞
 
-#### 1.1 Log4j的简介
+### 1.1 Log4j的简介
 
 *  日志框架
    *  常用日志框架：Log4j、SLF4J、Logback框架(三者均由Ceki Gulcu开发)，Log4j2(Apache)
@@ -43,7 +45,7 @@ date: 2021-12-12 22:18:36
    *  Log4j2 也支持 SLF4J，可以自动重新加载日志配置，并支持高级过滤选项
    *  Log4j2 允许基于 lambda 表达式对日志语句进行延迟评估，为低延迟系统提供异步记录器，并提供无垃圾模式以避免由垃圾收集器操作引起的任何延迟
 
-#### 1.2 Lookups功能
+### 1.2 Lookups功能
 
 * `Log4j2`的使用
 
@@ -62,7 +64,7 @@ date: 2021-12-12 22:18:36
 
   * `Log4j2`提供了常见的查找方式，其他需求则由开发者自行提供
 
-    ![lookups默认支持的方式](.\images-log4j2\lookups默认支持的方式.bmp)
+    ![lookups默认支持的方式](https://raw.githubusercontent.com/Chthollists/PicRepo/master/Technology/log4j2/lookups%E9%BB%98%E8%AE%A4%E6%94%AF%E6%8C%81%E7%9A%84%E6%96%B9%E5%BC%8F.bmp)
 
   * 其中，`Log4j2`提供的`JNDI`方式的lookups，这也是产生漏洞的直接原因
 
@@ -76,7 +78,7 @@ date: 2021-12-12 22:18:36
 
   * 在2.17版本中，需要通过配置` log4j2.enableJndiLookup=true`才可以开启`JNDI`方式的lookups，默认情况下不开启，从而解决漏洞
 
-#### 1.3 JNDI简介
+### 1.3 JNDI简介
 
 * JNDI的概念与作用：Java Naming and Directory Interface
   * JNDI即Java命名和目录接口，是Java的一个目录服务应用程序接口(API)，其核心就是命名与目录两大特性
@@ -87,7 +89,7 @@ date: 2021-12-12 22:18:36
   
   * 常见的JNDI的实现有：LDAP目录访问协议、DNS(Domain Name System)域名解析系统、RMI(Remote Method Invocation)远程方法调用等
   
-    ![JNDI框图](.\images-log4j2\JNDI框图.png)
+    ![JNDI框图](https://github.com/Chthollists/PicRepo/blob/master/Technology/log4j2/JNDI%E6%A1%86%E5%9B%BE.png?raw=true)
   
 *  JNDI中的命名：Naming：名称关联对象
 
@@ -167,7 +169,7 @@ date: 2021-12-12 22:18:36
     > }
     > ```
 
-#### 1.4 LDAP与RMI
+### 1.4 LDAP与RMI
 
 * LDAP的概念和作用：Lightweight Directory Access Protocol
 
@@ -251,7 +253,7 @@ date: 2021-12-12 22:18:36
     * 每次服务端创建一个对象时，它都会使用`bind()`或`rebind()`方法注册该对象，这些是使用称为绑定名称的唯一名称注册的
     * 客户端可以通过服务端绑定的名称从注册表中获取、调用远程对象，使用`lookup()`方法
 
-#### 1.5 Log4j漏洞
+### 1.5 Log4j2漏洞
 
 * 漏洞简介：漏洞评级：严重(最高级)
 
@@ -260,7 +262,7 @@ date: 2021-12-12 22:18:36
   * 只要用到 `Log4j2` 进行日志输出且日志内容能被攻击者部分可控，即可能会受到漏洞攻击影响，攻击者可以通过漏洞远程执行任意代码
   * 漏洞版本：`Apache Log4j2 2.0 ~ 2.14.1`，以及`2.15.0-rc1`
 
-  ![阿里云漏洞报告](.\images-log4j2\阿里云漏洞报告.bmp)
+  ![阿里云漏洞报告](https://raw.githubusercontent.com/Chthollists/PicRepo/master/Technology/log4j2/%E9%98%BF%E9%87%8C%E4%BA%91%E6%BC%8F%E6%B4%9E%E6%8A%A5%E5%91%8A.bmp)
 
 * Lookup：递归解析功能
 
@@ -313,7 +315,7 @@ date: 2021-12-12 22:18:36
 
   > 本次远程代码执行漏洞正是由于组件存在 Java JNDI 注入漏洞，当程序将用户输入的数据记录到日志时，攻击者通过构造特殊请求，来触发 Apache Log4j2 中的远程代码执行漏洞，从而利用此漏洞在目标服务器上执行任意代码。
 
-  ![Log4j2漏洞原理：JNDI注入攻击](.\images-log4j2\Log4j2漏洞原理：JNDI注入攻击.png)
+  ![Log4j2漏洞原理：JNDI注入攻击](https://github.com/Chthollists/PicRepo/blob/master/Technology/log4j2/Log4j2%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%EF%BC%9AJNDI%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB.png?raw=true)
 
 * 实际案例：`Minecraft Java`版本服
 
@@ -445,7 +447,7 @@ date: 2021-12-12 22:18:36
 
   * 测试结果
 
-    ![RMI方式注入攻击测试](.\images-log4j2\RMI方式注入攻击测试.bmp)
+    ![RMI方式注入攻击测试](https://raw.githubusercontent.com/Chthollists/PicRepo/master/Technology/log4j2/RMI%E6%96%B9%E5%BC%8F%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E6%B5%8B%E8%AF%95.bmp)
 
   * 注意
 
@@ -494,7 +496,7 @@ date: 2021-12-12 22:18:36
     > ```
     >
     
-    ![Issue讨论](.\images-log4j2\Issue讨论.bmp)
+    ![Issue讨论](https://raw.githubusercontent.com/Chthollists/PicRepo/master/Technology/log4j2/Issue%E8%AE%A8%E8%AE%BA.bmp)
 
 * 紧急修复措施：修改配置，关闭Lookup功能来缓解漏洞
 
@@ -508,7 +510,7 @@ date: 2021-12-12 22:18:36
 
     > `zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class`
 
-    ![解决方案](.\images-log4j2\解决方案.bmp)
+    ![解决方案](https://raw.githubusercontent.com/Chthollists/PicRepo/master/Technology/log4j2/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.bmp)
 
 * 其他措施(实际不可用)：升级JDK版本，限制JNDI
 
