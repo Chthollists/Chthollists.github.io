@@ -4,10 +4,10 @@
 
 # Site
 title: Chthollists的平凡之路
-subtitle: 'The story of my life'
+subtitle: '技术博客 研发小白'
 description: ''
-keywords: Code,Python,Java
-author: 'Code.Yang'
+keywords: Python,Java,LeetCode刷题笔记,Spring,MyBatis,SpringBoot,MySQL,Redis,RabbitMQ,Kafka,Dubbo,SpringCloud
+author: 'Chthollists'
 # 设置为英文 en
 language: zh-CN
 timezone: ''
