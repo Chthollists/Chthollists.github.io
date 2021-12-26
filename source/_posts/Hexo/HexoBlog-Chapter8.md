@@ -120,7 +120,7 @@ date: 2020-07-31 20:11:06
 
     * 将百度验证文件放在网站首页下，即：博客根目录`/source`下
     * 但是hexo在渲染生成时，会修改`html`文件，导致验证失败
-    
+  
 * `html`标签验证
   
   * 将`html`验证代码(如：`RdypQbGwZW`)添加到网站首页HTML代码的`<head>`标签之间
@@ -128,7 +128,10 @@ date: 2020-07-31 20:11:06
     * 在根目录`/themes/yourtheme/layout/_partial/head.ejs `中添加如下代码
   
       > ```html
+      > <!-- 百度站长的HTML标签验证 -->
       > <meta name="baidu-site-verification" content="RdypQbGwZW" />
+      > <!-- 谷歌 Google Search Console 的HTML标签验证 -->
+      > <meta name="google-site-verification" content="YrN80Ft-as1RRTSUGP2TwhrrwWzjfULH1ViF9sqAS_M" />
       > ```
   
 * `CNAME`方式
