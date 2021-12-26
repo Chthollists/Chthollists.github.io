@@ -22,7 +22,7 @@ date: 2021-12-12 22:18:36
   * **问题思考：JNDI与目前主流框架的配置文件的思想和原理是否类似**
   * 本人技术小白，欢迎大神交流指导
 
----
+![Violet](https://gitee.com/chthollists/PicRepo/raw/master/violet/Violet06.jpg)
 
 <!-- more -->
 
@@ -65,7 +65,7 @@ date: 2021-12-12 22:18:36
 
   * `Log4j2`提供了常见的查找方式，其他需求则由开发者自行提供
 
-    ![lookups默认支持的方式](https://raw.githubusercontent.com/Chthollists/PicRepo/master/Technology/log4j2/lookups%E9%BB%98%E8%AE%A4%E6%94%AF%E6%8C%81%E7%9A%84%E6%96%B9%E5%BC%8F.bmp)
+    ![lookups默认支持的方式](https://gitee.com/chthollists/PicRepo/raw/master/Technology/log4j2/lookups%E9%BB%98%E8%AE%A4%E6%94%AF%E6%8C%81%E7%9A%84%E6%96%B9%E5%BC%8F.bmp)
 
   * 其中，`Log4j2`提供的`JNDI`方式的lookups，这也是产生漏洞的直接原因
 
@@ -90,7 +90,7 @@ date: 2021-12-12 22:18:36
   
   * 常见的JNDI的实现有：LDAP目录访问协议、DNS(Domain Name System)域名解析系统、RMI(Remote Method Invocation)远程方法调用等
   
-    ![JNDI框图](https://github.com/Chthollists/PicRepo/blob/master/Technology/log4j2/JNDI%E6%A1%86%E5%9B%BE.png?raw=true)
+    ![JNDI框图](https://gitee.com/chthollists/PicRepo/raw/master/Technology/log4j2/JNDI%E6%A1%86%E5%9B%BE.png)
   
 *  JNDI中的命名：Naming：名称关联对象
 
@@ -263,7 +263,7 @@ date: 2021-12-12 22:18:36
   * 只要用到 `Log4j2` 进行日志输出且日志内容能被攻击者部分可控，即可能会受到漏洞攻击影响，攻击者可以通过漏洞远程执行任意代码
   * 漏洞版本：`Apache Log4j2 2.0 ~ 2.14.1`，以及`2.15.0-rc1`
 
-  ![阿里云漏洞报告](https://raw.githubusercontent.com/Chthollists/PicRepo/master/Technology/log4j2/%E9%98%BF%E9%87%8C%E4%BA%91%E6%BC%8F%E6%B4%9E%E6%8A%A5%E5%91%8A.bmp)
+  ![阿里云漏洞报告](https://gitee.com/chthollists/PicRepo/raw/master/Technology/log4j2/%E9%98%BF%E9%87%8C%E4%BA%91%E6%BC%8F%E6%B4%9E%E6%8A%A5%E5%91%8A.bmp)
 
 * Lookup：递归解析功能
 
@@ -316,7 +316,7 @@ date: 2021-12-12 22:18:36
 
   > 本次远程代码执行漏洞正是由于组件存在 Java JNDI 注入漏洞，当程序将用户输入的数据记录到日志时，攻击者通过构造特殊请求，来触发 Apache Log4j2 中的远程代码执行漏洞，从而利用此漏洞在目标服务器上执行任意代码。
 
-  ![Log4j2漏洞原理：JNDI注入攻击](https://github.com/Chthollists/PicRepo/blob/master/Technology/log4j2/Log4j2%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%EF%BC%9AJNDI%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB.png?raw=true)
+  ![Log4j2漏洞原理：JNDI注入攻击](https://gitee.com/chthollists/PicRepo/raw/master/Technology/log4j2/Log4j2%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%EF%BC%9AJNDI%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB.png)
 
 * 实际案例：`Minecraft Java`版本服
 
@@ -448,7 +448,7 @@ date: 2021-12-12 22:18:36
 
   * 测试结果
 
-    ![RMI方式注入攻击测试](https://raw.githubusercontent.com/Chthollists/PicRepo/master/Technology/log4j2/RMI%E6%96%B9%E5%BC%8F%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E6%B5%8B%E8%AF%95.bmp)
+    ![RMI方式注入攻击测试](https://gitee.com/chthollists/PicRepo/raw/master/Technology/log4j2/RMI%E6%96%B9%E5%BC%8F%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E6%B5%8B%E8%AF%95.bmp)
 
   * 注意
 
@@ -492,13 +492,12 @@ date: 2021-12-12 22:18:36
     > ```xml
     > <!-- Maven -->
     > <properties>
-    >     <log4j2.version>2.15.0</log4j2.version>
+    >  <log4j2.version>2.15.0</log4j2.version>
     > </properties>
     > ```
-    >
     
-    ![Issue讨论](https://raw.githubusercontent.com/Chthollists/PicRepo/master/Technology/log4j2/Issue%E8%AE%A8%E8%AE%BA.bmp)
-
+    ![Issue讨论](https://gitee.com/chthollists/PicRepo/raw/master/Technology/log4j2/Issue%E8%AE%A8%E8%AE%BA.bmp)
+  
 * 紧急修复措施：修改配置，关闭Lookup功能来缓解漏洞
 
   * 修改JVM参数：`-Dlog4j2.formatMsgNolookups=true`
@@ -511,7 +510,7 @@ date: 2021-12-12 22:18:36
 
     > `zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class`
 
-    ![解决方案](https://raw.githubusercontent.com/Chthollists/PicRepo/master/Technology/log4j2/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.bmp)
+    ![解决方案](https://gitee.com/chthollists/PicRepo/raw/master/Technology/log4j2/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.bmp)
 
 * 其他措施(实际不可用)：升级JDK版本，限制JNDI
 

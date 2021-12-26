@@ -24,7 +24,7 @@ date: 2020-07-28 20:18:58
 * 利用Hexo搭建的一个Yilia主题静态博客，并对博客进行了美化和功能扩展。
 * 主要功能：文章加密、文章置顶、背景音乐、点击爱心、百度统计、不蒜子统计、SEO优化、百度收录、版权信息、Gitalk评论系统、Live2D
 
-![Chtholly](http://qfpro7zhq.hd-bkt.clouddn.com/Chtholly06.jpg)
+![Chtholly](https://gitee.com/chthollists/PicRepo/raw/master/chtholly/Chtholly06.jpg)
 
 <!-- more -->
 
@@ -100,7 +100,6 @@ date: 2020-07-28 20:18:58
   * [Solo官网](https://solo.b3log.org/)
 * 基于Java
   * 配置环境：JDK
-  
 
 #### 2.2 服务器
 
@@ -298,7 +297,6 @@ date: 2020-07-28 20:18:58
   * 文件删除与恢复
   
     > 工作区的文件被删除后，在删除版本库中的文件
-    >
   > ```bash
     > git rm  文件名
     > git commit -m "说明remove "
@@ -380,7 +378,6 @@ date: 2020-07-28 20:18:58
   > # 之后push
   > git push origin master
   > ```
-  >
   
 * 从远程库克隆到本地库
 
@@ -1036,7 +1033,6 @@ date: 2020-07-28 20:18:58
 > 初始时微信分享功能有问题
 >
 > 解决方法：修改`themes\yilia\layout\_partial\post\share.ejs`文件
->
 
 * 由于百度云已经不支持二维码生成功能，修改share.ejs的度盘链接，改为qrserver.com的api
 

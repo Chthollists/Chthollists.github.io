@@ -33,15 +33,15 @@ date: 2021-12-12 22:18:36
 * 系统日志`DMP`文件输出设置
   * 第一步：右键"此电脑"，选择"属性"，找到系统下的高级系统设置项
   
-    ![高级系统设置](https://raw.githubusercontent.com/Chthollists/PicRepo/master/Technology/BlueScreen/%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE.bmp)
+    ![高级系统设置](https://gitee.com/chthollists/PicRepo/raw/master/Technology/BlueScreen/%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE.bmp)
   
   * 第二步：进入高级系统设置项，选择高级，点击启动和故障恢复项的设置
   
-    ![启动与故障设置](https://raw.githubusercontent.com/Chthollists/PicRepo/master/Technology/BlueScreen/%E5%90%AF%E5%8A%A8%E5%92%8C%E6%95%85%E9%9A%9C%E6%81%A2%E5%A4%8D%E8%AE%BE%E7%BD%AE.bmp)
+    ![启动与故障设置](https://gitee.com/chthollists/PicRepo/raw/master/Technology/BlueScreen/%E5%90%AF%E5%8A%A8%E5%92%8C%E6%95%85%E9%9A%9C%E6%81%A2%E5%A4%8D%E8%AE%BE%E7%BD%AE.bmp)
   
   * 第三步：在菜单中勾选将事件写入系统日志，并将选项写入调试信息设置为：核心内存转储、或小内存转储(256KB)，确认设置
   
-    ![故障日志设置](https://raw.githubusercontent.com/Chthollists/PicRepo/master/Technology/BlueScreen/%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97%E8%AE%BE%E7%BD%AE.bmp)
+    ![故障日志设置](https://gitee.com/chthollists/PicRepo/raw/master/Technology/BlueScreen/%E6%95%85%E9%9A%9C%E6%97%A5%E5%BF%97%E8%AE%BE%E7%BD%AE.bmp)
   
   * 设置完成后，当系统蓝屏后会自动保存事件日志文件，文件目录为`%SystemRoot%\MiniDump`
 
@@ -56,11 +56,11 @@ date: 2021-12-12 22:18:36
 
   * 第一步：点击第一个图标"高级选项"，勾选从以下`MiniDump`文件夹载入，默认路径为`C:\Windows\MiniDump`
 
-    ![BlueScreenView设置](https://raw.githubusercontent.com/Chthollists/PicRepo/master/Technology/BlueScreen/BlueScreenView%E8%AE%BE%E7%BD%AE.bmp)
+    ![BlueScreenView设置](https://gitee.com/chthollists/PicRepo/raw/master/Technology/BlueScreen/BlueScreenView%E8%AE%BE%E7%BD%AE.bmp)
 
   * 第二步：选择近期蓝屏导致的日志文件，根据时间来对应，可以看到报错的原因，红色的文件就是蓝屏的原因
 
-    ![蓝屏分析](https://raw.githubusercontent.com/Chthollists/PicRepo/master/Technology/BlueScreen/%E8%93%9D%E5%B1%8F%E5%88%86%E6%9E%90.bmp)
+    ![蓝屏分析](https://gitee.com/chthollists/PicRepo/raw/master/Technology/BlueScreen/%E8%93%9D%E5%B1%8F%E5%88%86%E6%9E%90.bmp)
 
   * 第三步：定位了出错的文件，即可查询该文件出错是由于软件兼容性冲突、缺少驱动等错误原因，针对性的进行修复
 

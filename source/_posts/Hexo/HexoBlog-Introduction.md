@@ -14,10 +14,10 @@ date: 2020-07-29 15:00:55
 ---
 
 * 博客简介
-* 欢迎来到[**Chthollists的平凡之路**](https://chthollists.github.io/)！
-* Welcome to my blog!
+  * 欢迎来到[**Chthollists的平凡之路**](https://chthollists.github.io/)！技术小白，一起成长 ~ ~ ~
+  * Welcome to my blog!
 
-![Violet](http://qfpro7zhq.hd-bkt.clouddn.com/Violet09.jpg)
+![Violet](https://gitee.com/chthollists/PicRepo/raw/master/violet/Violet09.jpg)
 
 <!-- more -->
 
