@@ -161,7 +161,7 @@ date: 2021-12-11 23:35:58
 
 * 第一步：新建分支：hexo_source
 
-  ![新建分支示意图](https://gitee.com/chthollists/PicRepo/raw/master/hexo/Step1-%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF.bmp)
+  ![新建分支](https://gitee.com/chthollists/PicRepo/raw/master/hexo/Step1-%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF.bmp)
   
 * 第二步：设置新分支为默认分支(非必须，也可通过命令指定分支)
 
