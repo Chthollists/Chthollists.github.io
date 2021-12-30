@@ -57,7 +57,7 @@ date: 2021-12-11 23:35:58
 
 * Hexo的源文件目录结构
 
-  ![Hexo文件目录结构](https://gitee.com/chthollists/PicRepo/raw/master/hexo/Hexo%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.bmp)
+  ![Hexo文件目录结构](https://gitee.com/chthollists/PicRepo/raw/master/hexo/Hexo%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png)
 
 * Hexo的本质操作
 
@@ -161,7 +161,7 @@ date: 2021-12-11 23:35:58
 
 * 第一步：新建分支：hexo_source
 
-  ![新建分支](https://gitee.com/chthollists/PicRepo/raw/master/hexo/Step1-%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF.bmp)
+  ![新建分支](https://gitee.com/chthollists/PicRepo/raw/master/hexo/Step1-%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF.png)
   
 * 第二步：设置新分支为默认分支(非必须，也可通过命令指定分支)
 
@@ -174,7 +174,7 @@ date: 2021-12-11 23:35:58
 
   * 查看分支：在`username.github.io`目录下执行`git branch`，结果为新分支名
 
-    ![新分支原始的文件](https://gitee.com/chthollists/PicRepo/raw/master/hexo/hexo%E5%88%86%E6%94%AF%E5%88%9D%E5%A7%8B%E7%9A%84%E6%96%87%E4%BB%B6.bmp)
+    ![新分支原始的文件](https://gitee.com/chthollists/PicRepo/raw/master/hexo/hexo%E5%88%86%E6%94%AF%E5%88%9D%E5%A7%8B%E7%9A%84%E6%96%87%E4%BB%B6.png)
 
 * 第四步：将Hexo源文件全部复制到`username.github.io`目录下
 
@@ -189,7 +189,7 @@ date: 2021-12-11 23:35:58
   > git push origin hexo_source
   > ```
 
-  ![新分支提交后的文件](https://gitee.com/chthollists/PicRepo/raw/master/hexo/hexo%E5%88%86%E6%94%AF%E6%8F%90%E4%BA%A4%E5%90%8E%E7%9A%84%E6%96%87%E4%BB%B6.bmp)
+  ![新分支提交后的文件](https://gitee.com/chthollists/PicRepo/raw/master/hexo/hexo%E5%88%86%E6%94%AF%E6%8F%90%E4%BA%A4%E5%90%8E%E7%9A%84%E6%96%87%E4%BB%B6.png)
 
 * 第六步：原节点更新博文
 

