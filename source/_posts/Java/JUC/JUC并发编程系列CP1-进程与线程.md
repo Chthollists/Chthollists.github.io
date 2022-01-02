@@ -1,5 +1,5 @@
 ---
-title: 样例
+title: What
 reward: true
 declare: true
 gitalkenable: true

@@ -5,7 +5,7 @@ reward: true
 declare: true
 gitalkenable: true
 categories:
-  - Middleware
+  - DataBase
   - MySQL
 tags:
   - MySQL

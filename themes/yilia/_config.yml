@@ -9,12 +9,12 @@ menu:
   标签: /tags
   # essays
   随笔: /categories/essays 
-  # Encrypt
-  限权: /tags/Encrypt  
   # categories/java
   Java: /categories/Java
   # categories/python
   Python: /categories/Python 
+  # Encrypt
+  数据库: /categories/DataBase  
   # categories/algorithm
   算法: /categories/Algorithm
   # categories/codeRecord 刷题
