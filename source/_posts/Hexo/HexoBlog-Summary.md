@@ -6,7 +6,7 @@ categories:
 declare: true
 gitalkenable: true
 toc: true
-top: 5
+top: 4
 tags:
   - Hexo
   - Git

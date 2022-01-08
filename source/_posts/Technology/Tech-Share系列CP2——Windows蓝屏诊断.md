@@ -5,7 +5,7 @@ declare: true
 gitalkenable: true
 categories: Technology
 toc: true
-top: 6
+top:
 tags:
   - BlueScreenView
   - ntoskrnl.exe
