@@ -7,7 +7,7 @@ categories:
   - others
   - Hexo
 toc: true
-top: 6
+top: 2
 tags:
   - Hexo
 abbrlink: 246f003b
