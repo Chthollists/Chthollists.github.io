@@ -1,5 +1,5 @@
 ---
-title: '每日一题:LeetCode:373.查找和最小的K对数字'
+title: 'LeetCode373.查找和最小的K对数字：「多路归并 & 堆」&「二分 & 滑动窗口」'
 reward: true
 declare: true
 gitalkenable: true
@@ -17,7 +17,7 @@ top:
 ---
 ---
 
-* 每日一题：LeetCode：373.查找和最小的K对数字
+* LeetCode373：查找和最小的K对数字
   * 时间：2022-01-14
   * 力扣难度：Meduim
   * 个人难度：Meduim
@@ -29,7 +29,7 @@ top:
 
 <!-- more -->
 
-# 2022-01-14：LeetCode：373.查找和最小的K对数字
+# LeetCode373.查找和最小的K对数字：「多路归并 & 堆」&「二分 & 滑动窗口」
 
 ## 1. 题目描述
 
