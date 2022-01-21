@@ -1,5 +1,5 @@
 ---
-title: '剑指Offer I.斐波那契数列：「状态DP」&「矩阵快速幂」'
+title: 剑指Offer I.斐波那契数列：「状态DP」&「矩阵快速幂」
 reward: true
 declare: true
 gitalkenable: true
@@ -8,8 +8,9 @@ toc: true
 tags:
   - 状态机
   - 动态规划
-  -	递归
-  -	矩阵快速幂
+  - 递归
+  - 矩阵快速幂
+abbrlink: 8caae1e1
 date: 2022-01-17 20:17:35
 top:
 ---
