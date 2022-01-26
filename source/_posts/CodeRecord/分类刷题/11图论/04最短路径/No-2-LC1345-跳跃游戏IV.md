@@ -1,5 +1,5 @@
 ---
-title: '每日一题:LeetCode:1345.跳跃游戏IV'
+title: 'LeetCode1345.跳跃游戏IV：「单向BFS」&「双向BFS」'
 reward: true
 declare: true
 gitalkenable: true
@@ -14,7 +14,7 @@ top:
 ---
 ---
 
-* 每日一题：LeetCode：1345.跳跃游戏IV
+* LeetCode1345：跳跃游戏IV
   * 时间：2022-01-21
   * 力扣难度：Hard
   * 个人难度：Hard
@@ -26,7 +26,7 @@ top:
 
 <!-- more -->
 
-# 2022-01-21：LeetCode：1345.跳跃游戏IV
+# LeetCode1345.跳跃游戏IV：「单向BFS」&「双向BFS」
 
 ## 1. 题目描述
 

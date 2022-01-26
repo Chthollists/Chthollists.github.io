@@ -1,5 +1,5 @@
 ---
-title: '每日一题:LeetCode:219.存在重复元素II'
+title: 'LeetCode219.存在重复元素II：「哈希表」&「滑动窗口」'
 reward: true
 declare: true
 gitalkenable: true
@@ -8,13 +8,12 @@ toc: true
 tags:
   - 哈希表
   - 滑动窗口
-abbrlink: d6d39517
 date: 2022-01-19 13:01:20
 top:
 ---
 ---
 
-* 每日一题：LeetCode：219.存在重复元素II
+* LeetCode219：存在重复元素II
   * 时间：2022-01-19
   * 力扣难度：Easy
   * 个人难度：Easy
@@ -26,7 +25,7 @@ top:
 
 <!-- more -->
 
-# 2022-01-19：LeetCode：219.存在重复元素II
+# LeetCode219.存在重复元素II：「哈希表」&「滑动窗口」
 
 ## 1. 题目描述
 

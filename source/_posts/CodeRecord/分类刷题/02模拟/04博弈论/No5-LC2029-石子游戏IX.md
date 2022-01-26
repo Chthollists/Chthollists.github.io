@@ -1,5 +1,5 @@
 ---
-title: 'LeetCode2029.石子游戏IX：「博弈论」&「贪心」'
+title: LeetCode2029.石子游戏IX：「博弈论」&「贪心」
 reward: true
 declare: true
 gitalkenable: true
@@ -8,7 +8,8 @@ toc: true
 tags:
   - 数学
   - 博弈论
-  -	贪心
+  - 贪心
+abbrlink: a94c0e43
 date: 2022-01-20 15:11:27
 top:
 ---
