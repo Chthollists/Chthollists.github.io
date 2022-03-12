@@ -1,5 +1,5 @@
 ---
-title: 'LeetCode219.存在重复元素II：「哈希表」&「滑动窗口」'
+title: LeetCode219.存在重复元素II：「哈希表」&「滑动窗口」
 reward: true
 declare: true
 gitalkenable: true
@@ -8,6 +8,7 @@ toc: true
 tags:
   - 哈希表
   - 滑动窗口
+abbrlink: 9d7d5c9f
 date: 2022-01-19 13:01:20
 top:
 ---
@@ -83,7 +84,7 @@ top:
 
 ---
 
-## 3. 方法二：滑动窗口
+## 3. 方法二：滑动窗口 & 哈希表
 
 * 思路
 

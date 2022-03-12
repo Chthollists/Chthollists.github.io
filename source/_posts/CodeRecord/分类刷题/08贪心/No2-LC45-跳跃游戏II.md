@@ -1,5 +1,5 @@
 ---
-title: 'LeetCode219.存在重复元素II：「哈希表」&「滑动窗口」'
+title: LeetCode219.存在重复元素II：「哈希表」&「滑动窗口」
 reward: true
 declare: true
 gitalkenable: true
@@ -8,6 +8,7 @@ toc: true
 tags:
   - 贪心
   - 动态规划
+abbrlink: 9d7d5c9f
 date: 2022-01-22 00:22:12
 top:
 ---
